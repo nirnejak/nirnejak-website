@@ -24,6 +24,22 @@ module.exports = {
           from: { opacity: 0, transform: "translateX(10px)" },
           to: { opacity: 1, transform: "translateX(0)" },
         },
+        slideDown: {
+          from: { transform: "translateY(-10px)" },
+          to: { transform: "translateY(0)" },
+        },
+        slideUp: {
+          from: { transform: "translateY(10px)" },
+          to: { transform: "translateY(0)" },
+        },
+        slideLeft: {
+          from: { transform: "translateX(-10px)" },
+          to: { transform: "translateX(0)" },
+        },
+        slideRight: {
+          from: { transform: "translateX(10px)" },
+          to: { transform: "translateX(0)" },
+        },
       },
       animation: {
         slideDownAndFade:
@@ -33,6 +49,10 @@ module.exports = {
         slideUpAndFade: "slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)",
         slideRightAndFade:
           "slideRightAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)",
+        slideDown: "slideDown 400ms cubic-bezier(0.16, 1, 0.3, 1)",
+        slideUp: "slideUp 400ms cubic-bezier(0.16, 1, 0.3, 1)",
+        slideLeft: "slideLeft 400ms cubic-bezier(0.16, 1, 0.3, 1)",
+        slideRight: "slideRight 400ms cubic-bezier(0.16, 1, 0.3, 1)",
       },
     },
     fontFamily: {
