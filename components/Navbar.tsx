@@ -14,28 +14,49 @@ const Navbar: React.FC<Props> = () => {
     <nav className="fixed top-0 w-full px-10">
       <Container className="flex py-6">
         <div className="flex">
-          <AppLink className={navLinkClass} href="/">
+          <AppLink
+            className={navLinkClass}
+            activeClassName="bg-zinc-800"
+            href="/"
+          >
             Home
           </AppLink>
-          <AppLink className={navLinkClass} href="/">
+          <AppLink
+            className={navLinkClass}
+            activeClassName="bg-zinc-800"
+            href="/work/"
+          >
             Work
           </AppLink>
-          <AppLink className={navLinkClass} href="/">
+          <AppLink
+            className={navLinkClass}
+            activeClassName="bg-zinc-800"
+            href="/blogs/"
+          >
             Blogs
           </AppLink>
-          <AppLink className={navLinkClass} href="/">
+          <AppLink
+            className={navLinkClass}
+            activeClassName="bg-zinc-800"
+            href="/uses/"
+          >
             Uses
           </AppLink>
         </div>
         <div className="ml-auto flex">
           <AppLink
             className={navLinkClass}
+            activeClassName="bg-zinc-800"
             href="https://read.cv/nirnejak"
             target="_blank"
           >
             Resumé
           </AppLink>
-          <AppLink className={navLinkClass} href="/">
+          <AppLink
+            className={navLinkClass}
+            activeClassName="bg-zinc-800"
+            href="/contact/"
+          >
             Contact
           </AppLink>
         </div>
