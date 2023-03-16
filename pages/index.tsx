@@ -26,13 +26,13 @@ const HomePage = () => {
               <span className="text-gradient-red">Code & </span>
               <span className="text-gradient-yellow">Write.</span>
             </h1>
-            <p className="mt-5 font-light text-gray-500">
+            <p className="mt-5 font-light leading-6 text-gray-500">
               I am passionate about elegant user interfaces, web animations, and
-              data visualization. #figma #react #typescript. Currently{" "}
+              data visualization. Currently{" "}
               <AppLink
                 href="https://www.draxlr.com/"
                 target="_blank"
-                className="font-normal text-slate-400"
+                className="font-bold text-zinc-400"
               >
                 @Inkoop(Draxlr)
               </AppLink>
