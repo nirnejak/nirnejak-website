@@ -77,23 +77,26 @@ const HomePage = () => {
               {renderSocialLink(
                 "Github",
                 "https://github.com/nirnejak/",
-                <GithubFill />
+                <GithubFill size={21} />
               )}
               {renderSocialLink(
                 "Codepen",
                 "https://codepen.io/nirnejak/",
-                <CodepenFill />
+                <CodepenFill size={21} />
               )}
               {renderSocialLink(
                 "Dribbble",
                 "https://dribbble.com/nirnejak",
-                <DribbbleFill />
+                <DribbbleFill size={21} />
               )}
               {renderSocialLink(
                 "Twitter",
                 "https://twitter.com/jeetnirnejak/",
                 <span className="flex items-center gap-1.5">
-                  <TwitterFill className="group-hover:animate-slideRight group-focus:animate-slideRight" />
+                  <TwitterFill
+                    size={21}
+                    className="group-hover:animate-slideRight group-focus:animate-slideRight"
+                  />
                   <ArrowRight
                     className="hidden animate-slideLeftAndFade hover:block group-hover:block group-focus-visible:block"
                     size={14}
