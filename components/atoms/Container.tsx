@@ -5,17 +5,41 @@ import classNames from "utils/classNames"
 type Props = {
   children: React.ReactNode
   className?: string
+  size?: "narrow" | "normal" | "wide" | "ultrawide"
 }
 
-const Container: React.FC<Props> = ({ children, className, ...restProps }) => {
+const Container: React.FC<Props> = ({
+  children,
+  className,
+  size,
+  ...restProps
+}) => {
+  const widthClass = React.useMemo(() => {
+    switch (size) {
+      case "narrow":
+        return "max-w-[480px]"
+      case "wide":
+        return "max-w-[980px]"
+      case "ultrawide":
+        return "max-w-[1200px]"
+      case "normal":
+      default:
+        return "max-w-[680px]"
+    }
+  }, [size])
+
   return (
     <div
-      className={classNames("mx-auto max-w-[800px]", className)}
+      className={classNames("mx-auto", widthClass, className)}
       {...restProps}
     >
       {children}
     </div>
   )
+}
+
+Container.defaultProps = {
+  size: "normal",
 }
 
 export default Container
