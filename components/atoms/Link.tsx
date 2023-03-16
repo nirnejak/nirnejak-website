@@ -15,7 +15,10 @@ const AppLink: React.FC<Props> = ({ href, children, className, ...props }) => {
   if (href.includes("http") || href.includes("mailto")) {
     return (
       <a
-        className={classNames("text-sm font-medium text-white", className)}
+        className={classNames(
+          className,
+          "text-sm font-medium text-white hover:text-zinc-100"
+        )}
         href={href}
         {...props}
       >
@@ -25,7 +28,10 @@ const AppLink: React.FC<Props> = ({ href, children, className, ...props }) => {
   } else {
     return (
       <Link
-        className={classNames("text-sm font-medium text-white", className)}
+        className={classNames(
+          className,
+          "text-sm font-medium text-white hover:text-zinc-100"
+        )}
         href={href}
         {...props}
       >
