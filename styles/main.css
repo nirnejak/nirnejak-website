@@ -13,13 +13,13 @@
 }
 
 ::-moz-selection {
-  color: var(--color-lightest);
-  background-color: var(--color-primary);
+  @apply text-white;
+  @apply bg-blue-600;
 }
 
 ::selection {
-  color: var(--color-lightest);
-  background-color: var(--color-primary);
+  @apply text-white;
+  @apply bg-blue-600;
 }
 
 * {
