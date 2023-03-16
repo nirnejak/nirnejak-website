@@ -13,7 +13,7 @@ const Navbar: React.FC<Props> = () => {
   return (
     <nav className="fixed top-0 w-full px-10">
       <Container className="flex py-6">
-        <div className="flex">
+        <div className="flex gap-1">
           <AppLink
             className={navLinkClass}
             activeClassName="bg-zinc-800"
@@ -50,7 +50,7 @@ const Navbar: React.FC<Props> = () => {
             Uses
           </AppLink>
         </div>
-        <div className="ml-auto flex">
+        <div className="ml-auto flex gap-1">
           <AppLink
             className={navLinkClass}
             activeClassName="bg-zinc-800"
