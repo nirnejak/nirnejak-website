@@ -1,52 +1,9 @@
 import * as React from "react"
 
-import * as Tooltip from "@radix-ui/react-tooltip"
-import {
-  ArrowRight,
-  CodepenFill,
-  DribbbleFill,
-  GithubFill,
-  TwitterFill,
-} from "akar-icons"
-
 import Container from "components/atoms/Container"
 import Layout from "components/atoms/Layout"
 import AppLink from "components/atoms/Link"
-import classNames from "utils/classNames"
-
-const renderSocialLink = (
-  text: string,
-  link: string,
-  icon: React.ReactNode,
-  isRight?: boolean
-): JSX.Element => {
-  return (
-    <Tooltip.Provider>
-      <Tooltip.Root>
-        <Tooltip.Trigger asChild>
-          <button
-            onClick={() => window.open(link, "_blank")}
-            className={classNames(
-              "group rounded-md p-3 text-zinc-700 hover:bg-zinc-800",
-              isRight ? "ml-auto" : ""
-            )}
-          >
-            {icon}
-          </button>
-        </Tooltip.Trigger>
-        <Tooltip.Portal>
-          <Tooltip.Content
-            className="select-none rounded-md bg-zinc-800 px-3.5 py-2.5 text-sm leading-none text-zinc-300 will-change-[transform,opacity] data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade"
-            sideOffset={5}
-          >
-            {text}
-            <Tooltip.Arrow className="fill-zinc-800" />
-          </Tooltip.Content>
-        </Tooltip.Portal>
-      </Tooltip.Root>
-    </Tooltip.Provider>
-  )
-}
+import SocialLinks from "components/SocialLinks"
 
 const HomePage = () => {
   return (
@@ -74,36 +31,7 @@ const HomePage = () => {
               </AppLink>
             </p>
             <div className="mt-16 flex">
-              {renderSocialLink(
-                "Github",
-                "https://github.com/nirnejak/",
-                <GithubFill size={21} />
-              )}
-              {renderSocialLink(
-                "Codepen",
-                "https://codepen.io/nirnejak/",
-                <CodepenFill size={21} />
-              )}
-              {renderSocialLink(
-                "Dribbble",
-                "https://dribbble.com/nirnejak",
-                <DribbbleFill size={21} />
-              )}
-              {renderSocialLink(
-                "Twitter",
-                "https://twitter.com/jeetnirnejak/",
-                <span className="flex items-center gap-1.5">
-                  <TwitterFill
-                    size={21}
-                    className="group-hover:animate-slideRight group-focus:animate-slideRight"
-                  />
-                  <ArrowRight
-                    className="hidden animate-slideLeftAndFade hover:block group-hover:block group-focus-visible:block"
-                    size={14}
-                  />
-                </span>,
-                true
-              )}
+              <SocialLinks />
             </div>
           </div>
         </section>
