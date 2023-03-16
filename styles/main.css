@@ -6,26 +6,10 @@
 
 @font-face {
   font-family: "Space Grotesk";
-  src: url("./fonts/SpaceGrotesk-Light.ttf") format("truetype");
+  src: url("./SpaceGrotesk-Variable.ttf") format("truetype supports variations");
   font-display: swap;
   font-style: normal;
   font-weight: 300;
-}
-
-@font-face {
-  font-family: "Space Grotesk";
-  src: url("./fonts/SpaceGrotesk-Regular.ttf") format("truetype");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Space Grotesk";
-  src: url("./fonts/SpaceGrotesk-Bold.ttf") format("truetype");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 700;
 }
 
 ::-moz-selection {
