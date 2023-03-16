@@ -10,7 +10,7 @@ type Props = {
 const Navbar: React.FC<Props> = () => {
   return (
     <nav className="fixed top-0 w-full px-10">
-      <Container className="flex py-6" size="normal">
+      <Container className="flex py-6">
         <div className="flex gap-5">
           <AppLink className="" href="/">
             Home
@@ -26,7 +26,7 @@ const Navbar: React.FC<Props> = () => {
           </AppLink>
         </div>
         <div className="ml-auto flex gap-5">
-          <AppLink className="" href="/">
+          <AppLink className="" href="https://read.cv/nirnejak" target="_blank">
             Resumé
           </AppLink>
           <AppLink className="" href="/">
