@@ -38,6 +38,13 @@ const Navbar: React.FC<Props> = () => {
           <AppLink
             className={navLinkClass}
             activeClassName="bg-zinc-800"
+            href="/photos/"
+          >
+            Photos
+          </AppLink>
+          <AppLink
+            className={navLinkClass}
+            activeClassName="bg-zinc-800"
             href="/uses/"
           >
             Uses
