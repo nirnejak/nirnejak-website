@@ -62,8 +62,8 @@ const HomePage = () => {
               <span className="text-gradient-blue font-bold">Developer</span>,
               <span className="text-gradient-red font-bold"> Designer </span>&
               sometimes a{" "}
-              <span className="text-gradient-yellow font-bold">Blogger.</span>.
-              I am passionate about elegant user interfaces, web animations, and
+              <span className="text-gradient-yellow font-bold">Blogger</span>. I
+              am passionate about elegant user interfaces, web animations, and
               data visualization. Currently{" "}
               <AppLink
                 href="https://www.draxlr.com/"
@@ -93,7 +93,7 @@ const HomePage = () => {
                 "Twitter",
                 "https://twitter.com/jeetnirnejak/",
                 <span className="flex items-center gap-1.5">
-                  <TwitterFill />
+                  <TwitterFill className="group-hover:animate-slideRight" />
                   <ArrowRight
                     className="hidden animate-slideLeftAndFade hover:block group-hover:block"
                     size={14}
