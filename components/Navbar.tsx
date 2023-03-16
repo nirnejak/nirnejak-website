@@ -7,29 +7,35 @@ type Props = {
   theme?: string
 }
 
+const navLinkClass = "rounded-md px-3.5 py-1.5 hover:bg-zinc-800"
+
 const Navbar: React.FC<Props> = () => {
   return (
     <nav className="fixed top-0 w-full px-10">
       <Container className="flex py-6">
-        <div className="flex gap-5">
-          <AppLink className="" href="/">
+        <div className="flex">
+          <AppLink className={navLinkClass} href="/">
             Home
           </AppLink>
-          <AppLink className="" href="/">
-            Blogs
-          </AppLink>
-          <AppLink className="" href="/">
+          <AppLink className={navLinkClass} href="/">
             Work
           </AppLink>
-          <AppLink className="" href="/">
+          <AppLink className={navLinkClass} href="/">
+            Blogs
+          </AppLink>
+          <AppLink className={navLinkClass} href="/">
             Uses
           </AppLink>
         </div>
-        <div className="ml-auto flex gap-5">
-          <AppLink className="" href="https://read.cv/nirnejak" target="_blank">
+        <div className="ml-auto flex">
+          <AppLink
+            className={navLinkClass}
+            href="https://read.cv/nirnejak"
+            target="_blank"
+          >
             Resumé
           </AppLink>
-          <AppLink className="" href="/">
+          <AppLink className={navLinkClass} href="/">
             Contact
           </AppLink>
         </div>
