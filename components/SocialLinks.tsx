@@ -15,27 +15,25 @@ const renderSocialLink = (
   icon: React.ReactNode
 ): JSX.Element => {
   return (
-    <Tooltip.Provider>
-      <Tooltip.Root>
-        <Tooltip.Trigger asChild>
-          <button
-            onClick={() => window.open(link, "_blank")}
-            className="group rounded-md p-3 text-zinc-700 hover:bg-zinc-800"
-          >
-            {icon}
-          </button>
-        </Tooltip.Trigger>
-        <Tooltip.Portal>
-          <Tooltip.Content
-            className="select-none rounded-md bg-zinc-800 px-3.5 py-2.5 text-sm leading-none text-zinc-300 will-change-[transform,opacity] data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade"
-            sideOffset={5}
-          >
-            {text}
-            <Tooltip.Arrow className="fill-zinc-800" />
-          </Tooltip.Content>
-        </Tooltip.Portal>
-      </Tooltip.Root>
-    </Tooltip.Provider>
+    <Tooltip.Root>
+      <Tooltip.Trigger asChild>
+        <button
+          onClick={() => window.open(link, "_blank")}
+          className="group rounded-md p-3 text-zinc-700 hover:bg-zinc-800"
+        >
+          {icon}
+        </button>
+      </Tooltip.Trigger>
+      <Tooltip.Portal>
+        <Tooltip.Content
+          className="select-none rounded-md bg-zinc-800 px-3.5 py-2.5 text-sm leading-none text-zinc-300 will-change-[transform,opacity] data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade"
+          sideOffset={5}
+        >
+          {text}
+          <Tooltip.Arrow className="fill-zinc-800" />
+        </Tooltip.Content>
+      </Tooltip.Portal>
+    </Tooltip.Root>
   )
 }
 
@@ -59,29 +57,31 @@ const socialLinks = [
 
 const SocialLinks: React.FC = () => {
   return (
-    <div className="flex w-full justify-between">
-      <div>
-        {socialLinks.map(({ title, url, icon }) =>
-          renderSocialLink(title, url, icon)
-        )}
+    <Tooltip.Provider delayDuration={0}>
+      <div className="flex w-full justify-between">
+        <div>
+          {socialLinks.map(({ title, url, icon }) =>
+            renderSocialLink(title, url, icon)
+          )}
+        </div>
+        <div>
+          {renderSocialLink(
+            "Twitter",
+            "https://twitter.com/jeetnirnejak/",
+            <span className="flex items-center gap-1.5">
+              <TwitterFill
+                size={21}
+                className="group-hover:animate-slideRight group-focus:animate-slideRight"
+              />
+              <ArrowRight
+                className="hidden animate-slideLeftAndFade hover:block group-hover:block group-focus-visible:block"
+                size={14}
+              />
+            </span>
+          )}
+        </div>
       </div>
-      <div>
-        {renderSocialLink(
-          "Twitter",
-          "https://twitter.com/jeetnirnejak/",
-          <span className="flex items-center gap-1.5">
-            <TwitterFill
-              size={21}
-              className="group-hover:animate-slideRight group-focus:animate-slideRight"
-            />
-            <ArrowRight
-              className="hidden animate-slideLeftAndFade hover:block group-hover:block group-focus-visible:block"
-              size={14}
-            />
-          </span>
-        )}
-      </div>
-    </div>
+    </Tooltip.Provider>
   )
 }
 
