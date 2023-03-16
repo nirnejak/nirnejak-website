@@ -93,9 +93,9 @@ const HomePage = () => {
                 "Twitter",
                 "https://twitter.com/jeetnirnejak/",
                 <span className="flex items-center gap-1.5">
-                  <TwitterFill className="group-hover:animate-slideRight" />
+                  <TwitterFill className="group-hover:animate-slideRight group-focus:animate-slideRight" />
                   <ArrowRight
-                    className="hidden animate-slideLeftAndFade hover:block group-hover:block"
+                    className="hidden animate-slideLeftAndFade hover:block group-hover:block group-focus-visible:block"
                     size={14}
                   />
                 </span>,
