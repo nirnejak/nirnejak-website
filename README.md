@@ -1,15 +1,8 @@
 <h1 align="center">
-  Next.js TypeScript Starter
+  Jitendra Nirnejak's Portfolio
 </h1>
 
 ---
-
-## Additional Packages Used
-
-- Tailwind CSS - for styling
-- Framer Motion - for animations
-- React Query - for data fetching and caching
-- use-sound - for using sound effects
 
 ## Available Scripts
 
