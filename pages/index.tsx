@@ -19,14 +19,17 @@ const HomePage = () => {
   return (
     <Layout>
       <Container>
-        <section className="flex h-screen items-center">
+        <section className="flex h-screen items-start pt-64">
           <div>
-            <h1 className="text-5xl font-bold text-zinc-800">
-              <span className="text-gradient-blue">Design, </span>
-              <span className="text-gradient-red">Code & </span>
-              <span className="text-gradient-yellow">Write.</span>
+            <h1 className="text-5xl font-bold text-zinc-300">
+              Jitendra Nirnejak
             </h1>
-            <p className="mt-5 font-light leading-6 text-gray-500">
+            <p className="mt-5 font-light leading-7 text-gray-500">
+              I{"'"}m a{" "}
+              <span className="text-gradient-blue font-bold">Developer</span>,
+              <span className="text-gradient-red font-bold"> Designer </span>&
+              sometimes a{" "}
+              <span className="text-gradient-yellow font-bold">Blogger.</span>.
               I am passionate about elegant user interfaces, web animations, and
               data visualization. Currently{" "}
               <AppLink
