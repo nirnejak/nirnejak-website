@@ -1,5 +1,6 @@
 import * as React from "react"
 
+import * as Tooltip from "@radix-ui/react-tooltip"
 import {
   ArrowRight,
   CodepenFill,
@@ -13,13 +14,45 @@ import Layout from "components/atoms/Layout"
 import AppLink from "components/atoms/Link"
 import classNames from "utils/classNames"
 
-const socialLinkClasses = "rounded-md p-3 text-zinc-700 hover:bg-zinc-800"
+const renderSocialLink = (
+  text: string,
+  link: string,
+  icon: React.ReactNode,
+  isMultiple?: boolean
+): JSX.Element => {
+  return (
+    <Tooltip.Provider>
+      <Tooltip.Root>
+        <Tooltip.Trigger asChild>
+          <button
+            onClick={() => window.open(link, "_blank")}
+            className={classNames(
+              "rounded-md p-3 text-zinc-700 hover:bg-zinc-800",
+              isMultiple ? "ml-auto flex items-center gap-1.5" : ""
+            )}
+          >
+            {icon}
+          </button>
+        </Tooltip.Trigger>
+        <Tooltip.Portal>
+          <Tooltip.Content
+            className="select-none rounded-md bg-zinc-800 px-3.5 py-2.5 text-sm leading-none text-zinc-300 will-change-[transform,opacity] data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade"
+            sideOffset={5}
+          >
+            {text}
+            <Tooltip.Arrow className="fill-zinc-800" />
+          </Tooltip.Content>
+        </Tooltip.Portal>
+      </Tooltip.Root>
+    </Tooltip.Provider>
+  )
+}
 
 const HomePage = () => {
   return (
     <Layout>
       <Container>
-        <section className="flex h-screen items-start pt-64">
+        <section className="flex h-screen items-start pt-56">
           <div>
             <h1 className="text-5xl font-bold text-zinc-300">
               Jitendra Nirnejak
@@ -41,42 +74,30 @@ const HomePage = () => {
               </AppLink>
             </p>
             <div className="mt-16 flex">
-              <AppLink
-                className={socialLinkClasses}
-                href="https://github.com/nirnejak/"
-                target="_blank"
-              >
+              {renderSocialLink(
+                "Github",
+                "https://github.com/nirnejak/",
                 <GithubFill />
-              </AppLink>
-              <AppLink
-                className={socialLinkClasses}
-                href="https://codepen.io/nirnejak/"
-                target="_blank"
-              >
+              )}
+              {renderSocialLink(
+                "Codepen",
+                "https://codepen.io/nirnejak/",
                 <CodepenFill />
-              </AppLink>
-              <AppLink
-                className={socialLinkClasses}
-                href="https://dribbble.com/nirnejak"
-                target="_blank"
-              >
+              )}
+              {renderSocialLink(
+                "Dribbble",
+                "https://dribbble.com/nirnejak",
                 <DribbbleFill />
-              </AppLink>
-              <AppLink
-                className={classNames(
-                  socialLinkClasses,
-                  "ml-auto flex items-center gap-1.5"
-                )}
-                href="https://twitter.com/jeetnirnejak/"
-                target="_blank"
-              >
-                <span>
+              )}
+              {renderSocialLink(
+                "Twitter",
+                "https://twitter.com/jeetnirnejak/",
+                <>
                   <TwitterFill />
-                </span>
-                <span>
                   <ArrowRight size={14} />
-                </span>
-              </AppLink>
+                </>,
+                true
+              )}
             </div>
           </div>
         </section>
