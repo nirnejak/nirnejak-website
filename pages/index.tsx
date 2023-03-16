@@ -18,7 +18,7 @@ const renderSocialLink = (
   text: string,
   link: string,
   icon: React.ReactNode,
-  isMultiple?: boolean
+  isRight?: boolean
 ): JSX.Element => {
   return (
     <Tooltip.Provider>
@@ -27,8 +27,8 @@ const renderSocialLink = (
           <button
             onClick={() => window.open(link, "_blank")}
             className={classNames(
-              "rounded-md p-3 text-zinc-700 hover:bg-zinc-800",
-              isMultiple ? "ml-auto flex items-center gap-1.5" : ""
+              "group rounded-md p-3 text-zinc-700 hover:bg-zinc-800",
+              isRight ? "ml-auto" : ""
             )}
           >
             {icon}
@@ -92,10 +92,13 @@ const HomePage = () => {
               {renderSocialLink(
                 "Twitter",
                 "https://twitter.com/jeetnirnejak/",
-                <>
+                <span className="flex items-center gap-1.5">
                   <TwitterFill />
-                  <ArrowRight size={14} />
-                </>,
+                  <ArrowRight
+                    className="hidden animate-slideLeftAndFade hover:block group-hover:block"
+                    size={14}
+                  />
+                </span>,
                 true
               )}
             </div>
