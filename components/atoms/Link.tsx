@@ -6,8 +6,9 @@ import classNames from "utils/classNames"
 
 type Props = {
   href: string
-  className?: string
   children: React.ReactNode
+  className?: string
+  target?: "_blank" | "_self" | "_parent" | "_top" | string
 }
 
 const AppLink: React.FC<Props> = ({ href, children, className, ...props }) => {
