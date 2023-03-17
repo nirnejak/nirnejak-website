@@ -23,8 +23,8 @@ const AppLink: React.FC<Props> = ({
   const router = useRouter()
 
   const isActive = React.useMemo(
-    () => router.pathname === href,
-    [href, router.pathname]
+    () => router.asPath === href,
+    [href, router.asPath]
   )
 
   if (href.includes("http") || href.includes("mailto")) {
