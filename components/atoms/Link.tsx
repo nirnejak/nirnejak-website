@@ -6,7 +6,7 @@ import useSound from "use-sound"
 
 import classNames from "utils/classNames"
 
-type Props = {
+interface Props {
   href: string
   children: React.ReactNode
   className?: string
@@ -43,7 +43,7 @@ const AppLink: React.FC<Props> = ({
         )}
         onClick={(e) => {
           play()
-          if (onClick) onClick(e)
+          if (onClick !== undefined) onClick(e)
         }}
         {...restProps}
       >
@@ -61,7 +61,7 @@ const AppLink: React.FC<Props> = ({
         )}
         onClick={(e) => {
           play()
-          if (onClick) onClick(e)
+          if (onClick !== undefined) onClick(e)
         }}
         {...restProps}
       >

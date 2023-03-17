@@ -2,7 +2,7 @@ import React from "react"
 
 import classNames from "utils/classNames"
 
-type Props = {
+interface Props {
   children: React.ReactNode
   className?: string
   size?: "narrow" | "normal" | "wide" | "ultrawide"

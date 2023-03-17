@@ -6,7 +6,7 @@ import Background from "./Background"
 import Navbar from "components/Navbar"
 import classNames from "utils/classNames"
 
-type Props = {
+interface Props {
   title?: string
   description?: string
   children: React.ReactNode

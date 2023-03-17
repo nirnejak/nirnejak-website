@@ -3,7 +3,7 @@ import * as React from "react"
 import Container from "./atoms/Container"
 import AppLink from "./atoms/Link"
 
-type Props = {
+interface Props {
   theme?: string
 }
 

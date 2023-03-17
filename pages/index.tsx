@@ -5,7 +5,7 @@ import Layout from "components/atoms/Layout"
 import AppLink from "components/atoms/Link"
 import SocialLinks from "components/SocialLinks"
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
   return (
     <Layout>
       <Container>

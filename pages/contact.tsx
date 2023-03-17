@@ -3,7 +3,7 @@ import * as React from "react"
 import Container from "components/atoms/Container"
 import Layout from "components/atoms/Layout"
 
-const ContactPage = () => {
+const ContactPage: React.FC = () => {
   return (
     <Layout>
       <Container>

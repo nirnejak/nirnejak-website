@@ -3,7 +3,7 @@ import * as React from "react"
 import Container from "components/atoms/Container"
 import Layout from "components/atoms/Layout"
 
-const PhotosPage = () => {
+const PhotosPage: React.FC = () => {
   return (
     <Layout>
       <Container>

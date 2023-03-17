@@ -5,7 +5,7 @@ import Layout from "components/atoms/Layout"
 import AppLink from "components/atoms/Link"
 import { allBlogs } from "utils/data"
 
-const BlogsPage = () => {
+const BlogsPage: React.FC = () => {
   return (
     <Layout>
       <Container>
