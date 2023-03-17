@@ -1,3 +1,48 @@
+export const allProjects = [
+  {
+    title: "SQL Editor & Formatter",
+    description: "A tool to write SQL Queries and format them.",
+    type: "",
+    link: "",
+  },
+  {
+    title: "Draxlr 3.0",
+    description: "Draxlr is an app to build dashboards and setup alerts.",
+    type: "",
+    link: "",
+  },
+  {
+    title: "Draxlr Documentation",
+    description: "Wrote the product documentation for Draxlr",
+    type: "",
+    link: "",
+  },
+  {
+    title: "Sup.today",
+    description: "Designed the website and app UI and built the Website.",
+    type: "",
+    link: "",
+  },
+  {
+    title: "Draxlr Website",
+    description: "Designed and Developed the Draxlr Website.",
+    type: "",
+    link: "",
+  },
+  {
+    title: "Inkoop website",
+    description: "Designer and developed the new Inkoop Website",
+    type: "",
+    link: "",
+  },
+  {
+    title: "Inkoop Social Media",
+    description: "Designed the templates of Inkoop's social media posts.",
+    type: "",
+    link: "",
+  },
+]
+
 export const allBlogs = [
   {
     author: "Jitendra Nirnejak",
