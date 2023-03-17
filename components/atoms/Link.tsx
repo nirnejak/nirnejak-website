@@ -12,7 +12,7 @@ type Props = {
   className?: string
   activeClassName?: string
   onClick?: (e) => void
-  target?: "_blank" | "_self" | "_parent" | "_top" | string
+  target?: "_blank" | "_self" | "_parent" | "_top" // add 'string' as option here if using for frameset
 }
 
 const AppLink: React.FC<Props> = ({
