@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { LinkOut } from "akar-icons"
+import { ArrowRight } from "akar-icons"
 
 import Container from "components/atoms/Container"
 import Layout from "components/atoms/Layout"
@@ -17,18 +17,14 @@ const WorkPage = () => {
 
             <div className="mt-20">
               {allProjects.map((project, index) => (
-                <div key={index} className="mb-2 flex justify-between">
+                <AppLink
+                  key={index}
+                  href={project.link}
+                  className="-mx-3 mb-1 flex items-center justify-between gap-1 rounded-md px-3 py-2 text-zinc-500 hover:bg-zinc-800"
+                >
                   <p className="text-zinc-500">{project.title}</p>
-                  <AppLink
-                    href={project.link}
-                    className="flex items-center gap-1 text-sm text-zinc-500"
-                  >
-                    <span>Visit</span>
-                    <span>
-                      <LinkOut size={12} />
-                    </span>
-                  </AppLink>
-                </div>
+                  <ArrowRight size={12} />
+                </AppLink>
               ))}
             </div>
           </div>

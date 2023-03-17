@@ -13,7 +13,7 @@ const BlogsPage = () => {
           <div>
             <h1 className="text-5xl font-bold text-zinc-300">Blogs</h1>
 
-            <div className="-mx-3 mt-10 flex flex-col gap-1 pb-16">
+            <div className="-mx-3 mt-20 flex flex-col gap-1 pb-16">
               {allBlogs.map((blog, index) => (
                 <AppLink
                   key={index}
