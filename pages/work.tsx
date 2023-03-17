@@ -20,10 +20,13 @@ const WorkPage = () => {
                 <AppLink
                   key={index}
                   href={project.link}
-                  className="-mx-3 mb-1 flex items-center justify-between gap-1 rounded-md px-3 py-2 text-zinc-500 hover:bg-zinc-800"
+                  className="group -mx-3 mb-1 flex items-center justify-between gap-1 rounded-md px-3 py-2 text-zinc-500 hover:bg-zinc-800"
                 >
                   <p className="text-zinc-500">{project.title}</p>
-                  <ArrowRight size={12} />
+                  <ArrowRight
+                    size={12}
+                    className="hidden animate-slideLeftAndFade hover:block group-hover:block group-focus-visible:block"
+                  />
                 </AppLink>
               ))}
             </div>
