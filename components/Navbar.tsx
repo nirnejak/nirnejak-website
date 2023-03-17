@@ -14,57 +14,32 @@ const Navbar: React.FC<Props> = () => {
   return (
     <nav className="fixed top-0 w-full px-10">
       <Container className="flex py-6">
-        <div className="flex gap-1">
-          <AppLink
-            className={navLinkClass}
-            activeClassName="bg-zinc-800"
-            href="/"
-          >
+        <div className="-mx-3.5 flex gap-1">
+          <AppLink className={navLinkClass} href="/">
             Home
           </AppLink>
-          <AppLink
-            className={navLinkClass}
-            activeClassName="bg-zinc-800"
-            href="/work/"
-          >
+          <AppLink className={navLinkClass} href="/work/">
             Work
           </AppLink>
-          <AppLink
-            className={navLinkClass}
-            activeClassName="bg-zinc-800"
-            href="/blogs/"
-          >
+          <AppLink className={navLinkClass} href="/blogs/">
             Blogs
           </AppLink>
-          <AppLink
-            className={navLinkClass}
-            activeClassName="bg-zinc-800"
-            href="/photos/"
-          >
+          <AppLink className={navLinkClass} href="/photos/">
             Photos
           </AppLink>
-          <AppLink
-            className={navLinkClass}
-            activeClassName="bg-zinc-800"
-            href="/uses/"
-          >
+          <AppLink className={navLinkClass} href="/uses/">
             Uses
           </AppLink>
         </div>
         <div className="ml-auto flex gap-1">
           <AppLink
             className={navLinkClass}
-            activeClassName="bg-zinc-800"
             href="https://read.cv/nirnejak"
             target="_blank"
           >
             Resumé
           </AppLink>
-          <AppLink
-            className={navLinkClass}
-            activeClassName="bg-zinc-800"
-            href="/contact/"
-          >
+          <AppLink className={navLinkClass} href="/contact/">
             Contact
           </AppLink>
         </div>
