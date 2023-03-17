@@ -15,7 +15,7 @@ const renderSocialLink = (
   icon: React.ReactNode
 ): JSX.Element => {
   return (
-    <Tooltip.Root>
+    <Tooltip.Root key={text}>
       <Tooltip.Trigger asChild>
         <button
           onClick={() => window.open(link, "_blank")}
