@@ -37,25 +37,6 @@
     "react-hooks/exhaustive-deps": "warn",
     "react-hooks/rules-of-hooks": "error",
 
-    // Uncomment this if using font-awesome
-    // "tailwindcss/no-custom-classname": [
-    //   "error",
-    //   {
-    //     "whitelist": [
-    //       "fad",
-    //       "fab",
-    //       "fas",
-    //       "far",
-    //       "fal",
-    //       "fa-\\w+",
-    //       "fa-\\w+-\\w+",
-    //       "fa-\\w+-\\w+-\\w+",
-    //       "fa-\\w+-\\w+-\\w+-\\w+",
-    //       "fa-\\w+-\\w+-\\w+-\\w+-\\w+",
-    //     ]
-    //   }
-    // ],
-
     "import/order": [
       "error",
       {
