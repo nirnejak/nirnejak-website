@@ -2,6 +2,7 @@ import * as React from "react"
 
 import Link from "next/link"
 import { useRouter } from "next/router"
+import useSound from "use-sound"
 
 import classNames from "utils/classNames"
 
@@ -10,6 +11,7 @@ type Props = {
   children: React.ReactNode
   className?: string
   activeClassName?: string
+  onClick?: (e) => void
   target?: "_blank" | "_self" | "_parent" | "_top" | string
 }
 
@@ -18,9 +20,12 @@ const AppLink: React.FC<Props> = ({
   children,
   className,
   activeClassName,
-  ...props
+  onClick,
+  ...restProps
 }) => {
   const router = useRouter()
+
+  const [play] = useSound("../sounds/whoop.wav")
 
   const isActive = React.useMemo(
     () => router.asPath === href,
@@ -33,10 +38,14 @@ const AppLink: React.FC<Props> = ({
         href={href}
         className={classNames(
           className,
-          "text-sm font-medium text-white hover:text-zinc-100",
+          "text-white hover:text-zinc-100",
           isActive && activeClassName
         )}
-        {...props}
+        onClick={(e) => {
+          play()
+          if (onClick) onClick(e)
+        }}
+        {...restProps}
       >
         {children}
       </a>
@@ -47,10 +56,14 @@ const AppLink: React.FC<Props> = ({
         href={href}
         className={classNames(
           className,
-          "text-sm font-medium text-white hover:text-zinc-100",
+          "text-white hover:text-zinc-100",
           isActive && activeClassName
         )}
-        {...props}
+        onClick={(e) => {
+          play()
+          if (onClick) onClick(e)
+        }}
+        {...restProps}
       >
         {children}
       </Link>
