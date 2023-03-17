@@ -71,7 +71,7 @@ const SocialLinks: React.FC = () => {
             <span className="flex items-center gap-1.5">
               <TwitterFill
                 size={21}
-                className="group-hover:animate-slideRight group-focus:animate-slideRight"
+                className="animate-slideLeft group-hover:animate-slideRight group-focus:animate-slideRight"
               />
               <ArrowRight
                 className="hidden animate-slideLeftAndFade hover:block group-hover:block group-focus-visible:block"
