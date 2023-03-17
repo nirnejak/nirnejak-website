@@ -30,7 +30,7 @@ const Container: React.FC<Props> = ({
 
   return (
     <div
-      className={classNames("mx-auto", widthClass, className)}
+      className={classNames("mx-auto px-4 md:px-0", widthClass, className)}
       {...restProps}
     >
       {children}
