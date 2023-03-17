@@ -7,7 +7,8 @@ type Props = {
   theme?: string
 }
 
-const navLinkClass = "rounded-md px-3.5 py-1.5 hover:bg-zinc-800"
+const navLinkClass =
+  "font-medium text-xs rounded-md px-3.5 py-1.5 hover:bg-zinc-800"
 
 const Navbar: React.FC<Props> = () => {
   return (

@@ -25,7 +25,7 @@ const HomePage = () => {
               <AppLink
                 href="https://www.draxlr.com/"
                 target="_blank"
-                className="font-bold text-zinc-400"
+                className="text-sm font-medium text-zinc-400"
               >
                 @Inkoop(Draxlr)
               </AppLink>
