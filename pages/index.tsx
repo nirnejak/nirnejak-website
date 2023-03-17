@@ -16,16 +16,14 @@ const HomePage = () => {
             </h1>
             <p className="mt-5 font-light leading-7 text-gray-500">
               I{"'"}m a{" "}
-              <span className="text-gradient-blue font-bold">Developer</span>,
-              <span className="text-gradient-red font-bold"> Designer </span>&
-              sometimes a{" "}
-              <span className="text-gradient-yellow font-bold">Blogger</span>. I
+              <span className="text-gradient-blue font-bold">Developer</span> &
+              <span className="text-gradient-red font-bold"> Designer </span>. I
               am passionate about elegant user interfaces, web animations, and
               data visualization. Currently{" "}
               <AppLink
                 href="https://www.draxlr.com/"
                 target="_blank"
-                className="text-sm font-medium text-zinc-400"
+                className="text-gradient-yellow text-sm font-bold"
               >
                 @Inkoop(Draxlr)
               </AppLink>
