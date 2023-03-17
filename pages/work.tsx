@@ -15,12 +15,13 @@ const WorkPage = () => {
           <div className="w-full">
             <h1 className="text-5xl font-bold text-zinc-300">Work</h1>
 
-            <div className="mt-20">
+            <div className="-mx-3 mt-16 flex flex-col gap-1 pb-16">
               {allProjects.map((project, index) => (
                 <AppLink
                   key={index}
                   href={project.link}
-                  className="group -mx-3 mb-1 flex items-center justify-between gap-1 rounded-md px-3 py-2 text-zinc-500 hover:bg-zinc-800"
+                  target="_blank"
+                  className="group flex items-center justify-between rounded-md px-3 py-2 text-zinc-500 hover:bg-zinc-800"
                 >
                   <p className="text-zinc-500">{project.title}</p>
                   <ArrowRight
