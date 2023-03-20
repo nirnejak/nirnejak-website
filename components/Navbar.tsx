@@ -1,16 +1,19 @@
 import * as React from "react"
 
-import { ThreeLineHorizontal } from "akar-icons"
+import { LinkOut, ThreeLineHorizontal } from "akar-icons"
 
 import Container from "./atoms/Container"
 import AppLink from "./atoms/Link"
+import Tabs from "./atoms/Tabs"
+import classNames from "utils/classNames"
+import { navLinks } from "utils/navigation"
 
 interface Props {
   theme?: string
 }
 
 const navLinkClass =
-  "font-medium text-xs rounded-md px-3.5 py-1.5 hover:bg-zinc-800"
+  "font-medium text-xs rounded-md px-4 py-2 hover:bg-zinc-800"
 
 const Navbar: React.FC<Props> = () => {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -25,34 +28,26 @@ const Navbar: React.FC<Props> = () => {
 
   return (
     <nav className="fixed top-0 w-full">
-      <Container className="hidden py-6 md:flex">
-        <div className="-mx-3.5 flex gap-1">
-          <AppLink className={navLinkClass} href="/">
-            Home
-          </AppLink>
-          <AppLink className={navLinkClass} href="/work/">
-            Work
-          </AppLink>
-          <AppLink className={navLinkClass} href="/blogs/">
-            Blogs
-          </AppLink>
-          <AppLink className={navLinkClass} href="/photos/">
-            Photos
-          </AppLink>
-          <AppLink className={navLinkClass} href="/uses/">
-            Uses
-          </AppLink>
+      <Container className="hidden items-center py-3 md:flex">
+        <div className="-mx-3.5">
+          <Tabs />
         </div>
-        <div className="ml-auto flex gap-1">
+        <div className="ml-auto">
           <AppLink
-            className={navLinkClass}
+            className={classNames(
+              navLinkClass,
+              "group flex items-center gap-1.5"
+            )}
             href="https://read.cv/nirnejak"
             target="_blank"
           >
-            Resumé
-          </AppLink>
-          <AppLink className={navLinkClass} href="/contact/">
-            Contact
+            <span className="animate-slideLeft group-hover:animate-slideRight group-focus:animate-slideRight">
+              Resumé
+            </span>
+            <LinkOut
+              className="hidden animate-slideLeftAndFade hover:block group-hover:block group-focus-visible:block"
+              size={14}
+            />
           </AppLink>
         </div>
       </Container>
@@ -69,21 +64,15 @@ const Navbar: React.FC<Props> = () => {
               setIsOpen(false)
             }}
           >
-            <AppLink className={navLinkClass} href="/">
-              Home
-            </AppLink>
-            <AppLink className={navLinkClass} href="/work/">
-              Work
-            </AppLink>
-            <AppLink className={navLinkClass} href="/blogs/">
-              Blogs
-            </AppLink>
-            <AppLink className={navLinkClass} href="/photos/">
-              Photos
-            </AppLink>
-            <AppLink className={navLinkClass} href="/uses/">
-              Uses
-            </AppLink>
+            {navLinks.map((navLink) => (
+              <AppLink
+                key={navLink.value}
+                className={navLinkClass}
+                href={navLink.link}
+              >
+                {navLink.content}
+              </AppLink>
+            ))}
             <br />
             <AppLink
               className={navLinkClass}
@@ -91,9 +80,6 @@ const Navbar: React.FC<Props> = () => {
               target="_blank"
             >
               Resumé
-            </AppLink>
-            <AppLink className={navLinkClass} href="/contact/">
-              Contact
             </AppLink>
           </div>
         ) : (
