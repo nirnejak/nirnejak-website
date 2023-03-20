@@ -11,11 +11,11 @@ const WorkPage: React.FC = () => {
   return (
     <Layout>
       <Container>
-        <section className="flex h-screen items-start pt-56">
+        <section className="flex h-screen items-start pt-32 md:pt-56">
           <div className="w-full">
             <h1 className="text-5xl font-bold text-zinc-300">Work</h1>
 
-            <div className="-mx-3 mt-16 flex flex-col gap-1 pb-16">
+            <div className="-mx-3 mt-10 flex flex-col gap-1 pb-16 md:mt-16">
               {allProjects.map((project, index) => (
                 <AppLink
                   key={index}

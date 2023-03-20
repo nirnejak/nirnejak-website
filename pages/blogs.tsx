@@ -9,11 +9,11 @@ const BlogsPage: React.FC = () => {
   return (
     <Layout>
       <Container>
-        <section className="flex min-h-screen items-start pt-56">
+        <section className="flex min-h-screen items-start pt-32 md:pt-56">
           <div>
             <h1 className="text-5xl font-bold text-zinc-300">Blogs</h1>
 
-            <div className="-mx-3 mt-16 flex flex-col gap-1 pb-16">
+            <div className="-mx-3 mt-10 flex flex-col gap-1 pb-16 md:mt-16">
               {allBlogs.map((blog, index) => (
                 <AppLink
                   key={index}

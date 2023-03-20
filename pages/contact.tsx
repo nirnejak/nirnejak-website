@@ -46,11 +46,14 @@ const ContactPage: React.FC = () => {
   return (
     <Layout>
       <Container>
-        <section className="flex min-h-screen items-start pt-56">
+        <section className="flex min-h-screen items-start pt-32 md:pt-56">
           <div className="w-full">
             <h1 className="text-5xl font-bold text-zinc-300">Contact</h1>
 
-            <form className="mt-16 flex flex-col gap-3" onSubmit={handleSubmit}>
+            <form
+              className="mt-10 flex flex-col gap-3 md:mt-16"
+              onSubmit={handleSubmit}
+            >
               <input
                 type="text"
                 className="rounded-md bg-zinc-800 py-3 px-4 text-xs text-zinc-400 placeholder:text-zinc-600"

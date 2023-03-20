@@ -7,11 +7,11 @@ const UsesPage: React.FC = () => {
   return (
     <Layout>
       <Container>
-        <section className="flex min-h-screen items-start pt-56">
+        <section className="flex min-h-screen items-start pt-32 md:pt-56">
           <div className="w-full">
             <h1 className="text-5xl font-bold text-zinc-300">Uses</h1>
 
-            <div className="mt-16 flex flex-col gap-8 pb-16">
+            <div className="mt-10 flex flex-col gap-8 pb-16 md:mt-16">
               <div>
                 <h4 className="text-lg font-bold text-zinc-300">
                   Design Tools

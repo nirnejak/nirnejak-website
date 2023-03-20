@@ -9,12 +9,12 @@ const HomePage: React.FC = () => {
   return (
     <Layout>
       <Container>
-        <section className="flex h-screen items-start pt-56">
+        <section className="flex h-screen items-start pt-32 md:pt-56">
           <div>
-            <h1 className="text-5xl font-bold text-zinc-300">
+            <h1 className="text-4xl font-bold text-zinc-300 md:text-5xl">
               Jitendra Nirnejak
             </h1>
-            <p className="mt-5 font-light leading-7 text-gray-500">
+            <p className="mt-5 text-sm font-light leading-7 text-gray-500 md:text-base">
               I{"'"}m a{" "}
               <span className="text-gradient-blue font-bold">Developer</span> &
               <span className="text-gradient-red font-bold"> Designer </span>. I
