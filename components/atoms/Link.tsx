@@ -11,7 +11,7 @@ interface Props {
   children: React.ReactNode
   className?: string
   activeClassName?: string
-  onClick?: (e) => void
+  onClick?: (e: any) => void
   target?: "_blank" | "_self" | "_parent" | "_top" // add 'string' as option here if using for frameset
 }
 
