@@ -15,6 +15,14 @@ const navLinkClass =
 const Navbar: React.FC<Props> = () => {
   const [isOpen, setIsOpen] = React.useState(false)
 
+  React.useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflowY = "hidden"
+    } else {
+      document.body.style.overflowY = "visible"
+    }
+  }, [isOpen])
+
   return (
     <nav className="fixed top-0 w-full">
       <Container className="hidden py-6 md:flex">

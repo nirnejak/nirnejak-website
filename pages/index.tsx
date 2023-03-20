@@ -15,7 +15,7 @@ const HomePage: React.FC = () => {
               Jitendra Nirnejak
             </h1>
             <p className="mt-5 text-sm font-light leading-7 text-gray-500 md:text-base">
-              I{"'"}m a{" "}
+              I&apos;m a{" "}
               <span className="text-gradient-blue font-bold">Developer</span> &
               <span className="text-gradient-red font-bold"> Designer </span>. I
               am passionate about elegant user interfaces, web animations, and
