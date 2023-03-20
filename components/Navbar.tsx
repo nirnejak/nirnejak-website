@@ -89,13 +89,13 @@ const Navbar: React.FC<Props> = () => {
             </AppLink>
           </div>
         ) : (
-          <div className="flex p-4 text-white">
+          <div className="flex p-4">
             <button
               onClick={() => {
                 setIsOpen(true)
               }}
             >
-              <ThreeLineHorizontal />
+              <ThreeLineHorizontal className="text-white" />
             </button>
           </div>
         )}
