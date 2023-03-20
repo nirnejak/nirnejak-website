@@ -14,14 +14,6 @@ const UsesPage: React.FC = () => {
             <div className="mt-16 flex flex-col gap-8 pb-16">
               <div>
                 <h4 className="text-lg font-bold text-zinc-300">
-                  Languages and Frameworks
-                </h4>
-                <p className="mt-1.5 text-sm text-zinc-500">
-                  TypeScript, React and Node.js
-                </p>
-              </div>
-              <div>
-                <h4 className="text-lg font-bold text-zinc-300">
                   Design Tools
                 </h4>
                 <p className="mt-1.5 text-sm text-zinc-500">
@@ -33,7 +25,15 @@ const UsesPage: React.FC = () => {
                   Terminal and Editor
                 </h4>
                 <p className="mt-1.5 text-sm text-zinc-500">
-                  ZSH + Oh-my-zsh, iTerm, VS Code(Settings Gist)
+                  ZSH + Oh-my-zsh, iTerm, VS Code
+                </p>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-zinc-300">
+                  Languages and Frameworks
+                </h4>
+                <p className="mt-1.5 text-sm text-zinc-500">
+                  TypeScript, React and Node.js
                 </p>
               </div>
               <div>
