@@ -11,7 +11,7 @@ const WorkPage: React.FC = () => {
   return (
     <Layout>
       <Container>
-        <section className="flex h-screen items-start pt-32 md:pt-56">
+        <section className="flex h-screen items-start pt-32 md:pt-40">
           <div className="w-full">
             <h1 className="text-5xl font-bold text-zinc-300">Work</h1>
 

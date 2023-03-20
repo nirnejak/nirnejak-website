@@ -9,7 +9,7 @@ const BlogsPage: React.FC = () => {
   return (
     <Layout>
       <Container>
-        <section className="flex min-h-screen items-start pt-32 md:pt-56">
+        <section className="flex min-h-screen items-start pt-32 md:pt-40">
           <div>
             <h1 className="text-5xl font-bold text-zinc-300">Blogs</h1>
 
