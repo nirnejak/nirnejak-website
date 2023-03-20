@@ -23,7 +23,7 @@ const WorkPage: React.FC = () => {
                   target="_blank"
                   className="group flex items-center justify-between rounded-md px-3 py-2 text-zinc-500 hover:bg-zinc-800"
                 >
-                  <p className="text-zinc-500">{project.title}</p>
+                  <p>{project.title}</p>
                   <ArrowRight
                     size={12}
                     className="hidden animate-slideLeftAndFade hover:block group-hover:block group-focus-visible:block"
