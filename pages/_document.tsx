@@ -9,7 +9,7 @@ const MyDocument: React.FC = () => {
         <meta charSet="utf-8" />
         {/* Manifest */}
         <link rel="manifest" href="/manifest.json" />
-        <link rel="apple-touch-icon" href="/icon-512x512.png"></link>
+        <link rel="apple-touch-icon" href="/icons/icon-512x512.png"></link>
         <meta name="theme-color" content="#00d09f" />
         {/* Basic Meta */}
         <meta
