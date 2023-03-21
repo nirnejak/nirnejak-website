@@ -6,7 +6,8 @@
 
 @font-face {
   font-family: "Space Grotesk";
-  src: url("./SpaceGrotesk-Variable.ttf") format("truetype supports variations");
+  src: url("/fonts/SpaceGrotesk-Variable.ttf")
+    format("truetype supports variations");
   font-display: swap;
   font-style: normal;
   font-weight: 300;
