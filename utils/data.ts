@@ -44,16 +44,6 @@ export const allProjects = [
 ]
 
 export const allBlogs = {
-  // 2023: [
-  //   {
-  //     author: "Jitendra Nirnejak",
-  //     date: "21 March 2023",
-  //     description:
-  //       "Comparing express.js and fastify, two popular Node.js frameworks for building back-end APIs in 2023.",
-  //     title: "Express.js vs Fastify: In-Depth Comparison of Node.js Frameworks",
-  //     url: "https://www.draxlr.com/blogs/postgres-hstore-vs-json-comparing-different-unstructured-data-types-in-postgresql/",
-  //   },
-  // ],
   2022: [
     {
       author: "Jitendra Nirnejak",

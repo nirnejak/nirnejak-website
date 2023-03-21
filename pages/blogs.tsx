@@ -14,24 +14,6 @@ const BlogsPage: React.FC = () => {
             <h1 className="text-5xl font-bold text-zinc-300">Blogs</h1>
 
             <div className="mt-10 flex flex-col gap-10 pb-16 md:mt-16">
-              {/* <div className="flex gap-24">
-                <div className="mt-3 text-sm text-zinc-300">2023</div>
-                <div className="mx-3 flex flex-col gap-1">
-                  {allBlogs[2023].map((blog, index) => (
-                    <AppLink
-                      key={index}
-                      href={blog.url}
-                      target="_blank"
-                      className="rounded-lg p-3 hover:bg-zinc-800"
-                    >
-                      <h3 className="text-sm font-bold">{blog.title}</h3>
-                      <p className="mt-1.5 text-xs text-zinc-500">
-                        {blog.description}
-                      </p>
-                    </AppLink>
-                  ))}
-                </div>
-              </div> */}
               <div className="flex gap-24">
                 <div className="mt-3 text-sm text-zinc-300">2022</div>
                 <div className="mx-3 flex flex-col gap-1">
