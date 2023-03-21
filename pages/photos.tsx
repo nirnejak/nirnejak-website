@@ -12,7 +12,7 @@ const PhotosPage: React.FC = () => {
             <h1 className="text-5xl font-bold text-zinc-300">Photos</h1>
 
             <div className="mt-10 flex flex-col gap-1 pb-16 md:mt-16">
-              <p className="my-16 text-center text-zinc-500">Coming Soon ✨</p>
+              <p className="my-16 text-center text-zinc-500">Soon ✨</p>
             </div>
           </div>
         </section>
