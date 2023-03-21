@@ -12,8 +12,7 @@ interface Props {
   theme?: string
 }
 
-const navLinkClass =
-  "font-medium text-xs rounded-md px-4 py-2 hover:bg-zinc-800"
+const navLinkClass = "font-medium text-xs rounded-md px-4 py-2 hover-bg"
 
 const Navbar: React.FC<Props> = () => {
   const [isOpen, setIsOpen] = React.useState(false)

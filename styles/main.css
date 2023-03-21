@@ -77,7 +77,8 @@ button {
   @apply opacity-0;
 }
 
-.hover-bg:hover::after {
+.hover-bg:hover::after,
+.hover-bg:focus::after {
   @apply scale-100;
   @apply opacity-100;
 }

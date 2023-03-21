@@ -19,7 +19,7 @@ const renderSocialLink = (
       <Tooltip.Trigger asChild>
         <button
           onClick={() => window.open(link, "_blank")}
-          className="group rounded-md p-3 text-zinc-700 hover:bg-zinc-800"
+          className="hover-bg group rounded-md p-3 text-zinc-700"
         >
           {icon}
         </button>
