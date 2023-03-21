@@ -21,7 +21,7 @@ const WorkPage: React.FC = () => {
                   key={index}
                   href={project.link}
                   target="_blank"
-                  className="group flex items-center justify-between rounded-md px-3 py-2 text-zinc-500 hover:bg-zinc-800"
+                  className="hover-bg group flex items-center justify-between rounded-md px-3 py-2 text-zinc-500"
                 >
                   <p>{project.title}</p>
                   <ArrowRight

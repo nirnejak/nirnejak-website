@@ -54,13 +54,13 @@ button {
   -webkit-text-fill-color: transparent;
 }
 
-.blog-link {
+.hover-bg {
   z-index: 1;
 
   @apply relative;
 }
 
-.blog-link::after {
+.hover-bg::after {
   content: "";
   z-index: -1;
   transform-origin: center;
@@ -77,7 +77,7 @@ button {
   @apply opacity-0;
 }
 
-.blog-link:hover::after {
+.hover-bg:hover::after {
   @apply scale-100;
   @apply opacity-100;
 }
