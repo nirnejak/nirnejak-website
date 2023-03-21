@@ -3,6 +3,9 @@ import * as React from "react"
 import Container from "components/atoms/Container"
 import Layout from "components/atoms/Layout"
 
+// TODO: Photo gallery and preview
+// TODO: Unsplash and/or imgs.so link
+
 const PhotosPage: React.FC = () => {
   return (
     <Layout>

@@ -1,7 +1,5 @@
 import * as React from "react"
 
-import { motion, useAnimation } from "framer-motion"
-
 import Container from "components/atoms/Container"
 import Layout from "components/atoms/Layout"
 import AppLink from "components/atoms/Link"

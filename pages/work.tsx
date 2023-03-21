@@ -10,6 +10,7 @@ import AppLink from "components/atoms/Link"
 import { allProjects } from "utils/data"
 
 // TODO: find a way to add work description
+// TODO: filterable? grouped? visualization or graph of some sort? tags?
 
 const WorkPage: React.FC = () => {
   const controls = useAnimation()
