@@ -21,8 +21,8 @@ const BlogsPage: React.FC = () => {
                   target="_blank"
                   className="rounded-lg p-3 hover:bg-zinc-800"
                 >
-                  <h3 className="font-bold">{blog.title}</h3>
-                  <p className="mt-1.5 text-sm font-light text-zinc-500">
+                  <h3 className="text-sm font-bold">{blog.title}</h3>
+                  <p className="mt-1.5 text-xs font-light text-zinc-500">
                     {blog.description}
                   </p>
                 </AppLink>
