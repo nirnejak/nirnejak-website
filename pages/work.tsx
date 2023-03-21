@@ -7,6 +7,8 @@ import Layout from "components/atoms/Layout"
 import AppLink from "components/atoms/Link"
 import { allProjects } from "utils/data"
 
+// TODO: find a way to add work description
+
 const WorkPage: React.FC = () => {
   return (
     <Layout>

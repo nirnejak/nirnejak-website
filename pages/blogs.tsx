@@ -5,6 +5,8 @@ import Layout from "components/atoms/Layout"
 import AppLink from "components/atoms/Link"
 import { allBlogs } from "utils/data"
 
+// TODO: maybe add blog images
+
 const BlogsPage: React.FC = () => {
   return (
     <Layout>

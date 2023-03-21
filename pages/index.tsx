@@ -5,6 +5,12 @@ import Layout from "components/atoms/Layout"
 import AppLink from "components/atoms/Link"
 import SocialLinks from "components/SocialLinks"
 
+// TODO: maybe add skills/expertise section
+// TODO: maybe add recent blogs
+// TODO: maybe add recently done projects
+
+// TODO: add footer - unsplash link, uses link, product hunt link, linkedin link, unsplash link
+
 const HomePage: React.FC = () => {
   return (
     <Layout>
