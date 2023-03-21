@@ -9,7 +9,8 @@ interface ResponseDataType {
 }
 
 const ContactPage: React.FC = () => {
-  const [isSubmitting, setIsSubmitting] = React.useState(false)
+  const [isSending, setIsSending] = React.useState(false)
+  const [isSent, setIsSent] = React.useState(false)
 
   const [state, setState] = React.useState<{
     name: string
@@ -25,7 +26,7 @@ const ContactPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
-    setIsSubmitting(true)
+    setIsSending(true)
     fetch("https://formspree.io/f/xgerdbkz", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -33,13 +34,16 @@ const ContactPage: React.FC = () => {
     })
       .then(async (response) => await response.json())
       .then((data: ResponseDataType) => {
-        setIsSubmitting(false)
+        setIsSending(false)
         if (data.ok) {
-          // Show thanks message
+          setIsSent(true)
+          setTimeout(() => {
+            setIsSent(false)
+          }, 3000)
         }
       })
       .catch(() => {
-        // Show error message
+        setIsSending(false)
       })
   }
 
@@ -79,10 +83,10 @@ const ContactPage: React.FC = () => {
                 onChange={handleChange}
               />
               <button
-                disabled={isSubmitting}
+                disabled={isSending}
                 className="rounded-md bg-white py-3 px-4 text-center text-sm font-bold uppercase tracking-wide"
               >
-                {isSubmitting ? "SENDING..." : "SEND"}
+                {isSending ? "SENDING..." : isSent ? "SENT!" : "SEND"}
               </button>
             </form>
             <div className="mt-10 text-center">
