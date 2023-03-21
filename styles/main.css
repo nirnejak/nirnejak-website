@@ -53,3 +53,29 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.blog-link {
+  z-index: 1;
+
+  @apply relative;
+}
+
+.blog-link::after {
+  content: "";
+  z-index: -1;
+  transform-origin: bottom center;
+  transition: transform 0.25s;
+
+  @apply rounded-lg;
+  @apply absolute;
+  @apply bottom-0;
+  @apply left-0;
+  @apply w-full;
+  @apply h-full;
+  @apply bg-zinc-800;
+  @apply scale-y-0;
+}
+
+.blog-link:hover::after {
+  @apply scale-y-100;
+}
