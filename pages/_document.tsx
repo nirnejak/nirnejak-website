@@ -1,5 +1,7 @@
 import * as React from "react"
 
+import PlausibleProvider from "next-plausible"
+
 import { Html, Head, Main, NextScript } from "next/document"
 
 const MyDocument: React.FC = () => {
@@ -27,15 +29,11 @@ const MyDocument: React.FC = () => {
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:creator" content="@jeetnirnejak" />
         <meta name="twitter:site" content="@jeetnirnejak" />
-
-        <script
-          defer
-          data-domain="nirnejak.com"
-          src="https://plausible.io/js/script.js"
-        />
       </Head>
       <body className="overflow-x-hidden bg-zinc-900">
-        <Main />
+        <PlausibleProvider domain="nirnejak.com">
+          <Main />
+        </PlausibleProvider>
         <NextScript />
       </body>
     </Html>
