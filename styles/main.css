@@ -83,3 +83,13 @@ button {
   @apply scale-100;
   @apply opacity-100;
 }
+
+@media screen and (min-width: 768px) {
+  .card-tall {
+    grid-row: span 2 / auto; /* start / end */
+  }
+
+  .card-wide {
+    grid-column: span 2 / auto; /* start / end */
+  }
+}
