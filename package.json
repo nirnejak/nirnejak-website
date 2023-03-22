@@ -16,7 +16,7 @@
     "@radix-ui/react-tooltip": "^1.0.5",
     "akar-icons": "^1.9.25",
     "dotenv": "^16.0.3",
-    "framer-motion": "^10.6.1",
+    "framer-motion": "^10.8.4",
     "next": "^13.2.4",
     "next-plausible": "^3.7.2",
     "next-pwa": "^5.6.0",
