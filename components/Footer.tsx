@@ -1,16 +1,29 @@
 import * as React from "react"
 
 import { LinkOut } from "akar-icons"
+import { useRouter } from "next/router"
 
 import Container from "./atoms/Container"
 import AppLink from "./atoms/Link"
+import classNames from "utils/classNames"
 
 const Footer: React.FC = () => {
+  const router = useRouter()
+
+  const isFixed = React.useMemo(() => {
+    return !router.pathname.includes("blogs")
+  }, [router.pathname])
+
   return (
-    <footer className="border-t-[0.05px] border-zinc-700">
+    <footer
+      className={classNames(
+        isFixed ? "fixed bottom-0 w-full " : "",
+        "border-t-[0.1px] border-zinc-700 bg-zinc-900"
+      )}
+    >
       <Container>
         <div className="flex w-full justify-between py-3 text-xs text-zinc-500">
-          <div>© 2023, By Jitendra Nirnejak</div>
+          <div>Designed with ❤️ and a lot of ☕️</div>
           <div className="flex gap-4">
             <AppLink
               href="https://unsplash.com/@nirnejak/"

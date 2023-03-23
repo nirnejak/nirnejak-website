@@ -3,6 +3,7 @@ import * as React from "react"
 import Head from "next/head"
 
 import Background from "./Background"
+import Footer from "components/Footer"
 import Navbar from "components/Navbar"
 import classNames from "utils/classNames"
 
@@ -30,6 +31,7 @@ const Layout: React.FC<Props> = ({
 
       <Navbar />
       {children}
+      <Footer />
 
       <Background />
     </main>
