@@ -5,7 +5,6 @@ import { useRouter } from "next/router"
 
 import Container from "./atoms/Container"
 import AppLink from "./atoms/Link"
-import classNames from "utils/classNames"
 
 const Footer: React.FC = () => {
   const router = useRouter()
@@ -15,12 +14,7 @@ const Footer: React.FC = () => {
   }, [router.pathname])
 
   return (
-    <footer
-      className={classNames(
-        isFixed ? "fixed bottom-0 w-full " : "",
-        "border-t-[0.1px] border-zinc-700 bg-zinc-900"
-      )}
-    >
+    <footer className={isFixed ? "fixed bottom-0 w-full" : ""}>
       <Container>
         <div className="flex w-full justify-between py-3 text-xs text-zinc-500">
           <div>Designed with ❤️ and a lot of ☕️</div>
