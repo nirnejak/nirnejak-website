@@ -13,7 +13,7 @@ const SEO: React.FC<Props> = ({ path, title, description, image }) => {
   const baseUrl = "https://nirnejak.com"
   const metaTitle = title
   const metaDescription = description
-  const metaImage = image ?? "https://nirnejak.com/images/covers/main.png"
+  const metaImage = image ?? `${baseUrl}/cover.png`
 
   return (
     <Head>
