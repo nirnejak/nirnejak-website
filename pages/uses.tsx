@@ -43,7 +43,7 @@ const UsesPage: React.FC = () => {
         >
           <h1 className="text-5xl font-bold text-zinc-300">Uses</h1>
 
-          <div className="mt-10 flex gap-12 pb-16 md:mt-16">
+          <div className="mt-10 flex flex-col-reverse gap-12 pb-16 md:mt-16 md:flex-row">
             <div className="flex-1">
               <Image
                 width={1000}
