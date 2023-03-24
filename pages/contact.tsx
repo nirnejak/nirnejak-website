@@ -5,6 +5,7 @@ import { motion, useAnimation } from "framer-motion"
 
 import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
+import SEO from "components/seo"
 
 interface ResponseDataType {
   ok: boolean
@@ -67,6 +68,11 @@ const ContactPage: React.FC = () => {
 
   return (
     <Container>
+      <SEO
+        title="Contact | Jitendra Nirnejak"
+        description="Contact Jitendra Nirnejak, Fill the form or reach out via email"
+        path="/contact/"
+      />
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <motion.div
           animate={controls}

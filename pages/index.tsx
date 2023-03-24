@@ -5,6 +5,7 @@ import { motion, useAnimation } from "framer-motion"
 
 import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
+import SEO from "components/seo"
 import SocialLinks from "components/SocialLinks"
 
 // TODO: maybe add skills/expertise section - Figma, TypeScript, React, Vue, Node, Postgres
@@ -30,6 +31,11 @@ const HomePage: React.FC = () => {
 
   return (
     <Container>
+      <SEO
+        title="Jitendra Nirnejak"
+        description="Portfolio Website of Jitendra Nirnejak, Developer and Designer"
+        path="/"
+      />
       <section className="flex h-screen items-start pt-32 md:pt-56">
         <motion.div
           animate={controls}

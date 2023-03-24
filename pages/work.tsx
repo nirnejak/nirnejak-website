@@ -6,6 +6,7 @@ import { motion, useAnimation } from "framer-motion"
 
 import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
+import SEO from "components/seo"
 import { allProjects } from "utils/data"
 
 // TODO: find a way to add work description
@@ -30,6 +31,11 @@ const WorkPage: React.FC = () => {
 
   return (
     <Container>
+      <SEO
+        title="Work | Jitendra Nirnejak"
+        description="Projects built by Jitendra Nirnejak"
+        path="/work/"
+      />
       <section className="flex h-screen items-start pt-32 md:pt-40">
         <motion.div
           animate={controls}

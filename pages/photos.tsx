@@ -4,9 +4,9 @@ import { useInView } from "react-intersection-observer"
 import { motion, useAnimation } from "framer-motion"
 
 import Container from "components/atoms/Container"
+import SEO from "components/seo"
 
 // TODO: Photo gallery and preview
-// TODO: Unsplash and/or imgs.so link
 
 const PhotosPage: React.FC = () => {
   const controls = useAnimation()
@@ -27,6 +27,11 @@ const PhotosPage: React.FC = () => {
 
   return (
     <Container>
+      <SEO
+        title="Photos | Jitendra Nirnejak"
+        description="A gallery of Photos captured by Jitendra Nirnejak"
+        path="/photos/"
+      />
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <motion.div
           animate={controls}

@@ -5,6 +5,7 @@ import { motion, useAnimation } from "framer-motion"
 
 import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
+import SEO from "components/seo"
 import { allBlogs } from "utils/data"
 
 // TODO: maybe add blog images
@@ -28,6 +29,11 @@ const BlogsPage: React.FC = () => {
 
   return (
     <Container>
+      <SEO
+        title="Blogs | Jitendra Nirnejak"
+        description="Blogs and articles written by Jitendra Nirnejak"
+        path="/blogs/"
+      />
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <motion.div
           animate={controls}
