@@ -2,9 +2,6 @@ import * as React from "react"
 
 import Head from "next/head"
 
-import Background from "./Background"
-import Footer from "components/Footer"
-import Navbar from "components/Navbar"
 import classNames from "utils/classNames"
 
 interface Props {
@@ -22,18 +19,14 @@ const Layout: React.FC<Props> = ({
   ...restProps
 }) => {
   return (
-    <main {...restProps} className={classNames("bg-zinc-900", className)}>
+    <main {...restProps}>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
       {children}
-      <Footer />
-
-      <Background />
     </main>
   )
 }

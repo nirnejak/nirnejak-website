@@ -1,4 +1,7 @@
 import * as React from "react"
+import { useInView } from "react-intersection-observer"
+
+import { motion, useAnimation } from "framer-motion"
 
 import Container from "components/atoms/Container"
 import Layout from "components/atoms/Layout"
@@ -9,6 +12,22 @@ interface ResponseDataType {
 }
 
 const ContactPage: React.FC = () => {
+  const controls = useAnimation()
+  const [ref, inView] = useInView()
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start("visible").catch((err) => {
+        console.log(err)
+      })
+    }
+  }, [controls, inView])
+
+  const variants = {
+    visible: { opacity: 1, translateY: 0 },
+    hidden: { opacity: 0, translateY: 10 },
+  }
+
   const [isSending, setIsSending] = React.useState(false)
   const [isSent, setIsSent] = React.useState(false)
 
@@ -48,60 +67,65 @@ const ContactPage: React.FC = () => {
   }
 
   return (
-    <Layout>
-      <Container>
-        <section className="flex min-h-screen items-start pt-32 md:pt-40">
-          <div className="w-full">
-            <h1 className="text-5xl font-bold text-zinc-300">Contact</h1>
+    <Container>
+      <section className="flex min-h-screen items-start pt-32 md:pt-40">
+        <motion.div
+          animate={controls}
+          initial="hidden"
+          transition={{ delay: 0, duration: 0.2 }}
+          variants={variants}
+          className="w-full"
+          ref={ref}
+        >
+          <h1 className="text-5xl font-bold text-zinc-300">Contact</h1>
 
-            <form
-              className="mt-10 flex flex-col gap-3 md:mt-16"
-              onSubmit={handleSubmit}
+          <form
+            className="mt-10 flex flex-col gap-3 md:mt-16"
+            onSubmit={handleSubmit}
+          >
+            <input
+              type="text"
+              className="rounded-md bg-zinc-800 py-3 px-4 text-xs text-zinc-400 placeholder:text-zinc-600"
+              placeholder="Name"
+              name="name"
+              value={state.name}
+              onChange={handleChange}
+            />
+            <input
+              type="email"
+              className="rounded-md bg-zinc-800 py-3 px-4 text-xs text-zinc-400 placeholder:text-zinc-600"
+              placeholder="Email"
+              name="email"
+              value={state.email}
+              onChange={handleChange}
+            />
+            <textarea
+              className="rounded-md bg-zinc-800 py-3 px-4 text-xs text-zinc-400 placeholder:text-zinc-600"
+              placeholder="Message"
+              rows={3}
+              name="message"
+              value={state.message}
+              onChange={handleChange}
+            />
+            <button
+              disabled={isSending}
+              className="rounded-md bg-white py-3 px-4 text-center text-sm font-bold uppercase tracking-wide"
             >
-              <input
-                type="text"
-                className="rounded-md bg-zinc-800 py-3 px-4 text-xs text-zinc-400 placeholder:text-zinc-600"
-                placeholder="Name"
-                name="name"
-                value={state.name}
-                onChange={handleChange}
-              />
-              <input
-                type="email"
-                className="rounded-md bg-zinc-800 py-3 px-4 text-xs text-zinc-400 placeholder:text-zinc-600"
-                placeholder="Email"
-                name="email"
-                value={state.email}
-                onChange={handleChange}
-              />
-              <textarea
-                className="rounded-md bg-zinc-800 py-3 px-4 text-xs text-zinc-400 placeholder:text-zinc-600"
-                placeholder="Message"
-                rows={3}
-                name="message"
-                value={state.message}
-                onChange={handleChange}
-              />
-              <button
-                disabled={isSending}
-                className="rounded-md bg-white py-3 px-4 text-center text-sm font-bold uppercase tracking-wide"
-              >
-                {isSending ? "SENDING..." : isSent ? "SENT!" : "SEND"}
-              </button>
-            </form>
-            <div className="mt-10 text-center">
-              <p className="text-sm font-bold text-zinc-400">or reach me at</p>
-              <AppLink
-                href="mailto:hello@nirnejak.com&subject=Website%20Enquiry"
-                className="text-sm text-zinc-600"
-              >
-                jeetnirnejak@gmail.com
-              </AppLink>
-            </div>
+              {isSending ? "SENDING..." : isSent ? "SENT!" : "SEND"}
+            </button>
+          </form>
+          <div className="mt-10 text-center">
+            <p className="text-sm font-bold text-zinc-400">or reach me at</p>
+            <AppLink
+              href="mailto:hello@nirnejak.com&subject=Website%20Enquiry"
+              className="text-sm text-zinc-600"
+            >
+              jeetnirnejak@gmail.com
+            </AppLink>
           </div>
-        </section>
-      </Container>
-    </Layout>
+        </motion.div>
+      </section>
+    </Container>
   )
 }
 
