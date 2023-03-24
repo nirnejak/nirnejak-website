@@ -65,7 +65,7 @@ const Tabs: React.FC = () => {
       onMouseLeave={resetHighlight}
     >
       <div
-        className="absolute top-1 left-0 h-8 rounded-md bg-zinc-800"
+        className="absolute left-0 h-full rounded-md bg-zinc-800"
         ref={highlightRef}
         style={{
           transition: "0.15s ease",
@@ -77,7 +77,7 @@ const Tabs: React.FC = () => {
         <Link
           href={tab.link}
           key={tab.value}
-          className="relative inline-block px-4 py-3 text-xs font-medium text-white"
+          className="relative inline-block px-4 py-2 text-xs font-medium text-white"
           onMouseOver={(
             ev: React.MouseEvent<HTMLAnchorElement, MouseEvent>
           ) => {
