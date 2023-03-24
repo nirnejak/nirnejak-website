@@ -16,9 +16,11 @@ const Footer: React.FC = () => {
   return (
     <footer className={isFixed ? "fixed bottom-0 w-full" : ""}>
       <Container>
-        <div className="flex w-full justify-between py-3 text-xs text-zinc-500">
-          <div>Designed with ❤️ and a lot of ☕️</div>
-          <div className="flex gap-4">
+        <div className="flex w-full flex-col justify-between gap-4 py-3 text-xs text-zinc-500 md:flex-row">
+          <div className="text-center md:text-left">
+            Designed with ❤️ and a lot of ☕️
+          </div>
+          <div className="flex justify-center gap-4 md:justify-end">
             <AppLink
               href="https://unsplash.com/@nirnejak/"
               className="flex items-center gap-1 text-zinc-500"
