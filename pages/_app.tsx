@@ -7,6 +7,9 @@ import Background from "components/atoms/Background"
 import Footer from "components/Footer"
 import Navbar from "components/Navbar"
 
+// TODO: Add Command Bar
+// TODO: Scale Cursor Circle on Hover
+
 const MyApp: React.FC<AppProps> = (props) => {
   const { Component, pageProps } = props
 
