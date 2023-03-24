@@ -2,7 +2,7 @@ import * as React from "react"
 
 import Link from "next/link"
 
-import { navLinks } from "utils/navigation"
+import { navLinks } from "components/Navbar"
 
 const tabsData = navLinks
 

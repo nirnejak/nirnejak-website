@@ -6,11 +6,43 @@ import Container from "./atoms/Container"
 import AppLink from "./atoms/Link"
 import Tabs from "./atoms/Tabs"
 import classNames from "utils/classNames"
-import { navLinks } from "utils/navigation"
 
 interface Props {
   theme?: string
 }
+
+export const navLinks = [
+  {
+    content: "Home",
+    value: "home",
+    link: "/",
+  },
+  {
+    content: "Work",
+    value: "work",
+    link: "/work/",
+  },
+  {
+    content: "Blogs",
+    value: "blogs",
+    link: "/blogs/",
+  },
+  {
+    content: "Photos",
+    value: "photos",
+    link: "/photos/",
+  },
+  {
+    content: "Uses",
+    value: "uses",
+    link: "/uses/",
+  },
+  {
+    content: "Contact",
+    value: "contact",
+    link: "/contact/",
+  },
+]
 
 const navLinkClass = "font-medium text-xs rounded-md px-4 py-2 hover-bg"
 
