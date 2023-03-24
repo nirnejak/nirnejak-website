@@ -53,7 +53,7 @@ const WorkPage: React.FC = () => {
                 key={index}
                 href={project.link}
                 target="_blank"
-                className="hover-bg group flex items-center justify-between rounded-md px-3 py-2 text-zinc-500"
+                className="hover-bg group flex items-center justify-between rounded-md px-3 py-2 text-sm text-zinc-500 md:text-base"
               >
                 <p>{project.title}</p>
                 <ArrowRight
