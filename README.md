@@ -12,6 +12,22 @@
 
 ---
 
+## Packages and Services Used
+
+**Additional Libraries**
+
+- Tailwind CSS - for styling
+- Framer Motion - for animations
+- Radix UI - for headless UI elements
+- use-sound - for using sound effects
+
+**Services**
+
+- Analytics - Plausible Analytics
+- Hosting - Vercel
+
+---
+
 ## Available Scripts
 
 **Install Dependencies**
