@@ -28,15 +28,25 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex justify-center gap-4 md:justify-end">
             <AppLink
+              href="https://github.com/nirnejak/nirnejak-website"
+              className="flex items-center gap-1 text-zinc-500"
+              target="_blank"
+            >
+              Source Code
+              <LinkOut size={12} />
+            </AppLink>
+            {/* <AppLink
               href="https://unsplash.com/@nirnejak/"
               className="flex items-center gap-1 text-zinc-500"
+              target="_blank"
             >
               Unsplash
               <LinkOut size={12} />
-            </AppLink>
+            </AppLink> */}
             <AppLink
               href="https://www.producthunt.com/@nirnejak"
               className="flex items-center gap-1 text-zinc-500"
+              target="_blank"
             >
               ProductHunt
               <LinkOut size={12} />
@@ -44,6 +54,7 @@ const Footer: React.FC = () => {
             <AppLink
               href="https://www.linkedin.com/in/nirnejak/"
               className="flex items-center gap-1 text-zinc-500"
+              target="_blank"
             >
               LinkedIn
               <LinkOut size={12} />
