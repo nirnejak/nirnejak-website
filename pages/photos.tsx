@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer"
 import { motion, useAnimation } from "framer-motion"
 
 import Container from "components/atoms/Container"
-import SEO from "components/seo"
+import SEO from "components/SEO"
 
 // TODO: Photo gallery and preview
 

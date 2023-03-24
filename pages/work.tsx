@@ -6,7 +6,7 @@ import { motion, useAnimation } from "framer-motion"
 
 import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
-import SEO from "components/seo"
+import SEO from "components/SEO"
 import { allProjects } from "utils/data"
 
 // TODO: find a way to add work description

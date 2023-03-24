@@ -5,7 +5,7 @@ import { motion, useAnimation } from "framer-motion"
 
 import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
-import SEO from "components/seo"
+import SEO from "components/SEO"
 import { allBlogs } from "utils/data"
 
 // TODO: maybe add blog images

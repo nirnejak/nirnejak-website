@@ -6,7 +6,7 @@ import Image from "next/image"
 
 import SetupImage from "../assets/images/setup.png"
 import Container from "components/atoms/Container"
-import SEO from "components/seo"
+import SEO from "components/SEO"
 
 const UsesPage: React.FC = () => {
   const controls = useAnimation()
