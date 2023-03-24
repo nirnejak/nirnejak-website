@@ -4,7 +4,6 @@ import { useInView } from "react-intersection-observer"
 import { motion, useAnimation } from "framer-motion"
 
 import Container from "components/atoms/Container"
-import Layout from "components/atoms/Layout"
 import AppLink from "components/atoms/Link"
 
 interface ResponseDataType {
