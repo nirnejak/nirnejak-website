@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/fonts/SpaceGrotesk-Variable.ttf",
+      "source": "/fonts/SpaceGrotesk[wght].woff2",
       "headers": [
         {
           "key": "Cache-Control",
