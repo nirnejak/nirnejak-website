@@ -56,7 +56,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ["Space Grotesk"],
+      sans: ["Space Grotesk", "system-ui", "sans-serif"],
     },
   },
   variants: {
