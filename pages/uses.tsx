@@ -46,7 +46,7 @@ const UsesPage: React.FC = () => {
           <div className="mt-10 flex flex-col-reverse gap-12 pb-16 md:mt-16 md:flex-row">
             <div className="flex-1">
               <Image
-                width={1000}
+                width={700}
                 src={SetupImage}
                 alt="Desk Setup"
                 className="rounded-lg"
