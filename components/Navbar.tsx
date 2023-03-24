@@ -26,7 +26,7 @@ const Navbar: React.FC<Props> = () => {
   }, [isOpen])
 
   return (
-    <nav className="fixed top-0 w-full">
+    <nav className="fixed top-0 z-10 w-full">
       <Container className="hidden items-center py-3 md:flex">
         <div className="-mx-3.5">
           <Tabs />
@@ -54,7 +54,7 @@ const Navbar: React.FC<Props> = () => {
         {isOpen ? (
           <div
             className="flex h-screen w-screen flex-col items-center justify-center gap-5 bg-zinc-900 px-20"
-            role={"button"}
+            role="button"
             tabIndex={0}
             onKeyUp={(e) => {
               e.key === "Enter" && setIsOpen(false)
