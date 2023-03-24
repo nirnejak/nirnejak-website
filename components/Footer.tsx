@@ -9,12 +9,18 @@ import AppLink from "./atoms/Link"
 const Footer: React.FC = () => {
   const router = useRouter()
 
-  const isFixed = React.useMemo(() => {
-    return !router.pathname.includes("blogs")
+  const footerClass = React.useMemo(() => {
+    if (router.pathname.includes("blogs")) {
+      return ""
+    } else if (router.pathname.includes("uses")) {
+      return "md:fixed bottom-0 w-full"
+    } else {
+      return "fixed bottom-0 w-full"
+    }
   }, [router.pathname])
 
   return (
-    <footer className={isFixed ? "fixed bottom-0 w-full" : ""}>
+    <footer className={footerClass}>
       <Container>
         <div className="flex w-full flex-col justify-between gap-4 py-3 text-xs text-zinc-500 md:flex-row">
           <div className="text-center md:text-left">
