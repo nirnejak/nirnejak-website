@@ -30,7 +30,7 @@ const UsesPage: React.FC = () => {
       <SEO
         title="Uses | Jitendra Nirnejak"
         description="Tool and Technologies used by Jitendra Nirnejak"
-        path="/photos/"
+        path="/uses/"
       />
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <motion.div
