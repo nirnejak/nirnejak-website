@@ -6,11 +6,9 @@
 
 @font-face {
   font-family: "Space Grotesk";
-  src: url("/fonts/SpaceGrotesk-Variable.ttf")
-    format("truetype supports variations");
+  src: url("/fonts/SpaceGrotesk-Variable.ttf") format("truetype");
   font-display: swap;
   font-style: normal;
-  font-weight: 300;
 }
 
 ::-moz-selection {
