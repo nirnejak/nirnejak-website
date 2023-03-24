@@ -1,5 +1,5 @@
 {
-  "name": "nirnejak-website-2023",
+  "name": "nirnejak-website",
   "description": "Portfolio website of Jitendra Nirnejak",
   "version": "1.0.0",
   "author": "Jitendra Nirnejak <jeetnirnejak@gmail.com>",
@@ -67,9 +67,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nirnejak/nirnejak-website-2023"
+    "url": "https://github.com/nirnejak/nirnejak-website"
   },
   "bugs": {
-    "url": "https://github.com/nirnejak/nirnejak-website-2023/issues"
+    "url": "https://github.com/nirnejak/nirnejak-website/issues"
   }
 }
