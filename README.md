@@ -36,7 +36,7 @@
 npm install
 ```
 
-**Setup Pre-commit**
+**Install Git Hooks(Required for Development)**
 
 ```bash
 npm run prepare
@@ -46,6 +46,24 @@ npm run prepare
 
 ```bash
 npm run dev
+```
+
+**Lint all the files**
+
+```bash
+npm run lint
+```
+
+**Format all files with Prettier**
+
+```bash
+npm run format
+```
+
+**Check TypeScript issues**
+
+```bash
+npm run type-check
 ```
 
 **Build for Production**
