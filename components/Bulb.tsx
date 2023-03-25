@@ -11,12 +11,12 @@ const Bulb: React.FC = () => {
   const [playOff] = useSound("../sounds/off.mp3")
 
   return (
-    <div className="area fixed top-0 right-24">
-      <div className="wire"></div>
+    <div className="area fixed top-0 right-24 hidden md:block">
+      <div className="wire" />
       <div className="fixture">
-        <div className="strip"></div>
-        <div className="strip"></div>
-        <div className="strip"></div>
+        <div className="strip" />
+        <div className="strip" />
+        <div className="strip" />
       </div>
       <div
         tabIndex={0}
@@ -34,9 +34,9 @@ const Bulb: React.FC = () => {
           setIsSwitchOn(!isSwitchOn)
         }}
       >
-        <div className="zig"></div>
-        <div className="zig"></div>
-        <div className="zig"></div>
+        <div className="zig" />
+        <div className="zig" />
+        <div className="zig" />
       </div>
     </div>
   )
