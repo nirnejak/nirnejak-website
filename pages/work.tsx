@@ -64,7 +64,7 @@ const WorkPage: React.FC = () => {
             ))}
           </div>
 
-          <div className="-mx-3 mt-10 mb-3 flex md:mt-16">
+          <div className="-mx-3 mb-3 flex">
             <div className="mr-auto">
               <AppLink
                 className="hover-bg flex items-center gap-1.5 rounded-md px-4 py-2 text-xs font-medium"
