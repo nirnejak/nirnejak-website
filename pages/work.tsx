@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useInView } from "react-intersection-observer"
 
-import { ArrowRight } from "akar-icons"
+import { ArrowRight, LinkOut } from "akar-icons"
 import { motion, useAnimation } from "framer-motion"
 
 import Container from "components/atoms/Container"
@@ -62,6 +62,19 @@ const WorkPage: React.FC = () => {
                 />
               </AppLink>
             ))}
+          </div>
+
+          <div className="-mx-3 mt-10 mb-3 flex md:mt-16">
+            <div className="mr-auto">
+              <AppLink
+                className="hover-bg flex items-center gap-1.5 rounded-md px-4 py-2 text-xs font-medium"
+                href="https://layers.to/nirnejak"
+                target="_blank"
+              >
+                <span className="">Designs</span>
+                <LinkOut className="" size={14} />
+              </AppLink>
+            </div>
           </div>
         </motion.div>
       </section>
