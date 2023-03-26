@@ -180,12 +180,3 @@ button {
     transform: rotate(-3deg);
   }
 }
-
-.element {
-  background: linear-gradient(
-    90deg,
-    #f6eac1,
-    hsla(46, 53%, 76%, 0.85) 60%,
-    #85733a
-  );
-}
