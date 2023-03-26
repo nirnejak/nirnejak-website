@@ -39,9 +39,9 @@ const Bulb: React.FC = () => {
   }
 
   return (
-    <div className="area fixed top-0 right-24 hidden md:block">
-      <div className="wire" />
-      <div className="fixture">
+    <div className="fixed top-0 right-24 hidden h-[500px] w-52 origin-top animate-swing md:block">
+      <div className="relative left-[98px] h-[200px] w-1 bg-black" />
+      <div className="relative left-[92px] h-[20px] w-4 bg-zinc-500">
         <div className="strip" />
         <div className="strip" />
         <div className="strip" />

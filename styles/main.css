@@ -78,6 +78,7 @@ button {
   @apply scale-100 opacity-100;
 }
 
+/* Photo Gallery */
 @media screen and (min-width: 768px) {
   .card-tall {
     grid-row: span 2 / auto; /* start / end */
@@ -88,32 +89,7 @@ button {
   }
 }
 
-.area {
-  width: 200px;
-  height: 500px;
-  animation: swing 1s infinite ease-in-out alternate;
-  transform-origin: top;
-  -moz-transform-origin: top;
-  -webkit-transform-origin: top;
-}
-
-.wire {
-  @apply w-1;
-  @apply relative;
-  @apply bg-black;
-
-  left: 98px;
-  height: 200px;
-}
-
-.fixture {
-  @apply relative w-4;
-  @apply bg-zinc-500;
-
-  height: 20px;
-  left: 92px;
-}
-
+/* Bulb */
 .strip {
   @apply relative top-1;
   @apply bg-zinc-400;
@@ -168,15 +144,4 @@ button {
 
 .zig:nth-of-type(3) {
   top: -6px;
-}
-
-@keyframes swing {
-  from {
-    -moz-transform: rotate(3deg);
-    -webkit-transform: rotate(3deg);
-    transform: rotate(3deg);
-  }
-  to {
-    transform: rotate(-3deg);
-  }
 }

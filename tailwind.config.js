@@ -40,6 +40,10 @@ module.exports = {
           from: { transform: "translateX(10px)" },
           to: { transform: "translateX(0)" },
         },
+        swing: {
+          from: { transform: "rotate(3deg)" },
+          to: { transform: "rotate(-3deg)" },
+        },
       },
       animation: {
         slideDownAndFade:
@@ -53,6 +57,7 @@ module.exports = {
         slideUp: "slideUp 400ms cubic-bezier(0.16, 1, 0.3, 1)",
         slideLeft: "slideLeft 400ms cubic-bezier(0.16, 1, 0.3, 1)",
         slideRight: "slideRight 400ms cubic-bezier(0.16, 1, 0.3, 1)",
+        swing: "swing 1s infinite ease-in-out alternate",
       },
     },
     fontFamily: {
