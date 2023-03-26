@@ -87,6 +87,7 @@ const Navbar: React.FC<Props> = () => {
               onClick={() => {
                 setIsOpen(true)
               }}
+              aria-label="Open Menu"
             >
               <ThreeLineHorizontal className="text-white" />
             </button>
