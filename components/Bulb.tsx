@@ -27,7 +27,7 @@ const Bulb: React.FC = () => {
       setTimer(
         setTimeout(() => {
           setCount((oldCount) => 0)
-        }, 2000)
+        }, 1000)
       )
     }
 
