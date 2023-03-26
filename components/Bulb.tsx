@@ -2,12 +2,13 @@ import * as React from "react"
 
 import useSound from "use-sound"
 
+let timer: any = null
+
 const Bulb: React.FC = () => {
   const [isSwitchOn, setIsSwitchOn] = React.useState(false)
 
   const [count, setCount] = React.useState(0)
   const [isBroken, setIsBroken] = React.useState(false)
-  const [timer, setTimer] = React.useState<any>(null)
 
   const [playOn] = useSound("../sounds/on.mp3")
   const [playOff] = useSound("../sounds/off.mp3")
@@ -22,11 +23,10 @@ const Bulb: React.FC = () => {
     setIsSwitchOn(!isSwitchOn)
 
     if (timer === null) {
-      setTimer(
-        setTimeout(() => {
-          setCount((oldCount) => 0)
-        }, 1000)
-      )
+      timer = setTimeout(() => {
+        setCount(0)
+        timer = null
+      }, 1500)
     }
 
     setCount(count + 1)
