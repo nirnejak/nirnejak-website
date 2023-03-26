@@ -56,6 +56,7 @@ button {
 
 .hover-bg {
   @apply relative;
+  @apply hover:after:scale-100 hover:after:opacity-100 focus:after:scale-100 focus:after:opacity-100;
 
   z-index: 1;
 }
@@ -69,11 +70,6 @@ button {
 
   content: "";
   z-index: -1;
-}
-
-.hover-bg:hover::after,
-.hover-bg:focus::after {
-  @apply scale-100 opacity-100;
 }
 
 /* Photo Gallery */
