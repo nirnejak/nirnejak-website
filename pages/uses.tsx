@@ -54,33 +54,33 @@ const UsesPage: React.FC = () => {
             </div>
             <div className="flex flex-1 flex-col gap-8">
               <div>
-                <h4 className="text-sm text-zinc-500">Design Tools</h4>
+                <p className="text-sm text-zinc-500">Design Tools</p>
                 <p className="mt-1.5 text-lg font-bold text-zinc-300">
                   Figma and Procreate
                 </p>
               </div>
               <div>
-                <h4 className="text-sm text-zinc-500">Terminal and Editor</h4>
+                <p className="text-sm text-zinc-500">Terminal and Editor</p>
                 <p className="mt-1.5 text-lg font-bold text-zinc-300">
                   ZSH, iTerm & VS Code
                 </p>
               </div>
               <div>
-                <h4 className="text-sm text-zinc-500">
+                <p className="text-sm text-zinc-500">
                   Languages and Frameworks
-                </h4>
+                </p>
                 <p className="mt-1.5 text-lg font-bold text-zinc-300">
                   TypeScript, React & Node.js
                 </p>
               </div>
               <div>
-                <h4 className="text-sm text-zinc-500">Gear & Gadgets</h4>
+                <p className="text-sm text-zinc-500">Gear & Gadgets</p>
                 <p className="mt-1.5 text-lg font-bold text-zinc-300">
                   iPhone 14 Pro, iPad Pro 11 & MacBook Air(M2)
                 </p>
               </div>
               <div>
-                <h4 className="text-sm text-zinc-500">What&apos;s for 2023</h4>
+                <p className="text-sm text-zinc-500">What&apos;s for 2023</p>
                 <p className="mt-1.5 text-lg font-bold text-zinc-300">
                   TypeScript & Fastify
                 </p>
