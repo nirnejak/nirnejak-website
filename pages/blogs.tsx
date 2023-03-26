@@ -55,7 +55,7 @@ const BlogsPage: React.FC = () => {
                     target="_blank"
                     className="hover-bg -mx-3 p-3 md:mx-0"
                   >
-                    <h3 className="text-sm font-bold">{blog.title}</h3>
+                    <h2 className="text-sm font-bold">{blog.title}</h2>
                     <p className="mt-1.5 text-xs text-zinc-500">
                       {blog.description}
                     </p>
@@ -73,7 +73,7 @@ const BlogsPage: React.FC = () => {
                     target="_blank"
                     className="hover-bg -mx-3 p-3 md:mx-0"
                   >
-                    <h3 className="text-sm font-bold">{blog.title}</h3>
+                    <h2 className="text-sm font-bold">{blog.title}</h2>
                     <p className="mt-1.5 text-xs text-zinc-500">
                       {blog.description}
                     </p>
@@ -91,7 +91,7 @@ const BlogsPage: React.FC = () => {
                     target="_blank"
                     className="hover-bg -mx-3 p-3 md:mx-0"
                   >
-                    <h3 className="text-sm font-bold">{blog.title}</h3>
+                    <h2 className="text-sm font-bold">{blog.title}</h2>
                     <p className="mt-1.5 text-xs text-zinc-500">
                       {blog.description}
                     </p>
@@ -109,7 +109,7 @@ const BlogsPage: React.FC = () => {
                     target="_blank"
                     className="hover-bg -mx-3 p-3 md:mx-0"
                   >
-                    <h3 className="text-sm font-bold">{blog.title}</h3>
+                    <h2 className="text-sm font-bold">{blog.title}</h2>
                     <p className="mt-1.5 text-xs text-zinc-500">
                       {blog.description}
                     </p>
