@@ -40,7 +40,7 @@ const WorkPage: React.FC = () => {
         <motion.div
           animate={controls}
           initial="hidden"
-          transition={{ delay: 0, duration: 0.15 }}
+          transition={{ delay: 0, duration: 0.15, type: "spring" }}
           variants={variants}
           className="w-full"
           ref={ref}
@@ -53,7 +53,7 @@ const WorkPage: React.FC = () => {
                 key={index}
                 href={project.link}
                 target="_blank"
-                className="hover-bg group flex items-center justify-between rounded-md px-3 py-2 text-sm text-zinc-500 md:text-base"
+                className="hover-bg group flex items-center justify-between rounded-md px-3 py-2 text-sm text-zinc-500 outline-none md:text-base  "
               >
                 <p>{project.title}</p>
                 <ArrowRight
@@ -67,7 +67,7 @@ const WorkPage: React.FC = () => {
           <div className="-mx-3 mb-3 flex">
             <div className="mr-auto">
               <AppLink
-                className="hover-bg flex items-center gap-1.5 rounded-md px-4 py-2 text-xs font-medium"
+                className="hover-bg flex items-center gap-1.5 rounded-md px-4 py-2 text-xs font-medium outline-none"
                 href="https://layers.to/nirnejak"
                 target="_blank"
               >
