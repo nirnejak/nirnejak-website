@@ -36,7 +36,7 @@ const PhotosPage: React.FC = () => {
         <motion.div
           animate={controls}
           initial="hidden"
-          transition={{ delay: 0, duration: 0.2 }}
+          transition={{ delay: 0, duration: 0.15 }}
           variants={variants}
           ref={ref}
           className="w-full"
