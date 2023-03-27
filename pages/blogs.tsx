@@ -38,7 +38,7 @@ const BlogsPage: React.FC = () => {
         <motion.div
           animate={controls}
           initial="hidden"
-          transition={{ delay: 0, duration: 0.15 }}
+          transition={{ delay: 0, duration: 0.15, type: "spring" }}
           variants={variants}
           ref={ref}
         >
@@ -53,7 +53,7 @@ const BlogsPage: React.FC = () => {
                     key={index}
                     href={blog.url}
                     target="_blank"
-                    className="hover-bg -mx-3 p-3 md:mx-0"
+                    className="hover-bg -mx-3 p-3 outline-none md:mx-0"
                   >
                     <h2 className="text-sm font-bold">{blog.title}</h2>
                     <p className="mt-1.5 text-xs text-zinc-500">
@@ -71,7 +71,7 @@ const BlogsPage: React.FC = () => {
                     key={index}
                     href={blog.url}
                     target="_blank"
-                    className="hover-bg -mx-3 p-3 md:mx-0"
+                    className="hover-bg -mx-3 p-3 outline-none md:mx-0"
                   >
                     <h2 className="text-sm font-bold">{blog.title}</h2>
                     <p className="mt-1.5 text-xs text-zinc-500">
@@ -89,7 +89,7 @@ const BlogsPage: React.FC = () => {
                     key={index}
                     href={blog.url}
                     target="_blank"
-                    className="hover-bg -mx-3 p-3 md:mx-0"
+                    className="hover-bg -mx-3 p-3 outline-none md:mx-0"
                   >
                     <h2 className="text-sm font-bold">{blog.title}</h2>
                     <p className="mt-1.5 text-xs text-zinc-500">
@@ -107,7 +107,7 @@ const BlogsPage: React.FC = () => {
                     key={index}
                     href={blog.url}
                     target="_blank"
-                    className="hover-bg -mx-3 p-3 md:mx-0"
+                    className="hover-bg -mx-3 p-3 outline-none md:mx-0"
                   >
                     <h2 className="text-sm font-bold">{blog.title}</h2>
                     <p className="mt-1.5 text-xs text-zinc-500">
