@@ -40,7 +40,7 @@ const HomePage: React.FC = () => {
         <motion.div
           animate={controls}
           initial="hidden"
-          transition={{ delay: 0, duration: 0.15 }}
+          transition={{ delay: 0, duration: 0.15, type: "spring" }}
           variants={variants}
           ref={ref}
         >
