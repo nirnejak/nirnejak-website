@@ -27,7 +27,7 @@
     "use-sound": "^4.0.1"
   },
   "devDependencies": {
-    "@types/node": "^18.15.7",
+    "@types/node": "^18.15.10",
     "@types/react": "^18.0.29",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
