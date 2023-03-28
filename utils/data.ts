@@ -44,6 +44,17 @@ export const allProjects = [
 ]
 
 export const allBlogs = {
+  2023: [
+    {
+      author: "Jitendra Nirnejak",
+      date: "23 March 2023",
+      description:
+        "An In-Depth Comparison of two popular Node.js Frameworks, and why choosing Fastify may be a better option.",
+      title:
+        "Express.js vs Fastify - In-Depth Comparison of Node.js Frameworks",
+      url: "https://www.inkoop.io/blog/express-vs-fastify-in-depth-comparison-of-node-js-frameworks/",
+    },
+  ],
   2022: [
     {
       author: "Jitendra Nirnejak",
