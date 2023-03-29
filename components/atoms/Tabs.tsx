@@ -1,6 +1,7 @@
 import * as React from "react"
 
 import Link from "next/link"
+import useSound from "use-sound"
 
 import { navLinks } from "utils/navigation"
 
@@ -18,6 +19,8 @@ interface TAB_TYPE {
 }
 
 const Tabs: React.FC = () => {
+  const [play] = useSound("../sounds/whoop.wav")
+
   const [tabBoundingBox, setTabBoundingBox] =
     React.useState<TAB_BOUNDING_BOX_TYPE | null>(null)
   const [wrapperBoundingBox, setWrapperBoundingBox] =
@@ -85,6 +88,9 @@ const Tabs: React.FC = () => {
           }}
           onFocus={(ev: React.FocusEvent<HTMLAnchorElement>) => {
             repositionHighlight(ev, tab)
+          }}
+          onClick={() => {
+            play()
           }}
         >
           {tab.content}
