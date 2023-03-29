@@ -18,6 +18,7 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "cSpell.words": [
     "akar",
+    "changefreq",
     "classname",
     "cmdk",
     "Codepen",
@@ -32,6 +33,7 @@
     "precommit",
     "tailwindcss",
     "ultrawide",
+    "urlset",
     "Vuesax"
   ]
 }
