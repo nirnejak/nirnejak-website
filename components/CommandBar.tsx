@@ -53,13 +53,14 @@ const CommandBar: React.FC = () => {
 
   const [isOpen, setIsOpen] = React.useState(false)
 
-  const [play] = useSound("../sounds/whoop.wav")
+  const [playWhoop] = useSound("../sounds/whoop.wav")
+  const [playBlow] = useSound("../sounds/blow.mp3")
 
   React.useEffect(() => {
-    if (isOpen) {
-      // TODO: play spaceship, rise sound
+    if (isOpen && playBlow !== undefined) {
+      playBlow()
     }
-  }, [isOpen])
+  }, [isOpen, playBlow])
 
   React.useEffect(() => {
     const eventHandler = (e: any | React.KeyboardEvent): void => {
@@ -80,7 +81,7 @@ const CommandBar: React.FC = () => {
     } else {
       router.push(href) // eslint-disable-line @typescript-eslint/no-floating-promises
     }
-    play()
+    playWhoop()
     setIsOpen(false)
   }
 
