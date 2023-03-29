@@ -1,7 +1,6 @@
 import * as React from "react"
-import { useInView } from "react-intersection-observer"
 
-import { motion, useAnimation } from "framer-motion"
+import { motion } from "framer-motion"
 
 import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
@@ -13,22 +12,6 @@ import SocialLinks from "components/SocialLinks"
 // TODO: maybe add recently done projects
 
 const HomePage: React.FC = () => {
-  const controls = useAnimation()
-  const [ref, inView] = useInView()
-
-  React.useEffect(() => {
-    if (inView) {
-      controls.start("visible").catch((err) => {
-        console.log(err)
-      })
-    }
-  }, [controls, inView])
-
-  const variants = {
-    visible: { opacity: 1, translateY: 0 },
-    hidden: { opacity: 0, translateY: 10 },
-  }
-
   return (
     <Container>
       <SEO
@@ -38,11 +21,9 @@ const HomePage: React.FC = () => {
       />
       <section className="flex h-screen items-start pt-32 md:pt-56">
         <motion.div
-          animate={controls}
-          initial="hidden"
+          animate={{ opacity: 1, translateY: 0 }}
+          initial={{ opacity: 0, translateY: 10 }}
           transition={{ delay: 0, duration: 0.15, type: "spring" }}
-          variants={variants}
-          ref={ref}
         >
           <h1 className="text-4xl font-bold text-zinc-300 md:text-5xl">
             Jitendra Nirnejak
