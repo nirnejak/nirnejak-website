@@ -2,12 +2,16 @@ import * as React from "react"
 
 import {
   Camera,
+  CodepenFill,
+  DribbbleFill,
   GithubFill,
   HomeAlt1,
   LaptopDevice,
+  LinkedinFill,
   LinkOut,
   Pencil,
   Phone,
+  TwitterFill,
 } from "akar-icons"
 import { Command } from "cmdk"
 import { useRouter } from "next/router"
@@ -52,7 +56,7 @@ const CommandBar: React.FC = () => {
         open={isOpen}
         onOpenChange={setIsOpen}
         label="Global Command Menu"
-        className="fixed left-1/2 top-1/2 z-50 w-5/12 -translate-x-1/2 -translate-y-1/2 animate-zoomIn rounded-lg bg-zinc-800 p-3 text-sm"
+        className="fixed left-1/2 top-1/2 z-50 w-5/12 -translate-x-1/2 -translate-y-1/2 animate-zoomIn rounded-lg bg-zinc-800 p-3 text-sm font-light"
       >
         <Command.Input
           className="w-full rounded-lg bg-zinc-900 px-3.5 py-2.5 text-sm text-zinc-300 outline-none placeholder:text-zinc-600"
@@ -149,6 +153,82 @@ const CommandBar: React.FC = () => {
           >
             <Phone size={13} />
             <span>Contact</span>
+          </Command.Item>
+          <Command.Separator className="my-1 h-[0.5px] bg-zinc-700" />
+          <Command.Item
+            className={commandItemClass}
+            onClick={() => {
+              window.open("https://twitter.com/jeetnirnejak/", "_blank")
+            }}
+            onKeyUp={(e) => {
+              if (e.key === "Enter")
+                window.open("https://twitter.com/jeetnirnejak/", "_blank")
+            }}
+            tabIndex={0}
+          >
+            <TwitterFill size={13} />
+            <span>Twitter</span>
+            <LinkOut size={13} className="ml-auto" />
+          </Command.Item>
+          <Command.Item
+            className={commandItemClass}
+            onClick={() => {
+              window.open("https://github.com/nirnejak/", "_blank")
+            }}
+            onKeyUp={(e) => {
+              if (e.key === "Enter")
+                window.open("https://github.com/nirnejak/", "_blank")
+            }}
+            tabIndex={0}
+          >
+            <GithubFill size={13} />
+            <span>Github</span>
+            <LinkOut size={13} className="ml-auto" />
+          </Command.Item>
+          <Command.Item
+            className={commandItemClass}
+            onClick={() => {
+              window.open("https://codepen.io/nirnejak/", "_blank")
+            }}
+            onKeyUp={(e) => {
+              if (e.key === "Enter")
+                window.open("https://codepen.io/nirnejak/", "_blank")
+            }}
+            tabIndex={0}
+          >
+            <CodepenFill size={13} />
+            <span>Codepen</span>
+            <LinkOut size={13} className="ml-auto" />
+          </Command.Item>
+          <Command.Item
+            className={commandItemClass}
+            onClick={() => {
+              window.open("https://dribbble.com/nirnejak", "_blank")
+            }}
+            onKeyUp={(e) => {
+              if (e.key === "Enter")
+                window.open("https://dribbble.com/nirnejak", "_blank")
+            }}
+            tabIndex={0}
+          >
+            <DribbbleFill size={13} />
+            <span>Dribbble</span>
+            <LinkOut size={13} className="ml-auto" />
+          </Command.Item>
+          <Command.Item
+            className={commandItemClass}
+            onClick={() => {
+              window.open("https://www.linkedin.com/in/nirnejak/", "_blank")
+            }}
+            onKeyUp={(e) => {
+              if (e.key === "Enter")
+                window.open("https://www.linkedin.com/in/nirnejak/", "_blank")
+            }}
+            tabIndex={0}
+          >
+            <LinkedinFill size={13} />
+            <span>LinkedIn</span>
+            <LinkOut size={13} className="ml-auto" />
           </Command.Item>
           <Command.Separator className="my-1 h-[0.5px] bg-zinc-700" />
           <Command.Item
