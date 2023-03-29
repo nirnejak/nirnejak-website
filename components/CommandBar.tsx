@@ -63,7 +63,7 @@ const CommandBar: React.FC = () => {
           placeholder="Search Command"
         />
 
-        <Command.List className="pt-2 text-zinc-300">
+        <Command.List className="max-h-[280px] overflow-y-scroll pt-2 text-zinc-300">
           <Command.Item
             className={commandItemClass}
             tabIndex={0}
