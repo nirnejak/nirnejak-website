@@ -90,7 +90,7 @@ const ContactPage: React.FC = () => {
           >
             <input
               type="text"
-              className="rounded-md bg-zinc-800 py-3 px-4 text-xs text-zinc-400 placeholder:text-zinc-600"
+              className="rounded-md bg-zinc-800 px-4 py-3 text-xs text-zinc-400 placeholder:text-zinc-600"
               placeholder="Name"
               name="name"
               value={state.name}
@@ -98,14 +98,14 @@ const ContactPage: React.FC = () => {
             />
             <input
               type="email"
-              className="rounded-md bg-zinc-800 py-3 px-4 text-xs text-zinc-400 placeholder:text-zinc-600"
+              className="rounded-md bg-zinc-800 px-4 py-3 text-xs text-zinc-400 placeholder:text-zinc-600"
               placeholder="Email"
               name="email"
               value={state.email}
               onChange={handleChange}
             />
             <textarea
-              className="rounded-md bg-zinc-800 py-3 px-4 text-xs text-zinc-400 placeholder:text-zinc-600"
+              className="rounded-md bg-zinc-800 px-4 py-3 text-xs text-zinc-400 placeholder:text-zinc-600"
               placeholder="Message"
               rows={3}
               name="message"
@@ -114,7 +114,7 @@ const ContactPage: React.FC = () => {
             />
             <button
               disabled={isSending}
-              className="rounded-md bg-white py-3 px-4 text-center text-sm font-bold uppercase tracking-wide"
+              className="rounded-md bg-white px-4 py-3 text-center text-sm font-bold uppercase tracking-wide"
             >
               {isSending ? "SENDING..." : isSent ? "SENT!" : "SEND"}
             </button>
