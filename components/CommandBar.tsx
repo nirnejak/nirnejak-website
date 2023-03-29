@@ -1,60 +1,24 @@
 import * as React from "react"
 
 import {
-  Camera,
   CodepenFill,
   DribbbleFill,
   GithubFill,
-  HomeAlt1,
-  LaptopDevice,
   LinkedinFill,
   LinkOut,
-  Pencil,
-  Phone,
   TwitterFill,
 } from "akar-icons"
 import { Command } from "cmdk"
 import { useRouter } from "next/router"
 import useSound from "use-sound"
 
+import { navLinks } from "utils/navigation"
+
 const commandItemClass =
   "px-3 py-2.5 cursor-pointer hover-bg hover-bg-dark flex items-center gap-1.5 outline-0"
 
 // TODO: Fix click action
 // TODO: Add keyboard navigation with arrows
-
-const pageLinks = [
-  {
-    title: "Home",
-    href: "/",
-    icon: <HomeAlt1 size={13} />,
-  },
-  {
-    title: "Work",
-    href: "/work/",
-    icon: <LaptopDevice size={13} />,
-  },
-  {
-    title: "Blogs",
-    href: "/blogs/",
-    icon: <Pencil size={13} />,
-  },
-  {
-    title: "Photos",
-    href: "/photos/",
-    icon: <Camera size={13} />,
-  },
-  {
-    title: "Uses",
-    href: "/uses/",
-    icon: <LaptopDevice size={13} />,
-  },
-  {
-    title: "Contact",
-    href: "/contact/",
-    icon: <Phone size={13} />,
-  },
-]
 
 const socialLinks = [
   {
@@ -138,20 +102,20 @@ const CommandBar: React.FC = () => {
         />
 
         <Command.List className="max-h-[280px] overflow-y-scroll pt-2 text-zinc-300">
-          {pageLinks.map((link, index) => (
+          {navLinks.map((link, index) => (
             <Command.Item
               key={index}
               className={commandItemClass}
               tabIndex={0}
               onClick={() => {
-                navigate(link.href)
+                navigate(link.link)
               }}
               onKeyUp={(e: React.KeyboardEvent) => {
-                if (e.key === "Enter") navigate(link.href)
+                if (e.key === "Enter") navigate(link.link)
               }}
             >
               {link.icon}
-              <span>{link.title}</span>
+              <span>{link.content}</span>
             </Command.Item>
           ))}
           <Command.Separator className="my-1 h-[0.5px] bg-zinc-700" />
