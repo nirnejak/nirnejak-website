@@ -15,6 +15,7 @@ import {
 } from "akar-icons"
 import { Command } from "cmdk"
 import { useRouter } from "next/router"
+import useSound from "use-sound"
 
 const commandItemClass =
   "px-3 py-2.5 cursor-pointer hover-bg hover-bg-dark flex items-center gap-1.5 outline-0"
@@ -26,6 +27,8 @@ const CommandBar: React.FC = () => {
   const router = useRouter()
 
   const [isOpen, setIsOpen] = React.useState(false)
+
+  const [play] = useSound("../sounds/whoop.wav")
 
   React.useEffect(() => {
     if (isOpen) {
@@ -45,6 +48,12 @@ const CommandBar: React.FC = () => {
       document.removeEventListener("keydown", eventHandler)
     }
   }, [setIsOpen])
+
+  const navigateToPage = (href: string): void => {
+    router.push(href) // eslint-disable-line @typescript-eslint/no-floating-promises
+    play()
+    setIsOpen(false)
+  }
 
   return (
     <div
@@ -68,11 +77,11 @@ const CommandBar: React.FC = () => {
             className={commandItemClass}
             tabIndex={0}
             onClick={() => {
-              router.push("/") // eslint-disable-line @typescript-eslint/no-floating-promises
+              navigateToPage("/")
             }}
             onKeyUp={(e: React.KeyboardEvent) => {
               if (e.key === "Enter") {
-                router.push("/") // eslint-disable-line @typescript-eslint/no-floating-promises
+                navigateToPage("/")
               }
             }}
           >
@@ -83,11 +92,11 @@ const CommandBar: React.FC = () => {
             className={commandItemClass}
             tabIndex={0}
             onClick={() => {
-              router.push("/work/") // eslint-disable-line @typescript-eslint/no-floating-promises
+              navigateToPage("/work/")
             }}
             onKeyUp={(e: React.KeyboardEvent) => {
               if (e.key === "Enter") {
-                router.push("/work/") // eslint-disable-line @typescript-eslint/no-floating-promises
+                navigateToPage("/work/")
               }
             }}
           >
@@ -98,11 +107,11 @@ const CommandBar: React.FC = () => {
             className={commandItemClass}
             tabIndex={0}
             onClick={() => {
-              router.push("/blogs/") // eslint-disable-line @typescript-eslint/no-floating-promises
+              navigateToPage("/blogs/")
             }}
             onKeyUp={(e: React.KeyboardEvent) => {
               if (e.key === "Enter") {
-                router.push("/blogs/") // eslint-disable-line @typescript-eslint/no-floating-promises
+                navigateToPage("/blogs/")
               }
             }}
           >
@@ -113,11 +122,11 @@ const CommandBar: React.FC = () => {
             className={commandItemClass}
             tabIndex={0}
             onClick={() => {
-              router.push("/photos/") // eslint-disable-line @typescript-eslint/no-floating-promises
+              navigateToPage("/photos/")
             }}
             onKeyUp={(e: React.KeyboardEvent) => {
               if (e.key === "Enter") {
-                router.push("/photos/") // eslint-disable-line @typescript-eslint/no-floating-promises
+                navigateToPage("/photos/")
               }
             }}
           >
@@ -128,11 +137,11 @@ const CommandBar: React.FC = () => {
             className={commandItemClass}
             tabIndex={0}
             onClick={() => {
-              router.push("/uses/") // eslint-disable-line @typescript-eslint/no-floating-promises
+              navigateToPage("/uses/")
             }}
             onKeyUp={(e: React.KeyboardEvent) => {
               if (e.key === "Enter") {
-                router.push("/uses/") // eslint-disable-line @typescript-eslint/no-floating-promises
+                navigateToPage("/uses/")
               }
             }}
           >
@@ -143,11 +152,11 @@ const CommandBar: React.FC = () => {
             className={commandItemClass}
             tabIndex={0}
             onClick={() => {
-              router.push("/contact/") // eslint-disable-line @typescript-eslint/no-floating-promises
+              navigateToPage("/contact/")
             }}
             onKeyUp={(e: React.KeyboardEvent) => {
               if (e.key === "Enter") {
-                router.push("/contact/") // eslint-disable-line @typescript-eslint/no-floating-promises
+                navigateToPage("/contact/")
               }
             }}
           >
