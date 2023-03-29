@@ -23,6 +23,67 @@ const commandItemClass =
 // TODO: Fix click action
 // TODO: Add keyboard navigation with arrows
 
+const pageLinks = [
+  {
+    title: "Home",
+    href: "/",
+    icon: <HomeAlt1 size={13} />,
+  },
+  {
+    title: "Work",
+    href: "/work/",
+    icon: <LaptopDevice size={13} />,
+  },
+  {
+    title: "Blogs",
+    href: "/blogs/",
+    icon: <Pencil size={13} />,
+  },
+  {
+    title: "Photos",
+    href: "/photos/",
+    icon: <Camera size={13} />,
+  },
+  {
+    title: "Uses",
+    href: "/uses/",
+    icon: <LaptopDevice size={13} />,
+  },
+  {
+    title: "Contact",
+    href: "/contact/",
+    icon: <Phone size={13} />,
+  },
+]
+
+const socialLinks = [
+  {
+    title: "Twitter",
+    href: "https://twitter.com/jeetnirnejak/",
+    icon: <TwitterFill size={13} />,
+  },
+  {
+    title: "Github",
+    href: "https://github.com/nirnejak/",
+    icon: <GithubFill size={13} />,
+  },
+  {
+    title: "Codepen",
+    href: "https://codepen.io/nirnejak/",
+    icon: <CodepenFill size={13} />,
+  },
+  {
+    title: "Dribbble",
+    href: "https://dribbble.com/nirnejak",
+    icon: <DribbbleFill size={13} />,
+  },
+  {
+    title: "LinkedIn",
+    href: "https://www.linkedin.com/in/nirnejak/",
+    icon: <LinkedinFill size={13} />,
+  },
+]
+
 const CommandBar: React.FC = () => {
   const router = useRouter()
 
@@ -49,8 +110,12 @@ const CommandBar: React.FC = () => {
     }
   }, [setIsOpen])
 
-  const navigateToPage = (href: string): void => {
-    router.push(href) // eslint-disable-line @typescript-eslint/no-floating-promises
+  const navigate = (href: string): void => {
+    if (href.includes("http") || href.includes("mailto")) {
+      window.open(href, "_blank")
+    } else {
+      router.push(href) // eslint-disable-line @typescript-eslint/no-floating-promises
+    }
     play()
     setIsOpen(false)
   }
@@ -73,172 +138,40 @@ const CommandBar: React.FC = () => {
         />
 
         <Command.List className="max-h-[280px] overflow-y-scroll pt-2 text-zinc-300">
-          <Command.Item
-            className={commandItemClass}
-            tabIndex={0}
-            onClick={() => {
-              navigateToPage("/")
-            }}
-            onKeyUp={(e: React.KeyboardEvent) => {
-              if (e.key === "Enter") {
-                navigateToPage("/")
-              }
-            }}
-          >
-            <HomeAlt1 size={13} />
-            <span>Home</span>
-          </Command.Item>
-          <Command.Item
-            className={commandItemClass}
-            tabIndex={0}
-            onClick={() => {
-              navigateToPage("/work/")
-            }}
-            onKeyUp={(e: React.KeyboardEvent) => {
-              if (e.key === "Enter") {
-                navigateToPage("/work/")
-              }
-            }}
-          >
-            <LaptopDevice size={13} />
-            <span>Work</span>
-          </Command.Item>
-          <Command.Item
-            className={commandItemClass}
-            tabIndex={0}
-            onClick={() => {
-              navigateToPage("/blogs/")
-            }}
-            onKeyUp={(e: React.KeyboardEvent) => {
-              if (e.key === "Enter") {
-                navigateToPage("/blogs/")
-              }
-            }}
-          >
-            <Pencil size={13} />
-            <span>Blogs</span>
-          </Command.Item>
-          <Command.Item
-            className={commandItemClass}
-            tabIndex={0}
-            onClick={() => {
-              navigateToPage("/photos/")
-            }}
-            onKeyUp={(e: React.KeyboardEvent) => {
-              if (e.key === "Enter") {
-                navigateToPage("/photos/")
-              }
-            }}
-          >
-            <Camera size={13} />
-            <span>Photos</span>
-          </Command.Item>
-          <Command.Item
-            className={commandItemClass}
-            tabIndex={0}
-            onClick={() => {
-              navigateToPage("/uses/")
-            }}
-            onKeyUp={(e: React.KeyboardEvent) => {
-              if (e.key === "Enter") {
-                navigateToPage("/uses/")
-              }
-            }}
-          >
-            <LaptopDevice size={13} />
-            <span>Uses</span>
-          </Command.Item>
-          <Command.Item
-            className={commandItemClass}
-            tabIndex={0}
-            onClick={() => {
-              navigateToPage("/contact/")
-            }}
-            onKeyUp={(e: React.KeyboardEvent) => {
-              if (e.key === "Enter") {
-                navigateToPage("/contact/")
-              }
-            }}
-          >
-            <Phone size={13} />
-            <span>Contact</span>
-          </Command.Item>
+          {pageLinks.map((link, index) => (
+            <Command.Item
+              key={index}
+              className={commandItemClass}
+              tabIndex={0}
+              onClick={() => {
+                navigate(link.href)
+              }}
+              onKeyUp={(e: React.KeyboardEvent) => {
+                if (e.key === "Enter") navigate(link.href)
+              }}
+            >
+              {link.icon}
+              <span>{link.title}</span>
+            </Command.Item>
+          ))}
           <Command.Separator className="my-1 h-[0.5px] bg-zinc-700" />
-          <Command.Item
-            className={commandItemClass}
-            onClick={() => {
-              window.open("https://twitter.com/jeetnirnejak/", "_blank")
-            }}
-            onKeyUp={(e) => {
-              if (e.key === "Enter")
-                window.open("https://twitter.com/jeetnirnejak/", "_blank")
-            }}
-            tabIndex={0}
-          >
-            <TwitterFill size={13} />
-            <span>Twitter</span>
-            <LinkOut size={13} className="ml-auto" />
-          </Command.Item>
-          <Command.Item
-            className={commandItemClass}
-            onClick={() => {
-              window.open("https://github.com/nirnejak/", "_blank")
-            }}
-            onKeyUp={(e) => {
-              if (e.key === "Enter")
-                window.open("https://github.com/nirnejak/", "_blank")
-            }}
-            tabIndex={0}
-          >
-            <GithubFill size={13} />
-            <span>Github</span>
-            <LinkOut size={13} className="ml-auto" />
-          </Command.Item>
-          <Command.Item
-            className={commandItemClass}
-            onClick={() => {
-              window.open("https://codepen.io/nirnejak/", "_blank")
-            }}
-            onKeyUp={(e) => {
-              if (e.key === "Enter")
-                window.open("https://codepen.io/nirnejak/", "_blank")
-            }}
-            tabIndex={0}
-          >
-            <CodepenFill size={13} />
-            <span>Codepen</span>
-            <LinkOut size={13} className="ml-auto" />
-          </Command.Item>
-          <Command.Item
-            className={commandItemClass}
-            onClick={() => {
-              window.open("https://dribbble.com/nirnejak", "_blank")
-            }}
-            onKeyUp={(e) => {
-              if (e.key === "Enter")
-                window.open("https://dribbble.com/nirnejak", "_blank")
-            }}
-            tabIndex={0}
-          >
-            <DribbbleFill size={13} />
-            <span>Dribbble</span>
-            <LinkOut size={13} className="ml-auto" />
-          </Command.Item>
-          <Command.Item
-            className={commandItemClass}
-            onClick={() => {
-              window.open("https://www.linkedin.com/in/nirnejak/", "_blank")
-            }}
-            onKeyUp={(e) => {
-              if (e.key === "Enter")
-                window.open("https://www.linkedin.com/in/nirnejak/", "_blank")
-            }}
-            tabIndex={0}
-          >
-            <LinkedinFill size={13} />
-            <span>LinkedIn</span>
-            <LinkOut size={13} className="ml-auto" />
-          </Command.Item>
+          {socialLinks.map((link, index) => (
+            <Command.Item
+              key={index}
+              className={commandItemClass}
+              onClick={() => {
+                navigate(link.href)
+              }}
+              onKeyUp={(e) => {
+                if (e.key === "Enter") navigate(link.href)
+              }}
+              tabIndex={0}
+            >
+              {link.icon}
+              <span>{link.title}</span>
+              <LinkOut size={13} className="ml-auto" />
+            </Command.Item>
+          ))}
           <Command.Separator className="my-1 h-[0.5px] bg-zinc-700" />
           <Command.Item
             className={commandItemClass}
