@@ -72,6 +72,10 @@ button {
   z-index: -1;
 }
 
+.hover-bg.hover-bg-dark::after {
+  @apply bg-zinc-900;
+}
+
 /* Photo Gallery */
 @media screen and (min-width: 768px) {
   .card-tall {
