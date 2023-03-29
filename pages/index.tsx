@@ -21,9 +21,9 @@ const HomePage: React.FC = () => {
       />
       <section className="flex h-screen items-start pt-32 md:pt-56">
         <motion.div
-          animate={{ opacity: 1, translateY: 0 }}
-          initial={{ opacity: 0, translateY: 10 }}
-          transition={{ delay: 0, duration: 0.15, type: "spring" }}
+        // animate={{ opacity: 1, translateY: 0 }}
+        // initial={{ opacity: 0, translateY: 10 }}
+        // transition={{ delay: 0, duration: 0.15, type: "spring" }}
         >
           <h1 className="text-4xl font-bold text-zinc-300 md:text-5xl">
             Jitendra Nirnejak
