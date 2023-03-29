@@ -4,6 +4,7 @@ import type { AppProps } from "next/app"
 
 import Background from "components/atoms/Background"
 import Bulb from "components/Bulb"
+import CommandBar from "components/CommandBar"
 import Footer from "components/Footer"
 import Navbar from "components/Navbar"
 
@@ -20,8 +21,10 @@ const MyApp: React.FC<AppProps> = (props) => {
       <Navbar />
       <Component {...pageProps} />
       <Footer />
+
       <Bulb />
       <Background />
+      <CommandBar />
     </main>
   )
 }
