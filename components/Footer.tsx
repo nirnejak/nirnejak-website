@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
           <div className="text-center md:text-left">
             Designed with ❤️ and a lot of ☕️
           </div>
-          <div className="flex justify-center gap-4 md:justify-end">
+          <div className="hidden md:flex">
             <p className="flex items-center gap-1 text-zinc-500">
               <span className="rounded-md bg-zinc-800 p-1.5">
                 <Command size={11} />
