@@ -62,7 +62,9 @@ const CommandBar: React.FC = () => {
   return (
     <Command
       className={
-        isOpen ? "fixed left-0 top-0 z-50 h-screen w-full bg-zinc-900/90" : ""
+        isOpen
+          ? "fixed left-0 top-0 z-50 h-screen w-full bg-zinc-900/30 backdrop-blur-lg"
+          : ""
       }
     >
       <Command.Dialog
