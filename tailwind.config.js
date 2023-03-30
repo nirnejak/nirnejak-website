@@ -44,8 +44,8 @@ module.exports = {
           from: { transform: "rotate(3deg)" },
           to: { transform: "rotate(-3deg)" },
         },
-        zoomIn: {
-          from: { transform: "translate(-50%, -50%) scale(0.95)" },
+        rise: {
+          from: { transform: "translate(-50%, -40%) scale(0.95)" },
           to: { transform: "translate(-50%, -50%) scale(1)" },
         },
       },
@@ -62,7 +62,7 @@ module.exports = {
         slideLeft: "slideLeft 400ms cubic-bezier(0.16, 1, 0.3, 1)",
         slideRight: "slideRight 400ms cubic-bezier(0.16, 1, 0.3, 1)",
         swing: "swing 1s infinite ease-in-out alternate",
-        zoomIn: "zoomIn 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+        rise: "rise 150ms cubic-bezier(0.4, 0, 0.2, 1)",
       },
     },
     fontFamily: {
