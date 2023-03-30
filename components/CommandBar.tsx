@@ -17,7 +17,6 @@ import { navLinks } from "utils/navigation"
 const commandItemClass =
   "px-3 py-2.5 cursor-pointer hover-bg hover-bg-dark flex items-center gap-1.5 outline-0"
 
-// TODO: Fix click action
 // TODO: Add keyboard navigation with arrows
 
 const socialLinks = [
@@ -50,6 +49,8 @@ const socialLinks = [
 
 const CommandBar: React.FC = () => {
   const router = useRouter()
+
+  const listRef = React.useRef(null)
 
   const [isOpen, setIsOpen] = React.useState(false)
 
@@ -104,17 +105,17 @@ const CommandBar: React.FC = () => {
         <Command.Empty className="mt-5 w-full text-center text-zinc-300">
           No results found.
         </Command.Empty>
-        <Command.List className="max-h-[280px] overflow-y-scroll pt-2 text-zinc-300">
+        <Command.List
+          className="max-h-[280px] overflow-y-scroll pt-2 text-zinc-300"
+          ref={listRef}
+        >
           {navLinks.map((link, index) => (
             <Command.Item
               key={index}
               className={commandItemClass}
               tabIndex={0}
-              onClick={() => {
+              onSelect={() => {
                 navigate(link.link)
-              }}
-              onKeyUp={(e: React.KeyboardEvent) => {
-                if (e.key === "Enter") navigate(link.link)
               }}
             >
               {link.icon}
@@ -126,11 +127,8 @@ const CommandBar: React.FC = () => {
             <Command.Item
               key={index}
               className={commandItemClass}
-              onClick={() => {
+              onSelect={() => {
                 navigate(link.href)
-              }}
-              onKeyUp={(e) => {
-                if (e.key === "Enter") navigate(link.href)
               }}
               tabIndex={0}
             >
@@ -142,18 +140,11 @@ const CommandBar: React.FC = () => {
           <Command.Separator className="my-1 h-[0.5px] bg-zinc-700" />
           <Command.Item
             className={commandItemClass}
-            onClick={() => {
+            onSelect={() => {
               window.open(
                 "https://github.com/nirnejak/nirnejak-website",
                 "_blank"
               )
-            }}
-            onKeyUp={(e) => {
-              if (e.key === "Enter")
-                window.open(
-                  "https://github.com/nirnejak/nirnejak-website",
-                  "_blank"
-                )
             }}
             tabIndex={0}
           >
