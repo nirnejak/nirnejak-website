@@ -101,7 +101,9 @@ const CommandBar: React.FC = () => {
           className="w-full rounded-lg bg-zinc-900 px-3.5 py-2.5 text-sm text-zinc-300 outline-none placeholder:text-zinc-600"
           placeholder="Search Command"
         />
-
+        <Command.Empty className="mt-5 w-full text-center text-zinc-300">
+          No results found.
+        </Command.Empty>
         <Command.List className="max-h-[280px] overflow-y-scroll pt-2 text-zinc-300">
           {navLinks.map((link, index) => (
             <Command.Item
