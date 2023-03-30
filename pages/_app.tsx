@@ -10,7 +10,6 @@ import Navbar from "components/Navbar"
 
 import "../styles/main.css"
 
-// TODO: Add Command Bar
 // TODO: Scale Cursor Circle on Hover
 
 const MyApp: React.FC<AppProps> = (props) => {
