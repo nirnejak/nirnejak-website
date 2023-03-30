@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
   return (
     <footer className={footerClass}>
       <Container>
-        <div className="flex w-full flex-col justify-between gap-4 py-3 text-xs text-zinc-500 md:flex-row">
+        <div className="flex w-full flex-col items-center justify-between gap-4 py-3 text-xs text-zinc-500 md:flex-row">
           <div className="text-center md:text-left">
             Designed with ❤️ and a lot of ☕️
           </div>
