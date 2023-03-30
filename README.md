@@ -16,15 +16,17 @@
 
 **Additional Libraries**
 
-- Tailwind CSS - for styling
-- Framer Motion - for animations
-- Radix UI - for headless UI elements
-- use-sound - for using sound effects
+- [Tailwind CSS](https://tailwindcss.com/) - for styling
+- [Akar Icons](https://akaricons.com/) - for perfectly rounded icons
+- [Framer Motion](https://www.framer.com/motion/) - for animations
+- [Radix UI](https://www.radix-ui.com/) - for headless UI elements(tooltip)
+- [use-sound](https://www.npmjs.com/package/use-sound) - for using sound effects
+- [cmdk](https://cmdk.paco.me/) - for command menu(press cmd/ctrl+k)
 
 **Services**
 
-- Analytics - Plausible Analytics
-- Hosting - Vercel
+- Analytics - [Plausible Analytics](https://plausible.io/)
+- Hosting - [Vercel](https://vercel.com/)
 
 ---
 
