@@ -8,7 +8,7 @@ import AppLink from "components/atoms/Link"
 import SEO from "components/SEO"
 import SocialLinks from "components/SocialLinks"
 
-// TODO: maybe add skills/expertise section - Figma, TypeScript, React, Vue, Node, Postgres
+// TODO: maybe add skills/expertise section(with graph, maybe circular packing) - Figma, TypeScript, React, Vue, Node, Postgres
 // TODO: maybe add recent blogs
 // TODO: maybe add recently done projects
 
