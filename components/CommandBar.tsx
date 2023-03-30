@@ -1,61 +1,14 @@
 import * as React from "react"
 
-import {
-  CodepenFill,
-  DribbbleFill,
-  GithubFill,
-  LinkedinFill,
-  LinkOut,
-  TwitterFill,
-  Frame,
-  UnsplashFill,
-} from "akar-icons"
+import { GithubFill, LinkOut } from "akar-icons"
 import { Command } from "cmdk"
 import { useRouter } from "next/router"
 import useSound from "use-sound"
 
-import { navLinks } from "utils/navigation"
+import { navLinks, socialLinks } from "utils/navigation"
 
 const commandItemClass =
   "command-item px-3 py-2.5 cursor-pointer hover-bg hover-bg-dark flex items-center gap-2.5 outline-0"
-
-const socialLinks = [
-  {
-    content: "Twitter",
-    href: "https://twitter.com/jeetnirnejak/",
-    icon: <TwitterFill size={15} />,
-  },
-  {
-    content: "Github",
-    href: "https://github.com/nirnejak/",
-    icon: <GithubFill size={15} />,
-  },
-  {
-    content: "Codepen",
-    href: "https://codepen.io/nirnejak/",
-    icon: <CodepenFill size={15} />,
-  },
-  {
-    content: "Dribbble",
-    href: "https://dribbble.com/nirnejak/",
-    icon: <DribbbleFill size={15} />,
-  },
-  {
-    content: "Layers.to",
-    href: "https://layers.to/nirnejak/",
-    icon: <Frame size={15} />,
-  },
-  {
-    content: "LinkedIn",
-    href: "https://www.linkedin.com/in/nirnejak/",
-    icon: <LinkedinFill size={15} />,
-  },
-  {
-    content: "Unsplash",
-    href: "https://unsplash.com/@nirnejak/",
-    icon: <UnsplashFill size={15} />,
-  },
-]
 
 const CommandBar: React.FC = () => {
   const router = useRouter()

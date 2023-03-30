@@ -1,4 +1,17 @@
-import { Camera, HomeAlt1, LaptopDevice, Pencil, Phone } from "akar-icons"
+import {
+  Camera,
+  HomeAlt1,
+  LaptopDevice,
+  Pencil,
+  Phone,
+  CodepenFill,
+  DribbbleFill,
+  GithubFill,
+  LinkedinFill,
+  TwitterFill,
+  Frame,
+  UnsplashFill,
+} from "akar-icons"
 
 export const navLinks = [
   {
@@ -36,5 +49,43 @@ export const navLinks = [
     value: "contact",
     link: "/contact/",
     icon: <Phone size={15} />,
+  },
+]
+
+export const socialLinks = [
+  {
+    content: "Twitter",
+    href: "https://twitter.com/jeetnirnejak/",
+    icon: <TwitterFill size={15} />,
+  },
+  {
+    content: "Github",
+    href: "https://github.com/nirnejak/",
+    icon: <GithubFill size={15} />,
+  },
+  {
+    content: "Codepen",
+    href: "https://codepen.io/nirnejak/",
+    icon: <CodepenFill size={15} />,
+  },
+  {
+    content: "Dribbble",
+    href: "https://dribbble.com/nirnejak/",
+    icon: <DribbbleFill size={15} />,
+  },
+  {
+    content: "Layers.to",
+    href: "https://layers.to/nirnejak/",
+    icon: <Frame size={15} />,
+  },
+  {
+    content: "LinkedIn",
+    href: "https://www.linkedin.com/in/nirnejak/",
+    icon: <LinkedinFill size={15} />,
+  },
+  {
+    content: "Unsplash",
+    href: "https://unsplash.com/@nirnejak/",
+    icon: <UnsplashFill size={15} />,
   },
 ]
