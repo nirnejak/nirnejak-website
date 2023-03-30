@@ -15,55 +15,51 @@ import useSound from "use-sound"
 import { navLinks } from "utils/navigation"
 
 const commandItemClass =
-  "px-3 py-2.5 cursor-pointer hover-bg hover-bg-dark flex items-center gap-1.5 outline-0"
-
-// TODO: Add keyboard navigation with arrows
+  "command-item px-3 py-2.5 cursor-pointer hover-bg hover-bg-dark flex items-center gap-2.5 outline-0"
 
 const socialLinks = [
   {
-    title: "Twitter",
+    content: "Twitter",
     href: "https://twitter.com/jeetnirnejak/",
-    icon: <TwitterFill size={13} />,
+    icon: <TwitterFill size={15} />,
   },
   {
-    title: "Github",
+    content: "Github",
     href: "https://github.com/nirnejak/",
-    icon: <GithubFill size={13} />,
+    icon: <GithubFill size={15} />,
   },
   {
-    title: "Codepen",
+    content: "Codepen",
     href: "https://codepen.io/nirnejak/",
-    icon: <CodepenFill size={13} />,
+    icon: <CodepenFill size={15} />,
   },
   {
-    title: "Dribbble",
+    content: "Dribbble",
     href: "https://dribbble.com/nirnejak",
-    icon: <DribbbleFill size={13} />,
+    icon: <DribbbleFill size={15} />,
   },
   {
-    title: "LinkedIn",
+    content: "LinkedIn",
     href: "https://www.linkedin.com/in/nirnejak/",
-    icon: <LinkedinFill size={13} />,
+    icon: <LinkedinFill size={15} />,
   },
 ]
 
 const CommandBar: React.FC = () => {
   const router = useRouter()
 
-  const listRef = React.useRef(null)
-
-  const [isOpen, setIsOpen] = React.useState(false)
-
   const [playWhoop] = useSound("../sounds/whoop.wav")
   const [playBlow] = useSound("../sounds/blow.mp3")
 
-  React.useEffect(() => {
-    if (isOpen && playBlow !== undefined) {
-      playBlow()
-    }
-  }, [isOpen, playBlow])
+  const listRef = React.useRef(null)
+  const inputRef = React.useRef<HTMLInputElement | null>(null)
+
+  const [value, setValue] = React.useState("Home")
+  const [isOpen, setIsOpen] = React.useState(false)
 
   React.useEffect(() => {
+    inputRef?.current?.focus()
+
     const eventHandler = (e: any | React.KeyboardEvent): void => {
       if ((e as KeyboardEvent).key === "k" && (e as KeyboardEvent).metaKey) {
         setIsOpen(true)
@@ -74,7 +70,13 @@ const CommandBar: React.FC = () => {
     return () => {
       document.removeEventListener("keydown", eventHandler)
     }
-  }, [setIsOpen])
+  }, [])
+
+  React.useEffect(() => {
+    if (isOpen && playBlow !== undefined) {
+      playBlow()
+    }
+  }, [isOpen, playBlow])
 
   const navigate = (href: string): void => {
     if (href.includes("http") || href.includes("mailto")) {
@@ -87,7 +89,7 @@ const CommandBar: React.FC = () => {
   }
 
   return (
-    <div
+    <Command
       className={
         isOpen ? "fixed left-0 top-0 z-50 h-screen w-full bg-zinc-900/90" : ""
       }
@@ -95,18 +97,24 @@ const CommandBar: React.FC = () => {
       <Command.Dialog
         open={isOpen}
         onOpenChange={setIsOpen}
+        loop={true}
+        value={value}
+        onValueChange={(v) => {
+          setValue(v)
+        }}
         label="Global Command Menu"
         className="fixed left-1/2 top-1/2 z-50 w-full max-w-[680px] -translate-x-1/2 -translate-y-1/2 animate-rise rounded-lg bg-zinc-800 p-3 text-sm font-light"
       >
         <Command.Input
           className="w-full rounded-lg bg-zinc-900 px-3.5 py-2.5 text-sm text-zinc-300 outline-none placeholder:text-zinc-600"
-          placeholder="Search Command"
+          placeholder="Search Link"
+          ref={inputRef}
         />
         <Command.Empty className="mt-5 w-full text-center text-zinc-300">
           No results found.
         </Command.Empty>
         <Command.List
-          className="max-h-[280px] overflow-y-scroll pt-2 text-zinc-300"
+          className="max-h-[280px] overflow-y-scroll overscroll-contain pt-2 text-zinc-300"
           ref={listRef}
         >
           {navLinks.map((link, index) => (
@@ -114,6 +122,7 @@ const CommandBar: React.FC = () => {
               key={index}
               className={commandItemClass}
               tabIndex={0}
+              value={link.content}
               onSelect={() => {
                 navigate(link.link)
               }}
@@ -127,34 +136,36 @@ const CommandBar: React.FC = () => {
             <Command.Item
               key={index}
               className={commandItemClass}
+              tabIndex={0}
+              value={link.content}
               onSelect={() => {
                 navigate(link.href)
               }}
-              tabIndex={0}
             >
               {link.icon}
-              <span>{link.title}</span>
+              <span>{link.content}</span>
               <LinkOut size={13} className="ml-auto" />
             </Command.Item>
           ))}
           <Command.Separator className="my-1 h-[0.5px] bg-zinc-700" />
           <Command.Item
             className={commandItemClass}
+            tabIndex={0}
+            value="View Source"
             onSelect={() => {
               window.open(
                 "https://github.com/nirnejak/nirnejak-website",
                 "_blank"
               )
             }}
-            tabIndex={0}
           >
-            <GithubFill size={13} />
+            <GithubFill size={15} />
             <span>View Source</span>
             <LinkOut size={13} className="ml-auto" />
           </Command.Item>
         </Command.List>
       </Command.Dialog>
-    </div>
+    </Command>
   )
 }
 
