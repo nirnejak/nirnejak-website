@@ -85,7 +85,7 @@ const CommandBar: React.FC = () => {
           No results found.
         </Command.Empty>
         <Command.List
-          className="max-h-[280px] overflow-y-scroll overscroll-contain py-2 text-zinc-300"
+          className="my-2 max-h-[280px] overflow-y-scroll overscroll-contain text-zinc-300"
           ref={listRef}
         >
           {navLinks.map((link, index) => (
