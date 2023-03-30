@@ -7,6 +7,8 @@ import {
   LinkedinFill,
   LinkOut,
   TwitterFill,
+  Frame,
+  UnsplashFill,
 } from "akar-icons"
 import { Command } from "cmdk"
 import { useRouter } from "next/router"
@@ -35,13 +37,23 @@ const socialLinks = [
   },
   {
     content: "Dribbble",
-    href: "https://dribbble.com/nirnejak",
+    href: "https://dribbble.com/nirnejak/",
     icon: <DribbbleFill size={15} />,
+  },
+  {
+    content: "Layers.to",
+    href: "https://layers.to/nirnejak/",
+    icon: <Frame size={15} />,
   },
   {
     content: "LinkedIn",
     href: "https://www.linkedin.com/in/nirnejak/",
     icon: <LinkedinFill size={15} />,
+  },
+  {
+    content: "Unsplash",
+    href: "https://unsplash.com/@nirnejak/",
+    icon: <UnsplashFill size={15} />,
   },
 ]
 
