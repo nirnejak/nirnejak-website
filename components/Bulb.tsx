@@ -69,7 +69,7 @@ const Bulb: React.FC = () => {
               : {}
           }
           onKeyUp={(e) => {
-            e.key === "enter" && setIsSwitchOn(!isSwitchOn)
+            e.key === "Enter" && toggleBulb()
           }}
           onClick={() => {
             toggleBulb()
