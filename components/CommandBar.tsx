@@ -32,7 +32,10 @@ const CommandBar: React.FC = () => {
     inputRef?.current?.focus()
 
     const eventHandler = (e: any | React.KeyboardEvent): void => {
-      if ((e as KeyboardEvent).key === "k" && (e as KeyboardEvent).metaKey) {
+      if (
+        (e as KeyboardEvent).key === "k" &&
+        ((e as KeyboardEvent).metaKey || (e as KeyboardEvent).ctrlKey)
+      ) {
         setIsOpen(true)
       }
     }
