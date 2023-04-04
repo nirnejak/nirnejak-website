@@ -16,7 +16,7 @@ const MyApp: React.FC<AppProps> = (props) => {
   const { Component, pageProps } = props
 
   return (
-    <main className="bg-zinc-900">
+    <>
       <Navbar />
       <Component {...pageProps} />
       <Footer />
@@ -24,7 +24,7 @@ const MyApp: React.FC<AppProps> = (props) => {
       <Bulb />
       <Background />
       <CommandBar />
-    </main>
+    </>
   )
 }
 
