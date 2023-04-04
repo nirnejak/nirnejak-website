@@ -9,7 +9,8 @@ import AppLink from "components/atoms/Link"
 import SEO from "components/SEO"
 import { allProjects } from "utils/data"
 
-// TODO: find a way to add work description
+// TODO: Add case study
+// TODO: Add crafts gallery section
 // TODO: filterable? grouped? visualization or graph of some sort? tags?
 
 const WorkPage: React.FC = () => {
