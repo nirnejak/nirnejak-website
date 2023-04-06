@@ -48,6 +48,10 @@ module.exports = {
           from: { transform: "translate(-50%, -40%) scale(0.95)" },
           to: { transform: "translate(-50%, -50%) scale(1)" },
         },
+        scale: {
+          from: { opacity: 0, transform: "scale(0)" },
+          to: { opacity: 1, transform: "scale(1)" },
+        },
       },
       animation: {
         slideDownAndFade:
@@ -63,6 +67,7 @@ module.exports = {
         slideRight: "slideRight 400ms cubic-bezier(0.16, 1, 0.3, 1)",
         swing: "swing 1s infinite ease-in-out alternate",
         rise: "rise 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+        scale: "scale 150ms cubic-bezier(0.4, 0, 0.2, 1)",
       },
     },
     fontFamily: {
