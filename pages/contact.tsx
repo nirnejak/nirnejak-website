@@ -1,7 +1,4 @@
 import * as React from "react"
-import { useInView } from "react-intersection-observer"
-
-import { motion, useAnimation } from "framer-motion"
 
 import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
@@ -12,22 +9,6 @@ interface ResponseDataType {
 }
 
 const ContactPage: React.FC = () => {
-  const controls = useAnimation()
-  const [ref, inView] = useInView()
-
-  React.useEffect(() => {
-    if (inView) {
-      controls.start("visible").catch((err) => {
-        console.log(err)
-      })
-    }
-  }, [controls, inView])
-
-  const variants = {
-    visible: { opacity: 1, translateY: 0 },
-    hidden: { opacity: 0, translateY: 10 },
-  }
-
   const [isSending, setIsSending] = React.useState(false)
   const [isSent, setIsSent] = React.useState(false)
 
@@ -74,14 +55,7 @@ const ContactPage: React.FC = () => {
         path="/contact/"
       />
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
-        <motion.div
-          animate={controls}
-          initial="hidden"
-          transition={{ delay: 0, duration: 0.15, type: "spring" }}
-          variants={variants}
-          className="w-full"
-          ref={ref}
-        >
+        <div className="w-full">
           <h1 className="text-5xl font-bold text-zinc-300">Contact</h1>
 
           <form
@@ -128,7 +102,7 @@ const ContactPage: React.FC = () => {
               jeetnirnejak@gmail.com
             </AppLink>
           </div>
-        </motion.div>
+        </div>
       </section>
     </Container>
   )
