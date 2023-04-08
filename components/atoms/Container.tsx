@@ -11,7 +11,7 @@ interface Props {
 const Container: React.FC<Props> = ({
   children,
   className,
-  size,
+  size = "normal",
   ...restProps
 }) => {
   const widthClass = React.useMemo(() => {
@@ -36,10 +36,6 @@ const Container: React.FC<Props> = ({
       {children}
     </div>
   )
-}
-
-Container.defaultProps = {
-  size: "normal",
 }
 
 export default Container

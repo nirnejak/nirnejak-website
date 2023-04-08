@@ -9,7 +9,12 @@ interface Props {
   image?: string
 }
 
-const SEO: React.FC<Props> = ({ path, title, description, image }) => {
+const SEO: React.FC<Props> = ({
+  path,
+  title = "Jitendra Nirnejak - Portfolio Website",
+  description = "Jitendra Nirnejak is a developer and designer based out of Bangalore, India. He has expertise in React, TypeScript, Node.js, UI Design and Prototyping.",
+  image,
+}) => {
   const baseUrl = "https://nirnejak.com"
   const metaTitle = title
   const metaDescription = description
@@ -36,12 +41,6 @@ const SEO: React.FC<Props> = ({ path, title, description, image }) => {
       <meta name="twitter:image" content={`${baseUrl}${metaImage}`} />
     </Head>
   )
-}
-
-SEO.defaultProps = {
-  title: "Jitendra Nirnejak - Portfolio Website",
-  description:
-    "Jitendra Nirnejak is a developer and designer based out of Bangalore, India. He has expertise in React, TypeScript, Node.js, UI Design and Prototyping.",
 }
 
 export default SEO
