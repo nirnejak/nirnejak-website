@@ -1,5 +1,11 @@
 export const allProjects = [
   {
+    title: "SVG Animations Gallery",
+    description: "A Gallery of SVG Animations built with Framer Motion",
+    type: "Design & Code",
+    link: "https://svg-animations-framer.vercel.app/",
+  },
+  {
     title: "SQL Editor & Formatter",
     description: "A tool to write SQL Queries and format them.",
     type: "Code",
@@ -30,7 +36,7 @@ export const allProjects = [
     link: "https://www.draxlr.com/",
   },
   {
-    title: "Inkoop website",
+    title: "Inkoop Website",
     description: "Designer and developed the new Inkoop Website",
     type: "Design & Code",
     link: "https://www.inkoop.io/",
