@@ -12,6 +12,10 @@ const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
   poweredByHeader: false,
+  experimental: {
+    // Required:
+    appDir: true,
+  },
 }
 
 module.exports = withPWA(nextConfig)
