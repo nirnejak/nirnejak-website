@@ -25,7 +25,7 @@
 
 **Services**
 
-- Analytics - [Plausible Analytics](https://plausible.io/)
+- Analytics - [Pirsch Analytics](https://pirsch.io/)
 - Hosting - [Vercel](https://vercel.com/)
 
 ---

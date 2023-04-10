@@ -39,11 +39,13 @@ const MyDocument: React.FC = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@jeetnirnejak" />
         <meta name="twitter:site" content="@jeetnirnejak" />
-        {/* Plausible Analytics */}
+        {/* Pirsch Analytics */}
         <script
           defer
-          data-domain="nirnejak.com"
-          src="https://plausible.io/js/script.js"
+          type="text/javascript"
+          src="https://api.pirsch.io/pirsch.js"
+          id="pirschjs"
+          data-code="lPemrjGu8lYrGEQVCU1PauV9OJvOHlyy"
         />
       </Head>
       <body className="overflow-x-hidden bg-zinc-900">
