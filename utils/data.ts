@@ -3,7 +3,7 @@ export const allProjects = [
     title: "SVG Animations Gallery",
     description: "A Gallery of SVG Animations built with Framer Motion",
     type: "Design & Code",
-    link: "https://svg-animations-framer.vercel.app/",
+    link: "https://svg-animations-gallery.vercel.app/",
   },
   {
     title: "SQL Editor & Formatter",
