@@ -1,5 +1,11 @@
 export const allProjects = [
   {
+    title: "React Presentation Maker",
+    description: "Use your React components as presentation slides",
+    type: "Design & Code",
+    link: "https://react-presentation-maker.vercel.app/",
+  },
+  {
     title: "SVG Animations Gallery",
     description: "A Gallery of SVG Animations built with Framer Motion",
     type: "Design & Code",
