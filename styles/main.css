@@ -13,14 +13,12 @@
 }
 
 ::-moz-selection {
-  @apply text-white;
-  @apply bg-blue-600;
+  @apply bg-zinc-600 text-white;
   -webkit-text-fill-color: white;
 }
 
 ::selection {
-  @apply text-white;
-  @apply bg-blue-600;
+  @apply bg-zinc-600 text-white;
   -webkit-text-fill-color: white;
 }
 
