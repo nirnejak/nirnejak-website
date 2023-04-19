@@ -1,5 +1,11 @@
 export const allProjects = [
   {
+    title: "CSV Plot",
+    description: "Quickly plot CSV data into graphs(bar, pie, area, map, etc.)",
+    type: "Design & Code",
+    link: "https://csv-plot-tau.vercel.app/",
+  },
+  {
     title: "React Presentation Maker",
     description: "Use your React components as presentation slides",
     type: "Design & Code",
