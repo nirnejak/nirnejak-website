@@ -35,19 +35,6 @@ const WorkPage: React.FC = () => {
               </AppLink>
             ))}
           </div>
-
-          <div className="-mx-3 mb-3 flex">
-            <div className="mr-auto">
-              <AppLink
-                className="hover-bg flex items-center gap-1.5 rounded-md px-4 py-2 text-xs font-medium outline-none"
-                href="https://layers.to/nirnejak"
-                target="_blank"
-              >
-                <span className="">Designs</span>
-                <LinkOut className="" size={14} />
-              </AppLink>
-            </div>
-          </div>
         </div>
       </section>
     </Container>
