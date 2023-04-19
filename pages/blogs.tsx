@@ -5,8 +5,6 @@ import AppLink from "components/atoms/Link"
 import SEO from "components/SEO"
 import { allBlogs } from "utils/data"
 
-// TODO: maybe add blog images
-
 const BlogsPage: React.FC = () => {
   return (
     <Container>

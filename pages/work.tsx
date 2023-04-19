@@ -7,11 +7,6 @@ import AppLink from "components/atoms/Link"
 import SEO from "components/SEO"
 import { allProjects } from "utils/data"
 
-// TODO: Add case study
-// TODO: Add crafts gallery section
-// TODO: filterable? grouped? visualization or graph of some sort? tags?
-// TODO: Projects and Side Projects
-
 const WorkPage: React.FC = () => {
   return (
     <Container>

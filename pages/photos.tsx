@@ -3,8 +3,6 @@ import * as React from "react"
 import Container from "components/atoms/Container"
 import SEO from "components/SEO"
 
-// TODO: Photo gallery and preview
-
 const PhotosPage: React.FC = () => {
   return (
     <Container>

@@ -10,8 +10,6 @@ import Navbar from "components/Navbar"
 
 import "../styles/main.css"
 
-// TODO: Scale Cursor Circle on Hover
-
 const MyApp: React.FC<AppProps> = (props) => {
   const { Component, pageProps } = props
 
