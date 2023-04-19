@@ -20,9 +20,11 @@ const WorkPage: React.FC = () => {
           <h1 className="text-5xl font-bold text-zinc-300">Work</h1>
 
           <div className="mt-10 text-sm md:mt-16">
-            <div className="mb-16 grid grid-cols-1 md:grid-cols-2">
-              <p className="mb-3 text-zinc-300 md:mt-2">Side Projects</p>
-              <div className="flex flex-col gap-1 md:mx-3">
+            <div className="mb-16 flex flex-col md:flex-row">
+              <p className="mb-3 w-[250px] text-zinc-300 md:mt-2">
+                Side Projects
+              </p>
+              <div className="flex flex-1 flex-col gap-1 md:mx-3">
                 {allProjects.work.map((project, index) => (
                   <AppLink
                     key={index}
@@ -38,9 +40,11 @@ const WorkPage: React.FC = () => {
                 ))}
               </div>
             </div>
-            <div className="mb-16 grid grid-cols-1 md:grid-cols-2">
-              <p className="mb-3 text-zinc-300 md:mt-2">Work Projects</p>
-              <div className="flex flex-col gap-1 md:mx-3">
+            <div className="mb-16 flex flex-col md:flex-row">
+              <p className="mb-3 w-[250px] text-zinc-300 md:mt-2">
+                Work Projects
+              </p>
+              <div className="flex flex-1 flex-col gap-1 md:mx-3">
                 {allProjects.side.map((project, index) => (
                   <AppLink
                     key={index}
