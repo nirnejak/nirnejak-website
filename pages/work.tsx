@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { ArrowRight, LinkOut } from "akar-icons"
+import { ArrowRight } from "akar-icons"
 
 import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
