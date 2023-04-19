@@ -1,65 +1,70 @@
-export const allProjects = [
-  {
-    title: "CSV Plot",
-    description: "Quickly plot CSV data into graphs(bar, pie, area, map, etc.)",
-    type: "Design & Code",
-    link: "https://csv-plot-tau.vercel.app/",
-  },
-  {
-    title: "React Presentation Maker",
-    description: "Use your React components as presentation slides",
-    type: "Design & Code",
-    link: "https://react-presentation-maker.vercel.app/",
-  },
-  {
-    title: "SVG Animations Gallery",
-    description: "A Gallery of SVG Animations built with Framer Motion",
-    type: "Design & Code",
-    link: "https://svg-animations-gallery.vercel.app/",
-  },
-  {
-    title: "SQL Editor & Formatter",
-    description: "A tool to write SQL Queries and format them.",
-    type: "Code",
-    link: "https://www.draxlr.com/tools/sql-formatter/",
-  },
-  {
-    title: "Draxlr App",
-    description: "Draxlr is an app to build dashboards and setup alerts.",
-    type: "Design & Code",
-    link: "https://app.draxlr.com/",
-  },
-  {
-    title: "Draxlr Documentation",
-    description: "Wrote the product documentation for Draxlr",
-    type: "Content",
-    link: "https://www.draxlr.com/docs/",
-  },
-  {
-    title: "Sup.today",
-    description: "Designed the website and app UI and built the Website.",
-    type: "Design & Code",
-    link: "https://sup.today/",
-  },
-  {
-    title: "Draxlr Website",
-    description: "Designed and Developed the Draxlr Website.",
-    type: "Design & Code",
-    link: "https://www.draxlr.com/",
-  },
-  {
-    title: "Inkoop Website",
-    description: "Designer and developed the new Inkoop Website",
-    type: "Design & Code",
-    link: "https://www.inkoop.io/",
-  },
-  {
-    title: "Inkoop Social Media",
-    description: "Designed the templates of Inkoop's social media posts.",
-    type: "Design",
-    link: "https://www.instagram.com/inkoopteam/",
-  },
-]
+export const allProjects = {
+  work: [
+    {
+      title: "CSV Plot",
+      description:
+        "Quickly plot CSV data into graphs(bar, pie, area, map, etc.)",
+      type: "Design & Code",
+      link: "https://csv-plot-tau.vercel.app/",
+    },
+    {
+      title: "React Presentation Maker",
+      description: "Use your React components as presentation slides",
+      type: "Design & Code",
+      link: "https://react-presentation-maker.vercel.app/",
+    },
+    {
+      title: "SVG Animations Gallery",
+      description: "A Gallery of SVG Animations built with Framer Motion",
+      type: "Design & Code",
+      link: "https://svg-animations-gallery.vercel.app/",
+    },
+    {
+      title: "SQL Editor & Formatter",
+      description: "A tool to write SQL Queries and format them.",
+      type: "Code",
+      link: "https://www.draxlr.com/tools/sql-formatter/",
+    },
+  ],
+  side: [
+    {
+      title: "Draxlr App",
+      description: "Draxlr is an app to build dashboards and setup alerts.",
+      type: "Design & Code",
+      link: "https://app.draxlr.com/",
+    },
+    {
+      title: "Draxlr Documentation",
+      description: "Wrote the product documentation for Draxlr",
+      type: "Content",
+      link: "https://www.draxlr.com/docs/",
+    },
+    {
+      title: "Sup.today",
+      description: "Designed the website and app UI and built the Website.",
+      type: "Design & Code",
+      link: "https://sup.today/",
+    },
+    {
+      title: "Draxlr Website",
+      description: "Designed and Developed the Draxlr Website.",
+      type: "Design & Code",
+      link: "https://www.draxlr.com/",
+    },
+    {
+      title: "Inkoop Website",
+      description: "Designer and developed the new Inkoop Website",
+      type: "Design & Code",
+      link: "https://www.inkoop.io/",
+    },
+    {
+      title: "Inkoop Social Media",
+      description: "Designed the templates of Inkoop's social media posts.",
+      type: "Design",
+      link: "https://www.instagram.com/inkoopteam/",
+    },
+  ],
+}
 
 export const allBlogs = {
   2023: [

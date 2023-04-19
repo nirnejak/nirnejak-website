@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   const router = useRouter()
 
   const footerClass = React.useMemo(() => {
-    if (router.pathname.includes("blogs")) {
+    if (router.pathname.includes("blogs") || router.pathname.includes("work")) {
       return ""
     } else if (router.pathname.includes("uses")) {
       return "md:fixed bottom-0 w-full"
