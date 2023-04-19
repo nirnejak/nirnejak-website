@@ -24,7 +24,7 @@ export const allProjects = [
     link: "https://www.draxlr.com/tools/sql-formatter/",
   },
   {
-    title: "Draxlr 3.0",
+    title: "Draxlr App",
     description: "Draxlr is an app to build dashboards and setup alerts.",
     type: "Design & Code",
     link: "https://app.draxlr.com/",
