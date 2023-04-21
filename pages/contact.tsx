@@ -69,6 +69,7 @@ const ContactPage: React.FC = () => {
               name="name"
               value={state.name}
               onChange={handleChange}
+              required
             />
             <input
               type="email"
@@ -77,6 +78,7 @@ const ContactPage: React.FC = () => {
               name="email"
               value={state.email}
               onChange={handleChange}
+              required
             />
             <textarea
               className="rounded-md bg-zinc-800 px-4 py-3 text-xs text-zinc-400 placeholder:text-zinc-600"
@@ -85,6 +87,7 @@ const ContactPage: React.FC = () => {
               name="message"
               value={state.message}
               onChange={handleChange}
+              required
             />
             <button
               disabled={isSending}
