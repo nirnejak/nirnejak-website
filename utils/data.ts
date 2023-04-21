@@ -5,7 +5,7 @@ export const allProjects = {
       description:
         "Quickly plot CSV data into graphs(bar, pie, area, map, etc.)",
       type: "Design & Code",
-      link: "https://csv-plot-tau.vercel.app/",
+      link: "https://plot-csv.vercel.app/",
     },
     {
       title: "React Presentation Maker",
