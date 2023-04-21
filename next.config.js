@@ -12,6 +12,9 @@ const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
   poweredByHeader: false,
+  images: {
+    domains: ["media.giphy.com"],
+  },
   experimental: {
     // Required:
     appDir: true,
