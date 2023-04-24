@@ -45,6 +45,7 @@ const AppLink: React.FC<Props> = ({
           play()
           if (onClick !== undefined) onClick(e)
         }}
+        rel="noopener noreferrer nofollow"
         {...restProps}
       >
         {children}
