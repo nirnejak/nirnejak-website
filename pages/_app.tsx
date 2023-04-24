@@ -3,7 +3,7 @@ import * as React from "react"
 import { Analytics } from "@vercel/analytics/react"
 import type { AppProps } from "next/app"
 
-import Background from "components/atoms/Background"
+import Background from "components/Background"
 import Bulb from "components/Bulb"
 import CommandBar from "components/CommandBar"
 import Footer from "components/Footer"
