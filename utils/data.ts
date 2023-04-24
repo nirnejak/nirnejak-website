@@ -29,7 +29,8 @@ export const allProjects = {
   side: [
     {
       title: "Draxlr App",
-      description: "Draxlr is an app to build dashboards and setup alerts.",
+      description:
+        "Responsible for the development and the design of the platform.",
       type: "Design & Code",
       link: "https://app.draxlr.com/",
     },
@@ -41,25 +42,25 @@ export const allProjects = {
     },
     {
       title: "Sup.today",
-      description: "Designed the website and app UI and built the Website.",
+      description: "Designed the app UI, designed and built the site.",
       type: "Design & Code",
       link: "https://sup.today/",
     },
     {
       title: "Draxlr Website",
-      description: "Designed and Developed the Draxlr Website.",
+      description: "Designed and developed the Draxlr site.",
       type: "Design & Code",
       link: "https://www.draxlr.com/",
     },
     {
       title: "Inkoop Website",
-      description: "Designer and developed the new Inkoop Website",
+      description: "Designed and developed the new organization site",
       type: "Design & Code",
       link: "https://www.inkoop.io/",
     },
     {
       title: "Inkoop Social Media",
-      description: "Designed the templates of Inkoop's social media posts.",
+      description: "Designed social media posts of the organization.",
       type: "Design",
       link: "https://www.instagram.com/inkoopteam/",
     },
