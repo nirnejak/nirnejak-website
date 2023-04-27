@@ -1,6 +1,5 @@
 import * as React from "react"
 
-import { Analytics } from "@vercel/analytics/react"
 import type { AppProps } from "next/app"
 
 import Background from "components/Background"
@@ -23,7 +22,6 @@ const MyApp: React.FC<AppProps> = (props) => {
       <Bulb />
       <Background />
       <CommandBar />
-      <Analytics />
     </>
   )
 }
