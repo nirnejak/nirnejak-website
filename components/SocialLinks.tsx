@@ -45,11 +45,6 @@ const socialLinks = [
     icon: <GithubFill size={21} />,
   },
   {
-    title: "Codepen",
-    url: "https://codepen.io/nirnejak/",
-    icon: <CodepenFill size={21} />,
-  },
-  {
     title: "Dribbble",
     url: "https://dribbble.com/nirnejak",
     icon: <DribbbleFill size={21} />,
