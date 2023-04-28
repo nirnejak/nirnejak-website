@@ -1,5 +1,19 @@
 export const allProjects = {
-  work: [
+  starter: [
+    {
+      title: "nextjs-typescript-starter",
+      description: "Next.js TypeScript & Tailwind Starter",
+      type: "Code",
+      link: "https://github.com/nirnejak/nextjs-typescript-starter",
+    },
+    {
+      title: "typescript-node-starter",
+      description: "A Node.js(Express) TypeScript Starter Template",
+      type: "Code",
+      link: "https://github.com/nirnejak/typescript-node-starter",
+    },
+  ],
+  side: [
     {
       title: "CSV Plot",
       description:
@@ -25,8 +39,20 @@ export const allProjects = {
       type: "Code",
       link: "https://www.draxlr.com/tools/sql-formatter/",
     },
+    {
+      title: "Workout Tracker",
+      description: "A PWA with localstorage to track daily workouts.",
+      type: "Design & Code",
+      link: "https://workouts-ios.vercel.app/",
+    },
+    {
+      title: "Raycast Microsoft Todo Plugin",
+      description: "Add tasks to Microsoft Todo using Raycast.",
+      type: "Code",
+      link: "https://github.com/nirnejak/raycast-microsoft-to-do/",
+    },
   ],
-  side: [
+  work: [
     {
       title: "Draxlr App",
       description:
