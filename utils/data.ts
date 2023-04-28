@@ -16,8 +16,7 @@ export const allProjects = {
   side: [
     {
       title: "CSV Plot",
-      description:
-        "Quickly plot CSV data into graphs(bar, pie, area, map, etc.)",
+      description: "Quickly plot CSV data into graphs(bar, pie, map, etc.)",
       type: "Design & Code",
       link: "https://plot-csv.vercel.app/",
     },
@@ -39,24 +38,23 @@ export const allProjects = {
       type: "Code",
       link: "https://www.draxlr.com/tools/sql-formatter/",
     },
-    {
-      title: "Workout Tracker",
-      description: "A PWA with localstorage to track daily workouts.",
-      type: "Design & Code",
-      link: "https://workouts-ios.vercel.app/",
-    },
-    {
-      title: "Raycast Microsoft Todo Plugin",
-      description: "Add tasks to Microsoft Todo using Raycast.",
-      type: "Code",
-      link: "https://github.com/nirnejak/raycast-microsoft-to-do/",
-    },
+    // {
+    //   title: "Workout Tracker",
+    //   description: "A PWA with localstorage to track daily workouts.",
+    //   type: "Design & Code",
+    //   link: "https://workouts-ios.vercel.app/",
+    // },
+    // {
+    //   title: "Raycast Microsoft Todo Plugin",
+    //   description: "Add tasks to Microsoft Todo using Raycast.",
+    //   type: "Code",
+    //   link: "https://github.com/nirnejak/raycast-microsoft-to-do/",
+    // },
   ],
   work: [
     {
       title: "Draxlr App",
-      description:
-        "Responsible for the development and the design of the platform.",
+      description: "Development and the design of the platform.",
       type: "Design & Code",
       link: "https://app.draxlr.com/",
     },
