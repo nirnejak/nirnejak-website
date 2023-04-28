@@ -3,7 +3,7 @@ import * as React from "react"
 import * as Tooltip from "@radix-ui/react-tooltip"
 import {
   ArrowRight,
-  CodepenFill,
+  ProductHuntFill,
   DribbbleFill,
   GithubFill,
   TwitterFill,
@@ -48,6 +48,11 @@ const socialLinks = [
     title: "Dribbble",
     url: "https://dribbble.com/nirnejak",
     icon: <DribbbleFill size={21} />,
+  },
+  {
+    title: "ProductHunt",
+    url: "https://www.producthunt.com/@nirnejak",
+    icon: <ProductHuntFill size={21} />,
   },
 ]
 
