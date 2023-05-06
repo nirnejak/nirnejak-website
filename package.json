@@ -19,7 +19,6 @@
     "dotenv": "^16.0.3",
     "framer-motion": "^10.12.7",
     "next": "^13.4.0",
-    "next-plausible": "^3.7.2",
     "next-pwa": "^5.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
