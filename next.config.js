@@ -15,10 +15,6 @@ const nextConfig = {
   images: {
     domains: ["media.giphy.com"],
   },
-  experimental: {
-    // Required:
-    appDir: true,
-  },
 }
 
 module.exports = withPWA(nextConfig)
