@@ -95,6 +95,14 @@ export const allBlogs = {
   2023: [
     {
       author: "Jitendra Nirnejak",
+      date: "8 May 2023",
+      description:
+        "Discover the power of SVGs! Learn the basics and advanced techniques for creating and animating stunning, scalable graphics for web",
+      title: "SVG Basics - Elements, Styling, Transformation & Animations",
+      url: "https://www.inkoop.io/blog/svg-basics-element-styling-transformation-animations/",
+    },
+    {
+      author: "Jitendra Nirnejak",
       date: "23 March 2023",
       description:
         "An In-Depth Comparison of two popular Node.js Frameworks, and why choosing Fastify may be a better option.",
