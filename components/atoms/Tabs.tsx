@@ -80,7 +80,7 @@ const Tabs: React.FC = () => {
         <Link
           href={tab.link}
           key={tab.value}
-          className="relative inline-block px-4 py-2 text-xs font-medium text-white outline-none"
+          className="relative inline-block px-4 py-2 text-xs font-medium text-white outline-none active:scale-95"
           onMouseOver={(
             ev: React.MouseEvent<HTMLAnchorElement, MouseEvent>
           ) => {
