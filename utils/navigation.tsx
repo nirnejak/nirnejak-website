@@ -12,6 +12,7 @@ import {
   Frame,
   UnsplashFill,
   ProductHuntFill,
+  InstagramFill,
 } from "akar-icons"
 
 export const navLinks = [
@@ -73,6 +74,11 @@ export const socialLinks = [
     content: "ProductHunt",
     href: "https://www.producthunt.com/@nirnejak",
     icon: <ProductHuntFill size={15} />,
+  },
+  {
+    content: "Instagram",
+    href: "https://instagram.com/jitendra.nirnejak/",
+    icon: <InstagramFill size={15} />,
   },
   {
     content: "Layers.to",
