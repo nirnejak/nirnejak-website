@@ -37,19 +37,17 @@ const UsesPage: React.FC = () => {
               <div>
                 <p className="text-sm text-zinc-500">Design Tools</p>
                 <p className="mt-1.5 text-lg font-bold text-zinc-300">
-                  Figma and Procreate
+                  Figma & Procreate
                 </p>
               </div>
               <div>
-                <p className="text-sm text-zinc-500">
-                  Languages and Frameworks
-                </p>
+                <p className="text-sm text-zinc-500">Languages & Frameworks</p>
                 <p className="mt-1.5 text-lg font-bold text-zinc-300">
                   TypeScript, React & Node.js
                 </p>
               </div>
               <div>
-                <p className="text-sm text-zinc-500">Terminal and Editor</p>
+                <p className="text-sm text-zinc-500">Terminal & Editor</p>
                 <p className="mt-1.5 text-lg font-bold text-zinc-300">
                   ZSH, iTerm & VS Code
                 </p>
