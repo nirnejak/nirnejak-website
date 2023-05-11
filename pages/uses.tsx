@@ -29,15 +29,15 @@ const UsesPage: React.FC = () => {
             </div>
             <div className="flex flex-1 flex-col gap-8">
               <div>
-                <p className="text-sm text-zinc-500">Design Tools</p>
+                <p className="text-sm text-zinc-500">Gear & Gadgets</p>
                 <p className="mt-1.5 text-lg font-bold text-zinc-300">
-                  Figma and Procreate
+                  iPhone 14 Pro, iPad Pro 11 & MacBook Air(M2)
                 </p>
               </div>
               <div>
-                <p className="text-sm text-zinc-500">Terminal and Editor</p>
+                <p className="text-sm text-zinc-500">Design Tools</p>
                 <p className="mt-1.5 text-lg font-bold text-zinc-300">
-                  ZSH, iTerm & VS Code
+                  Figma and Procreate
                 </p>
               </div>
               <div>
@@ -49,15 +49,16 @@ const UsesPage: React.FC = () => {
                 </p>
               </div>
               <div>
-                <p className="text-sm text-zinc-500">Gear & Gadgets</p>
+                <p className="text-sm text-zinc-500">Terminal and Editor</p>
                 <p className="mt-1.5 text-lg font-bold text-zinc-300">
-                  iPhone 14 Pro, iPad Pro 11 & MacBook Air(M2)
+                  ZSH, iTerm & VS Code
                 </p>
               </div>
+
               <div>
                 <p className="text-sm text-zinc-500">What&apos;s for 2023</p>
                 <p className="mt-1.5 text-lg font-bold text-zinc-300">
-                  TypeScript & Fastify
+                  Prisma & Fastify
                 </p>
               </div>
             </div>
