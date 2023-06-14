@@ -56,7 +56,7 @@ const UsesPage: React.FC = () => {
               <div>
                 <p className="text-sm text-zinc-500">What&apos;s for 2023</p>
                 <p className="mt-1.5 text-lg font-bold text-zinc-300">
-                  Prisma & Fastify
+                  SwiftUI
                 </p>
               </div>
             </div>
