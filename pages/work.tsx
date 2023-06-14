@@ -3,6 +3,7 @@ import * as React from "react"
 import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
 import SEO from "components/SEO"
+import WorkLinks from "components/WorkLinks"
 import { allProjects } from "utils/data"
 
 const WorkPage: React.FC = () => {
@@ -16,6 +17,10 @@ const WorkPage: React.FC = () => {
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <div className="w-full">
           <h1 className="text-5xl font-bold text-zinc-300">Work</h1>
+
+          <div className="mt-10 text-sm md:mt-16">
+            <WorkLinks />
+          </div>
 
           <div className="mt-10 text-sm md:mt-16">
             <div className="mb-16 flex flex-col md:flex-row">
