@@ -1,9 +1,14 @@
 import * as React from "react"
 
+import { type GetStaticProps } from "next"
+
+import Image from "next/image"
+
 import Container from "components/atoms/Container"
 import SEO from "components/SEO"
+import { getAllImages } from "utils/photos"
 
-const PhotosPage: React.FC = () => {
+const PhotosPage: React.FC<{ images: string[] }> = ({ images }) => {
   return (
     <Container>
       <SEO
@@ -16,7 +21,18 @@ const PhotosPage: React.FC = () => {
           <h1 className="text-5xl font-bold text-zinc-300">Photos</h1>
 
           <div className="mt-10 flex flex-col gap-1 pb-16 md:mt-16">
-            <p className="my-16 text-center text-zinc-500">Soon ✨</p>
+            <div className="grid grid-cols-3 gap-5">
+              {images.map((imageUrl, index) => (
+                <Image
+                  key={index}
+                  src={`/photos/${imageUrl}`}
+                  alt={imageUrl}
+                  className="rounded-lg"
+                  width="270"
+                  height="480"
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -25,3 +41,15 @@ const PhotosPage: React.FC = () => {
 }
 
 export default PhotosPage
+
+export const getStaticProps: GetStaticProps = async () => {
+  const imageDirectories = getAllImages()
+
+  console.log(imageDirectories)
+
+  return {
+    props: {
+      images: imageDirectories,
+    },
+  }
+}
