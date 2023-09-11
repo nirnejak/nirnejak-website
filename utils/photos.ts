@@ -12,5 +12,7 @@ export const getAllImages = (): string[] => {
   const images = directories
     .map((slug: string) => slug)
     .filter((slug: string) => !slug.includes(".DS_Store"))
+    .filter((slug: string) => !slug.includes(".HEIC"))
+    .filter((slug: string) => !slug.includes(".heic"))
   return images
 }
