@@ -17,6 +17,7 @@
     "akar-icons": "^1.9.29",
     "cmdk": "^0.2.0",
     "dotenv": "^16.3.1",
+    "eslint-plugin-n": "^16.1.0",
     "framer-motion": "^10.16.4",
     "next": "^13.4.19",
     "next-pwa": "^5.6.0",
