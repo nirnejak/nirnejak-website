@@ -45,8 +45,6 @@ export default PhotosPage
 export const getStaticProps: GetStaticProps = async () => {
   const imageDirectories = getAllImages()
 
-  console.log(imageDirectories)
-
   return {
     props: {
       images: imageDirectories,
