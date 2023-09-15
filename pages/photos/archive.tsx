@@ -24,9 +24,9 @@ const ArchivePage: React.FC = () => {
   return (
     <Container>
       <SEO
-        title="Photos | Jitendra Nirnejak"
-        description="A gallery of Photos captured by Jitendra Nirnejak"
-        path="/photos/"
+        title="Archive | Jitendra Nirnejak"
+        description="An archive of the Photos captured by Jitendra Nirnejak"
+        path="/photos/archive/"
       />
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <div className="w-full">
