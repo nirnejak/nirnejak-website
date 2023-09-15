@@ -1,6 +1,8 @@
 import * as React from "react"
 
+import { Inbox } from "akar-icons"
 import Image from "next/image"
+import Link from "next/link"
 
 import Container from "components/atoms/Container"
 import SEO from "components/SEO"
@@ -169,7 +171,19 @@ const PhotosPage: React.FC = () => {
       />
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <div className="w-full">
-          <h1 className="text-5xl font-bold text-zinc-300">Photos</h1>
+          <div className="flex justify-between">
+            <h1 className="text-5xl font-bold text-zinc-300">Photos</h1>
+            <div>
+              <Link
+                href={"/photos/archive"}
+                className="hover-bg flex items-center gap-1 px-4 py-2 text-sm text-zinc-400 hover:text-zinc-300
+              "
+              >
+                <Inbox size={22} />
+                <span>Archive</span>
+              </Link>
+            </div>
+          </div>
 
           <div className="mt-10 flex flex-col gap-1 pb-16 md:mt-16">
             <div className="grid grid-cols-3 gap-5">
