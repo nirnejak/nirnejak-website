@@ -176,7 +176,7 @@ const PhotosPage: React.FC = () => {
             <div>
               <Link
                 href={"/photos/archive"}
-                className="hover-bg flex items-center gap-1 px-4 py-2 text-sm text-zinc-400 hover:text-zinc-300
+                className="hover-bg flex items-center gap-1.5 px-4 py-2 text-sm text-zinc-400 hover:text-zinc-300
               "
               >
                 <Inbox size={22} />
