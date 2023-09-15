@@ -169,10 +169,12 @@ const PhotosPage: React.FC = () => {
   const openModal = (imageUrl: string): void => {
     setCurrentImage(imageUrl)
     setIsModalVisible(true)
+    document.body.style.overflowY = "hidden"
   }
   const closeModal = (): void => {
     setIsModalVisible(false)
     setCurrentImage("")
+    document.body.style.overflowY = "unset"
   }
 
   return (
@@ -196,8 +198,8 @@ const PhotosPage: React.FC = () => {
             }}
           >
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={{ opacity: 0, translateY: 15 }}
+              animate={{ opacity: 1, translateY: 0 }}
               exit={{ opacity: 0 }}
               className="w-[500px]"
             >
