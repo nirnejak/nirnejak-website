@@ -44,6 +44,7 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
               exit={{ opacity: 0 }}
               className="w-[450px]"
             >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={currentImage}
                 alt={currentImage}
