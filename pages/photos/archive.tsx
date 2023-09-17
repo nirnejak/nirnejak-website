@@ -1,10 +1,10 @@
 import * as React from "react"
 
 import { Camera } from "akar-icons"
-import Image from "next/image"
 import Link from "next/link"
 
 import Container from "components/atoms/Container"
+import PhotoGallery from "components/PhotoGallery"
 import SEO from "components/SEO"
 
 const images = [
@@ -45,18 +45,7 @@ const ArchivePage: React.FC = () => {
           </div>
 
           <div className="mt-10 flex flex-col gap-1 pb-16 md:mt-16">
-            <div className="grid grid-cols-3 gap-5">
-              {images.map((imageUrl, index) => (
-                <Image
-                  key={index}
-                  src={`/photos/${imageUrl}`}
-                  alt={imageUrl}
-                  className="rounded-lg"
-                  width="270"
-                  height="480"
-                />
-              ))}
-            </div>
+            <PhotoGallery images={images} />
           </div>
         </div>
       </section>

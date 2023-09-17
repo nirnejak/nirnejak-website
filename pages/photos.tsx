@@ -1,11 +1,10 @@
 import * as React from "react"
 
 import { Inbox } from "akar-icons"
-import { AnimatePresence, motion } from "framer-motion"
-import Image from "next/image"
 import Link from "next/link"
 
 import Container from "components/atoms/Container"
+import PhotoGallery from "components/PhotoGallery"
 import SEO from "components/SEO"
 
 const images = [
@@ -163,21 +162,6 @@ const images = [
 ]
 
 const PhotosPage: React.FC = () => {
-  const [isModalVisible, setIsModalVisible] = React.useState(false)
-  const [currentImage, setCurrentImage] = React.useState("")
-
-  const openModal = (imageUrl: string): void => {
-    setCurrentImage(imageUrl)
-    setIsModalVisible(true)
-    document.body.style.overflowY = "hidden"
-  }
-
-  const closeModal = (): void => {
-    setIsModalVisible(false)
-    setCurrentImage("")
-    document.body.style.overflowY = "unset"
-  }
-
   return (
     <Container>
       <SEO
@@ -185,30 +169,6 @@ const PhotosPage: React.FC = () => {
         description="A gallery of Photos captured by Jitendra Nirnejak"
         path="/photos/"
       />
-      <AnimatePresence>
-        {isModalVisible && (
-          <div
-            className="fixed left-0 top-0 z-20 grid h-screen w-full place-items-center bg-zinc-900/30 backdrop-blur-lg"
-            onClick={() => {
-              closeModal()
-            }}
-            role="button"
-            tabIndex={0}
-            onKeyUp={(e) => {
-              e.key === "Enter" && closeModal()
-            }}
-          >
-            <motion.div
-              initial={{ opacity: 0, translateY: 15 }}
-              animate={{ opacity: 1, translateY: 0 }}
-              exit={{ opacity: 0 }}
-              className="w-[450px]"
-            >
-              <img src={currentImage} alt={currentImage} />
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <div className="w-full">
           <div className="flex justify-between">
@@ -226,29 +186,7 @@ const PhotosPage: React.FC = () => {
           </div>
 
           <div className="mt-10 flex flex-col gap-1 pb-16 md:mt-16">
-            <div className="grid grid-cols-3 gap-5">
-              {images.map((imageUrl, index) => (
-                <div
-                  key={index}
-                  onClick={() => {
-                    openModal(imageUrl)
-                  }}
-                  role="button"
-                  tabIndex={0}
-                  onKeyUp={(e) => {
-                    e.key === "Enter" && openModal(imageUrl)
-                  }}
-                >
-                  <Image
-                    src={`/photos/${imageUrl}`}
-                    alt={imageUrl}
-                    className="rounded-lg"
-                    width="270"
-                    height="480"
-                  />
-                </div>
-              ))}
-            </div>
+            <PhotoGallery images={images} />
           </div>
         </div>
       </section>
