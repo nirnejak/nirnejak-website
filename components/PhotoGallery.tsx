@@ -73,7 +73,6 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
               className="rounded-lg"
               width="270"
               height="480"
-              placeholder="blur"
             />
           </div>
         ))}
