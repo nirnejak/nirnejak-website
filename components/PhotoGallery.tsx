@@ -4,13 +4,31 @@ import { XSmall } from "akar-icons"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
 
+import classNames from "utils/classNames"
+
 interface Props {
   images: string[]
 }
 
+const allTags = [
+  "beach",
+  "mountain",
+  "sky",
+  "street",
+  "cafe",
+  "food",
+  "sunset",
+  "concert",
+  "snow",
+  "train",
+  "holy",
+  "city",
+]
+
 const PhotoGallery: React.FC<Props> = ({ images }) => {
   const [isModalVisible, setIsModalVisible] = React.useState(false)
   const [currentImage, setCurrentImage] = React.useState("")
+  const [selectedTags, setSelectedTags] = React.useState<string[]>([])
 
   const openModal = (imageUrl: string): void => {
     setCurrentImage(imageUrl)
@@ -22,6 +40,14 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
     setIsModalVisible(false)
     setCurrentImage("")
     document.body.style.overflowY = "unset"
+  }
+
+  const addRemoveTag = (tag: string): void => {
+    if (selectedTags.includes(tag)) {
+      setSelectedTags((currentTags) => currentTags.filter((t) => t !== tag))
+    } else {
+      setSelectedTags((currentTags) => [...currentTags, tag])
+    }
   }
 
   return (
@@ -53,6 +79,22 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
           </div>
         )}
       </AnimatePresence>
+      <div className="mb-5 flex flex-wrap gap-1">
+        {allTags.map((tag, index) => (
+          <button
+            key={index}
+            className={classNames(
+              "z-0 flex items-center gap-1.5 px-4 py-2 text-sm text-zinc-400 hover:text-zinc-300",
+              selectedTags.includes(tag) ? "bg-zinc-800 rounded-lg" : "hover-bg"
+            )}
+            onClick={() => {
+              addRemoveTag(tag)
+            }}
+          >
+            #{tag}
+          </button>
+        ))}
+      </div>
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
         <AnimatePresence>
           {images.map((imageUrl, index) => (
@@ -76,7 +118,7 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
               }}
             >
               <Image
-                src={`/photos/${imageUrl}`}
+                src={imageUrl}
                 alt={imageUrl}
                 className="rounded-lg transition-transform hover:scale-105"
                 width="270"

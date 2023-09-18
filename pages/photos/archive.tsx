@@ -8,16 +8,9 @@ import PhotoGallery from "components/PhotoGallery"
 import SEO from "components/SEO"
 
 const images = [
-  "IMG_7019.jpeg",
-  "IMG_8991.jpeg",
-  "IMG_1525.jpeg",
-  "IMG_8987.jpeg",
-  "IMG_9380.jpeg",
-  "IMG_7218.jpeg",
-  "IMG_1374.jpeg",
-  "IMG_8401.jpeg",
-  "IMG_0318.jpeg",
-  "IMG_8912.jpeg",
+  "/photos/archive/DJI_20211230_180216_620.JPG",
+  "/photos/archive/IMG_0076.jpeg",
+  "/photos/archive/IMG_7178.jpeg",
 ]
 
 const ArchivePage: React.FC = () => {
