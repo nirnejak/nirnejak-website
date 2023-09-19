@@ -79,7 +79,7 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
           </div>
         )}
       </AnimatePresence>
-      <div className="-mx-5 mb-5 flex flex-wrap gap-1">
+      <div className="-mx-5 mb-5 hidden flex-wrap gap-1">
         {allTags.map((tag, index) => (
           <button
             key={index}
