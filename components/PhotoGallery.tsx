@@ -79,12 +79,12 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
           </div>
         )}
       </AnimatePresence>
-      <div className="mb-5 flex flex-wrap gap-1">
+      <div className="-mx-5 mb-5 flex flex-wrap gap-1">
         {allTags.map((tag, index) => (
           <button
             key={index}
             className={classNames(
-              "z-0 flex items-center gap-1.5 px-4 py-2 text-sm text-zinc-400 hover:text-zinc-300",
+              "z-0 flex items-center gap-1.5 px-3 py-1.5 text-xs text-zinc-400 hover:text-zinc-300",
               selectedTags.includes(tag) ? "bg-zinc-800 rounded-lg" : "hover-bg"
             )}
             onClick={() => {
