@@ -16,6 +16,11 @@ const images = [
   "/photos/archive/DJI_20220611_124058_027.JPG",
   "/photos/archive/IMG_1506.JPG",
   "/photos/archive/IMG_2258.JPG",
+  "/photos/archive/IMG_1397.JPG",
+  "/photos/archive/IMG_7231.JPG",
+  "/photos/archive/IMG_7247.JPG",
+  "/photos/archive/IMG_7248.JPG",
+  "/photos/archive/IMG_7254.JPG",
 ]
 
 const ArchivePage: React.FC = () => {
