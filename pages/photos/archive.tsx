@@ -21,6 +21,7 @@ const images = [
   "/photos/archive/IMG_7247.JPG",
   "/photos/archive/IMG_7248.JPG",
   "/photos/archive/IMG_7254.JPG",
+  "/photos/archive/IMG_7197.JPG",
 ]
 
 const ArchivePage: React.FC = () => {

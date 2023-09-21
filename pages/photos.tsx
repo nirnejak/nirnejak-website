@@ -20,7 +20,6 @@ const images = [
   "/photos/IMG_7206.jpeg",
   "/photos/IMG_1385.jpeg",
   "/photos/IMG_2403.jpeg",
-  "/photos/IMG_7197.jpeg",
   "/photos/IMG_0097.jpeg",
   "/photos/IMG_8448.jpeg",
   "/photos/DJI_20220901_175441_067.jpg",
