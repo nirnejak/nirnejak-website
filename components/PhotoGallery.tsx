@@ -120,9 +120,9 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
               <Image
                 src={imageUrl}
                 alt={imageUrl}
-                className="rounded-lg transition-transform hover:scale-105"
-                width="270"
-                height="480"
+                className="rounded-2xl transition-transform hover:scale-105"
+                width="360"
+                height="640"
               />
             </motion.div>
           ))}
