@@ -6,23 +6,7 @@ import Link from "next/link"
 import Container from "components/atoms/Container"
 import PhotoGallery from "components/PhotoGallery"
 import SEO from "components/SEO"
-
-const images = [
-  "/photos/archive/DJI_20211230_180216_620.JPG",
-  "/photos/archive/IMG_0076.jpeg",
-  "/photos/archive/IMG_7178.jpeg",
-  "/photos/archive/IMG_7008.jpeg",
-  "/photos/archive/IMG_7254.jpeg",
-  "/photos/archive/DJI_20220611_124058_027.JPG",
-  "/photos/archive/IMG_1506.JPG",
-  "/photos/archive/IMG_2258.JPG",
-  "/photos/archive/IMG_1397.JPG",
-  "/photos/archive/IMG_7231.JPG",
-  "/photos/archive/IMG_7247.JPG",
-  "/photos/archive/IMG_7248.JPG",
-  "/photos/archive/IMG_7254.JPG",
-  "/photos/archive/IMG_7197.JPG",
-]
+import { archivedPhotos } from "utils/photos"
 
 const ArchivePage: React.FC = () => {
   return (
@@ -48,7 +32,7 @@ const ArchivePage: React.FC = () => {
           </div>
 
           <div className="mt-10 flex flex-col gap-1 pb-16 md:mt-16">
-            <PhotoGallery images={images} />
+            <PhotoGallery images={archivedPhotos} />
           </div>
         </div>
       </section>
