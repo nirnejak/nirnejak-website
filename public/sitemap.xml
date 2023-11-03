@@ -11,6 +11,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://nirnejak.com/work/sites/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://nirnejak.com/blogs/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
