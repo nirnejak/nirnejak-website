@@ -23,6 +23,9 @@ const allTags = [
   "train",
   "holy",
   "city",
+  "waterfall",
+  "river",
+  "lake",
 ]
 
 const PhotoGallery: React.FC<Props> = ({ images }) => {
