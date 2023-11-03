@@ -16,7 +16,7 @@ const WorkLinks: React.FC = () => {
           <GithubFill size={15} />
           <span>Github</span>
         </div>
-        <p className="text-xs text-green-500">83</p>
+        <p className="text-xs text-green-500">81</p>
       </AppLink>
       <AppLink
         href="https://dribbble.com/nirnejak/"
