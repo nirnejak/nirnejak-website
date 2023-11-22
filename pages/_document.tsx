@@ -1,6 +1,7 @@
 import * as React from "react"
 
 import { Html, Head, Main, NextScript } from "next/document"
+import Script from "next/script"
 
 const MyDocument: React.FC = () => {
   return (
@@ -44,6 +45,12 @@ const MyDocument: React.FC = () => {
           defer
           data-domain="nirnejak.com"
           src="https://plausible.io/js/script.js"
+        />
+        {/* Pirsch Analytics */}
+        <Script
+          src="https://api.pirsch.io/pirsch-extended.js"
+          id="pirschextendedjs"
+          data-code="2BnVC2295vEXRAma6sGBZZjGsRZ1d0D2"
         />
       </Head>
       <body className="overflow-x-hidden bg-zinc-900">
