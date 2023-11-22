@@ -45,14 +45,6 @@ const MyDocument: React.FC = () => {
           data-domain="nirnejak.com"
           src="https://plausible.io/js/script.js"
         />
-        {/* Pirsch Analytics */}
-        <script
-          defer
-          type="text/javascript"
-          src="https://api.pirsch.io/pirsch.js"
-          id="pirschjs"
-          data-code="2BnVC2295vEXRAma6sGBZZjGsRZ1d0D2"
-        ></script>
         {/* Umami Analytics */}
         <script
           async
