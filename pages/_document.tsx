@@ -45,12 +45,6 @@ const MyDocument: React.FC = () => {
           data-domain="nirnejak.com"
           src="https://plausible.io/js/script.js"
         />
-        {/* Umami Analytics */}
-        <script
-          async
-          src="https://analytics.eu.umami.is/script.js"
-          data-website-id="70aa6954-1220-4358-a16c-995fd3d18814"
-        />
       </Head>
       <body className="overflow-x-hidden bg-zinc-900">
         <Main />
