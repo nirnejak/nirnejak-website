@@ -45,6 +45,14 @@ const MyDocument: React.FC = () => {
           data-domain="nirnejak.com"
           src="https://plausible.io/js/script.js"
         />
+        {/* Pirsch Analytics */}
+        <script
+          defer
+          type="text/javascript"
+          src="https://api.pirsch.io/pirsch-extended.js"
+          id="pirschextendedjs"
+          data-code="lPemrjGu8lYrGEQVCU1PauV9OJvOHlyy"
+        />
       </Head>
       <body className="overflow-x-hidden bg-zinc-900">
         <Main />
