@@ -51,7 +51,6 @@ const MyDocument: React.FC = () => {
           src="https://api.pirsch.io/pirsch-extended.js"
           id="pirschextendedjs"
           data-code="2BnVC2295vEXRAma6sGBZZjGsRZ1d0D2"
-          strategy="afterInteractive"
         />
       </Head>
       <body className="overflow-x-hidden bg-zinc-900">
