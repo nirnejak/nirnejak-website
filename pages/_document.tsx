@@ -52,6 +52,7 @@ const MyDocument: React.FC = () => {
           src="https://api.pirsch.io/pirsch-extended.js"
           id="pirschextendedjs"
           data-code="lPemrjGu8lYrGEQVCU1PauV9OJvOHlyy"
+          data-domain="nirnejak.com"
         />
       </Head>
       <body className="overflow-x-hidden bg-zinc-900">
