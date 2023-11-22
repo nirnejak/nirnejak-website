@@ -51,9 +51,8 @@ const MyDocument: React.FC = () => {
           type="text/javascript"
           src="https://api.pirsch.io/pirsch-extended.js"
           id="pirschextendedjs"
-          data-code="lPemrjGu8lYrGEQVCU1PauV9OJvOHlyy"
-          data-domain="nirnejak.com"
-        />
+          data-code="2BnVC2295vEXRAma6sGBZZjGsRZ1d0D2"
+        ></script>
         {/* Umami Analytics */}
         <script
           async
