@@ -45,12 +45,6 @@ const MyDocument: React.FC = () => {
           data-domain="nirnejak.com"
           src="https://plausible.io/js/script.js"
         />
-        {/* Cloudflare Analytics */}
-        <script
-          defer
-          src="https://static.cloudflareinsights.com/beacon.min.js"
-          data-cf-beacon='{"token": "4751a5a256754444a03d642fb89fa96b"}'
-        />
       </Head>
       <body className="overflow-x-hidden bg-zinc-900">
         <Main />
