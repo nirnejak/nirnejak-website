@@ -6,7 +6,7 @@ import {
   ProductHuntFill,
   DribbbleFill,
   GithubFill,
-  TwitterFill,
+  XFill,
 } from "akar-icons"
 
 const renderSocialLink = (
@@ -67,10 +67,10 @@ const SocialLinks: React.FC = () => {
         </div>
         <div>
           {renderSocialLink(
-            "Twitter",
+            "X (formerly Twitter)",
             "https://twitter.com/jeetnirnejak/",
             <span className="flex items-center gap-1.5">
-              <TwitterFill
+              <XFill
                 size={21}
                 className="animate-slideLeft group-hover:animate-slideRight group-focus:animate-slideRight"
               />
