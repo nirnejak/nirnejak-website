@@ -45,11 +45,6 @@ const MyDocument: React.FC = () => {
           data-domain="nirnejak.com"
           src="https://plausible.io/js/script.js"
         />
-        {/* Statsy */}
-        <script
-          src="https://statsy.observer/clq39layd00h8840vg5xmfvyz.js"
-          defer
-        />
       </Head>
       <body className="overflow-x-hidden bg-zinc-900">
         <Main />
