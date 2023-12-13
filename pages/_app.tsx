@@ -1,5 +1,6 @@
 import * as React from "react"
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { AppProps } from "next/app"
 
 import Background from "components/Background"
@@ -22,6 +23,8 @@ const MyApp: React.FC<AppProps> = (props) => {
       <Bulb />
       <Background />
       <CommandBar />
+
+      <SpeedInsights />
     </>
   )
 }
