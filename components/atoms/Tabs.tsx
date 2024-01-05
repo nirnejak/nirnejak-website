@@ -43,7 +43,7 @@ const Tabs: React.FC = () => {
     if (wrapperRef?.current != null)
       setWrapperBoundingBox(wrapperRef.current.getBoundingClientRect())
     setIsHoveredFromNull(highlightedTab == null)
-    setHighlightedTab(tab)
+    setHighlightedTab(tab as TAB_TYPE)
   }
 
   const resetHighlight = (): void => {
