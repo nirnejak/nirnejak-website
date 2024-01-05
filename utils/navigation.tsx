@@ -8,7 +8,7 @@ import {
   DribbbleFill,
   GithubFill,
   LinkedinFill,
-  TwitterFill,
+  XFill,
   Frame,
   UnsplashFill,
   ProductHuntFill,
@@ -56,9 +56,9 @@ export const navLinks = [
 
 export const socialLinks = [
   {
-    content: "Twitter",
+    content: "X (formerly Twitter)",
     href: "https://twitter.com/jeetnirnejak/",
-    icon: <TwitterFill size={15} />,
+    icon: <XFill size={15} />,
   },
   {
     content: "Github",
