@@ -37,13 +37,13 @@ const Tabs: React.FC = () => {
     e:
       | React.MouseEvent<HTMLAnchorElement, MouseEvent>
       | React.FocusEvent<HTMLAnchorElement>,
-    tab: any
+    tab: TAB_TYPE
   ): void => {
     setTabBoundingBox((e.target as HTMLAnchorElement).getBoundingClientRect())
     if (wrapperRef?.current != null)
       setWrapperBoundingBox(wrapperRef.current.getBoundingClientRect())
     setIsHoveredFromNull(highlightedTab == null)
-    setHighlightedTab(tab as TAB_TYPE)
+    setHighlightedTab(tab)
   }
 
   const resetHighlight = (): void => {
