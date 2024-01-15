@@ -1,6 +1,5 @@
 import * as React from "react"
 
-import { Analytics } from "@statsy/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { AppProps } from "next/app"
 
@@ -26,7 +25,6 @@ const MyApp: React.FC<AppProps> = (props) => {
       <CommandBar />
 
       <SpeedInsights />
-      <Analytics siteId="clq39layd00h8840vg5xmfvyz" />
     </>
   )
 }
