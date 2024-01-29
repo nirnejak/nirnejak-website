@@ -21,11 +21,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nirnejak.com/contact/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://nirnejak.com/photos/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -37,6 +32,11 @@
   </url>
   <url>
     <loc>https://nirnejak.com/uses/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nirnejak.com/contact/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
