@@ -47,14 +47,14 @@ const UsesPage: React.FC = () => {
                 </p>
               </div>
               <div>
-                <p className="text-sm text-zinc-500">Terminal & Editor</p>
+                <p className="text-sm text-zinc-500">Dev Tools</p>
                 <p className="mt-1.5 text-lg font-bold text-zinc-300">
-                  ZSH, iTerm & VS Code
+                  iTerm & VS Code
                 </p>
               </div>
 
               <div>
-                <p className="text-sm text-zinc-500">What&apos;s for 2023</p>
+                <p className="text-sm text-zinc-500">What&apos;s for 2024</p>
                 <p className="mt-1.5 text-lg font-bold text-zinc-300">
                   SwiftUI
                 </p>
