@@ -38,7 +38,7 @@ const SEO: React.FC<Props> = ({
       {/* Twitter */}
       <meta name="twitter:title" content={metaTitle} />
       <meta name="twitter:description" content={metaDescription} />
-      <meta name="twitter:image" content={`${baseUrl}${metaImage}`} />
+      <meta name="twitter:image" content={metaImage} />
     </Head>
   )
 }
