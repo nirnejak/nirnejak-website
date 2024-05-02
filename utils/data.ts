@@ -8,7 +8,7 @@ export const allProjects = {
     },
     {
       title: "typescript-node-starter",
-      description: "A Node.js(Express) TypeScript Starter Template",
+      description: "A Node.js(Fastify) TypeScript Starter Template",
       type: "Code",
       link: "https://github.com/nirnejak/typescript-node-starter",
     },
