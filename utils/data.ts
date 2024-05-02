@@ -2,7 +2,7 @@ export const allProjects = {
   starter: [
     {
       title: "nextjs-typescript-starter",
-      description: "Next.js TypeScript & Tailwind Starter",
+      description: "Next.js TypeScript & Tailwind Starter Template",
       type: "Code",
       link: "https://github.com/nirnejak/nextjs-typescript-starter",
     },
