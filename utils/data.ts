@@ -15,16 +15,16 @@ export const allProjects = {
   ],
   side: [
     {
-      title: "CSV Plot",
-      description: "Quickly plot CSV data into graphs(bar, pie, map, etc.)",
-      type: "Design & Code",
-      link: "https://plot-csv.vercel.app/",
-    },
-    {
       title: "SVG Animations Gallery",
       description: "A Gallery of SVG Animations built with Framer Motion",
       type: "Design & Code",
       link: "https://svg-animations-gallery.vercel.app/",
+    },
+    {
+      title: "CSV Plot",
+      description: "Quickly plot CSV data into graphs(bar, pie, map, etc.)",
+      type: "Design & Code",
+      link: "https://plot-csv.vercel.app/",
     },
     {
       title: "React Presentation Maker",
