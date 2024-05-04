@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { DribbbleFill, GithubFill, LinkedinBoxFill } from "akar-icons"
+import { DribbbleFill, GithubFill, LinkOut, LinkedinBoxFill } from "akar-icons"
 
 import AppLink from "./atoms/Link"
 
@@ -16,7 +16,9 @@ const WorkLinks: React.FC = () => {
           <GithubFill size={15} />
           <span>Github</span>
         </div>
-        <p className="text-xs text-green-500">81</p>
+        <p className="text-xs text-green-500">
+          <LinkOut size={15} />
+        </p>
       </AppLink>
       <AppLink
         href="https://dribbble.com/nirnejak/"
@@ -27,7 +29,9 @@ const WorkLinks: React.FC = () => {
           <DribbbleFill size={15} />
           <span>Dribbble</span>
         </div>
-        <p className="text-xs text-pink-500">42</p>
+        <p className="text-xs text-pink-500">
+          <LinkOut size={15} />
+        </p>
       </AppLink>
       <AppLink
         href="https://www.linkedin.com/in/nirnejak/"
@@ -38,7 +42,9 @@ const WorkLinks: React.FC = () => {
           <LinkedinBoxFill size={15} />
           <span>LinkedIn</span>
         </div>
-        {/* <p className="text-xs text-blue-500">34</p> */}
+        <p className="text-xs text-blue-500">
+          <LinkOut size={15} />
+        </p>
       </AppLink>
     </div>
   )
