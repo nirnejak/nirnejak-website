@@ -23,14 +23,15 @@ const HomePage: React.FC = () => {
             <span className="text-gradient-blue font-bold">Developer</span> &
             <span className="text-gradient-red font-bold"> Designer </span>. I
             am passionate about elegant user interfaces, web animations, and
-            data visualization. Currently{" "}
+            data visualization.
+            {/* Currently{" "}
             <AppLink
               href="https://www.draxlr.com/"
               target="_blank"
               className="text-gradient-yellow text-sm font-bold"
             >
               @Inkoop(Draxlr)
-            </AppLink>
+            </AppLink> */}
           </p>
           <div className="mt-16 flex">
             <SocialLinks />
