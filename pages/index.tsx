@@ -24,14 +24,13 @@ const HomePage: React.FC = () => {
             <span className="text-gradient-red font-bold"> Designer </span>. I
             am passionate about elegant user interfaces, web animations, and
             data visualization.
-            {/* Currently{" "}
-            <AppLink
-              href="https://www.draxlr.com/"
-              target="_blank"
-              className="text-gradient-yellow text-sm font-bold"
-            >
-              @Inkoop(Draxlr)
-            </AppLink> */}
+          </p>
+          <p className="text-gray-500 md:text-base text-sm mt-5 font-light">
+            Open to{" "}
+            <span className="text-gradient-yellow text-sm font-bold">
+              frontend/design engineer
+            </span>{" "}
+            opportunities.
           </p>
           <div className="mt-16 flex">
             <SocialLinks />
