@@ -18,8 +18,8 @@
     "akar-icons": "^1.9.31",
     "cmdk": "^1.0.0",
     "dotenv": "^16.4.5",
-    "eslint-plugin-n": "^17.4.0",
-    "framer-motion": "^11.1.7",
+    "eslint-plugin-n": "^17.5.0",
+    "framer-motion": "^11.1.8",
     "next": "^14.2.3",
     "next-pwa": "^5.6.0",
     "react": "^18.3.1",
@@ -29,7 +29,7 @@
     "use-sound": "^4.0.1"
   },
   "devDependencies": {
-    "@types/node": "^20.12.8",
+    "@types/node": "^20.12.10",
     "@types/react": "^18.3.1",
     "@typescript-eslint/eslint-plugin": "^7.8.0",
     "@typescript-eslint/parser": "^7.8.0",
