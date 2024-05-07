@@ -1,3 +1,28 @@
+export const allResources = {
+  guides: [
+    {
+      title: "SEO Guidelines for Developers",
+      description:
+        "SEO Basics and Tips for Developers. Nail the fundamentals and boost traffic on your website.",
+      url: "Guide",
+      link: "/resources/seo-guidelines-for-developer/",
+    },
+    {
+      title: "Landing Page Tips",
+      description:
+        "Tips to create landing pages that boost engagement and increase conversion.",
+      url: "Guide",
+      link: "/resources/landing-page-tips/",
+    },
+    {
+      title: "Website Metadata Guide",
+      description: "Learn the basics of SEO meta tags for your website.",
+      url: "Guide",
+      link: "/resources/website-metadata-guide/",
+    },
+  ],
+}
+
 export const allProjects = {
   starter: [
     {

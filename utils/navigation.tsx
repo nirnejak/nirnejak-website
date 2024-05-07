@@ -13,6 +13,7 @@ import {
   UnsplashFill,
   ProductHuntFill,
   InstagramFill,
+  BookClose,
 } from "akar-icons"
 
 export const navLinks = [
@@ -33,6 +34,12 @@ export const navLinks = [
     value: "blogs",
     link: "/blogs/",
     icon: <Pencil size={15} />,
+  },
+  {
+    content: "Resources",
+    value: "resources",
+    link: "/resources/",
+    icon: <BookClose size={15} />,
   },
   {
     content: "Photos",
