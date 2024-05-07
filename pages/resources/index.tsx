@@ -14,7 +14,10 @@ const ResourcesPage: React.FC = () => {
         path="/resources/"
       />
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
-        <div className="w-full">
+        <div className="my-24 text-center text-zinc-300 w-full">
+          Good things are on their way ✨
+        </div>
+        {/* <div className="w-full">
           <h1 className="text-5xl font-bold text-zinc-300">Resources</h1>
 
           <div className="mt-10 text-sm md:mt-16">
@@ -35,7 +38,7 @@ const ResourcesPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
     </Container>
   )
