@@ -1,7 +1,6 @@
 import * as React from "react"
 
 import Container from "components/atoms/Container"
-import AppLink from "components/atoms/Link"
 import SEO from "components/SEO"
 import SocialLinks from "components/SocialLinks"
 
