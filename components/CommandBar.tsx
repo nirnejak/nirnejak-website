@@ -1,3 +1,4 @@
+"use client"
 import * as React from "react"
 
 import {
@@ -8,7 +9,7 @@ import {
   LinkOut,
 } from "akar-icons"
 import { Command } from "cmdk"
-import { useRouter } from "next/router"
+import { useRouter } from "next/navigation"
 import useSound from "use-sound"
 
 import { navLinks, socialLinks } from "utils/navigation"
