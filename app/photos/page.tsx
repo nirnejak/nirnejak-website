@@ -1,21 +1,15 @@
 import * as React from "react"
-
-import { Inbox } from "akar-icons"
 import Link from "next/link"
 
-import { photos } from "../utils/photos"
+import { Inbox } from "akar-icons"
+
+import { photos } from "utils/photos"
 import Container from "components/atoms/Container"
 import PhotoGallery from "components/PhotoGallery"
-import SEO from "components/SEO"
 
 const PhotosPage: React.FC = () => {
   return (
     <Container>
-      <SEO
-        title="Photos | Jitendra Nirnejak"
-        description="A gallery of Photos captured by Jitendra Nirnejak"
-        path="/photos/"
-      />
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <div className="w-full">
           <div className="flex justify-between">
