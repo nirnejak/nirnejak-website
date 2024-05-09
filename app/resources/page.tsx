@@ -2,17 +2,11 @@ import * as React from "react"
 
 import Container from "components/atoms/Container"
 // import AppLink from "components/atoms/Link"
-import SEO from "components/SEO"
 // import { allResources } from "utils/data"
 
 const ResourcesPage: React.FC = () => {
   return (
     <Container>
-      <SEO
-        title="Resources | Jitendra Nirnejak"
-        description="Resources by Jitendra Nirnejak"
-        path="/resources/"
-      />
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <div className="my-24 text-center text-zinc-300 w-full">
           Good things are on their way ✨
