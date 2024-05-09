@@ -14,19 +14,18 @@ const Container: React.FC<Props> = ({
   size = "normal",
   ...restProps
 }) => {
-  const widthClass = React.useMemo(() => {
-    switch (size) {
-      case "narrow":
-        return "max-w-[480px]"
-      case "wide":
-        return "max-w-[980px]"
-      case "ultrawide":
-        return "max-w-[1200px]"
-      case "normal":
-      default:
-        return "max-w-[680px]"
-    }
-  }, [size])
+  let widthClass = ""
+  switch (size) {
+    case "narrow":
+      widthClass = "max-w-[480px]"
+    case "wide":
+      widthClass = "max-w-[980px]"
+    case "ultrawide":
+      widthClass = "max-w-[1200px]"
+    case "normal":
+    default:
+      widthClass = "max-w-[680px]"
+  }
 
   return (
     <div
