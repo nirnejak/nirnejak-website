@@ -13,7 +13,7 @@ interface Props {
 
 const BaseLayout: React.FC<Props> = ({ children }) => {
   return (
-    <div>
+    <>
       <Navbar />
       {children}
       <Footer />
@@ -23,7 +23,7 @@ const BaseLayout: React.FC<Props> = ({ children }) => {
       <CommandBar />
 
       <SpeedInsights />
-    </div>
+    </>
   )
 }
 

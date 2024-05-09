@@ -4,33 +4,36 @@ import Link from "next/link"
 import { Camera } from "akar-icons"
 
 import { archivedPhotos } from "utils/photos"
+import BaseLayout from "components/atoms/BaseLayout"
 import Container from "components/atoms/Container"
 import PhotoGallery from "components/PhotoGallery"
 
 const PhotosArchivePage: React.FC = () => {
   return (
-    <Container>
-      <section className="flex min-h-screen items-start pt-32 md:pt-40">
-        <div className="w-full">
-          <div className="flex justify-between">
-            <h1 className="text-5xl font-bold text-zinc-300">Archive</h1>
-            <div>
-              <Link
-                href={"/photos/"}
-                className="hover-bg flex items-center gap-1.5 px-4 py-2 text-sm text-zinc-400 hover:text-zinc-300"
-              >
-                <Camera size={22} />
-                <span>All Photos</span>
-              </Link>
+    <BaseLayout>
+      <Container>
+        <section className="flex min-h-screen items-start pt-32 md:pt-40">
+          <div className="w-full">
+            <div className="flex justify-between">
+              <h1 className="text-5xl font-bold text-zinc-300">Archive</h1>
+              <div>
+                <Link
+                  href={"/photos/"}
+                  className="hover-bg flex items-center gap-1.5 px-4 py-2 text-sm text-zinc-400 hover:text-zinc-300"
+                >
+                  <Camera size={22} />
+                  <span>All Photos</span>
+                </Link>
+              </div>
+            </div>
+
+            <div className="mt-10 flex flex-col gap-1 pb-16 md:mt-16">
+              <PhotoGallery images={archivedPhotos} />
             </div>
           </div>
-
-          <div className="mt-10 flex flex-col gap-1 pb-16 md:mt-16">
-            <PhotoGallery images={archivedPhotos} />
-          </div>
-        </div>
-      </section>
-    </Container>
+        </section>
+      </Container>
+    </BaseLayout>
   )
 }
 

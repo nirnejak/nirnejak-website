@@ -24,12 +24,22 @@
 
 * {
   box-sizing: border-box;
-  transition: background-color 150ms ease-out, color 150ms ease-out;
-  cursor: url("../assets/icons/circle.svg") 15 15, auto;
+  transition:
+    background-color 150ms ease-out,
+    color 150ms ease-out;
+  cursor:
+    url("../assets/icons/circle.svg") 15 15,
+    auto;
+}
+
+body {
+  @apply bg-zinc-900 overflow-x-hidden;
 }
 
 button {
-  cursor: url("../assets/icons/circle.svg") 15 15, auto;
+  cursor:
+    url("../assets/icons/circle.svg") 15 15,
+    auto;
 }
 
 .text-gradient-blue {

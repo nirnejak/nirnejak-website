@@ -3,12 +3,13 @@ import * as React from "react"
 
 import Image from "next/image"
 
+import BaseLayout from "components/atoms/BaseLayout"
 import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
 
 const NotFound: React.FC = () => {
   return (
-    <>
+    <BaseLayout>
       <Container>
         <section className="grid min-h-screen place-content-center">
           <div className="relative">
@@ -27,7 +28,7 @@ const NotFound: React.FC = () => {
           </div>
         </section>
       </Container>
-    </>
+    </BaseLayout>
   )
 }
 

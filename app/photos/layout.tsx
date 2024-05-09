@@ -4,10 +4,6 @@ import { type Metadata } from "next"
 
 import generateMetadata from "utils/seo"
 
-import BaseLayout from "components/atoms/BaseLayout"
-
-import "styles/main.css"
-
 interface Props {
   children: React.ReactNode
 }
@@ -28,9 +24,7 @@ const PhotosLayout: React.FC<Props> = ({ children }) => {
           src="https://plausible.io/js/script.js"
         />
       </head>
-      <body className="overflow-x-hidden bg-zinc-900">
-        <BaseLayout>{children}</BaseLayout>
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
