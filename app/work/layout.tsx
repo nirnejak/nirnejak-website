@@ -18,7 +18,7 @@ export const metadata: Metadata = generateMetadata({
   description: "Projects built by Jitendra Nirnejak",
 })
 
-const ContactLayout: React.FC<Props> = ({ children }) => {
+const WorkLayout: React.FC<Props> = ({ children }) => {
   return (
     <html lang="en">
       <head>
@@ -35,4 +35,4 @@ const ContactLayout: React.FC<Props> = ({ children }) => {
   )
 }
 
-export default ContactLayout
+export default WorkLayout

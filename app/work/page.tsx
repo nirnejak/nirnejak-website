@@ -5,7 +5,7 @@ import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
 import WorkLinks from "components/WorkLinks"
 
-const ContactPage: React.FC = () => {
+const WorkPage: React.FC = () => {
   return (
     <Container>
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
@@ -78,4 +78,4 @@ const ContactPage: React.FC = () => {
   )
 }
 
-export default ContactPage
+export default WorkPage
