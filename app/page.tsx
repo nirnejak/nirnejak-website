@@ -1,17 +1,17 @@
 import * as React from "react"
 
 import Container from "components/atoms/Container"
-import SEO from "components/SEO"
+// import SEO from "components/SEO"
 import SocialLinks from "components/SocialLinks"
 
 const HomePage: React.FC = () => {
   return (
     <Container>
-      <SEO
+      {/* <SEO
         title="Jitendra Nirnejak"
         description="Portfolio Website of Jitendra Nirnejak, Developer and Designer"
         path="/"
-      />
+      /> */}
       <section className="flex h-screen items-start pt-32 md:pt-56">
         <div>
           <h1 className="text-4xl font-bold text-zinc-300 md:text-5xl">
