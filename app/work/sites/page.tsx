@@ -1,8 +1,8 @@
 import * as React from "react"
 
+import { allProjects } from "utils/data"
 import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
-import SEO from "components/SEO"
 import WorkLinks from "components/WorkLinks"
 
 const sites = {
@@ -39,14 +39,9 @@ const sites = {
   ],
 }
 
-const WorkPage: React.FC = () => {
+const SitesPage: React.FC = () => {
   return (
     <Container>
-      <SEO
-        title="Sites | Jitendra Nirnejak"
-        description="Websites built by Jitendra Nirnejak"
-        path="/work/sites/"
-      />
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <div className="w-full">
           <h1 className="text-5xl font-bold text-zinc-300">Sites</h1>
@@ -117,4 +112,4 @@ const WorkPage: React.FC = () => {
   )
 }
 
-export default WorkPage
+export default SitesPage
