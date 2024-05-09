@@ -1,3 +1,4 @@
+"use client"
 import * as React from "react"
 
 import useSound from "use-sound"
