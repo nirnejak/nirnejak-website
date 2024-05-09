@@ -102,7 +102,7 @@ const ContactPage: React.FC = () => {
               href="mailto:hello@nirnejak.com&subject=Website%20Enquiry"
               className="text-sm text-zinc-600"
             >
-              jeetnirnejak@gmail.com
+              hello@nirnejak.com
             </AppLink>
           </div>
         </div>
