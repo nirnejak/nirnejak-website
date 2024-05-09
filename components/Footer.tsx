@@ -1,22 +1,23 @@
+"use client"
 import * as React from "react"
 
 import { Command } from "akar-icons"
-import { useRouter } from "next/router"
+import { usePathname } from "next/navigation"
 
 import Container from "./atoms/Container"
 
 const Footer: React.FC = () => {
-  const router = useRouter()
+  const pathname = usePathname()
 
   const footerClass = React.useMemo(() => {
-    if (router.pathname.includes("blogs") || router.pathname.includes("work")) {
+    if (pathname?.includes("blogs") || pathname?.includes("work")) {
       return ""
-    } else if (router.pathname.includes("uses")) {
+    } else if (pathname?.includes("uses")) {
       return "md:fixed bottom-0 w-full"
     } else {
       return "fixed bottom-0 w-full"
     }
-  }, [router.pathname])
+  }, [pathname])
 
   return (
     <footer className={footerClass}>
