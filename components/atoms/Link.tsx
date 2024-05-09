@@ -1,7 +1,8 @@
+"use client"
 import * as React from "react"
 
 import Link from "next/link"
-import { useRouter } from "next/router"
+import { usePathname } from "next/navigation"
 import useSound from "use-sound"
 
 import classNames from "utils/classNames"
@@ -23,14 +24,11 @@ const AppLink: React.FC<Props> = ({
   onClick,
   ...restProps
 }) => {
-  const router = useRouter()
+  const pathname = usePathname()
 
   const [play] = useSound("../sounds/whoop.wav")
 
-  const isActive = React.useMemo(
-    () => router.asPath === href,
-    [href, router.asPath]
-  )
+  const isActive = React.useMemo(() => pathname === href, [href, pathname])
 
   if (href.includes("http") || href.includes("mailto")) {
     return (
