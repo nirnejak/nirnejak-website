@@ -1,6 +1,6 @@
 import * as React from "react"
 import type { Viewport } from "next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+// import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import Background from "components/Background"
 import Bulb from "components/Bulb"
@@ -37,7 +37,7 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
         <Background />
         <CommandBar />
 
-        <SpeedInsights />
+        {/* <SpeedInsights /> */}
       </body>
     </html>
   )
