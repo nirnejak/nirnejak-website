@@ -5,7 +5,7 @@ import { type Metadata } from "next"
 import generateMetadata from "utils/seo"
 import BaseLayout from "components/BaseLayout"
 
-import "../styles/main.css"
+import "styles/main.css"
 
 interface Props {
   children: React.ReactNode
