@@ -18,7 +18,7 @@ export const metadata: Metadata = generateMetadata({
   description: "An archive of the Photos captured by Jitendra Nirnejak",
 })
 
-const PhotosLayout: React.FC<Props> = ({ children }) => {
+const PhotosArchiveLayout: React.FC<Props> = ({ children }) => {
   return (
     <html lang="en">
       <head>
@@ -35,4 +35,4 @@ const PhotosLayout: React.FC<Props> = ({ children }) => {
   )
 }
 
-export default PhotosLayout
+export default PhotosArchiveLayout

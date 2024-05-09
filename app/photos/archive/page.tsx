@@ -7,7 +7,7 @@ import { archivedPhotos } from "utils/photos"
 import Container from "components/atoms/Container"
 import PhotoGallery from "components/PhotoGallery"
 
-const PhotosPage: React.FC = () => {
+const PhotosArchivePage: React.FC = () => {
   return (
     <Container>
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
@@ -34,4 +34,4 @@ const PhotosPage: React.FC = () => {
   )
 }
 
-export default PhotosPage
+export default PhotosArchivePage
