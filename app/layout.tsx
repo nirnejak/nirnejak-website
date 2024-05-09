@@ -3,7 +3,7 @@ import * as React from "react"
 import { type Metadata } from "next"
 
 import generateMetadata from "utils/seo"
-import BaseLayout from "components/BaseLayout"
+import BaseLayout from "components/atoms/BaseLayout"
 
 import "styles/main.css"
 
