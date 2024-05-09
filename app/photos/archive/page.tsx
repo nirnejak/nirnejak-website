@@ -1,21 +1,15 @@
 import * as React from "react"
-
-import { Camera } from "akar-icons"
 import Link from "next/link"
 
+import { Camera } from "akar-icons"
+
+import { archivedPhotos } from "utils/photos"
 import Container from "components/atoms/Container"
 import PhotoGallery from "components/PhotoGallery"
-import SEO from "components/SEO"
-import { archivedPhotos } from "utils/photos"
 
-const ArchivePage: React.FC = () => {
+const PhotosPage: React.FC = () => {
   return (
     <Container>
-      <SEO
-        title="Archive | Jitendra Nirnejak"
-        description="An archive of the Photos captured by Jitendra Nirnejak"
-        path="/photos/archive/"
-      />
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <div className="w-full">
           <div className="flex justify-between">
@@ -40,4 +34,4 @@ const ArchivePage: React.FC = () => {
   )
 }
 
-export default ArchivePage
+export default PhotosPage
