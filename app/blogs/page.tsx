@@ -2,17 +2,11 @@ import * as React from "react"
 
 import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
-import SEO from "components/SEO"
 import { allBlogs } from "utils/data"
 
 const BlogsPage: React.FC = () => {
   return (
     <Container>
-      <SEO
-        title="Blogs | Jitendra Nirnejak"
-        description="Blogs and articles written by Jitendra Nirnejak"
-        path="/blogs/"
-      />
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <div>
           <h1 className="text-5xl font-bold text-zinc-300">Blogs</h1>
