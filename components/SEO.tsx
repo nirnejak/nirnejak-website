@@ -19,6 +19,7 @@ const SEO: React.FC<Props> = ({
   const metaTitle = title
   const metaDescription = description
   const metaImage = image ?? `${baseUrl}/cover.png`
+  const metaPath = `${baseUrl}${path}`
 
   return (
     <Head>
@@ -26,11 +27,11 @@ const SEO: React.FC<Props> = ({
       {/* Basic Meta */}
       <meta name="image" content={metaImage} />
       <meta name="description" content={description} />
-      <link rel="canonical" href={`${baseUrl}${path}`} />
+      <link rel="canonical" href={metaPath} />
       {/* Schema.org for Google */}
       <meta itemProp="description" content={metaDescription} />
       {/* Open Graph */}
-      <meta property="og:url" content={`${baseUrl}${path}`} />
+      <meta property="og:url" content={metaPath} />
       <meta property="og:title" content={metaTitle} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:image" content={metaImage} />
