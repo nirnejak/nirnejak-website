@@ -1,4 +1,5 @@
 import * as React from "react"
+import type { Viewport } from "next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import Background from "components/Background"
@@ -11,6 +12,10 @@ import "styles/main.css"
 
 interface Props {
   children: React.ReactNode
+}
+
+export const viewport: Viewport = {
+  themeColor: "#000000",
 }
 
 const HomeLayout: React.FC<Props> = ({ children }) => {

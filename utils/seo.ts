@@ -39,7 +39,6 @@ const generateMetadata = ({
       "JavaScript",
       "Postgres",
     ],
-    themeColor: "#000000",
 
     icons: {
       icon: "/favicon.ico",
