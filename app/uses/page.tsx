@@ -2,18 +2,12 @@ import * as React from "react"
 
 import Image from "next/image"
 
-import SetupImage from "../assets/images/setup.png"
 import Container from "components/atoms/Container"
-import SEO from "components/SEO"
+import SetupImage from "assets/images/setup.png"
 
 const UsesPage: React.FC = () => {
   return (
     <Container>
-      <SEO
-        title="Uses | Jitendra Nirnejak"
-        description="Tool and Technologies used by Jitendra Nirnejak"
-        path="/uses/"
-      />
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <div className="w-full">
           <h1 className="text-5xl font-bold text-zinc-300">Uses</h1>
