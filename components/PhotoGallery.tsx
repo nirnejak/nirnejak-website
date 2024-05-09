@@ -12,14 +12,14 @@ interface Props {
 }
 
 const allTags = [
-  "beach",
-  "mountain",
-  "sky",
   "street",
   "cafe",
   "food",
-  "sunset",
   "concert",
+  "beach",
+  "mountain",
+  "sky",
+  "sunset",
   "snow",
   "train",
   "holy",
