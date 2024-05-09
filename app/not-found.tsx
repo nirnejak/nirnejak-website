@@ -1,15 +1,14 @@
+"use client"
 import * as React from "react"
 
 import Image from "next/image"
 
 import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
-import SEO from "components/SEO"
 
 const NotFound: React.FC = () => {
   return (
     <>
-      <SEO title="Not found" path="/404/" description="Page not found" />
       <Container>
         <section className="grid min-h-screen place-content-center">
           <div className="relative">
