@@ -23,6 +23,40 @@ export const allResources = {
   ],
 }
 
+export const allSites = {
+  ecommerce: [
+    { title: "ROCC Naturals", link: "https://roccnaturals.com.au/" },
+    { title: "Jessica Coppet", link: "https://jessicacoppetstudio.com/" },
+  ],
+  websites: [
+    { title: "Draxlr", link: "https://draxlr.com/" },
+    { title: "Sup Bot", link: "https://sup.today/" },
+    { title: "Inkoop", link: "https://www.inkoop.io/" },
+  ],
+  cms: [
+    { title: "Warlimont & Nutt", link: "https://www.wnre.com.au/" },
+    { title: "Sciberras Group", link: "https://sciberrasgroupre.com.au/" },
+    { title: "Matthews Agency", link: "https://matthews.agency/" },
+    { title: "Wingspan Capital", link: "https://wingspancapital.com.au/" },
+    { title: "Harris Wood", link: "https://www.harriswood.com.au/" },
+    { title: "Movable", link: "https://www.movable.com.au/" },
+    { title: "LBD Studios", link: "https://www.lbdstudios.com.au/" },
+    {
+      title: "Whitefox Real Estate",
+      link: "https://whitefoxrealestate.com.au/",
+    },
+    { title: "Kooyong Travel", link: "https://kooyongtravel.com.au/" },
+    { title: "Maven", link: "https://maven.com.au/" },
+    { title: "Srkhaus", link: "https://www.arkhaus.com.au/" },
+    { title: "iRock Finishes", link: "https://irockfinishes.com.au/" },
+    { title: "Flip Films", link: "https://flipfilms.com.au/" },
+    {
+      title: "Stuart Family Lawyers",
+      link: "https://www.stuartfamilylawyers.com.au/",
+    },
+  ],
+}
+
 export const allProjects = {
   starter: [
     {
