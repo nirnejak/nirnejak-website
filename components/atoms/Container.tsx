@@ -18,10 +18,13 @@ const Container: React.FC<Props> = ({
   switch (size) {
     case "narrow":
       widthClass = "max-w-[480px]"
+      break
     case "wide":
       widthClass = "max-w-[980px]"
+      break
     case "ultrawide":
       widthClass = "max-w-[1200px]"
+      break
     case "normal":
     default:
       widthClass = "max-w-[680px]"
