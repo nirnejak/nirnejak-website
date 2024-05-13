@@ -118,8 +118,8 @@ export const allProjects = {
       description:
         "An Platform to help users build dashboards and setup monitoring on their SQL databases.",
       contributions: [
-        "Built major section of the platform like Query builder, Graph Builder and the Dashboard in React and TypeScript",
-        "Designed the UI of the product in Figma.",
+        "Built major sections of the platform like Query Builder, Graph Builder, and the Dashboard in React and TypeScript.",
+        "Designed the User Interface of the product in Figma.",
         "Wrote the product documentation for Draxlr.",
       ],
       link: "https://www.draxlr.com/",
@@ -131,7 +131,7 @@ export const allProjects = {
       title: "Draxlr Website",
       description: "Website for the Draxlr Analytics platform.",
       contributions: [
-        "Designed the website, banners, illustrations and various assets",
+        "Designed the website and other assets like illustrations, banners, and logo",
         "Built the website with React, Next.js and TypeScript",
       ],
       link: "https://www.draxlr.com/",
