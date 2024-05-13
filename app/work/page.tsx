@@ -49,7 +49,7 @@ const WorkPage: React.FC = () => {
                 {allProjects.work.map((project, index) => (
                   <AppLink
                     key={index}
-                    href={project.link}
+                    href={`/work/${project.slug}/`}
                     target="_blank"
                     className="hover-bg rounded-md px-3 py-2 outline-none"
                   >
