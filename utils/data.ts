@@ -115,7 +115,7 @@ export const allProjects = {
       title: "Draxlr App",
       description: "Development and the design of the platform.",
       type: "Design & Code",
-      link: "https://app.draxlr.com/",
+      link: "https://www.draxlr.com/",
     },
     {
       title: "Draxlr Documentation",
