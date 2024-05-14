@@ -10,7 +10,7 @@ export const allResources = {
     {
       title: "Landing Page Tips",
       description:
-        "Tips to create landing pages that boost engagement and increase conversion.",
+        "Tips to create landing pages that boost engagement and increase conversion. Basics, Design, Content and SEO",
       url: "Guide",
       link: "/resources/landing-page-tips/",
     },
