@@ -74,6 +74,12 @@ export const allProjects = {
   ],
   side: [
     {
+      title: "Tailwind Animations",
+      description: "Copy Paste animations for TailwindCSS",
+      type: "Design & Code",
+      link: "https://tw-animations.vercel.app/",
+    },
+    {
       title: "SVG Animations Gallery",
       description: "A Gallery of SVG Animations built with Framer Motion",
       type: "Design & Code",
