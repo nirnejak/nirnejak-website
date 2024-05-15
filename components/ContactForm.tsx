@@ -7,6 +7,12 @@ interface ResponseDataType {
 
 interface Props {}
 
+declare global {
+  interface Window {
+    plausible: any
+  }
+}
+
 const ContactForm: React.FC<Props> = () => {
   const [isSending, setIsSending] = React.useState(false)
   const [isSent, setIsSent] = React.useState(false)
@@ -26,6 +32,7 @@ const ContactForm: React.FC<Props> = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
     setIsSending(true)
+    window.plausible("Submitted Contact Form")
     fetch("https://formspree.io/f/xgerdbkz", {
       method: "POST",
       headers: { "Content-Type": "application/json" },

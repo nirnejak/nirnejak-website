@@ -1,16 +1,6 @@
-@charset "utf-8";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-  font-family: "Space Grotesk";
-  src: url("/fonts/SpaceGrotesk[wght].woff2") format("woff2");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 100 900;
-}
 
 ::-moz-selection {
   @apply bg-zinc-600 text-white;
@@ -23,6 +13,7 @@
 }
 
 * {
+  @apply font-sans;
   box-sizing: border-box;
   transition:
     background-color 150ms ease-out,

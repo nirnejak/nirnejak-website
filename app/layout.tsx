@@ -1,5 +1,6 @@
 import * as React from "react"
 import type { Viewport } from "next"
+import localFont from "next/font/local"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import Background from "components/Background"
@@ -9,6 +10,16 @@ import Footer from "components/Footer"
 import Navbar from "components/Navbar"
 
 import "styles/main.css"
+
+const sansFont = localFont({
+  variable: "--sans-font",
+  src: [
+    {
+      path: "../fonts/SpaceGrotesk[wght].woff2",
+      style: "normal",
+    },
+  ],
+})
 
 interface Props {
   children: React.ReactNode
@@ -28,7 +39,7 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
           src="https://plausible.io/js/script.js"
         />
       </head>
-      <body>
+      <body className={sansFont.variable}>
         <Navbar />
         {children}
         <Footer />
