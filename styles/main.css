@@ -39,6 +39,7 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .text-gradient-red {
   background: -webkit-linear-gradient(top left, #e95d0f, #d61f5f);
   background-clip: text;
