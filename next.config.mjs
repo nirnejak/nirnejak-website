@@ -2,6 +2,8 @@
 
 import nextPwa from "next-pwa"
 
+import redirects from "./redirects.json" assert { type: "json" }
+
 const withPWA = nextPwa({
   dest: "public",
   register: true,
@@ -14,6 +16,9 @@ const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
   poweredByHeader: false,
+  async redirects() {
+    return redirects
+  },
   images: {
     remotePatterns: [
       {
