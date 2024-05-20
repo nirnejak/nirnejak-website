@@ -36,12 +36,6 @@ export const navLinks = [
     icon: <Pencil size={15} />,
   },
   {
-    content: "Resources",
-    value: "resources",
-    link: "/resources/",
-    icon: <BookClose size={15} />,
-  },
-  {
     content: "Photos",
     value: "photos",
     link: "/photos/",
