@@ -47,7 +47,7 @@ export const allSites = {
     },
     { title: "Kooyong Travel", link: "https://kooyongtravel.com.au/" },
     { title: "Maven", link: "https://maven.com.au/" },
-    { title: "Srkhaus", link: "https://www.arkhaus.com.au/" },
+    { title: "Arkhaus", link: "https://www.arkhaus.com.au/" },
     { title: "iRock Finishes", link: "https://irockfinishes.com.au/" },
     { title: "Flip Films", link: "https://flipfilms.com.au/" },
     {
