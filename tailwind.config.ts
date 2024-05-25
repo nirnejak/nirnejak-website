@@ -86,7 +86,7 @@ const config: Config = {
       },
     },
     fontFamily: {
-      sans: ["Space Grotesk", "system-ui", "sans-serif"],
+      sans: ["var(--sans-font)", "system-ui", "sans-serif"],
     },
   },
   variants: {
