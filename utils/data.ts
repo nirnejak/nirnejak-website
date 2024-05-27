@@ -5,7 +5,7 @@ export const allSites = {
   ],
   websites: [
     { title: "Draxlr", link: "https://draxlr.com/" },
-    { title: "Sup Bot", link: "https://sup.today/" },
+    // { title: "Sup Bot", link: "https://sup.today/" },
     { title: "Inkoop", link: "https://www.inkoop.io/" },
   ],
   cms: [
