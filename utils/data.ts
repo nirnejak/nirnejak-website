@@ -10,7 +10,7 @@ export const allSites = {
   ],
   cms: [
     { title: "Warlimont & Nutt", link: "https://www.wnre.com.au/" },
-    { title: "Sciberras Group", link: "https://sciberrasgroupre.com.au/" },
+    // { title: "Sciberras Group", link: "https://sciberrasgroupre.com.au/" },
     { title: "Matthews Agency", link: "https://matthews.agency/" },
     { title: "Wingspan Capital", link: "https://wingspancapital.com.au/" },
     { title: "Harris Wood", link: "https://www.harriswood.com.au/" },
@@ -20,7 +20,7 @@ export const allSites = {
       title: "Whitefox Real Estate",
       link: "https://whitefoxrealestate.com.au/",
     },
-    { title: "Kooyong Travel", link: "https://kooyongtravel.com.au/" },
+    // { title: "Kooyong Travel", link: "https://kooyongtravel.com.au/" },
     { title: "Maven", link: "https://maven.com.au/" },
     { title: "Arkhaus", link: "https://www.arkhaus.com.au/" },
     { title: "iRock Finishes", link: "https://irockfinishes.com.au/" },
