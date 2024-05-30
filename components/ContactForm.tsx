@@ -5,15 +5,13 @@ interface ResponseDataType {
   ok: boolean
 }
 
-interface Props {}
-
 declare global {
   interface Window {
     plausible: any
   }
 }
 
-const ContactForm: React.FC<Props> = () => {
+const ContactForm: React.FC = () => {
   const [isSending, setIsSending] = React.useState(false)
   const [isSent, setIsSent] = React.useState(false)
 
