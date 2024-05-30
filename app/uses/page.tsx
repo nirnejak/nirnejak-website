@@ -1,12 +1,12 @@
 import * as React from "react"
-import Image from "next/image"
+
 import { type Metadata } from "next"
 
-import generateMetadata from "utils/seo"
-
-import Container from "components/atoms/Container"
+import Image from "next/image"
 
 import SetupImage from "assets/images/setup.png"
+import Container from "components/atoms/Container"
+import generateMetadata from "utils/seo"
 
 export const metadata: Metadata = generateMetadata({
   path: "/uses/",

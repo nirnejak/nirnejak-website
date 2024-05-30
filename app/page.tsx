@@ -1,10 +1,10 @@
 import * as React from "react"
-import { type Metadata } from "next"
 
-import generateMetadata from "utils/seo"
+import { type Metadata } from "next"
 
 import Container from "components/atoms/Container"
 import SocialLinks from "components/SocialLinks"
+import generateMetadata from "utils/seo"
 
 export const metadata: Metadata = generateMetadata({
   path: "/",
@@ -20,14 +20,14 @@ const HomePage: React.FC = () => {
           <h1 className="text-4xl font-bold text-zinc-300 md:text-5xl">
             Jitendra Nirnejak
           </h1>
-          <p className="mt-5 text-sm font-light leading-7 text-gray-500 md:text-base">
+          <p className="mt-5 text-sm font-light leading-7 text-zinc-500 md:text-base">
             I&apos;m a{" "}
             <span className="text-gradient-blue font-bold">Developer</span> &
             <span className="text-gradient-red font-bold"> Designer </span>. I
             am passionate about elegant user interfaces, web- animations, and
             data visualization.
           </p>
-          <p className="text-gray-500 md:text-base text-sm mt-5 font-light">
+          <p className="mt-5 text-sm font-light text-zinc-500 md:text-base">
             Open to{" "}
             <span className="text-gradient-yellow text-sm font-bold">
               frontend/design engineer

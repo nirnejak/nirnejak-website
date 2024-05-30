@@ -1,12 +1,12 @@
 import * as React from "react"
+
 import { type Metadata } from "next"
 
-import generateMetadata from "utils/seo"
-
-import { allSites } from "utils/data"
 import Container from "components/atoms/Container"
-import WorkLinks from "components/WorkLinks"
 import AppLink from "components/atoms/Link"
+import WorkLinks from "components/WorkLinks"
+import { allSites } from "utils/data"
+import generateMetadata from "utils/seo"
 
 export const metadata: Metadata = generateMetadata({
   path: "/work/sites/",

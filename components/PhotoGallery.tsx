@@ -88,7 +88,7 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
           <button
             key={index}
             className={classNames(
-              "z-0 flex items-center gap-1.5 px-3 py-1.5 text-xs text-zinc-400 hover:text-zinc-300",
+              "z-0 flex items-center gap-1.5 px-3 py-1.5 text-xs text-zinc-500 hover:text-zinc-300",
               selectedTags.includes(tag) ? "bg-zinc-800 rounded-lg" : "hover-bg"
             )}
             onClick={() => {

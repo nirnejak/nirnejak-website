@@ -42,15 +42,15 @@ const Bulb: React.FC = () => {
       <div className="relative left-[98px] h-[200px] w-1 bg-black" />
       <div className="relative left-[92px] h-[20px] w-4 bg-zinc-500">
         <div
-          className="relative right-[1px] h-[2px] w-[18px] bg-zinc-400"
+          className="relative right-px h-[2px] w-[18px] bg-zinc-400"
           style={{ top: 4 }}
         />
         <div
-          className="relative right-[1px] h-[2px] w-[18px] bg-zinc-400"
+          className="relative right-px h-[2px] w-[18px] bg-zinc-400"
           style={{ top: 7 }}
         />
         <div
-          className="relative right-[1px] h-[2px] w-[18px] bg-zinc-400"
+          className="relative right-px h-[2px] w-[18px] bg-zinc-400"
           style={{ top: 10 }}
         />
       </div>
@@ -60,7 +60,7 @@ const Bulb: React.FC = () => {
         <div
           tabIndex={0}
           role={"button"}
-          className="relative bottom-[2px] left-[80px] z-[-1] h-[40px] w-[40px] cursor-pointer rounded-full bg-zinc-700"
+          className="relative bottom-[2px] left-[80px] z-[-1] size-[40px] cursor-pointer rounded-full bg-zinc-700"
           style={
             isSwitchOn
               ? {

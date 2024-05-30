@@ -1,7 +1,9 @@
 import * as React from "react"
+
 import type { Viewport } from "next"
-import localFont from "next/font/local"
+
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import localFont from "next/font/local"
 
 import Background from "components/Background"
 import Bulb from "components/Bulb"

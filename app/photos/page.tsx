@@ -1,13 +1,14 @@
 import * as React from "react"
-import Link from "next/link"
+
 import { type Metadata } from "next"
 
 import { Inbox } from "akar-icons"
+import Link from "next/link"
 
-import generateMetadata from "utils/seo"
-import { photos } from "utils/photos"
 import Container from "components/atoms/Container"
 import PhotoGallery from "components/PhotoGallery"
+import { photos } from "utils/photos"
+import generateMetadata from "utils/seo"
 
 export const metadata: Metadata = generateMetadata({
   path: "/photos/",
@@ -25,7 +26,7 @@ const PhotosPage: React.FC = () => {
             <div>
               <Link
                 href={"/photos/archive"}
-                className="hover-bg z-0 flex items-center gap-1.5 px-4 py-2 text-sm text-zinc-400 hover:text-zinc-300"
+                className="hover-bg z-0 flex items-center gap-1.5 px-4 py-2 text-sm text-zinc-500 hover:text-zinc-300"
               >
                 <Inbox size={22} />
                 <span>Archive</span>

@@ -1,13 +1,14 @@
 import * as React from "react"
-import Link from "next/link"
+
 import { type Metadata } from "next"
 
 import { Camera } from "akar-icons"
+import Link from "next/link"
 
-import generateMetadata from "utils/seo"
-import { archivedPhotos } from "utils/photos"
 import Container from "components/atoms/Container"
 import PhotoGallery from "components/PhotoGallery"
+import { archivedPhotos } from "utils/photos"
+import generateMetadata from "utils/seo"
 
 export const metadata: Metadata = generateMetadata({
   path: "/photos/archive/",
@@ -25,7 +26,7 @@ const PhotosArchivePage: React.FC = () => {
             <div>
               <Link
                 href={"/photos/"}
-                className="hover-bg flex items-center gap-1.5 px-4 py-2 text-sm text-zinc-400 hover:text-zinc-300"
+                className="hover-bg flex items-center gap-1.5 px-4 py-2 text-sm text-zinc-500 hover:text-zinc-300"
               >
                 <Camera size={22} />
                 <span>All Photos</span>

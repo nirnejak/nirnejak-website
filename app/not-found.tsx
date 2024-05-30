@@ -1,12 +1,13 @@
 "use client"
 import * as React from "react"
-import Image from "next/image"
+
 import { type Metadata } from "next"
 
-import generateMetadata from "utils/seo"
+import Image from "next/image"
 
 import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
+import generateMetadata from "utils/seo"
 
 export const metadata: Metadata = generateMetadata({
   path: "/",
