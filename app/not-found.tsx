@@ -29,7 +29,7 @@ const NotFound: React.FC = () => {
           <h1 className="mb-1 mt-3 text-center text-3xl font-bold text-zinc-300">
             You lost buddy?
           </h1>
-          <p className="text-center text-zinc-500">
+          <p className="text-center text-zinc-400">
             Let me take you <AppLink href="/">home</AppLink>
           </p>
         </div>

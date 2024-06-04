@@ -37,7 +37,7 @@ const WorkPage: React.FC = () => {
                     className="hover-bg rounded-md px-3 py-2 outline-none"
                   >
                     <p className="mb-1.5 font-bold">{project.title}</p>
-                    <p className="text-xs text-zinc-500">
+                    <p className="text-xs text-zinc-400">
                       {project.description}
                     </p>
                   </AppLink>
@@ -55,7 +55,7 @@ const WorkPage: React.FC = () => {
                     className="hover-bg rounded-md px-3 py-2 outline-none"
                   >
                     <p className="mb-1.5 font-bold">{project.title}</p>
-                    <p className="text-xs text-zinc-500">
+                    <p className="text-xs text-zinc-400">
                       {project.description}
                     </p>
                   </AppLink>
@@ -73,7 +73,7 @@ const WorkPage: React.FC = () => {
                     className="hover-bg rounded-md px-3 py-2 outline-none"
                   >
                     <p className="mb-1.5 font-bold">{project.title}</p>
-                    <p className="text-xs text-zinc-500">
+                    <p className="text-xs text-zinc-400">
                       {project.description}
                     </p>
                   </AppLink>

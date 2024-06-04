@@ -32,7 +32,7 @@ const BlogsPage: React.FC = () => {
                     className="hover-bg -mx-3 p-3 outline-none md:mx-0"
                   >
                     <h2 className="text-sm font-bold">{blog.title}</h2>
-                    <p className="mt-1.5 text-xs text-zinc-500">
+                    <p className="mt-1.5 text-xs text-zinc-400">
                       {blog.description}
                     </p>
                   </AppLink>
@@ -50,7 +50,7 @@ const BlogsPage: React.FC = () => {
                     className="hover-bg -mx-3 p-3 outline-none md:mx-0"
                   >
                     <h2 className="text-sm font-bold">{blog.title}</h2>
-                    <p className="mt-1.5 text-xs text-zinc-500">
+                    <p className="mt-1.5 text-xs text-zinc-400">
                       {blog.description}
                     </p>
                   </AppLink>
@@ -68,7 +68,7 @@ const BlogsPage: React.FC = () => {
                     className="hover-bg -mx-3 p-3 outline-none md:mx-0"
                   >
                     <h2 className="text-sm font-bold">{blog.title}</h2>
-                    <p className="mt-1.5 text-xs text-zinc-500">
+                    <p className="mt-1.5 text-xs text-zinc-400">
                       {blog.description}
                     </p>
                   </AppLink>
@@ -86,7 +86,7 @@ const BlogsPage: React.FC = () => {
                     className="hover-bg -mx-3 p-3 outline-none md:mx-0"
                   >
                     <h2 className="text-sm font-bold">{blog.title}</h2>
-                    <p className="mt-1.5 text-xs text-zinc-500">
+                    <p className="mt-1.5 text-xs text-zinc-400">
                       {blog.description}
                     </p>
                   </AppLink>
@@ -104,7 +104,7 @@ const BlogsPage: React.FC = () => {
                     className="hover-bg -mx-3 p-3 outline-none md:mx-0"
                   >
                     <h2 className="text-sm font-bold">{blog.title}</h2>
-                    <p className="mt-1.5 text-xs text-zinc-500">
+                    <p className="mt-1.5 text-xs text-zinc-400">
                       {blog.description}
                     </p>
                   </AppLink>

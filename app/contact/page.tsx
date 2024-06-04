@@ -24,7 +24,7 @@ const ContactPage: React.FC = () => {
           <ContactForm />
 
           <div className="mt-10 text-center">
-            <p className="text-sm font-bold text-zinc-500">or reach me at</p>
+            <p className="text-sm font-bold text-zinc-400">or reach me at</p>
             <AppLink
               href="mailto:hello@nirnejak.com&subject=Website%20Enquiry"
               className="text-sm text-zinc-600"

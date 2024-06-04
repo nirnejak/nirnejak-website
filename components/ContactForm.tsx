@@ -58,7 +58,7 @@ const ContactForm: React.FC = () => {
     >
       <input
         type="text"
-        className="rounded-md bg-zinc-800 px-4 py-3 text-xs text-zinc-500 placeholder:text-zinc-600"
+        className="rounded-md bg-zinc-800 px-4 py-3 text-xs text-zinc-400 placeholder:text-zinc-600"
         placeholder="Name"
         name="name"
         value={state.name}
@@ -67,7 +67,7 @@ const ContactForm: React.FC = () => {
       />
       <input
         type="email"
-        className="rounded-md bg-zinc-800 px-4 py-3 text-xs text-zinc-500 placeholder:text-zinc-600"
+        className="rounded-md bg-zinc-800 px-4 py-3 text-xs text-zinc-400 placeholder:text-zinc-600"
         placeholder="Email"
         name="email"
         value={state.email}
@@ -75,7 +75,7 @@ const ContactForm: React.FC = () => {
         required
       />
       <textarea
-        className="rounded-md bg-zinc-800 px-4 py-3 text-xs text-zinc-500 placeholder:text-zinc-600"
+        className="rounded-md bg-zinc-800 px-4 py-3 text-xs text-zinc-400 placeholder:text-zinc-600"
         placeholder="Message"
         rows={3}
         name="message"

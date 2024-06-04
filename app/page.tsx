@@ -20,14 +20,14 @@ const HomePage: React.FC = () => {
           <h1 className="text-4xl font-bold text-zinc-300 md:text-5xl">
             Jitendra Nirnejak
           </h1>
-          <p className="mt-5 text-sm font-light leading-7 text-zinc-500 md:text-base">
+          <p className="mt-5 text-sm leading-7 text-zinc-400 md:text-base">
             I&apos;m a{" "}
             <span className="text-gradient-blue font-bold">Developer</span> &
             <span className="text-gradient-red font-bold"> Designer </span>. I
             am passionate about elegant user interfaces, web- animations, and
             data visualization.
           </p>
-          <p className="mt-5 text-sm font-light text-zinc-500 md:text-base">
+          <p className="mt-5 text-sm text-zinc-400 md:text-base">
             Open to{" "}
             <span className="text-gradient-yellow text-sm font-bold">
               frontend/design engineer

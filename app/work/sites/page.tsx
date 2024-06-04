@@ -39,7 +39,7 @@ const SitesPage: React.FC = () => {
                     className="hover-bg rounded-md px-3 py-2 outline-none"
                   >
                     <p className="mb-1.5 font-bold">{project.title}</p>
-                    <p className="text-xs text-zinc-500">{project.link}</p>
+                    <p className="text-xs text-zinc-400">{project.link}</p>
                   </AppLink>
                 ))}
               </div>
@@ -57,7 +57,7 @@ const SitesPage: React.FC = () => {
                     className="hover-bg rounded-md px-3 py-2 outline-none"
                   >
                     <p className="mb-1.5 font-bold">{project.title}</p>
-                    <p className="text-xs text-zinc-500">{project.link}</p>
+                    <p className="text-xs text-zinc-400">{project.link}</p>
                   </AppLink>
                 ))}
               </div>
@@ -75,7 +75,7 @@ const SitesPage: React.FC = () => {
                     className="hover-bg rounded-md px-3 py-2 outline-none"
                   >
                     <p className="mb-1.5 font-bold">{project.title}</p>
-                    <p className="text-xs text-zinc-500">{project.link}</p>
+                    <p className="text-xs text-zinc-400">{project.link}</p>
                   </AppLink>
                 ))}
               </div>
