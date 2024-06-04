@@ -1,28 +1,3 @@
-export const allResources = {
-  guides: [
-    {
-      title: "SEO Guidelines for Developers",
-      description:
-        "SEO Basics and Tips for Developers. Nail the fundamentals and boost traffic on your website.",
-      url: "Guide",
-      link: "/resources/seo-guidelines-for-developer/",
-    },
-    {
-      title: "Landing Page Tips",
-      description:
-        "Tips to create landing pages that boost engagement and increase conversion. Basics, Design, Content and SEO",
-      url: "Guide",
-      link: "/resources/landing-page-tips/",
-    },
-    {
-      title: "Website Metadata Guide",
-      description: "Learn the basics of SEO meta tags for your website.",
-      url: "Guide",
-      link: "/resources/website-metadata-guide/",
-    },
-  ],
-}
-
 export const allSites = {
   ecommerce: [
     { title: "ROCC Naturals", link: "https://roccnaturals.com.au/" },
@@ -30,12 +5,12 @@ export const allSites = {
   ],
   websites: [
     { title: "Draxlr", link: "https://draxlr.com/" },
-    { title: "Sup Bot", link: "https://sup.today/" },
+    // { title: "Sup Bot", link: "https://sup.today/" },
     { title: "Inkoop", link: "https://www.inkoop.io/" },
   ],
   cms: [
     { title: "Warlimont & Nutt", link: "https://www.wnre.com.au/" },
-    { title: "Sciberras Group", link: "https://sciberrasgroupre.com.au/" },
+    // { title: "Sciberras Group", link: "https://sciberrasgroupre.com.au/" },
     { title: "Matthews Agency", link: "https://matthews.agency/" },
     { title: "Wingspan Capital", link: "https://wingspancapital.com.au/" },
     { title: "Harris Wood", link: "https://www.harriswood.com.au/" },
@@ -45,9 +20,9 @@ export const allSites = {
       title: "Whitefox Real Estate",
       link: "https://whitefoxrealestate.com.au/",
     },
-    { title: "Kooyong Travel", link: "https://kooyongtravel.com.au/" },
+    // { title: "Kooyong Travel", link: "https://kooyongtravel.com.au/" },
     { title: "Maven", link: "https://maven.com.au/" },
-    { title: "Srkhaus", link: "https://www.arkhaus.com.au/" },
+    { title: "Arkhaus", link: "https://www.arkhaus.com.au/" },
     { title: "iRock Finishes", link: "https://irockfinishes.com.au/" },
     { title: "Flip Films", link: "https://flipfilms.com.au/" },
     {

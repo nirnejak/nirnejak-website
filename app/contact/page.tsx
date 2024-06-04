@@ -1,10 +1,11 @@
 import * as React from "react"
+
 import { type Metadata } from "next"
 
-import generateMetadata from "utils/seo"
 import Container from "components/atoms/Container"
-import ContactForm from "components/ContactForm"
 import AppLink from "components/atoms/Link"
+import ContactForm from "components/ContactForm"
+import generateMetadata from "utils/seo"
 
 export const metadata: Metadata = generateMetadata({
   path: "/contact/",

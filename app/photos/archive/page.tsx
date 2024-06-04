@@ -1,13 +1,14 @@
 import * as React from "react"
-import Link from "next/link"
+
 import { type Metadata } from "next"
 
 import { Camera } from "akar-icons"
+import Link from "next/link"
 
-import generateMetadata from "utils/seo"
-import { archivedPhotos } from "utils/photos"
 import Container from "components/atoms/Container"
 import PhotoGallery from "components/PhotoGallery"
+import { archivedPhotos } from "utils/photos"
+import generateMetadata from "utils/seo"
 
 export const metadata: Metadata = generateMetadata({
   path: "/photos/archive/",

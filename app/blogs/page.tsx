@@ -1,10 +1,11 @@
 import * as React from "react"
+
 import { type Metadata } from "next"
 
-import generateMetadata from "utils/seo"
-import { allBlogs } from "utils/data"
 import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
+import { allBlogs } from "utils/data"
+import generateMetadata from "utils/seo"
 
 export const metadata: Metadata = generateMetadata({
   path: "/blogs/",
@@ -31,7 +32,7 @@ const BlogsPage: React.FC = () => {
                     className="hover-bg -mx-3 p-3 outline-none md:mx-0"
                   >
                     <h2 className="text-sm font-bold">{blog.title}</h2>
-                    <p className="mt-1.5 text-xs text-zinc-500">
+                    <p className="mt-1.5 text-xs text-zinc-400">
                       {blog.description}
                     </p>
                   </AppLink>
@@ -49,7 +50,7 @@ const BlogsPage: React.FC = () => {
                     className="hover-bg -mx-3 p-3 outline-none md:mx-0"
                   >
                     <h2 className="text-sm font-bold">{blog.title}</h2>
-                    <p className="mt-1.5 text-xs text-zinc-500">
+                    <p className="mt-1.5 text-xs text-zinc-400">
                       {blog.description}
                     </p>
                   </AppLink>
@@ -67,7 +68,7 @@ const BlogsPage: React.FC = () => {
                     className="hover-bg -mx-3 p-3 outline-none md:mx-0"
                   >
                     <h2 className="text-sm font-bold">{blog.title}</h2>
-                    <p className="mt-1.5 text-xs text-zinc-500">
+                    <p className="mt-1.5 text-xs text-zinc-400">
                       {blog.description}
                     </p>
                   </AppLink>
@@ -85,7 +86,7 @@ const BlogsPage: React.FC = () => {
                     className="hover-bg -mx-3 p-3 outline-none md:mx-0"
                   >
                     <h2 className="text-sm font-bold">{blog.title}</h2>
-                    <p className="mt-1.5 text-xs text-zinc-500">
+                    <p className="mt-1.5 text-xs text-zinc-400">
                       {blog.description}
                     </p>
                   </AppLink>
@@ -103,7 +104,7 @@ const BlogsPage: React.FC = () => {
                     className="hover-bg -mx-3 p-3 outline-none md:mx-0"
                   >
                     <h2 className="text-sm font-bold">{blog.title}</h2>
-                    <p className="mt-1.5 text-xs text-zinc-500">
+                    <p className="mt-1.5 text-xs text-zinc-400">
                       {blog.description}
                     </p>
                   </AppLink>

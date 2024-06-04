@@ -50,8 +50,8 @@ const config: Config = {
           to: { opacity: "1", transform: "scale(1)" },
         },
         rise: {
-          from: { transform: "translate(0, 20%) scale(0.8)" },
-          to: { transform: "translate(0, 0) scale(1)" },
+          from: { transform: "translate(-50%, -40%) scale(0.95)" },
+          to: { transform: "translate(-50%, -50%) scale(1)" },
         },
         shake: {
           "0%": { transform: "translate(1px, 1px) rotate(0deg)" },
@@ -86,7 +86,7 @@ const config: Config = {
       },
     },
     fontFamily: {
-      sans: ["Space Grotesk", "system-ui", "sans-serif"],
+      sans: ["var(--sans-font)", "system-ui", "sans-serif"],
     },
   },
   variants: {

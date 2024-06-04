@@ -10,7 +10,7 @@ const WorkLinks: React.FC = () => {
       <AppLink
         href="https://github.com/nirnejak/"
         target="_blank"
-        className="flex items-center justify-between rounded-md bg-green-800/10 p-3 hover:bg-green-900/20 hover:text-green-400"
+        className="flex items-center justify-between rounded-md bg-green-800/10 p-3 outline-none hover:bg-green-900/30 hover:text-green-400 focus:bg-green-900/30 focus:text-green-400"
       >
         <div className="flex items-center gap-1.5 text-green-500">
           <GithubFill size={15} />
@@ -23,7 +23,7 @@ const WorkLinks: React.FC = () => {
       <AppLink
         href="https://dribbble.com/nirnejak/"
         target="_blank"
-        className="flex items-center justify-between rounded-md bg-pink-800/10 p-3 hover:bg-pink-900/20 hover:text-pink-400"
+        className="flex items-center justify-between rounded-md bg-pink-800/10 p-3 outline-none hover:bg-pink-900/30 hover:text-pink-400 focus:bg-pink-900/30 focus:text-pink-400"
       >
         <div className="flex items-center gap-1.5 text-pink-500">
           <DribbbleFill size={15} />
@@ -36,7 +36,7 @@ const WorkLinks: React.FC = () => {
       <AppLink
         href="https://www.linkedin.com/in/nirnejak/"
         target="_blank"
-        className="flex items-center justify-between rounded-md bg-blue-800/10 p-3 hover:bg-blue-900/20 hover:text-blue-400"
+        className="flex items-center justify-between rounded-md bg-blue-800/10 p-3 outline-none hover:bg-blue-900/30 hover:text-blue-400 focus:bg-blue-900/30 focus:text-blue-400"
       >
         <div className="flex items-center gap-1.5 text-blue-500">
           <LinkedinBoxFill size={15} />

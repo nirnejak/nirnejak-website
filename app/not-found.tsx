@@ -1,12 +1,13 @@
 "use client"
 import * as React from "react"
-import Image from "next/image"
+
 import { type Metadata } from "next"
 
-import generateMetadata from "utils/seo"
+import Image from "next/image"
 
 import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
+import generateMetadata from "utils/seo"
 
 export const metadata: Metadata = generateMetadata({
   path: "/",
@@ -28,7 +29,7 @@ const NotFound: React.FC = () => {
           <h1 className="mb-1 mt-3 text-center text-3xl font-bold text-zinc-300">
             You lost buddy?
           </h1>
-          <p className="text-center text-zinc-500">
+          <p className="text-center text-zinc-400">
             Let me take you <AppLink href="/">home</AppLink>
           </p>
         </div>

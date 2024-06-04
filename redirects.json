@@ -1,0 +1,7 @@
+[
+  {
+    "source": "/resources/",
+    "destination": "/blogs/",
+    "permanent": true
+  }
+]
