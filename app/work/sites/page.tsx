@@ -46,10 +46,10 @@ const SitesPage: React.FC = () => {
             </div>
             <div className="mb-16 flex flex-col md:flex-row">
               <p className="mb-3 flex-1 text-zinc-300 md:mt-2">
-                Websites(without CMS Integration)
+                Websites(with CMS Integration)
               </p>
               <div className="flex flex-1 flex-col gap-1 md:mx-3">
-                {allSites.websites.map((project, index) => (
+                {allSites.cms.map((project, index) => (
                   <AppLink
                     key={index}
                     href={project.link}
@@ -64,10 +64,10 @@ const SitesPage: React.FC = () => {
             </div>
             <div className="mb-16 flex flex-col md:flex-row">
               <p className="mb-3 flex-1 text-zinc-300 md:mt-2">
-                Websites(with CMS Integration)
+                Websites(without CMS Integration)
               </p>
               <div className="flex flex-1 flex-col gap-1 md:mx-3">
-                {allSites.cms.map((project, index) => (
+                {allSites.websites.map((project, index) => (
                   <AppLink
                     key={index}
                     href={project.link}
