@@ -55,6 +55,20 @@ button {
   -webkit-text-fill-color: transparent;
 }
 
+.text-gradient-green {
+  background: -webkit-linear-gradient(top left, #04c100, #038100);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-purple {
+  background: -webkit-linear-gradient(top left, #ff00a8, #cc0086);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .command-item[aria-selected="true"] {
   @apply after:scale-100 after:opacity-100;
 }
