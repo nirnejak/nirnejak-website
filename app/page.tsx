@@ -28,11 +28,14 @@ const HomePage: React.FC = () => {
             visualization.
           </p>
           <p className="mt-5 text-sm text-zinc-400 md:text-base">
-            Open to{" "}
+            Open to new{" "}
             <span className="text-gradient-yellow text-sm font-bold">
               frontend/design engineer
             </span>{" "}
-            opportunities, currently working with{" "}
+            opportunities.
+          </p>
+          <p className="mt-12 text-sm text-zinc-400 md:text-base">
+            Currently working with{" "}
             <span className="text-gradient-green text-sm font-bold">
               @atollon.com.au
             </span>{" "}
