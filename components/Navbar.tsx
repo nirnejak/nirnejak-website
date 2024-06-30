@@ -13,6 +13,8 @@ interface Props {
   theme?: string
 }
 
+const SCHEDULE_CALL_LINK = "https://cal.com/nirnejak/15min"
+
 const navLinkClass =
   "font-medium text-xs rounded-md px-4 py-2 hover-bg outline-none"
 
@@ -39,11 +41,11 @@ const Navbar: React.FC<Props> = () => {
               navLinkClass,
               "group flex items-center gap-1.5"
             )}
-            href="https://read.cv/nirnejak"
+            href={SCHEDULE_CALL_LINK}
             target="_blank"
           >
             <span className="animate-slideLeft group-hover:animate-slideRight group-focus:animate-slideRight">
-              Resumé
+              Schedule call
             </span>
             <LinkOut
               className="hidden animate-slideLeftAndFade hover:block group-hover:block group-focus-visible:block"
@@ -77,10 +79,10 @@ const Navbar: React.FC<Props> = () => {
             <br />
             <AppLink
               className={navLinkClass}
-              href="https://read.cv/nirnejak"
+              href={SCHEDULE_CALL_LINK}
               target="_blank"
             >
-              Resumé
+              Schedule call
             </AppLink>
           </div>
         ) : (

@@ -21,18 +21,28 @@ const HomePage: React.FC = () => {
             Jitendra Nirnejak
           </h1>
           <p className="mt-5 text-sm leading-7 text-zinc-400 md:text-base">
-            I&apos;m a{" "}
+            I&apos;m an independent{" "}
             <span className="text-gradient-blue font-bold">Developer</span> &
-            <span className="text-gradient-red font-bold"> Designer </span>. I
-            am passionate about elegant user interfaces, web- animations, and
-            data visualization.
+            <span className="text-gradient-red font-bold"> Designer </span>,
+            obsessed with elegant user interfaces, web- animations, and data
+            visualization.
           </p>
           <p className="mt-5 text-sm text-zinc-400 md:text-base">
-            Open to{" "}
+            Open to new{" "}
             <span className="text-gradient-yellow text-sm font-bold">
               frontend/design engineer
             </span>{" "}
             opportunities.
+          </p>
+          <p className="mt-12 text-sm text-zinc-400 md:text-base">
+            Currently working with{" "}
+            <span className="text-gradient-green text-sm font-bold">
+              @atollon.com.au
+            </span>{" "}
+            and{" "}
+            <span className="text-gradient-purple text-sm font-bold">
+              @roboto.studio
+            </span>
           </p>
           <div className="mt-16 flex">
             <SocialLinks />
