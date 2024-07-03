@@ -27,15 +27,15 @@ const HomePage: React.FC = () => {
             obsessed with elegant user interfaces, web- animations, and data
             visualization.
           </p>
-          <p className="mt-5 text-sm text-zinc-400 md:text-base">
-            Open to new{" "}
+          <p className="mt-12 text-sm text-zinc-400">
+            ✦ &nbsp;Open to new{" "}
             <span className="text-gradient-yellow text-sm font-bold">
               frontend/design engineer
             </span>{" "}
-            opportunities.
+            opportunities
           </p>
-          <p className="mt-12 text-sm text-zinc-400 md:text-base">
-            Currently working with{" "}
+          <p className="mt-3.5 text-sm text-zinc-400">
+            ✦ &nbsp;Currently working with{" "}
             <span className="text-gradient-green text-sm font-bold">
               @atollon.com.au
             </span>{" "}
