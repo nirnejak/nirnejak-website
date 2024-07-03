@@ -58,9 +58,10 @@ const Bulb: React.FC = () => {
         ""
       ) : (
         <div
+          id="bulb"
           tabIndex={0}
           role={"button"}
-          className="relative bottom-[2px] left-[80px] z-[-1] size-[40px] cursor-pointer rounded-full bg-zinc-700"
+          className="relative bottom-[2px] left-[80px] z-[-1] size-[40px] cursor-none rounded-full bg-zinc-700"
           style={
             isSwitchOn
               ? {
