@@ -89,14 +89,3 @@ body {
 .hover-bg.hover-bg-dark {
   @apply after:bg-zinc-900;
 }
-
-/* Photo Gallery */
-@media screen and (min-width: 768px) {
-  .card-tall {
-    grid-row: span 2 / auto; /* start / end */
-  }
-
-  .card-wide {
-    grid-column: span 2 / auto; /* start / end */
-  }
-}
