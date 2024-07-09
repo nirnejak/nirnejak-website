@@ -13,7 +13,6 @@ import {
   UnsplashFill,
   ProductHuntFill,
   InstagramFill,
-  BookClose,
 } from "akar-icons"
 
 export const navLinks = [
