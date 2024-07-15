@@ -28,6 +28,10 @@ const HomePage: React.FC = () => {
             visualization.
           </p>
           <p className="mt-12 text-sm text-zinc-400">
+            ✦ &nbsp;<strong>5+</strong> Years Experience, &nbsp;
+            <strong>25+</strong> Projects, &nbsp;<strong>10+</strong> Clients
+          </p>
+          <p className="mt-3.5 text-sm text-zinc-400">
             ✦ &nbsp;Open to new{" "}
             <span className="text-gradient-yellow text-sm font-bold">
               frontend/design engineer
