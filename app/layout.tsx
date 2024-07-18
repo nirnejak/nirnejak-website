@@ -8,7 +8,6 @@ import localFont from "next/font/local"
 import Background from "components/Background"
 import Bulb from "components/Bulb"
 import CommandBar from "components/CommandBar"
-import CustomCursor from "components/CustomCursor"
 import Footer from "components/Footer"
 import Navbar from "components/Navbar"
 
@@ -52,7 +51,6 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
         <CommandBar />
 
         <SpeedInsights />
-        <CustomCursor />
       </body>
     </html>
   )

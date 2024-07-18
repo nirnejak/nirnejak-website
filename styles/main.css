@@ -18,10 +18,15 @@
   transition:
     background-color 150ms ease-out,
     color 150ms ease-out;
+  cursor:
+    url("../assets/icons/circle.svg") 15 15,
+    auto;
 }
 
 button {
-  @apply cursor-none;
+  cursor:
+    url("../assets/icons/circle.svg") 15 15,
+    auto;
 }
 
 body {
