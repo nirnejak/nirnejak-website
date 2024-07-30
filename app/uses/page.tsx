@@ -40,7 +40,7 @@ const UsesPage: React.FC = () => {
               <div>
                 <p className="text-sm text-zinc-400">Design Tools</p>
                 <p className="mt-1.5 text-lg font-bold text-zinc-300">
-                  Figma & Procreate
+                  Figma, Rive & Procreate
                 </p>
               </div>
               <div>
