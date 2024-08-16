@@ -10,7 +10,11 @@ const Footer: React.FC = () => {
   const pathname = usePathname()
 
   const footerClass = React.useMemo(() => {
-    if (pathname?.includes("blogs") || pathname?.includes("work")) {
+    if (
+      pathname?.includes("blogs") ||
+      pathname?.includes("work") ||
+      pathname?.includes("craft")
+    ) {
       return ""
     } else if (pathname?.includes("uses")) {
       return "md:fixed bottom-0 w-full"
