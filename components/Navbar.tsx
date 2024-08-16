@@ -5,7 +5,7 @@ import { LinkOut, ThreeLineHorizontal } from "akar-icons"
 
 import Container from "./atoms/Container"
 import AppLink from "./atoms/Link"
-import Tabs from "./atoms/Tabs"
+import NavigationTabs from "./NavigationTabs"
 import classNames from "utils/classNames"
 import { navLinks } from "utils/navigation"
 
@@ -33,7 +33,7 @@ const Navbar: React.FC<Props> = () => {
     <nav className="fixed top-0 z-10 w-full">
       <Container className="hidden items-center py-3 md:flex">
         <div className="-mx-3.5">
-          <Tabs />
+          <NavigationTabs />
         </div>
         <div className="ml-auto">
           <AppLink
