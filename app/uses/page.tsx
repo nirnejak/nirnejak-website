@@ -28,6 +28,7 @@ const UsesPage: React.FC = () => {
                 src={SetupImage}
                 alt="Desk Setup"
                 className="rounded-lg"
+                priority
               />
             </div>
             <div className="flex flex-1 flex-col gap-8">
