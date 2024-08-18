@@ -3,7 +3,7 @@ import * as React from "react"
 
 import { motion, AnimatePresence } from "framer-motion"
 
-import classNames from "@/utils/classNames"
+import classNames from "utils/classNames"
 
 const UpvoteButton: React.FC = () => {
   const [clickCount, setClickCount] = React.useState(0) // to be used as key prop, if I use count and user clicks the button too fast it add the elements 2 times to the dom

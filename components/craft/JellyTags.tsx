@@ -3,7 +3,7 @@ import * as React from "react"
 
 import { motion } from "framer-motion"
 
-import classNames from "@/utils/classNames"
+import classNames from "utils/classNames"
 
 interface ITag {
   value: string
