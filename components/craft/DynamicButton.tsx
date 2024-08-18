@@ -4,7 +4,7 @@ import * as React from "react"
 import { ArrowCycle } from "akar-icons"
 import { AnimatePresence, motion } from "framer-motion"
 
-const buttonCopy = {
+const buttonCopy: Record<string, string | React.ReactNode> = {
   idle: "Submit Form",
   loading: <ArrowCycle size={16} className="animate-spin" />,
   success: "Submitted!",
