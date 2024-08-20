@@ -14,7 +14,7 @@ const images = [
 
 const rotationClasses = ["-rotate-3", "rotate-6", "rotate-9", "rotate-12"]
 
-const AirbnbCards: React.FC = () => {
+const PhotoCards: React.FC = () => {
   return (
     <div className="relative mx-auto flex flex-col items-center justify-center">
       <div className="relative h-52 w-[340px] md:w-[500px]">
@@ -53,4 +53,4 @@ const AirbnbCards: React.FC = () => {
   )
 }
 
-export default AirbnbCards
+export default PhotoCards
