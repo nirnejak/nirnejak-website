@@ -101,7 +101,7 @@ export const allProjects = {
   work: [
     {
       slug: "draxlr-analytics",
-      type: "Design, Code & Content",
+      type: "Design & Code",
       title: "Draxlr Analytics",
       description:
         "An Platform to help users build dashboards and setup monitoring on their SQL databases.",
