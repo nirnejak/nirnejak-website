@@ -22,7 +22,7 @@ const HomePage: React.FC = () => {
           </h1>
           <p className="mt-5 text-sm leading-7 text-zinc-400 md:text-base">
             I&apos;m an independent{" "}
-            <span className="text-gradient-blue font-bold">Developer</span> &
+            <span className="text-gradient-blue font-bold">Engineer</span> &
             <span className="text-gradient-red font-bold"> Designer </span>,
             obsessed with elegant user interfaces, web- animations, and data
             visualization.
