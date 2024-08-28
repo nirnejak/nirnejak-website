@@ -68,7 +68,7 @@ const SocialLinks: React.FC = () => {
         </div>
         <div>
           {renderSocialLink(
-            "X (formerly Twitter)",
+            "X",
             "https://twitter.com/jeetnirnejak/",
             <span className="flex items-center gap-1.5">
               <XFill

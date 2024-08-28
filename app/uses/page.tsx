@@ -28,6 +28,7 @@ const UsesPage: React.FC = () => {
                 src={SetupImage}
                 alt="Desk Setup"
                 className="rounded-lg"
+                priority
               />
             </div>
             <div className="flex flex-1 flex-col gap-8">
@@ -40,7 +41,7 @@ const UsesPage: React.FC = () => {
               <div>
                 <p className="text-sm text-zinc-400">Design Tools</p>
                 <p className="mt-1.5 text-lg font-bold text-zinc-300">
-                  Figma & Procreate
+                  Figma, Rive & Procreate
                 </p>
               </div>
               <div>

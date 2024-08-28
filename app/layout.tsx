@@ -3,6 +3,7 @@ import * as React from "react"
 import type { Viewport } from "next"
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { IBM_Plex_Serif, Instrument_Serif } from "next/font/google"
 import localFont from "next/font/local"
 
 import Background from "components/Background"
@@ -10,6 +11,7 @@ import Bulb from "components/Bulb"
 import CommandBar from "components/CommandBar"
 import Footer from "components/Footer"
 import Navbar from "components/Navbar"
+import classNames from "utils/classNames"
 
 import "styles/main.css"
 
@@ -21,6 +23,29 @@ const sansFont = localFont({
       style: "normal",
     },
   ],
+})
+
+const monoFont = localFont({
+  variable: "--font-mono",
+  src: [
+    {
+      path: "../fonts/JetBrainsMono-Regular.ttf",
+      weight: "regular",
+      style: "normal",
+    },
+  ],
+})
+
+const serifFont = IBM_Plex_Serif({
+  variable: "--font-serif",
+  weight: ["400", "500"],
+  subsets: ["latin"],
+})
+
+const instrumentSerifFont = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  weight: ["400"],
+  subsets: ["latin"],
 })
 
 interface Props {
@@ -41,7 +66,14 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
           src="https://plausible.io/js/script.js"
         />
       </head>
-      <body className={sansFont.variable}>
+      <body
+        className={classNames(
+          monoFont.variable,
+          sansFont.variable,
+          serifFont.variable,
+          instrumentSerifFont.variable
+        )}
+      >
         <Navbar />
         {children}
         <Footer />

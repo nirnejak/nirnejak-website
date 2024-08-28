@@ -49,6 +49,13 @@ export const allProjects = {
   ],
   side: [
     {
+      title: "Interactive Components",
+      description:
+        "A collection os interactive components built with Framer Motion",
+      type: "Design & Code",
+      link: "https://react-interactive-components.vercel.app/",
+    },
+    {
       title: "Tailwind Animations",
       description: "Copy Paste animations for TailwindCSS",
       type: "Design & Code",

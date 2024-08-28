@@ -56,7 +56,7 @@ export const navLinks = [
 
 export const socialLinks = [
   {
-    content: "X (formerly Twitter)",
+    content: "X",
     href: "https://twitter.com/jeetnirnejak/",
     icon: <XFill size={15} />,
   },
