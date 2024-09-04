@@ -13,6 +13,7 @@ const Footer: React.FC = () => {
     if (
       pathname?.includes("blogs") ||
       pathname?.includes("work") ||
+      pathname?.includes("photos") ||
       pathname?.includes("craft")
     ) {
       return ""
