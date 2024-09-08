@@ -56,7 +56,7 @@
     "*.{js,jsx,ts,tsx}": "eslint"
   },
   "volta": {
-    "node": "20.16.0"
+    "node": "20.17.0"
   },
   "keywords": [
     "nextjs",
