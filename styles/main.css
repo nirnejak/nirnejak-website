@@ -29,10 +29,6 @@ button {
     auto;
 }
 
-body {
-  @apply bg-zinc-900 overflow-x-hidden;
-}
-
 .text-gradient-blue {
   background: -webkit-linear-gradient(top left, #03cffe, #397dd6);
   background-clip: text;
