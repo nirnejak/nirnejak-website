@@ -68,7 +68,7 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
       </head>
       <body
         className={classNames(
-          "bg-zinc-900 overflow-x-hidden",
+          "bg-zinc-900 overflow-x-hidden font-sans",
           monoFont.variable,
           sansFont.variable,
           serifFont.variable,

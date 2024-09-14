@@ -9,7 +9,7 @@
 }
 
 * {
-  @apply font-sans cursor-none;
+  @apply cursor-none;
 
   -webkit-font-smoothing: antialiased;
   text-rendering: geometricPrecision;
