@@ -22,7 +22,9 @@ const PhotosArchivePage: React.FC = () => {
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <div className="w-full">
           <div className="flex justify-between">
-            <h1 className="text-5xl font-bold text-zinc-300">Archive</h1>
+            <h1 className="text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
+              Archive
+            </h1>
             <div>
               <Link
                 href={"/photos/"}

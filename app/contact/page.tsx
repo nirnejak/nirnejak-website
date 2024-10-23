@@ -19,7 +19,9 @@ const ContactPage: React.FC = () => {
     <Container>
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <div className="w-full">
-          <h1 className="text-5xl font-bold text-zinc-300">Contact</h1>
+          <h1 className="text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
+            Contact
+          </h1>
 
           <ContactForm />
 

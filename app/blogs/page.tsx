@@ -18,7 +18,9 @@ const BlogsPage: React.FC = () => {
     <Container>
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <div>
-          <h1 className="text-5xl font-bold text-zinc-300">Blogs</h1>
+          <h1 className="text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
+            Blogs
+          </h1>
 
           <div className="mt-10 flex flex-col gap-10 pb-16 md:mt-16">
             <div className="flex flex-col gap-12 md:flex-row md:gap-24">

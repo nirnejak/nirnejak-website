@@ -19,7 +19,9 @@ const UsesPage: React.FC = () => {
     <Container>
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <div className="w-full">
-          <h1 className="text-5xl font-bold text-zinc-300">Uses</h1>
+          <h1 className="text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
+            Uses
+          </h1>
 
           <div className="mt-10 flex flex-col-reverse gap-12 pb-16 md:mt-16 md:flex-row">
             <div className="flex-1">
