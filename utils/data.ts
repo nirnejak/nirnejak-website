@@ -49,11 +49,10 @@ export const allProjects = {
   ],
   side: [
     {
-      title: "Interactive Components",
-      description:
-        "A collection os interactive components built with Framer Motion",
+      title: "SVG Animations Gallery",
+      description: "A Gallery of SVG Animations built with Framer Motion",
       type: "Design & Code",
-      link: "https://react-interactive-components.vercel.app/",
+      link: "https://svg-animations-gallery.vercel.app/",
     },
     {
       title: "Tailwind Animations",
@@ -62,10 +61,11 @@ export const allProjects = {
       link: "https://tw-animations.vercel.app/",
     },
     {
-      title: "SVG Animations Gallery",
-      description: "A Gallery of SVG Animations built with Framer Motion",
+      title: "Interactive Components",
+      description:
+        "A collection os interactive components built with Framer Motion",
       type: "Design & Code",
-      link: "https://svg-animations-gallery.vercel.app/",
+      link: "https://react-interactive-components.vercel.app/",
     },
     {
       title: "CSV Plot",
