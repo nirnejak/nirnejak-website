@@ -2,8 +2,6 @@
 
 import nextPwa from "next-pwa"
 
-import redirects from "./redirects.json" assert { type: "json" }
-
 const withPWA = nextPwa({
   dest: "public",
   register: true,
@@ -17,7 +15,43 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   async redirects() {
-    return redirects
+    return [
+      {
+        source: "/resources/",
+        destination: "/blogs/",
+        permanent: true,
+      },
+      {
+        source: "/craft/animate-height/",
+        destination: "/work/",
+        permanent: true,
+      },
+      {
+        source: "/craft/dynamic-button/",
+        destination: "/work/",
+        permanent: true,
+      },
+      {
+        source: "/craft/dynamic-island/",
+        destination: "/work/",
+        permanent: true,
+      },
+      {
+        source: "/craft/gradual-content-loading/",
+        destination: "/work/",
+        permanent: true,
+      },
+      {
+        source: "/craft/photo-cards/",
+        destination: "/work/",
+        permanent: true,
+      },
+      {
+        source: "/craft/slider-tabs/",
+        destination: "/work/",
+        permanent: true,
+      },
+    ]
   },
   images: {
     remotePatterns: [
