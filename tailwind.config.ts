@@ -86,10 +86,8 @@ const config: Config = {
       },
     },
     fontFamily: {
-      "instrument-serif": ["var(--font-instrument-serif)"],
       sans: ["var(--sans-font)", "system-ui", "sans-serif"],
-      serif: ["var(--font-serif)"],
-      mono: ["var(--font-mono)"],
+      // mono: ["var(--font-mono)"],
     },
   },
   variants: {

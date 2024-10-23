@@ -3,7 +3,6 @@ import * as React from "react"
 import type { Viewport } from "next"
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { IBM_Plex_Serif, Instrument_Serif } from "next/font/google"
 import localFont from "next/font/local"
 
 import Background from "components/Background"
@@ -25,28 +24,16 @@ const sansFont = localFont({
   ],
 })
 
-const monoFont = localFont({
-  variable: "--font-mono",
-  src: [
-    {
-      path: "../fonts/JetBrainsMono-Regular.ttf",
-      weight: "regular",
-      style: "normal",
-    },
-  ],
-})
-
-const serifFont = IBM_Plex_Serif({
-  variable: "--font-serif",
-  weight: ["400", "500"],
-  subsets: ["latin"],
-})
-
-const instrumentSerifFont = Instrument_Serif({
-  variable: "--font-instrument-serif",
-  weight: ["400"],
-  subsets: ["latin"],
-})
+// const monoFont = localFont({
+//   variable: "--font-mono",
+//   src: [
+//     {
+//       path: "../fonts/JetBrainsMono-Regular.ttf",
+//       weight: "regular",
+//       style: "normal",
+//     },
+//   ],
+// })
 
 interface Props {
   children: React.ReactNode
@@ -69,10 +56,8 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
       <body
         className={classNames(
           "bg-zinc-900 overflow-x-hidden font-sans",
-          monoFont.variable,
-          sansFont.variable,
-          serifFont.variable,
-          instrumentSerifFont.variable
+          // monoFont.variable,
+          sansFont.variable
         )}
       >
         <Navbar />
