@@ -87,7 +87,6 @@ const config: Config = {
     },
     fontFamily: {
       sans: ["var(--sans-font)", "system-ui", "sans-serif"],
-      // mono: ["var(--font-mono)"],
     },
   },
   variants: {
