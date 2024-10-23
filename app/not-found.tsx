@@ -26,11 +26,14 @@ const NotFound: React.FC = () => {
             width={480}
             height={270}
           />
-          <h1 className="mb-1 mt-3 text-center text-3xl font-bold text-zinc-300">
+          <h1 className="mb-3 mt-8 text-center text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
             You lost buddy?
           </h1>
           <p className="text-center text-zinc-400">
-            Let me take you <AppLink href="/">home</AppLink>
+            Let me take you{" "}
+            <AppLink href="/" className="font-semibold">
+              home
+            </AppLink>
           </p>
         </div>
       </section>
