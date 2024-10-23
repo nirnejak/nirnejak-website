@@ -4,7 +4,6 @@ import { type Metadata } from "next"
 
 import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
-import WorkLinks from "components/WorkLinks"
 import { allSites } from "utils/data"
 import generateMetadata from "utils/seo"
 
@@ -22,10 +21,6 @@ const SitesPage: React.FC = () => {
           <h1 className="text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
             Sites
           </h1>
-
-          <div className="mt-10 text-sm md:mt-16">
-            <WorkLinks />
-          </div>
 
           <div className="mt-10 text-sm md:mt-16">
             <div className="mb-16 flex flex-col md:flex-row">
