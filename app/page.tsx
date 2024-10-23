@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
     <Container>
       <section className="flex h-screen items-start pt-32 md:pt-56">
         <div>
-          <h1 className="text-4xl font-bold text-zinc-300 md:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
             Jitendra Nirnejak
           </h1>
           <p className="mt-5 text-sm leading-7 text-zinc-400 md:text-base">
