@@ -63,17 +63,17 @@ export const allProjects = {
   ],
   work: [
     {
-      title: "Draxlr App",
+      title: "Draxlr",
       description: "Product Design and Development",
       link: "https://www.draxlr.com/",
     },
     {
-      title: "Sup.today",
+      title: "Sup Bot",
       description: "Logo, Branding, Website Design & Product Design.",
       link: "https://sup.today/",
     },
     {
-      title: "Draxlr Website",
+      title: "Draxlr",
       description: "Web Animations, Website Design & Development",
       link: "https://www.draxlr.com/",
     },
@@ -83,13 +83,13 @@ export const allProjects = {
       link: "https://www.draxlr.com/",
     },
     {
-      title: "Inkoop Website",
+      title: "Inkoop",
       description: "SEO, Website Design and Development",
       link: "https://www.inkoop.io/",
     },
     {
-      title: "Inkoop Social Media",
-      description: "Design and Technical Content",
+      title: "Inkoop",
+      description: "Social Media Content and Technical Content",
       link: "https://www.instagram.com/inkoopteam/",
     },
   ],
