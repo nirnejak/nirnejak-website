@@ -4,7 +4,6 @@ import {
   LaptopDevice,
   Pencil,
   Phone,
-  CodepenFill,
   DribbbleFill,
   GithubFill,
   LinkedinFill,
@@ -12,7 +11,6 @@ import {
   Frame,
   UnsplashFill,
   ProductHuntFill,
-  InstagramFill,
 } from "akar-icons"
 
 export const navLinks = [
@@ -66,6 +64,11 @@ export const socialLinks = [
     icon: <GithubFill size={15} />,
   },
   {
+    content: "Layers.to",
+    href: "https://layers.to/nirnejak/",
+    icon: <Frame size={15} />,
+  },
+  {
     content: "Dribbble",
     href: "https://dribbble.com/nirnejak/",
     icon: <DribbbleFill size={15} />,
@@ -74,21 +77,6 @@ export const socialLinks = [
     content: "ProductHunt",
     href: "https://www.producthunt.com/@nirnejak",
     icon: <ProductHuntFill size={15} />,
-  },
-  {
-    content: "Instagram",
-    href: "https://instagram.com/jitendra.nirnejak/",
-    icon: <InstagramFill size={15} />,
-  },
-  {
-    content: "Layers.to",
-    href: "https://layers.to/nirnejak/",
-    icon: <Frame size={15} />,
-  },
-  {
-    content: "Codepen",
-    href: "https://codepen.io/nirnejak/",
-    icon: <CodepenFill size={15} />,
   },
   {
     content: "Unsplash",
