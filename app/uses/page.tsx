@@ -35,9 +35,16 @@ const UsesPage: React.FC = () => {
             </div>
             <div className="flex flex-1 flex-col gap-8">
               <div>
-                <p className="text-sm text-zinc-400">Gear & Gadgets</p>
+                <p className="text-sm text-zinc-400">Computer</p>
                 <p className="mt-1.5 text-lg font-bold text-zinc-300">
-                  iPhone 14 Pro, iPad Pro 11 & MacBook Air(M2)
+                  iPad Pro 11 & MacBook Air
+                </p>
+              </div>
+              <div>
+                <p className="text-sm text-zinc-400">Camera & Gear</p>
+                <p className="mt-1.5 text-lg font-bold text-zinc-300">
+                  iPhone 14 Pro, DJI Osmo Mobile
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; & Insta 360 x3
                 </p>
               </div>
               <div>
@@ -55,14 +62,7 @@ const UsesPage: React.FC = () => {
               <div>
                 <p className="text-sm text-zinc-400">Dev Tools</p>
                 <p className="mt-1.5 text-lg font-bold text-zinc-300">
-                  iTerm & VS Code
-                </p>
-              </div>
-
-              <div>
-                <p className="text-sm text-zinc-400">What&apos;s for 2024</p>
-                <p className="mt-1.5 text-lg font-bold text-zinc-300">
-                  SwiftUI
+                  iTerm, VS Code & ChatGPT
                 </p>
               </div>
             </div>
