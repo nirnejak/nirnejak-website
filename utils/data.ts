@@ -33,106 +33,63 @@ export const allSites = {
 }
 
 export const allProjects = {
-  starter: [
-    {
-      title: "nextjs-typescript-starter",
-      description: "Next.js TypeScript & Tailwind Starter Template",
-      type: "Code",
-      link: "https://github.com/nirnejak/nextjs-typescript-starter",
-    },
-    {
-      title: "typescript-node-starter",
-      description: "A Node.js(Fastify) TypeScript Starter Template",
-      type: "Code",
-      link: "https://github.com/nirnejak/typescript-node-starter",
-    },
-  ],
   side: [
     {
       title: "SVG Animations Gallery",
       description: "A Gallery of SVG Animations built with Framer Motion",
-      type: "Design & Code",
       link: "https://svg-animations-gallery.vercel.app/",
     },
     {
       title: "Tailwind Animations",
       description: "Copy Paste animations for TailwindCSS",
-      type: "Design & Code",
       link: "https://tw-animations.vercel.app/",
     },
     {
       title: "Interactive Components",
       description:
         "A collection os interactive components built with Framer Motion",
-      type: "Design & Code",
       link: "https://react-interactive-components.vercel.app/",
     },
-    {
-      title: "CSV Plot",
-      description: "Quickly plot CSV data into graphs(bar, pie, map, etc.)",
-      type: "Design & Code",
-      link: "https://plot-csv.vercel.app/",
-    },
-    {
-      title: "React Presentation Maker",
-      description: "Use your React components as presentation slides",
-      type: "Design & Code",
-      link: "https://react-presentation-maker.vercel.app/",
-    },
-    {
-      title: "SQL Editor & Formatter",
-      description: "A tool to write SQL Queries and format them.",
-      type: "Code",
-      link: "https://www.draxlr.com/tools/sql-formatter/",
-    },
     // {
-    //   title: "Workout Tracker",
-    //   description: "A PWA with localstorage to track daily workouts.",
-    //   type: "Design & Code",
-    //   link: "https://workouts-ios.vercel.app/",
+    //   title: "CSV Plot",
+    //   description: "Quickly plot CSV data into graphs(bar, pie, map, etc.)",
+    //   link: "https://plot-csv.vercel.app/",
     // },
     // {
-    //   title: "Raycast Microsoft Todo Plugin",
-    //   description: "Add tasks to Microsoft Todo using Raycast.",
-    //   type: "Code",
-    //   link: "https://github.com/nirnejak/raycast-microsoft-to-do/",
+    //   title: "React Presentation Maker",
+    //   description: "Use your React components as presentation slides",
+    //   link: "https://react-presentation-maker.vercel.app/",
     // },
   ],
   work: [
     {
       title: "Draxlr App",
-      description: "Development and the design of the platform.",
-      type: "Design & Code",
+      description: "Product Design and Development",
       link: "https://www.draxlr.com/",
     },
     {
-      title: "Draxlr Documentation",
-      description: "Wrote the product documentation for Draxlr",
-      type: "Content",
-      link: "https://www.draxlr.com/docs/",
-    },
-    {
       title: "Sup.today",
-      description: "Designed the app UI, designed and built the site.",
-      type: "Design & Code",
+      description: "Logo, Branding, Website Design & Product Design.",
       link: "https://sup.today/",
     },
     {
       title: "Draxlr Website",
-      description: "Designed and developed the Draxlr site.",
-      type: "Design & Code",
+      description: "Web Animations, Website Design & Development",
+      link: "https://www.draxlr.com/",
+    },
+    {
+      title: "Draxlr",
+      description: "Logo, Branding and Illustrations",
       link: "https://www.draxlr.com/",
     },
     {
       title: "Inkoop Website",
-      description: "Designed and developed the new organization site",
-      type: "Design & Code",
+      description: "SEO, Website Design and Development",
       link: "https://www.inkoop.io/",
     },
     {
       title: "Inkoop Social Media",
-      description: "Designed social media posts of the organization.",
-      type: "Design",
+      description: "Design and Technical Content",
       link: "https://www.instagram.com/inkoopteam/",
     },
   ],
