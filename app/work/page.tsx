@@ -42,7 +42,9 @@ const WorkPage: React.FC = () => {
               </div>
             </div>
             <div className="mb-16 flex flex-col md:flex-row">
-              <p className="mb-3 flex-1 text-zinc-300 md:mt-2">Side Projects</p>
+              <p className="mb-3 flex-1 text-zinc-300 md:mt-2">
+                Cooking on the side
+              </p>
               <div className="flex flex-1 flex-col gap-1 md:mx-3">
                 {allProjects.side.map((project, index) => (
                   <AppLink
