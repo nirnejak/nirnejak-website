@@ -26,7 +26,7 @@ const CommandBar: React.FC = () => {
   const listRef = React.useRef(null)
   const inputRef = React.useRef<HTMLInputElement | null>(null)
 
-  const [value, setValue] = React.useState("Home")
+  const [value, setValue] = React.useState("X")
   const [isOpen, setIsOpen] = React.useState(false)
 
   React.useEffect(() => {
@@ -94,21 +94,6 @@ const CommandBar: React.FC = () => {
           className="my-2 max-h-[280px] overflow-y-scroll overscroll-contain text-zinc-300"
           ref={listRef}
         >
-          {navLinks.map((link, index) => (
-            <Command.Item
-              key={index}
-              className={commandItemClass}
-              tabIndex={0}
-              value={link.content}
-              onSelect={() => {
-                navigate(link.link)
-              }}
-            >
-              {link.icon}
-              <span>{link.content}</span>
-            </Command.Item>
-          ))}
-          <Command.Separator className="my-1 h-[0.5px] bg-zinc-700" />
           {socialLinks.map((link, index) => (
             <Command.Item
               key={index}
@@ -122,6 +107,21 @@ const CommandBar: React.FC = () => {
               {link.icon}
               <span>{link.content}</span>
               <LinkOut size={13} className="ml-auto" />
+            </Command.Item>
+          ))}
+          <Command.Separator className="my-1 h-[0.5px] bg-zinc-700" />
+          {navLinks.map((link, index) => (
+            <Command.Item
+              key={index}
+              className={commandItemClass}
+              tabIndex={0}
+              value={link.content}
+              onSelect={() => {
+                navigate(link.link)
+              }}
+            >
+              {link.icon}
+              <span>{link.content}</span>
             </Command.Item>
           ))}
           <Command.Separator className="my-1 h-[0.5px] bg-zinc-700" />
