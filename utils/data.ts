@@ -35,7 +35,7 @@ export const allSites = {
 export const allProjects = {
   side: [
     {
-      title: "Web Animations Gallery",
+      title: "SVG Animations Gallery",
       description: "A Gallery of SVG Animations built with Framer Motion",
       link: "https://svg-animations-gallery.vercel.app/",
     },
