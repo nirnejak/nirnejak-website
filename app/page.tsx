@@ -5,7 +5,7 @@ import { type Metadata } from "next"
 import { CircleFill } from "akar-icons"
 
 import Container from "components/atoms/Container"
-import SocialLinks from "components/SocialLinks"
+import SocialIcons from "components/SocialIcons"
 import generateMetadata from "utils/seo"
 
 export const metadata: Metadata = generateMetadata({
@@ -19,7 +19,7 @@ const HomePage: React.FC = () => {
     <Container>
       <section className="flex h-screen items-start pt-32 md:pt-56">
         <div>
-          <div className="mb-8 flex">
+          <div className="mb-8 flex items-center justify-between">
             <span className="relative flex items-center gap-1.5 rounded-full bg-pink-800/10 px-5 py-2 pl-7 text-xs text-pink-600">
               <CircleFill
                 size={5}
@@ -31,32 +31,24 @@ const HomePage: React.FC = () => {
               />
               Open to projects
             </span>
+            <SocialIcons />
           </div>
           <h1 className="mb-5 text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
             Jitendra Nirnejak
           </h1>
-          <p className="mb-14 text-sm leading-7 text-zinc-400 md:text-base">
-            I&apos;m a freelance{" "}
-            <span className="text-gradient-blue font-bold">Developer</span> &
-            <span className="text-gradient-red font-bold"> Designer</span>,
-            crafting elegant websites, user interfaces and web-animations.
-          </p>
-          {/* <p className="mb-24 text-sm text-zinc-400 md:text-base">
+          <p className="mb-10 text-sm text-zinc-400 md:text-base">
             I&apos;m a freelance{" "}
             <span className="text-gradient-blue font-bold">Developer</span> &
             <span className="text-gradient-red font-bold"> Designer </span>,
             crafting elegant websites, user interfaces and web-animations. Over
             the last <strong className="text-gradient-yellow">5+</strong> years,
-            I have delivered{" "}
-            <strong className="text-gradient-purple">25+</strong> projects to
-            over <strong className="text-gradient-green">10+</strong> clients.
-          </p> */}
-          <p className="mb-3.5 text-sm text-zinc-400">
-            ✦ &nbsp;<strong>5+</strong> Years Experience, &nbsp;
-            <strong>25+</strong> Projects, &nbsp;<strong>10+</strong> Clients
+            I have delivered <strong className="text-gradient-blue">25+</strong>{" "}
+            projects to over{" "}
+            <strong className="text-gradient-green">10+</strong> clients.
           </p>
-          <p className="mb-16 text-sm text-zinc-400">
-            ✦ &nbsp;Currently working with{" "}
+
+          <p className="text-sm text-zinc-400">
+            Currently working with{" "}
             <span className="text-gradient-green text-sm font-bold">
               @atollon.com.au
             </span>{" "}
@@ -65,13 +57,11 @@ const HomePage: React.FC = () => {
               @roboto.studio
             </span>
           </p>
-          <div className="flex">
-            <SocialLinks />
-          </div>
+
           {/* <p className="mb-4 text-sm text-zinc-400 md:text-base">
             Previously designed and developed for:
-          </p>
-          <div className="-mx-2 flex flex-wrap items-center justify-between gap-x-4">
+          </p> */}
+          {/* <div className="-ml-2 flex flex-wrap items-center justify-between gap-x-4">
             <div className="max-h-11 scale-[85%] text-zinc-600 transition-colors hover:text-zinc-400">
               <svg
                 width="80"
