@@ -4,7 +4,6 @@ import { type Metadata } from "next"
 
 import { CircleFill } from "akar-icons"
 
-import Container from "components/atoms/Container"
 import SocialIcons from "components/SocialIcons"
 import generateMetadata from "utils/seo"
 
@@ -16,7 +15,7 @@ export const metadata: Metadata = generateMetadata({
 
 const HomePage: React.FC = () => {
   return (
-    <Container>
+    <main className="container">
       <section className="flex h-screen items-start pt-32 md:pt-56">
         <div>
           <div className="mb-8 flex items-center justify-between">
@@ -227,7 +226,7 @@ const HomePage: React.FC = () => {
           </div> */}
         </div>
       </section>
-    </Container>
+    </main>
   )
 }
 

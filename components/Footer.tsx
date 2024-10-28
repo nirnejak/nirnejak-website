@@ -4,8 +4,6 @@ import * as React from "react"
 import { Command } from "akar-icons"
 import { usePathname } from "next/navigation"
 
-import Container from "./atoms/Container"
-
 const Footer: React.FC = () => {
   const pathname = usePathname()
 
@@ -26,7 +24,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className={footerClass}>
-      <Container>
+      <div className="container">
         <div className="flex w-full flex-col items-center justify-between gap-4 py-3 text-xs text-zinc-400 md:flex-row">
           <div className="text-center md:text-left">
             Designed with ❤️ and a lot of ☕️
@@ -43,7 +41,7 @@ const Footer: React.FC = () => {
             </p>
           </div>
         </div>
-      </Container>
+      </div>
     </footer>
   )
 }

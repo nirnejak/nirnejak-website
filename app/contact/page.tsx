@@ -2,7 +2,6 @@ import * as React from "react"
 
 import { type Metadata } from "next"
 
-import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
 import ContactForm from "components/ContactForm"
 import generateMetadata from "utils/seo"
@@ -16,7 +15,7 @@ export const metadata: Metadata = generateMetadata({
 
 const ContactPage: React.FC = () => {
   return (
-    <Container>
+    <main className="container">
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <div className="w-full">
           <h1 className="mb-5 text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
@@ -40,7 +39,7 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </Container>
+    </main>
   )
 }
 

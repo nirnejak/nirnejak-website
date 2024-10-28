@@ -5,7 +5,6 @@ import { type Metadata } from "next"
 
 import Image from "next/image"
 
-import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
 import generateMetadata from "utils/seo"
 
@@ -17,7 +16,7 @@ export const metadata: Metadata = generateMetadata({
 
 const NotFound: React.FC = () => {
   return (
-    <Container>
+    <main className="container">
       <section className="grid min-h-screen place-content-center">
         <div className="relative">
           <Image
@@ -37,7 +36,7 @@ const NotFound: React.FC = () => {
           </p>
         </div>
       </section>
-    </Container>
+    </main>
   )
 }
 

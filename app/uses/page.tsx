@@ -5,7 +5,6 @@ import { type Metadata } from "next"
 import Image from "next/image"
 
 import SetupImage from "assets/images/setup.png"
-import Container from "components/atoms/Container"
 import generateMetadata from "utils/seo"
 
 export const metadata: Metadata = generateMetadata({
@@ -16,7 +15,7 @@ export const metadata: Metadata = generateMetadata({
 
 const UsesPage: React.FC = () => {
   return (
-    <Container>
+    <main className="container">
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <div className="w-full">
           <h1 className="text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
@@ -70,7 +69,7 @@ const UsesPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </Container>
+    </main>
   )
 }
 

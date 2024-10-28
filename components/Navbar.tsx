@@ -3,7 +3,6 @@ import * as React from "react"
 
 import { LinkOut, ThreeLineHorizontal } from "akar-icons"
 
-import Container from "./atoms/Container"
 import AppLink from "./atoms/Link"
 import NavigationTabs from "./NavigationTabs"
 import classNames from "utils/classNames"
@@ -31,7 +30,7 @@ const Navbar: React.FC<Props> = () => {
 
   return (
     <nav className="fixed top-0 z-10 w-full">
-      <Container className="hidden items-center py-3 md:flex">
+      <div className="container hidden items-center py-3 md:flex">
         <div className="-mx-3.5">
           <NavigationTabs />
         </div>
@@ -53,7 +52,7 @@ const Navbar: React.FC<Props> = () => {
             />
           </AppLink>
         </div>
-      </Container>
+      </div>
       <div className="flex md:hidden">
         {isOpen ? (
           <div

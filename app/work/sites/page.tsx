@@ -2,7 +2,6 @@ import * as React from "react"
 
 import { type Metadata } from "next"
 
-import Container from "components/atoms/Container"
 import AppLink from "components/atoms/Link"
 import { allSites } from "utils/data"
 import generateMetadata from "utils/seo"
@@ -15,7 +14,7 @@ export const metadata: Metadata = generateMetadata({
 
 const SitesPage: React.FC = () => {
   return (
-    <Container>
+    <main className="container">
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <div className="w-full">
           <h1 className="text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
@@ -80,7 +79,7 @@ const SitesPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </Container>
+    </main>
   )
 }
 
