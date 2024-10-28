@@ -29,10 +29,6 @@ button {
     auto;
 }
 
-.container {
-  @apply max-w-[680px] mx-auto px-4 md:px-0;
-}
-
 .text-gradient-blue {
   background: -webkit-linear-gradient(top left, #03cffe, #397dd6);
   background-clip: text;

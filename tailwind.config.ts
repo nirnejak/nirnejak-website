@@ -7,6 +7,16 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+        md: "0px",
+      },
+      screens: {
+        md: "680px",
+      },
+    },
     extend: {
       keyframes: {
         slideDownAndFade: {
