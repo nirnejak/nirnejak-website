@@ -27,6 +27,7 @@ const UsesPage: React.FC = () => {
             <div className="flex-1">
               <Image
                 width={700}
+                quality={100}
                 src={SetupImage}
                 alt="Desk Setup"
                 className="rounded-lg"
