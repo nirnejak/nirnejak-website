@@ -22,6 +22,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/photos/archive/",
+        destination: "/photos/",
+        permanent: true,
+      },
+      {
         source: "/craft/animate-height/",
         destination: "/work/",
         permanent: true,
