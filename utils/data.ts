@@ -4,8 +4,8 @@ export const allSites = {
     { title: "Jessica Coppet", link: "https://jessicacoppetstudio.com/" },
   ],
   websites: [
-    { title: "Draxlr", link: "https://draxlr.com/" },
-    // { title: "Sup Bot", link: "https://sup.today/" },
+    { title: "Draxlr", link: "https://www.draxlr.com/" },
+    // { title: "Sup Bot", link: "https://www.supbot.com/" },
     { title: "Inkoop", link: "https://www.inkoop.io/" },
   ],
   cms: [
@@ -18,11 +18,11 @@ export const allSites = {
     { title: "LBD Studios", link: "https://www.lbdstudios.com.au/" },
     {
       title: "Whitefox Real Estate",
-      link: "https://whitefoxrealestate.com.au/",
+      link: "https://www.whitefoxrealestate.com.au/",
     },
     // { title: "Kooyong Travel", link: "https://kooyongtravel.com.au/" },
     { title: "Maven", link: "https://maven.com.au/" },
-    { title: "Arkhaus", link: "https://www.arkhaus.com.au/" },
+    { title: "Arkhaus", link: "https://arkhaus.com.au/" },
     { title: "iRock Finishes", link: "https://irockfinishes.com.au/" },
     { title: "Flip Films", link: "https://flipfilms.com.au/" },
     {
@@ -70,7 +70,7 @@ export const allProjects = {
     {
       title: "Sup Bot",
       description: "Logo, Branding, Website Design & Product Design.",
-      link: "https://sup.today/",
+      link: "https://www.supbot.com/",
     },
     {
       title: "Draxlr",
@@ -226,10 +226,10 @@ export const allBlogs = {
       author: "Jitendra Nirnejak",
       date: "24 Sep 2019",
       description:
-        "AdminBro is a React JS based admin panel for Node JS. We talk about how to set it up and use it in Node JS applications with MongoDB and SQL Databases.",
+        "AdminJS is a React JS based admin panel for Node JS. We talk about how to set it up and use it in Node JS applications with MongoDB and SQL Databases.",
       title:
-        "AdminBro - a Modern Admin Panel for Node JS | React based Admin Panel",
-      url: "https://www.inkoop.io/blog/adminbro-a-modern-admin-panel-for-node-js/",
+        "AdminJS - a Modern Admin Panel for Node JS | React based Admin Panel",
+      url: "https://www.inkoop.io/blog/adminjs-a-modern-admin-panel-for-node-js/",
     },
   ],
 }
