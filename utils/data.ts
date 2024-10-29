@@ -48,7 +48,7 @@ export const allProjects = {
       title: "Interactive Components",
       description:
         "A collection of React components animated with Framer Motion",
-      link: "https://react-interactive-components.vercel.app/",
+      link: "https://interactive-interfaces.vercel.app/",
     },
     // {
     //   title: "CSV Plot",
