@@ -24,7 +24,7 @@ interface Props {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: "#1D1D20",
 }
 
 const HomeLayout: React.FC<Props> = ({ children }) => {
