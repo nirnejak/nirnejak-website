@@ -57,9 +57,9 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
   return (
     <>
       {isModalVisible && (
-        <div className="fixed left-0 top-0 z-20 grid h-screen w-full place-items-center bg-zinc-900/30 backdrop-blur-lg">
+        <div className="fixed left-0 top-0 z-20 grid h-screen w-full place-items-center bg-zinc-50/60 backdrop-blur-lg dark:bg-zinc-900/30">
           <button
-            className="fixed right-5 top-5 rounded-full bg-zinc-700 p-1.5 text-zinc-300 hover:bg-zinc-500"
+            className="fixed right-5 top-5 rounded-full bg-zinc-300 p-1.5 text-zinc-900 hover:bg-zinc-400 dark:bg-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-500"
             onClick={() => {
               closeModal()
             }}
@@ -86,7 +86,7 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
           <button
             key={index}
             className={classNames(
-              "z-0 flex items-center gap-1.5 px-3 py-1.5 text-xs text-zinc-400 hover:text-zinc-300",
+              "z-0 flex items-center gap-1.5 px-3 py-1.5 text-xs text-zinc-700 dark:text-zinc-400 hover:text-zinc-900 dark:text-zinc-300",
               selectedTags.includes(tag) ? "bg-zinc-800 rounded-lg" : "hover-bg"
             )}
             onClick={() => {

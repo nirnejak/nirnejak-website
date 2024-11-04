@@ -17,13 +17,15 @@ const WorkPage: React.FC = () => {
     <main className="container">
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <div className="w-full">
-          <h1 className="text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tighter text-zinc-900 md:text-5xl dark:text-zinc-300">
             Work
           </h1>
 
           <div className="mt-10 text-sm md:mt-16">
             <div className="mb-16 flex flex-col md:flex-row">
-              <p className="mb-3 flex-1 text-zinc-300 md:mt-2">Projects</p>
+              <p className="mb-3 flex-1 text-zinc-900 md:mt-2 dark:text-zinc-300">
+                Projects
+              </p>
               <div className="flex flex-1 flex-col gap-1 md:mx-3">
                 {allProjects.work.map((project, index) => (
                   <AppLink
@@ -32,8 +34,10 @@ const WorkPage: React.FC = () => {
                     target="_blank"
                     className="hover-bg rounded-md px-3 py-2 outline-none"
                   >
-                    <p className="mb-1.5 font-bold">{project.title}</p>
-                    <p className="text-xs text-zinc-400">
+                    <p className="mb-1.5 font-bold text-zinc-900 dark:text-zinc-300">
+                      {project.title}
+                    </p>
+                    <p className="text-xs text-zinc-700 dark:text-zinc-400">
                       {project.description}
                     </p>
                   </AppLink>
@@ -41,7 +45,7 @@ const WorkPage: React.FC = () => {
               </div>
             </div>
             <div className="mb-16 flex flex-col md:flex-row">
-              <p className="mb-3 flex-1 text-zinc-300 md:mt-2">
+              <p className="mb-3 flex-1 text-zinc-900 md:mt-2 dark:text-zinc-300">
                 Cooking on the side
               </p>
               <div className="flex flex-1 flex-col gap-1 md:mx-3">
@@ -52,8 +56,10 @@ const WorkPage: React.FC = () => {
                     target="_blank"
                     className="hover-bg rounded-md px-3 py-2 outline-none"
                   >
-                    <p className="mb-1.5 font-bold">{project.title}</p>
-                    <p className="text-xs text-zinc-400">
+                    <p className="mb-1.5 font-bold text-zinc-900 dark:text-zinc-300">
+                      {project.title}
+                    </p>
+                    <p className="text-xs text-zinc-700 dark:text-zinc-400">
                       {project.description}
                     </p>
                   </AppLink>

@@ -32,10 +32,10 @@ const HomePage: React.FC = () => {
             </span>
             <SocialIcons />
           </div>
-          <h1 className="mb-5 text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
+          <h1 className="mb-5 text-4xl font-bold tracking-tighter text-zinc-900 md:text-5xl dark:text-zinc-300">
             Jitendra Nirnejak
           </h1>
-          <p className="mb-10 text-sm text-zinc-400 md:text-base">
+          <p className="mb-10 text-sm text-zinc-700 md:text-base dark:text-zinc-400">
             I&apos;m a freelance{" "}
             <span className="text-gradient-blue font-bold">Developer</span> &
             <span className="text-gradient-red font-bold"> Designer </span>,
@@ -46,7 +46,7 @@ const HomePage: React.FC = () => {
             <strong className="text-gradient-green">10+</strong> clients.
           </p>
 
-          <p className="text-sm text-zinc-400">
+          <p className="text-sm text-zinc-700 dark:text-zinc-400">
             Currently working with{" "}
             <span className="text-gradient-green text-sm font-bold">
               @atollon.com.au
@@ -57,11 +57,11 @@ const HomePage: React.FC = () => {
             </span>
           </p>
 
-          {/* <p className="mb-4 text-sm text-zinc-400 md:text-base">
+          {/* <p className="mb-4 text-sm text-zinc-700 dark:text-zinc-400 md:text-base">
             Previously designed and developed for:
           </p> */}
           {/* <div className="-ml-2 flex flex-wrap items-center justify-between gap-x-4">
-            <div className="max-h-11 scale-[85%] text-zinc-600 transition-colors hover:text-zinc-400">
+            <div className="max-h-11 scale-[85%] text-zinc-700 transition-colors hover:text-zinc-400">
               <svg
                 width="80"
                 height="44"
@@ -95,7 +95,7 @@ const HomePage: React.FC = () => {
                 </defs>
               </svg>
             </div>
-            <div className="max-h-11 scale-[85%] text-zinc-600 transition-colors hover:text-zinc-400">
+            <div className="max-h-11 scale-[85%] text-zinc-700 transition-colors hover:text-zinc-400">
               <svg
                 width="80"
                 height="32"
@@ -135,7 +135,7 @@ const HomePage: React.FC = () => {
                 </g>
               </svg>
             </div>
-            <div className="max-h-11 scale-[85%] text-zinc-600 transition-colors hover:text-zinc-400">
+            <div className="max-h-11 scale-[85%] text-zinc-700 transition-colors hover:text-zinc-400">
               <svg
                 width="70"
                 height="40"
@@ -149,7 +149,7 @@ const HomePage: React.FC = () => {
                 ></path>
               </svg>
             </div>
-            <div className="max-h-11 scale-[85%] text-zinc-600 transition-colors hover:text-zinc-400">
+            <div className="max-h-11 scale-[85%] text-zinc-700 transition-colors hover:text-zinc-400">
               <svg
                 width="60"
                 height="36"
@@ -175,7 +175,7 @@ const HomePage: React.FC = () => {
                 ></path>
               </svg>
             </div>
-            <div className="max-h-11 scale-[85%] text-zinc-600 transition-colors hover:text-zinc-400">
+            <div className="max-h-11 scale-[85%] text-zinc-700 transition-colors hover:text-zinc-400">
               <svg
                 width="90"
                 height="49"
@@ -197,7 +197,7 @@ const HomePage: React.FC = () => {
                 </g>
               </svg>
             </div>
-            <div className="max-h-11 scale-[85%] text-zinc-600 transition-colors hover:text-zinc-400">
+            <div className="max-h-11 scale-[85%] text-zinc-700 transition-colors hover:text-zinc-400">
               <svg width="90" height="50" viewBox="0 0 143 36">
                 <path
                   fillRule="evenodd"
@@ -207,7 +207,7 @@ const HomePage: React.FC = () => {
                 ></path>
               </svg>
             </div>
-            <div className="max-h-11 scale-[85%] text-zinc-600 transition-colors hover:text-zinc-400">
+            <div className="max-h-11 scale-[85%] text-zinc-700 transition-colors hover:text-zinc-400">
               <svg
                 width="26"
                 height="40"

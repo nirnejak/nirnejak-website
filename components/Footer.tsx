@@ -25,17 +25,17 @@ const Footer: React.FC = () => {
   return (
     <footer className={footerClass}>
       <div className="container">
-        <div className="flex w-full flex-col items-center justify-between gap-4 py-3 text-xs text-zinc-400 md:flex-row">
+        <div className="flex w-full flex-col items-center justify-between gap-4 py-3 text-xs text-zinc-800 md:flex-row dark:text-zinc-400">
           <div className="text-center md:text-left">
             Designed with ❤️ and a lot of ☕️
           </div>
           <div className="hidden md:flex">
-            <p className="flex items-center gap-1 text-zinc-400">
-              <span className="rounded-md bg-zinc-800 p-1.5">
+            <p className="flex items-center gap-1 text-zinc-800 dark:text-zinc-400">
+              <span className="rounded-md bg-zinc-200 p-1.5 dark:bg-zinc-800">
                 <Command size={11} />
               </span>
               <span> + </span>
-              <span className="rounded-md bg-zinc-800 px-2 py-1 text-[10px]">
+              <span className="rounded-md bg-zinc-200 px-2 py-1 text-[10px] dark:bg-zinc-800">
                 K
               </span>
             </p>

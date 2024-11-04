@@ -84,9 +84,9 @@ button {
   @apply h-full w-full rounded-lg;
   @apply origin-center scale-90 opacity-0 transition-all;
 
-  @apply bg-zinc-800;
+  @apply bg-zinc-200 dark:bg-zinc-800;
 }
 
 .hover-bg.hover-bg-dark {
-  @apply after:bg-zinc-900;
+  @apply after:bg-zinc-200 dark:after:bg-zinc-900;
 }

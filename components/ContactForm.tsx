@@ -58,7 +58,7 @@ const ContactForm: React.FC = () => {
     >
       <input
         type="text"
-        className="rounded-md bg-zinc-800 px-4 py-3 text-xs text-zinc-400 placeholder:text-zinc-600"
+        className="rounded-md bg-zinc-200 px-4 py-3 text-xs text-zinc-700 placeholder:text-zinc-700 dark:bg-zinc-800 dark:text-zinc-400"
         placeholder="Name"
         name="name"
         value={state.name}
@@ -67,7 +67,7 @@ const ContactForm: React.FC = () => {
       />
       <input
         type="email"
-        className="rounded-md bg-zinc-800 px-4 py-3 text-xs text-zinc-400 placeholder:text-zinc-600"
+        className="rounded-md bg-zinc-200 px-4 py-3 text-xs text-zinc-700 placeholder:text-zinc-700 dark:bg-zinc-800 dark:text-zinc-400"
         placeholder="Email"
         name="email"
         value={state.email}
@@ -75,7 +75,7 @@ const ContactForm: React.FC = () => {
         required
       />
       <textarea
-        className="rounded-md bg-zinc-800 px-4 py-3 text-xs text-zinc-400 placeholder:text-zinc-600"
+        className="rounded-md bg-zinc-200 px-4 py-3 text-xs text-zinc-700 placeholder:text-zinc-700 dark:bg-zinc-800 dark:text-zinc-400"
         placeholder="Message"
         rows={3}
         name="message"
@@ -85,7 +85,7 @@ const ContactForm: React.FC = () => {
       />
       <button
         disabled={isSending}
-        className="rounded-md bg-white px-4 py-3 text-center text-sm font-bold uppercase tracking-wide"
+        className="rounded-md bg-zinc-900 px-4 py-3 text-center text-sm font-bold uppercase tracking-wide text-zinc-50 transition-transform active:scale-95 dark:bg-zinc-50 dark:text-zinc-900"
       >
         {isSending ? "SENDING..." : isSent ? "SENT!" : "SEND"}
       </button>

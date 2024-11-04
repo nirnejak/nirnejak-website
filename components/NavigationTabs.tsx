@@ -68,7 +68,7 @@ const NavigationTabs: React.FC = () => {
       onMouseLeave={resetHighlight}
     >
       <div
-        className="absolute left-0 h-full rounded-md bg-zinc-800"
+        className="absolute left-0 h-full rounded-md bg-zinc-300 dark:bg-zinc-800"
         ref={highlightRef}
         style={{
           transition: "0.15s ease",
@@ -80,7 +80,7 @@ const NavigationTabs: React.FC = () => {
         <Link
           href={tab.link}
           key={tab.value}
-          className="relative inline-block px-4 py-2 text-xs font-medium text-white outline-none active:scale-95"
+          className="relative inline-block px-4 py-2 text-xs font-medium text-zinc-800 outline-none active:scale-95 dark:text-zinc-50"
           onMouseOver={(
             ev: React.MouseEvent<HTMLAnchorElement, MouseEvent>
           ) => {
