@@ -5,34 +5,13 @@ import { XSmall } from "akar-icons"
 import { motion } from "framer-motion"
 import Image from "next/image"
 
-import classNames from "utils/classNames"
-
 interface Props {
   images: string[]
 }
 
-const allTags = [
-  "street",
-  "cafe",
-  "food",
-  "concert",
-  "beach",
-  "mountain",
-  "sky",
-  "sunset",
-  "snow",
-  "train",
-  "holy",
-  "city",
-  "waterfall",
-  "river",
-  "lake",
-]
-
 const PhotoGallery: React.FC<Props> = ({ images }) => {
   const [isModalVisible, setIsModalVisible] = React.useState(false)
   const [currentImage, setCurrentImage] = React.useState("")
-  const [selectedTags, setSelectedTags] = React.useState<string[]>([])
 
   const openModal = (imageUrl: string): void => {
     setCurrentImage(imageUrl)
@@ -45,14 +24,6 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
     setCurrentImage("")
     document.body.style.overflowY = "unset"
   }, [])
-
-  const addRemoveTag = (tag: string): void => {
-    if (selectedTags.includes(tag)) {
-      setSelectedTags((currentTags) => currentTags.filter((t) => t !== tag))
-    } else {
-      setSelectedTags((currentTags) => [...currentTags, tag])
-    }
-  }
 
   React.useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent): void => {
@@ -97,22 +68,6 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
           </motion.div>
         </div>
       )}
-      <div className="-mx-5 mb-5 hidden flex-wrap gap-1">
-        {allTags.map((tag, index) => (
-          <button
-            key={index}
-            className={classNames(
-              "z-0 flex items-center gap-1.5 px-3 py-1.5 text-xs text-zinc-700 dark:text-zinc-400 hover:text-zinc-900 dark:text-zinc-300",
-              selectedTags.includes(tag) ? "bg-zinc-800 rounded-lg" : "hover-bg"
-            )}
-            onClick={() => {
-              addRemoveTag(tag)
-            }}
-          >
-            #{tag}
-          </button>
-        ))}
-      </div>
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
         {images.map((imageUrl, index) => (
           <motion.div
