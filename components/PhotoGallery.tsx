@@ -40,11 +40,11 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
     document.body.style.overflowY = "hidden"
   }
 
-  const closeModal = (): void => {
+  const closeModal = React.useCallback(() => {
     setIsModalVisible(false)
     setCurrentImage("")
     document.body.style.overflowY = "unset"
-  }
+  }, [])
 
   const addRemoveTag = (tag: string): void => {
     if (selectedTags.includes(tag)) {
@@ -53,6 +53,22 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
       setSelectedTags((currentTags) => [...currentTags, tag])
     }
   }
+
+  React.useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent): void => {
+      if (event.key === "Escape") {
+        closeModal()
+      }
+    }
+
+    if (isModalVisible) {
+      document.addEventListener("keydown", handleKeyDown)
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [isModalVisible, closeModal])
 
   return (
     <>
