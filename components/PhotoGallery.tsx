@@ -5,45 +5,18 @@ import { XSmall } from "akar-icons"
 import { motion } from "framer-motion"
 import Image from "next/image"
 
+import useModal from "hooks/useModal"
+
 interface Props {
   images: string[]
 }
 
 const PhotoGallery: React.FC<Props> = ({ images }) => {
-  const [isModalVisible, setIsModalVisible] = React.useState(false)
-  const [currentImage, setCurrentImage] = React.useState("")
-
-  const openModal = (imageUrl: string): void => {
-    setCurrentImage(imageUrl)
-    setIsModalVisible(true)
-    document.body.style.overflowY = "hidden"
-  }
-
-  const closeModal = React.useCallback(() => {
-    setIsModalVisible(false)
-    setCurrentImage("")
-    document.body.style.overflowY = "unset"
-  }, [])
-
-  React.useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent): void => {
-      if (event.key === "Escape") {
-        closeModal()
-      }
-    }
-
-    if (isModalVisible) {
-      document.addEventListener("keydown", handleKeyDown)
-    }
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown)
-    }
-  }, [isModalVisible, closeModal])
+  const { isOpen, content, openModal, closeModal } = useModal()
 
   return (
     <>
-      {isModalVisible && (
+      {isOpen && (
         <div className="fixed left-0 top-0 z-20 grid h-screen w-full place-items-center bg-zinc-50/60 backdrop-blur-lg dark:bg-zinc-900/30">
           <button
             className="fixed right-5 top-5 rounded-full bg-zinc-300 p-1.5 text-zinc-900 hover:bg-zinc-400 dark:bg-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-500"
@@ -61,8 +34,8 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={currentImage}
-              alt={currentImage}
+              src={content}
+              alt={content}
               className="h-[calc(100vh-50px)] rounded-2xl"
             />
           </motion.div>
