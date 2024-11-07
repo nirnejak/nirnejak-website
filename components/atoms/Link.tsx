@@ -2,7 +2,6 @@
 import * as React from "react"
 
 import Link from "next/link"
-import { usePathname } from "next/navigation"
 import useSound from "use-sound"
 
 import classNames from "utils/classNames"
@@ -24,11 +23,7 @@ const AppLink: React.FC<Props> = ({
   onClick,
   ...restProps
 }) => {
-  const pathname = usePathname()
-
   const [play] = useSound("../sounds/whoop.wav")
-
-  const isActive = React.useMemo(() => pathname === href, [href, pathname])
 
   if (href.includes("http") || href.includes("mailto")) {
     return (
@@ -36,8 +31,7 @@ const AppLink: React.FC<Props> = ({
         href={href}
         className={classNames(
           className,
-          "text-zinc-800 hover:text-zinc-900 dark:text-zinc-50 dark:hover:text-zinc-100",
-          isActive && activeClassName
+          "text-zinc-800 hover:text-zinc-900 dark:text-zinc-50 dark:hover:text-zinc-100"
         )}
         onClick={(e) => {
           play()
@@ -55,8 +49,7 @@ const AppLink: React.FC<Props> = ({
         href={href}
         className={classNames(
           className,
-          "text-zinc-800 hover:text-zinc-900 dark:text-zinc-50 dark:hover:text-zinc-100",
-          isActive && activeClassName
+          "text-zinc-800 hover:text-zinc-900 dark:text-zinc-50 dark:hover:text-zinc-100"
         )}
         onClick={(e) => {
           play()
