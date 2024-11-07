@@ -67,7 +67,7 @@ const CommandBar: React.FC = () => {
     <Command
       className={
         isOpen
-          ? "fixed left-0 top-0 z-50 h-screen w-full bg-zinc-50/60 backdrop-blur-lg dark:bg-zinc-900/30"
+          ? "fixed left-0 top-0 z-50 h-screen w-full bg-zinc-50/30 backdrop-blur-lg dark:bg-zinc-900/30"
           : ""
       }
     >

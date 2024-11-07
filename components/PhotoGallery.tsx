@@ -17,7 +17,7 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
   return (
     <>
       {isOpen && (
-        <div className="fixed left-0 top-0 z-20 grid h-screen w-full place-items-center bg-zinc-50/60 backdrop-blur-lg dark:bg-zinc-900/30">
+        <div className="fixed left-0 top-0 z-20 grid h-screen w-full place-items-center bg-zinc-50/30 backdrop-blur-lg dark:bg-zinc-900/30">
           <button
             className="fixed right-5 top-5 rounded-full bg-zinc-300 p-1.5 text-zinc-900 hover:bg-zinc-400 dark:bg-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-500"
             onClick={() => {
