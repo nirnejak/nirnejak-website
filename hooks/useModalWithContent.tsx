@@ -7,7 +7,7 @@ interface HookReturn {
   closeModal: () => void
 }
 
-const useModal = (): HookReturn => {
+const useModalWithContent = (): HookReturn => {
   const [isOpen, setIsOpen] = React.useState(false)
   const [content, setContent] = React.useState("")
 
@@ -42,4 +42,4 @@ const useModal = (): HookReturn => {
   return { isOpen, content, openModal, closeModal }
 }
 
-export default useModal
+export default useModalWithContent

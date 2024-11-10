@@ -5,14 +5,14 @@ import { XSmall } from "akar-icons"
 import { motion } from "framer-motion"
 import Image from "next/image"
 
-import useModal from "hooks/useModal"
+import useModalWithContent from "hooks/useModalWithContent"
 
 interface Props {
   images: string[]
 }
 
 const PhotoGallery: React.FC<Props> = ({ images }) => {
-  const { isOpen, content, openModal, closeModal } = useModal()
+  const { isOpen, content, openModal, closeModal } = useModalWithContent()
 
   return (
     <>
