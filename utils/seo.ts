@@ -1,12 +1,34 @@
 import { type Metadata } from "next"
 
-export const BASE_URL = "https://nirnejak.com"
-
 interface MetadataArgs {
   path: string
   title: string
   description: string
   image?: string
+}
+
+const config = {
+  baseUrl: "https://nirnejak.com",
+  appName: "Jitendra Nirnejak",
+  author: "Jitendra Nirnejak",
+  authorUrl: "https://nirnejak.com/",
+  twitter: "jeetnirnejak",
+  keywords: [
+    "Designer",
+    "Developer",
+    "Figma",
+    "Rive",
+    "Spline",
+    "Framer",
+    "Webflow",
+    "React",
+    "Next.js",
+    "Gatsby",
+    "Node",
+    "TypeScript",
+    "JavaScript",
+    "Postgres",
+  ],
 }
 
 const generateMetadata = ({
@@ -17,45 +39,30 @@ const generateMetadata = ({
 }: MetadataArgs): Metadata => {
   const metaTitle = title
   const metaDescription = description
-  const metaImage = image ?? `${BASE_URL}/cover.png`
+  const metaImage = image ?? `${config.baseUrl}/cover.png`
 
   const metadata: Metadata = {
     title: metaTitle,
     description: metaDescription,
 
-    applicationName: "Jitendra Nirnejak",
-    creator: "Jitendra Nirnejak",
-    authors: [{ name: "Jitendra Nirnejak", url: "https://nirnejak.com/" }],
+    applicationName: config.appName,
+    creator: config.author,
+    authors: [{ name: config.author, url: config.authorUrl }],
     robots:
       "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-    keywords: [
-      "Designer",
-      "Developer",
-      "Figma",
-      "Rive",
-      "Spline",
-      "Framer",
-      "Webflow",
-      "React",
-      "Next.js",
-      "Gatsby",
-      "Node",
-      "TypeScript",
-      "JavaScript",
-      "Postgres",
-    ],
+    keywords: config.keywords,
 
     icons: {
       icon: "/favicon.ico",
       shortcut: "/icons/icon-512x512.png",
       apple: "/icons/icon-512x512.png",
     },
-    manifest: `${BASE_URL}/manifest.json`,
+    manifest: `${config.baseUrl}/manifest.json`,
 
     openGraph: {
       type: "website",
-      url: `${BASE_URL}${path}`,
-      siteName: "Jitendra Nirnejak",
+      url: `${config.baseUrl}${path}`,
+      siteName: config.appName,
       title: metaTitle,
       description: metaDescription,
       images: metaImage,
@@ -63,8 +70,8 @@ const generateMetadata = ({
 
     twitter: {
       card: "summary_large_image",
-      site: "@jeetnirnejak",
-      creator: "@jeetnirnejak",
+      site: `@${config.twitter}`,
+      creator: `@${config.twitter}`,
       title: metaTitle,
       description: metaDescription,
       images: metaImage,
