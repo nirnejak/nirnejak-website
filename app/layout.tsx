@@ -3,7 +3,7 @@ import * as React from "react"
 import type { Viewport } from "next"
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Space_Grotesk } from "next/font/google"
+import { Instrument_Sans } from "next/font/google"
 
 import Background from "components/Background"
 import Bulb from "components/Bulb"
@@ -14,7 +14,7 @@ import classNames from "utils/classNames"
 
 import "styles/main.css"
 
-const sansFont = Space_Grotesk({
+const sansFont = Instrument_Sans({
   variable: "--sans-font",
   subsets: ["latin"],
 })
