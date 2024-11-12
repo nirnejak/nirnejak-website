@@ -33,7 +33,7 @@ const HomePage: React.FC = () => {
             <SocialIcons />
           </div>
           <h1 className="mb-20 text-2xl font-medium tracking-tight text-zinc-400 md:text-3xl">
-            Hi, I&apos;m Jitendra Nirnejak - an independent developer & designer
+            Hi, I&apos;m Jitendra Nirnejak — an independent developer & designer
             crafting tasteful, elegant{" "}
             <span className="text-gradient-blue font-extrabold">websites,</span>{" "}
             <span className="text-gradient-red font-extrabold">
