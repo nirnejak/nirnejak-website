@@ -19,34 +19,30 @@ const HomePage: React.FC = () => {
       <section className="flex h-screen items-start pt-32 md:pt-48">
         <div>
           <div className="mb-8 flex items-center justify-between">
-            <span className="relative flex items-center gap-1.5 rounded-full bg-pink-800/10 px-5 py-2 pl-7 text-xs text-pink-600">
+            <span className="relative flex items-center gap-1.5 rounded-full bg-zinc-800 py-2 pl-7 pr-4 text-xs text-zinc-300">
               <CircleFill
                 size={5}
-                className="absolute left-3.5 animate-ping text-pink-600"
+                className="absolute left-3.5 animate-ping text-zinc-300"
               />
               <CircleFill
                 size={5}
-                className="absolute left-3.5 text-pink-600"
+                className="absolute left-3.5 text-zinc-300"
               />
               Open to projects
             </span>
             <SocialIcons />
           </div>
-          <h1 className="mb-5 text-4xl font-bold tracking-tighter text-zinc-900 md:text-5xl dark:text-zinc-300">
-            Jitendra Nirnejak
-          </h1>
-          <p className="mb-16 text-sm text-zinc-700 md:text-base dark:text-zinc-400 ">
-            I&apos;m an independent{" "}
-            <span className="text-gradient-blue font-semibold">developer</span>{" "}
-            & <span className="text-gradient-red font-semibold">designer</span>{" "}
-            crafting elegant websites, user interfaces, and web-animations for
-            startups and agencies. Over the last{" "}
-            <span className="text-gradient-yellow font-semibold">5</span> years,
-            I have delivered more than{" "}
-            <span className="text-gradient-blue font-semibold">25</span>{" "}
-            projects to over{" "}
-            <span className="text-gradient-green font-semibold">10</span>{" "}
-            clients.
+          <p className="mb-16 font-secondary text-lg leading-loose tracking-tighter text-zinc-700 md:text-3xl dark:text-zinc-400">
+            Hi, I&apos;m Jitendra Nirnejak — an independent developer & designer
+            crafting tasteful, elegant{" "}
+            <span className="text-gradient-blue font-semibold">websites,</span>{" "}
+            <span className="text-gradient-red font-semibold">
+              user-interfaces,
+            </span>{" "}
+            and{" "}
+            <span className="text-gradient-green font-semibold">
+              web-animations.
+            </span>
           </p>
 
           {/*
