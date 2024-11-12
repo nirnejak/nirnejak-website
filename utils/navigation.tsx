@@ -64,7 +64,7 @@ export const socialLinks = [
     icon: <GithubFill size={15} />,
   },
   {
-    content: "Layers.to",
+    content: "Layers",
     href: "https://layers.to/nirnejak/",
     icon: <Frame size={15} />,
   },
