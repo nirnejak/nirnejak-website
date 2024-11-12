@@ -19,14 +19,14 @@ const HomePage: React.FC = () => {
       <section className="flex h-screen items-start pt-32 md:pt-48">
         <div>
           <div className="mb-8 flex items-center justify-between">
-            <span className="relative flex items-center gap-1.5 rounded-full bg-zinc-800 py-2 pl-7 pr-4 text-xs text-zinc-300">
+            <span className="relative flex items-center gap-1.5 rounded-full bg-zinc-800 py-2 pl-7 pr-4 text-xs text-zinc-400">
               <CircleFill
                 size={5}
-                className="absolute left-3.5 animate-ping text-zinc-300"
+                className="absolute left-3.5 animate-ping text-zinc-400"
               />
               <CircleFill
                 size={5}
-                className="absolute left-3.5 text-zinc-300"
+                className="absolute left-3.5 text-zinc-400"
               />
               Open to projects
             </span>
