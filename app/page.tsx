@@ -39,9 +39,10 @@ const HomePage: React.FC = () => {
             I&apos;m an independent{" "}
             <span className="text-gradient-blue font-bold">Developer</span> &
             <span className="text-gradient-red font-bold"> Designer </span>,
-            crafting elegant websites, user interfaces and web-animations. Over
-            the last <strong className="text-gradient-yellow">5+</strong> years,
-            I have delivered <strong className="text-gradient-blue">25+</strong>{" "}
+            crafting elegant websites, user interfaces and web-animations for
+            startups and agencies. Over the last{" "}
+            <strong className="text-gradient-yellow">5+</strong> years, I have
+            delivered <strong className="text-gradient-blue">25+</strong>{" "}
             projects to over{" "}
             <strong className="text-gradient-green">10+</strong> clients.
           </p>
