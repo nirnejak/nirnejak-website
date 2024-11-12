@@ -177,7 +177,7 @@ const HomePage: React.FC = () => {
             </div>
             <div
               title="Supbot"
-              className="max-h-11 text-zinc-700 transition-colors hover:text-zinc-400"
+              className="max-h-11 scale-110 text-zinc-700 transition-colors hover:text-zinc-400"
             >
               <svg
                 className="md:translate-y-1"
