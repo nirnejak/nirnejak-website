@@ -32,7 +32,7 @@ const HomePage: React.FC = () => {
             </span>
             <SocialIcons />
           </div>
-          <h1 className="mb-16 text-2xl font-medium tracking-tight text-zinc-400 md:text-3xl">
+          <h1 className="mb-20 text-2xl font-medium tracking-tight text-zinc-400 md:text-3xl">
             Hi, I&apos;m Jitendra Nirnejak - an independent developer & designer
             crafting tasteful, elegant{" "}
             <span className="text-gradient-blue font-extrabold">websites,</span>{" "}
@@ -56,7 +56,7 @@ const HomePage: React.FC = () => {
               7. MerkleScience
               8. SwitchedON
           */}
-          <div className="grid grid-cols-2 gap-6 md:flex md:flex-row md:items-end md:justify-between md:gap-0">
+          <div className="grid grid-cols-3 gap-10 md:flex md:flex-row md:items-end md:justify-between md:gap-0">
             <div
               title="Atollon"
               className="max-h-11 text-zinc-700 transition-colors hover:text-zinc-400"
@@ -180,7 +180,7 @@ const HomePage: React.FC = () => {
               className="max-h-11 text-zinc-700 transition-colors hover:text-zinc-400"
             >
               <svg
-                className="translate-y-1"
+                className="md:translate-y-1"
                 width="76"
                 height="23"
                 viewBox="0 0 76 23"
