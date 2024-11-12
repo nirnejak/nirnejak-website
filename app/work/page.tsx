@@ -21,16 +21,16 @@ const WorkPage: React.FC = () => {
             Work
           </h1>
 
-          <div className="mt-10 text-sm md:mt-16">
+          <div className="mt-10 flex flex-col pb-16 text-sm md:mt-16">
             <div className="mb-16 flex flex-col md:flex-row">
               <p className="mb-3 flex-1 text-zinc-300 md:mt-2">Projects</p>
-              <div className="flex flex-1 flex-col gap-1 md:mx-3">
+              <div className="mx-0 flex flex-1 flex-col gap-1 md:mx-3">
                 {allProjects.work.map((project, index) => (
                   <AppLink
                     key={index}
                     href={project.link}
                     target="_blank"
-                    className="hover-bg rounded-md px-3 py-2 outline-none"
+                    className="hover-bg -mx-3 rounded-md p-3 outline-none md:mx-0"
                   >
                     <p className="mb-1.5 font-semibold text-zinc-300">
                       {project.title}
@@ -46,13 +46,13 @@ const WorkPage: React.FC = () => {
               <p className="mb-3 flex-1 text-zinc-300 md:mt-2">
                 Cooking on the side
               </p>
-              <div className="flex flex-1 flex-col gap-1 md:mx-3">
+              <div className="mx-0 flex flex-1 flex-col gap-1 md:mx-3">
                 {allProjects.side.map((project, index) => (
                   <AppLink
                     key={index}
                     href={project.link}
                     target="_blank"
-                    className="hover-bg rounded-md px-3 py-2 outline-none"
+                    className="hover-bg -mx-3 rounded-md p-3 outline-none md:mx-0"
                   >
                     <p className="mb-1.5 font-semibold text-zinc-300">
                       {project.title}
