@@ -32,7 +32,7 @@ const HomePage: React.FC = () => {
             </span>
             <SocialIcons />
           </div>
-          <p className="mb-16 font-secondary text-lg leading-loose tracking-tighter text-zinc-700 md:text-3xl dark:text-zinc-400">
+          <p className="mb-16 text-lg tracking-tighter text-zinc-700 md:text-3xl dark:text-zinc-400">
             Hi, I&apos;m Jitendra Nirnejak — an independent developer & designer
             crafting tasteful, elegant{" "}
             <span className="text-gradient-blue font-semibold">websites,</span>{" "}
