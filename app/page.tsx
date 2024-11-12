@@ -32,7 +32,7 @@ const HomePage: React.FC = () => {
             </span>
             <SocialIcons />
           </div>
-          <h1 className="mb-16 text-lg tracking-tight text-zinc-400 md:text-3xl">
+          <h1 className="mb-16 text-2xl tracking-tight text-zinc-400 md:text-3xl">
             Hi, I&apos;m Jitendra Nirnejak - an independent developer & designer
             crafting tasteful, elegant{" "}
             <span className="text-gradient-blue font-semibold">websites,</span>{" "}
@@ -56,7 +56,7 @@ const HomePage: React.FC = () => {
               7. MerkleScience
               8. SwitchedON
           */}
-          <div className="-ml-2 flex flex-wrap items-end justify-between gap-x-4">
+          <div className="grid grid-cols-2 gap-6 md:flex md:flex-row md:items-end md:justify-between md:gap-0">
             <div
               title="Atollon"
               className="max-h-11 scale-[85%] text-zinc-700 transition-colors hover:text-zinc-400"
