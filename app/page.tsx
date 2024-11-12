@@ -32,7 +32,7 @@ const HomePage: React.FC = () => {
             </span>
             <SocialIcons />
           </div>
-          <h1 className="mb-16 text-lg tracking-tight text-zinc-700 md:text-3xl dark:text-zinc-400">
+          <h1 className="mb-16 text-lg tracking-tight text-zinc-400 md:text-3xl">
             Hi, I&apos;m Jitendra Nirnejak - an independent developer & designer
             crafting tasteful, elegant{" "}
             <span className="text-gradient-blue font-semibold">websites,</span>{" "}
@@ -59,7 +59,7 @@ const HomePage: React.FC = () => {
           <div className="-ml-2 flex flex-wrap items-end justify-between gap-x-4">
             <div
               title="Atollon"
-              className="max-h-11 scale-[85%] text-zinc-400 transition-colors hover:text-zinc-500 dark:text-zinc-700 dark:hover:text-zinc-400"
+              className="max-h-11 scale-[85%] text-zinc-700 transition-colors hover:text-zinc-400"
             >
               <svg
                 width="101"
@@ -78,7 +78,7 @@ const HomePage: React.FC = () => {
             </div>
             <div
               title="March"
-              className="max-h-11 scale-[85%] text-zinc-400 transition-colors hover:text-zinc-500 dark:text-zinc-700 dark:hover:text-zinc-400"
+              className="max-h-11 scale-[85%] text-zinc-700 transition-colors hover:text-zinc-400"
             >
               <svg
                 width="102"
@@ -115,7 +115,7 @@ const HomePage: React.FC = () => {
             </div>
             <div
               title="Inkoop"
-              className="max-h-11 scale-[90%] text-zinc-400 transition-colors hover:text-zinc-500 dark:text-zinc-700 dark:hover:text-zinc-400"
+              className="max-h-11 scale-[90%] text-zinc-700 transition-colors hover:text-zinc-400"
             >
               <svg
                 width="29"
@@ -140,7 +140,7 @@ const HomePage: React.FC = () => {
             </div>
             <div
               title="Draxlr"
-              className="max-h-11 scale-[90%] text-zinc-400 transition-colors hover:text-zinc-500 dark:text-zinc-700 dark:hover:text-zinc-400"
+              className="max-h-11 scale-[90%] text-zinc-700 transition-colors hover:text-zinc-400"
             >
               <svg
                 width="71"
@@ -177,7 +177,7 @@ const HomePage: React.FC = () => {
             </div>
             <div
               title="Supbot"
-              className="max-h-11 scale-[90%] text-zinc-400 transition-colors hover:text-zinc-500 dark:text-zinc-700 dark:hover:text-zinc-400"
+              className="max-h-11 scale-[90%] text-zinc-700 transition-colors hover:text-zinc-400"
             >
               <svg
                 className="translate-y-1.5"
@@ -215,7 +215,7 @@ const HomePage: React.FC = () => {
             </div>
             <div
               title="Roboto Studio"
-              className="max-h-11 scale-[90%] text-zinc-400 transition-colors hover:text-zinc-500 dark:text-zinc-700 dark:hover:text-zinc-400"
+              className="max-h-11 scale-[90%] text-zinc-700 transition-colors hover:text-zinc-400"
             >
               <svg
                 width="44"
@@ -234,7 +234,7 @@ const HomePage: React.FC = () => {
                 />
               </svg>
             </div>
-            {/* <div title="Merkle Science" className="max-h-11 scale-[85%] text-zinc-400 transition-colors hover:text-zinc-500 dark:text-zinc-700 dark:hover:text-zinc-400">
+            {/* <div title="Merkle Science" className="max-h-11 scale-[85%] transition-colors text-zinc-700 hover:text-zinc-400">
               <svg
                 width="218"
                 height="19"

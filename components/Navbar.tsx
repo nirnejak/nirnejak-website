@@ -56,7 +56,7 @@ const Navbar: React.FC<Props> = () => {
       <div className="flex md:hidden">
         {isOpen ? (
           <div
-            className="flex h-screen w-screen flex-col items-center justify-center gap-5 bg-zinc-50 px-20 dark:bg-zinc-900"
+            className="flex h-screen w-screen flex-col items-center justify-center gap-5 bg-zinc-900 px-20"
             role="button"
             tabIndex={0}
             onKeyUp={(e) => {
@@ -92,7 +92,7 @@ const Navbar: React.FC<Props> = () => {
               }}
               aria-label="Open Menu"
             >
-              <ThreeLineHorizontal className="text-zinc-900 dark:text-zinc-50" />
+              <ThreeLineHorizontal className="text-zinc-50" />
             </button>
           </div>
         )}

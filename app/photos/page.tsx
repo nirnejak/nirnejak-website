@@ -17,7 +17,7 @@ const PhotosPage: React.FC = () => {
     <main className="container">
       <section className="flex min-h-screen items-start pt-32 md:pt-40">
         <div className="w-full">
-          <h1 className="text-4xl font-bold tracking-tighter text-zinc-900 md:text-5xl dark:text-zinc-300">
+          <h1 className="text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
             Photos
           </h1>
 
