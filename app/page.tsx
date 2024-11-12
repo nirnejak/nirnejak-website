@@ -16,7 +16,7 @@ export const metadata: Metadata = generateMetadata({
 const HomePage: React.FC = () => {
   return (
     <main className="container">
-      <section className="flex h-screen items-start pt-32 md:pt-56">
+      <section className="flex h-screen items-start pt-32 md:pt-48">
         <div>
           <div className="mb-8 flex items-center justify-between">
             <span className="relative flex items-center gap-1.5 rounded-full bg-pink-800/10 px-5 py-2 pl-7 text-xs text-pink-600">
@@ -35,17 +35,20 @@ const HomePage: React.FC = () => {
           <h1 className="mb-5 text-4xl font-bold tracking-tighter text-zinc-900 md:text-5xl dark:text-zinc-300">
             Jitendra Nirnejak
           </h1>
-          <p className="mb-16 text-sm text-zinc-700 md:text-base dark:text-zinc-400">
+          <p className="mb-16 text-sm text-zinc-700 md:text-base dark:text-zinc-400 ">
             I&apos;m an independent{" "}
-            <span className="text-gradient-blue font-bold">Developer</span> &
-            <span className="text-gradient-red font-bold"> Designer </span>,
-            crafting elegant websites, user interfaces and web-animations for
+            <span className="text-gradient-blue font-semibold">developer</span>{" "}
+            & <span className="text-gradient-red font-semibold">designer</span>{" "}
+            crafting elegant websites, user interfaces, and web-animations for
             startups and agencies. Over the last{" "}
-            <strong className="text-gradient-yellow">5+</strong> years, I have
-            delivered <strong className="text-gradient-blue">25+</strong>{" "}
+            <span className="text-gradient-yellow font-semibold">5</span> years,
+            I have delivered more than{" "}
+            <span className="text-gradient-blue font-semibold">25</span>{" "}
             projects to over{" "}
-            <strong className="text-gradient-green">10+</strong> clients.
+            <span className="text-gradient-green font-semibold">10</span>{" "}
+            clients.
           </p>
+
           {/*
             INFO:
               1. Atollon Studio
