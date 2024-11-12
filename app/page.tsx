@@ -9,7 +9,7 @@ import generateMetadata from "utils/seo"
 
 export const metadata: Metadata = generateMetadata({
   path: "/",
-  title: "Jitendra Nirnejak - Portfolio Website",
+  title: "Jitendra Nirnejak - Developer & Designer",
   description: "Portfolio Website of Jitendra Nirnejak, Developer and Designer",
 })
 
@@ -32,15 +32,15 @@ const HomePage: React.FC = () => {
             </span>
             <SocialIcons />
           </div>
-          <h1 className="mb-16 text-2xl tracking-tight text-zinc-400 md:text-3xl">
+          <h1 className="mb-16 text-2xl font-medium tracking-tight text-zinc-400 md:text-3xl">
             Hi, I&apos;m Jitendra Nirnejak - an independent developer & designer
             crafting tasteful, elegant{" "}
-            <span className="text-gradient-blue font-semibold">websites,</span>{" "}
-            <span className="text-gradient-red font-semibold">
+            <span className="text-gradient-blue font-extrabold">websites,</span>{" "}
+            <span className="text-gradient-red font-extrabold">
               user-interfaces,
             </span>{" "}
             and{" "}
-            <span className="text-gradient-green font-semibold">
+            <span className="text-gradient-green font-extrabold">
               web-animations.
             </span>
           </h1>

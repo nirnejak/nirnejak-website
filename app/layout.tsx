@@ -3,7 +3,7 @@ import * as React from "react"
 import type { Viewport } from "next"
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Instrument_Sans } from "next/font/google"
+import localFont from "next/font/local"
 
 import Background from "components/Background"
 import Bulb from "components/Bulb"
@@ -14,9 +14,18 @@ import classNames from "utils/classNames"
 
 import "styles/main.css"
 
-const sansFont = Instrument_Sans({
+const sansFont = localFont({
   variable: "--sans-font",
-  subsets: ["latin"],
+  src: [
+    {
+      path: "../fonts/GeneralSans-Variable.ttf",
+      style: "normal",
+    },
+    {
+      path: "../fonts/GeneralSans-VariableItalic.ttf",
+      style: "italic",
+    },
+  ],
 })
 
 interface Props {
