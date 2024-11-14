@@ -80,6 +80,7 @@ const Navbar: React.FC<Props> = () => {
               className={navLinkClass}
               href={SCHEDULE_CALL_LINK}
               target="_blank"
+              onClick={() => window.plausible("Schedule a call Clicked")}
             >
               Schedule call
             </AppLink>
