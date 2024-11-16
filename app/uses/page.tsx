@@ -2,31 +2,8 @@ import * as React from "react"
 
 import { type Metadata } from "next"
 
-import * as motion from "framer-motion/client"
-import Image from "next/image"
-
-import MysticallyAwkward from "assets/uses/IMG_0849.jpeg"
-import GoodVibesGreatCoffee from "assets/uses/IMG_2056.jpeg"
-import Photo7 from "assets/uses/IMG_2249.jpeg"
-import TopDownBnW from "assets/uses/IMG_2448.jpeg"
-import Bunny from "assets/uses/IMG_4289.jpeg"
-import BlueTokai from "assets/uses/IMG_4772.jpeg"
-import GirlDrawing from "assets/uses/IMG_4890.jpeg"
-import TacoXbox from "assets/uses/IMG_8559.jpeg"
+import UsesImages from "components/UsesImages"
 import generateMetadata from "utils/seo"
-
-const rotation = [-3, 3, -6, 6]
-
-const images = [
-  MysticallyAwkward,
-  TopDownBnW,
-  GirlDrawing,
-  Bunny,
-  BlueTokai,
-  TacoXbox,
-  GoodVibesGreatCoffee,
-  Photo7,
-]
 
 export const metadata: Metadata = generateMetadata({
   path: "/uses/",
@@ -42,53 +19,7 @@ const UsesPage: React.FC = () => {
           Uses
         </h1>
       </section>
-      <section className="relative -ml-4 mt-10 grid w-[calc(100vw+32px)] grid-cols-4 md:mt-20 md:grid-cols-8">
-        {images.map((image, index) => (
-          <motion.div
-            key={index}
-            className={index > 3 ? "-mt-4 md:mt-0" : ""}
-            initial={{ opacity: 0, scale: 0.02 }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              rotate: rotation[index % 3],
-
-              transition: {
-                type: "spring",
-                stiffness: 100,
-                damping: 10,
-                mass: 1,
-                duration: 0.1,
-                delay: 0.05 * index,
-              },
-            }}
-            whileHover={{
-              rotate: 0,
-              zIndex: 5,
-              translateY: -30,
-              scale: 1.3,
-
-              transition: {
-                type: "spring",
-                stiffness: 530,
-                damping: 20,
-                mass: 1,
-                duration: 0.1,
-              },
-            }}
-          >
-            <div className="w-32 rounded-3xl bg-white p-2 shadow-xl md:w-52 md:p-3">
-              <Image
-                width={400}
-                src={image}
-                alt="Image"
-                className="rounded-2xl"
-                priority
-              />
-            </div>
-          </motion.div>
-        ))}
-      </section>
+      <UsesImages />
       <section className="container mb-16 mt-10 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2">
         <div>
           <p className="text-sm text-zinc-400">Computer</p>
