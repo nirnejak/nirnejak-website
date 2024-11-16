@@ -58,6 +58,7 @@ const UsesImages: React.FC = () => {
               src={image}
               alt="Image"
               className="rounded-2xl"
+              quality={100}
               priority
             />
           </div>
