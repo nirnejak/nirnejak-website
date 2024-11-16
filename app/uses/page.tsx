@@ -32,7 +32,7 @@ const UsesPage: React.FC = () => {
           Uses
         </h1>
       </section>
-      <section className="relative -mx-4 mt-10 grid w-[calc(100vw+32px)] grid-cols-7 md:mt-20">
+      <section className="relative -mx-4 mt-10 grid w-[calc(100vw+32px)] grid-cols-7 overflow-x-hidden md:mt-20 md:overflow-x-visible">
         {images.map((image, index) => (
           <motion.div
             key={index}
