@@ -12,11 +12,9 @@ const Footer: React.FC = () => {
       pathname?.includes("blogs") ||
       pathname?.includes("work") ||
       pathname?.includes("photos") ||
-      pathname?.includes("craft")
+      pathname?.includes("uses")
     ) {
       return ""
-    } else if (pathname?.includes("uses")) {
-      return "md:fixed bottom-0 w-full"
     } else {
       return "fixed bottom-0 w-full"
     }
