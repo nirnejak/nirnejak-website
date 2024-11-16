@@ -15,7 +15,7 @@ export const metadata: Metadata = generateMetadata({
 const SitesPage: React.FC = () => {
   return (
     <main className="container">
-      <section className="flex min-h-screen items-start pt-32 md:pt-40">
+      <section className="mt-32 flex min-h-screen items-start md:mt-40">
         <div className="w-full">
           <h1 className="text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
             Sites
