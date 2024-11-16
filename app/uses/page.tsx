@@ -26,13 +26,13 @@ export const metadata: Metadata = generateMetadata({
 
 const UsesPage: React.FC = () => {
   return (
-    <main>
+    <main className="max-w-[100vw] overflow-hidden">
       <section className="container mt-32 flex items-start md:mt-40">
         <h1 className="text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
           Uses
         </h1>
       </section>
-      <section className="relative -mx-4 mt-10 grid w-[calc(100vw+32px)] grid-cols-7 overflow-x-hidden md:mt-20 md:overflow-x-visible">
+      <section className="relative -mx-4 mt-10 grid w-[calc(100vw+32px)] grid-cols-7 md:mt-20">
         {images.map((image, index) => (
           <motion.div
             key={index}
