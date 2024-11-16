@@ -41,7 +41,7 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
           </motion.div>
         </div>
       )}
-      <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-2 gap-3 md:grid-cols-2 lg:grid-cols-3">
         {images.map((imageUrl, index) => (
           <motion.div
             key={index}
@@ -53,15 +53,21 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
             onKeyUp={(e) => {
               e.key === "Enter" && openModal(imageUrl)
             }}
-            initial={{ scale: 0.9, rotate: "5deg", opacity: 0 }}
-            animate={{ scale: 1, rotate: "0deg", opacity: 1 }}
-            transition={{
-              delay: 0.1 * (index + 1),
-              type: "spring",
-              stiffness: 350,
-              damping: 25,
-              duration: 0.15,
+            initial={{ opacity: 0, scale: 0.02, rotate: 5 }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              rotate: 0,
+
+              transition: {
+                type: "spring",
+                stiffness: 100,
+                damping: 10,
+                duration: 0.1,
+                delay: 0.1 * (index + 1),
+              },
             }}
+            className="rounded-3xl bg-white p-2 md:p-3"
           >
             <Image
               src={imageUrl}
