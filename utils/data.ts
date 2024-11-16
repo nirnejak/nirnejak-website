@@ -45,7 +45,7 @@ export const allProjects = {
       link: "https://tw-animations.vercel.app/",
     },
     {
-      title: "Interactive Components",
+      title: "Interactive Interfaces",
       description:
         "A collection of React components animated with Framer Motion",
       link: "https://interactive-interfaces.vercel.app/",
