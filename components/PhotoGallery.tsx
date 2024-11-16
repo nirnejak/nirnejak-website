@@ -34,13 +34,13 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
             animate={{ opacity: 1, translateY: 0 }}
             exit={{ opacity: 0 }}
             className="flex p-5"
+            ref={ref}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={content}
               alt={content}
               className="h-[calc(100vh-50px)] rounded-2xl"
-              ref={ref as React.LegacyRef<HTMLImageElement>}
             />
           </motion.div>
         </div>
