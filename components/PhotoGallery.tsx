@@ -5,6 +5,7 @@ import { XSmall } from "akar-icons"
 import { motion } from "framer-motion"
 import Image from "next/image"
 
+import useClickOutside from "hooks/useClickOutside"
 import useModalWithContent from "hooks/useModalWithContent"
 
 interface Props {
@@ -13,6 +14,8 @@ interface Props {
 
 const PhotoGallery: React.FC<Props> = ({ images }) => {
   const { isOpen, content, openModal, closeModal } = useModalWithContent()
+
+  const ref = useClickOutside(closeModal)
 
   return (
     <>
@@ -37,6 +40,7 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
               src={content}
               alt={content}
               className="h-[calc(100vh-50px)] rounded-2xl"
+              ref={ref as React.LegacyRef<HTMLImageElement>}
             />
           </motion.div>
         </div>
