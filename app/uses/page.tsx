@@ -55,9 +55,6 @@ const UsesPage: React.FC = () => {
             whileTap={{
               rotate: 0,
               zIndex: 5,
-              translateY: "-50%",
-              translateX: "-50%",
-              left: "50%",
               scale: 1.8,
 
               transition: {
