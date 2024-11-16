@@ -52,19 +52,6 @@ const UsesPage: React.FC = () => {
                 delay: 0.05 * index,
               },
             }}
-            whileTap={{
-              rotate: 0,
-              zIndex: 5,
-              scale: 1.8,
-
-              transition: {
-                type: "spring",
-                stiffness: 530,
-                damping: 20,
-                mass: 1,
-                duration: 0.1,
-              },
-            }}
             whileHover={{
               rotate: 0,
               zIndex: 5,
