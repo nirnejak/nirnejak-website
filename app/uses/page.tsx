@@ -47,7 +47,6 @@ const UsesPage: React.FC = () => {
                 stiffness: 100,
                 damping: 10,
                 mass: 1,
-
                 duration: 0.1,
                 delay: 0.05 * index,
               },
@@ -72,6 +71,7 @@ const UsesPage: React.FC = () => {
                 src={image}
                 alt="Image"
                 className="rounded-2xl"
+                priority
               />
             </div>
           </motion.div>
