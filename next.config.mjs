@@ -62,7 +62,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "media.giphy.com",
+        hostname: "i.giphy.com",
         port: "",
         pathname: "/**",
       },

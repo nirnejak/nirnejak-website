@@ -13,17 +13,22 @@ export const metadata: Metadata = generateMetadata({
   description: "Portfolio Website of Jitendra Nirnejak, Developer and Designer",
 })
 
+const gifs = [
+  "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWFlN2tteTk4Y3N2NGUycHpnOThlZmQ3M3U2Z3I5MDFoZmk0aXBlNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1EmBoG0IL50VIJLWTs/giphy.gif",
+  "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXI4ZnA5ZDJ5d2llNGRyNXNrdWVkY2p3MWZkY2xxYXhvaW91dW0xayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RHInHY2dInc6uMI2ET/giphy.gif",
+  "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXBraHp2MzhpODI5Z3oxNmlyNWt4c2l3aGF2MjcxaWRpeGkzdmMxdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ji6zzUZwNIuLS/giphy.gif",
+  "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExemxhMGZ1Z2sydGFiZXZzOTB6NTRyMGU4cjl5YzE5amczOHh3eXVyeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mPytjcsG3XS4o/giphy.gif",
+  "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWJkY3E2c2FpcjduMGk0OWFjb2F4ZHh5ejd6M3JhdXEydnJhOHF5eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6G4lHr2Lv6vQoqWTw4/giphy.gif",
+]
+
 const NotFound: React.FC = () => {
+  const index = Math.floor(Math.random() * 5)
+
   return (
     <main className="container">
       <section className="grid min-h-screen place-content-center">
-        <div className="relative">
-          <Image
-            src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2YxZTBhOTc4NDE0YmQxYWUwM2M5YmVkYTkzZTgyYzEzYTk2MTYzMSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/1EmBoG0IL50VIJLWTs/giphy.gif"
-            alt="Lost"
-            width={480}
-            height={270}
-          />
+        <div className="">
+          <Image src={gifs[index]} alt="Lost" width={480} height={270} />
           <h1 className="mb-3 mt-10 text-center text-3xl font-bold tracking-tighter text-zinc-300 md:text-4xl">
             You lost buddy?
           </h1>
