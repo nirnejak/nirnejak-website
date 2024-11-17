@@ -1,7 +1,7 @@
 export const allSites = {
   ecommerce: [
-    { title: "ROCC Naturals", link: "https://roccnaturals.com.au/" },
     { title: "Jessica Coppet", link: "https://jessicacoppetstudio.com/" },
+    { title: "ROCC Naturals", link: "https://roccnaturals.com.au/" },
   ],
   websites: [
     { title: "Draxlr", link: "https://www.draxlr.com/" },
@@ -9,6 +9,7 @@ export const allSites = {
     { title: "Inkoop", link: "https://www.inkoop.io/" },
   ],
   cms: [
+    { title: "Wills Property", link: "https://www.willsproperty.com.au/" },
     { title: "Warlimont & Nutt", link: "https://www.wnre.com.au/" },
     // { title: "Sciberras Group", link: "https://sciberrasgroupre.com.au/" },
     { title: "Matthews Agency", link: "https://matthews.agency/" },
