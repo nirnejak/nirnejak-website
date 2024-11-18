@@ -29,7 +29,7 @@ const Navbar: React.FC<Props> = () => {
   }, [isOpen])
 
   return (
-    <nav className="fixed top-0 z-10 w-full">
+    <nav className="fixed top-0 z-10 w-full backdrop-blur-lg">
       <div className="container hidden items-center py-3 md:flex">
         <div className="-mx-3.5">
           <NavigationTabs />
