@@ -60,7 +60,7 @@ const socialLinks = [
 const SocialLinks: React.FC = () => {
   return (
     <Tooltip.Provider delayDuration={200}>
-      <div className="-mx-3.5 flex w-[calc(100%+48px)] justify-between gap-1">
+      <div className="flex justify-between gap-1">
         <div>
           {socialLinks.map(({ title, url, icon }) =>
             renderSocialLink(title, url, icon)
