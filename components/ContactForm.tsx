@@ -11,6 +11,8 @@ declare global {
   }
 }
 
+const INITIAL_STATE = { name: "", email: "", message: "" }
+
 const ContactForm: React.FC = () => {
   const [isSending, setIsSending] = React.useState(false)
   const [isSent, setIsSent] = React.useState(false)
@@ -19,7 +21,7 @@ const ContactForm: React.FC = () => {
     name: string
     email: string
     message: string
-  }>({ name: "", email: "", message: "" })
+  }>(INITIAL_STATE)
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -43,6 +45,7 @@ const ContactForm: React.FC = () => {
           setIsSent(true)
           setTimeout(() => {
             setIsSent(false)
+            setState(INITIAL_STATE)
           }, 3000)
         }
       })
