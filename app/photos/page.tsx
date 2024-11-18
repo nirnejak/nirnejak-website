@@ -14,17 +14,14 @@ export const metadata: Metadata = generateMetadata({
 
 const PhotosPage: React.FC = () => {
   return (
-    <main className="container">
-      <section className="mt-32 flex min-h-screen items-start md:mt-40">
-        <div className="w-full">
-          <h1 className="text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
-            Photos
-          </h1>
-
-          <div className="mt-10 flex flex-col gap-1 pb-16 md:mt-16">
-            <PhotoGallery images={photos} />
-          </div>
-        </div>
+    <main>
+      <section className="container mt-32 md:mt-40">
+        <h1 className="text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
+          Photos
+        </h1>
+      </section>
+      <section className="container mb-16 mt-10 flex min-h-screen items-start md:mt-16">
+        <PhotoGallery images={photos} />
       </section>
     </main>
   )
