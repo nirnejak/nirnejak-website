@@ -15,7 +15,7 @@ const UsesPage: React.FC = () => {
   return (
     <main className="max-w-[100vw] overflow-hidden">
       <section className="container mt-32 md:mt-40">
-        <h1 className="text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
+        <h1 className="text-4xl font-bold tracking-tight text-zinc-300 md:text-5xl">
           Uses
         </h1>
       </section>

@@ -29,7 +29,7 @@ const NotFound: React.FC = () => {
       <section className="grid min-h-screen place-content-center">
         <div className="">
           <Image src={gifs[index]} alt="Lost" width={480} height={270} />
-          <h1 className="mb-3 mt-10 text-center text-3xl font-bold tracking-tighter text-zinc-300 md:text-4xl">
+          <h1 className="mb-3 mt-10 text-center text-3xl font-bold tracking-tight text-zinc-300 md:text-4xl">
             You lost buddy?
           </h1>
           <p className="text-center text-zinc-400">
