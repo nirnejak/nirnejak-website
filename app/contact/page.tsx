@@ -20,7 +20,7 @@ const ContactPage: React.FC = () => {
         <h1 className="mb-5 text-4xl font-bold tracking-tighter text-zinc-300 md:text-5xl">
           Contact
         </h1>
-        <p className="text-xs text-zinc-400 md:text-sm">
+        <p className="text-xs text-zinc-500 md:text-sm">
           Get in touch with me if you want to discuss a project or maybe just
           say hi :)
         </p>
@@ -29,10 +29,10 @@ const ContactPage: React.FC = () => {
         <ContactForm />
 
         <div className="mt-10 text-center">
-          <p className="text-sm font-bold text-zinc-300">or reach me at</p>
+          <p className="text-sm text-zinc-500">or reach me at</p>
           <AppLink
             href="mailto:hello@nirnejak.com&subject=Project%20Enquiry"
-            className="text-sm text-zinc-600"
+            className="text-sm font-semibold text-zinc-300"
           >
             hello@nirnejak.com
           </AppLink>
