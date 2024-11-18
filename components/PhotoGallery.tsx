@@ -17,6 +17,12 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
 
   const ref = useClickOutside(closeModal)
 
+  const [isLoaded, setIsLoaded] = React.useState(false)
+
+  React.useEffect(() => {
+    setIsLoaded(true)
+  }, [])
+
   return (
     <>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
@@ -31,21 +37,19 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
             onKeyUp={(e) => {
               e.key === "Enter" && openModal(imageUrl)
             }}
-            initial={{ opacity: 0, scale: 0.02, rotate: 5 }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              rotate: 0,
+            initial={{ opacity: 0, scale: 0.02, rotate: 15 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            whileHover={{ scale: 1.2, rotate: 0, zIndex: 5 }}
+            transition={{
+              type: "spring",
+              stiffness: isLoaded ? 530 : 100,
+              damping: isLoaded ? 20 : 10,
+              mass: 1,
+              duration: 0.1,
 
-              transition: {
-                type: "spring",
-                stiffness: 100,
-                damping: 10,
-                duration: 0.1,
-                delay: 0.05 * (index + 1),
-              },
+              delay: isLoaded ? 0 : 0.05 * index,
             }}
-            className="rounded-3xl bg-white p-2 md:p-3"
+            className="rounded-3xl bg-white p-2 hover:shadow-2xl md:p-3"
           >
             <Image
               src={imageUrl}
