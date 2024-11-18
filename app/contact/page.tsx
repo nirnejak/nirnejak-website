@@ -25,8 +25,7 @@ const ContactPage: React.FC = () => {
       <section className="container mt-10 grid gap-10 md:mt-16 md:grid-cols-5">
         <div className="col-span-2 flex flex-col">
           <p className="text-xs text-zinc-500 md:text-sm">
-            Thanks for your interest in contacting me. Get in touch with me if
-            you want to discuss a project or maybe just say hi :)
+            Let{"'"}s get in touch to discuss a project or maybe just say hi :)
           </p>
           <div className="mt-auto">
             <p className="text-sm text-zinc-500">Reach me via email</p>
@@ -36,7 +35,7 @@ const ContactPage: React.FC = () => {
             >
               hello@nirnejak.com
             </AppLink>
-            <div className="-ml-3.5 -mb-3 mt-4">
+            <div className="-mb-3 -ml-3.5 mt-4">
               <SocialLinks />
             </div>
           </div>
