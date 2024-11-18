@@ -52,10 +52,7 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <form
-      className="mt-10 flex flex-col gap-3 md:mt-16"
-      onSubmit={handleSubmit}
-    >
+    <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
       <input
         type="text"
         className="rounded-md bg-zinc-800 px-4 py-3 text-xs text-zinc-400 placeholder:text-zinc-600"
