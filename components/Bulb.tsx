@@ -59,7 +59,9 @@ const Bulb: React.FC = () => {
       ) : (
         <div
           tabIndex={0}
-          role={"button"}
+          role={"checkbox"}
+          aria-checked="false"
+          aria-labelledby="Bulb"
           className="relative bottom-[2px] left-[80px] z-[-1] size-[40px] cursor-pointer rounded-full bg-zinc-700"
           style={
             isSwitchOn
