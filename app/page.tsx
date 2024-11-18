@@ -15,8 +15,8 @@ export const metadata: Metadata = generateMetadata({
 
 const HomePage: React.FC = () => {
   return (
-    <main>
-      <section className="container mt-32 min-h-[73vh] md:mt-48">
+    <main className="min-h-[73.5vh]">
+      <section className="container mt-32 md:mt-48">
         <div className="mb-8 flex items-center justify-between">
           <span className="relative flex items-center gap-1.5 rounded-full bg-zinc-800 py-2 pl-7 pr-4 text-xs font-medium text-zinc-400">
             <CircleFill
