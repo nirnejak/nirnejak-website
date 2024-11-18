@@ -53,7 +53,7 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
               className="rounded-2xl"
               width="360"
               height="640"
-              priority={index < 5}
+              priority={index < 11}
             />
           </motion.div>
         ))}
