@@ -19,6 +19,45 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
 
   return (
     <>
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+        {images.map((imageUrl, index) => (
+          <motion.div
+            key={index}
+            role="button"
+            tabIndex={0}
+            onClick={() => {
+              openModal(imageUrl)
+            }}
+            onKeyUp={(e) => {
+              e.key === "Enter" && openModal(imageUrl)
+            }}
+            initial={{ opacity: 0, scale: 0.02, rotate: 5 }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              rotate: 0,
+
+              transition: {
+                type: "spring",
+                stiffness: 100,
+                damping: 10,
+                duration: 0.1,
+                delay: 0.05 * (index + 1),
+              },
+            }}
+            className="rounded-3xl bg-white p-2 md:p-3"
+          >
+            <Image
+              src={imageUrl}
+              alt={imageUrl}
+              className="rounded-2xl"
+              width="360"
+              height="640"
+              priority={index < 5}
+            />
+          </motion.div>
+        ))}
+      </div>
       {isOpen && (
         <div className="fixed left-0 top-0 z-20 grid h-screen w-full place-items-center bg-zinc-900/30 backdrop-blur-lg">
           <button
@@ -45,45 +84,6 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
           </motion.div>
         </div>
       )}
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-2 lg:grid-cols-3">
-        {images.map((imageUrl, index) => (
-          <motion.div
-            key={index}
-            role="button"
-            tabIndex={0}
-            onClick={() => {
-              openModal(imageUrl)
-            }}
-            onKeyUp={(e) => {
-              e.key === "Enter" && openModal(imageUrl)
-            }}
-            initial={{ opacity: 0, scale: 0.02, rotate: 5 }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              rotate: 0,
-
-              transition: {
-                type: "spring",
-                stiffness: 100,
-                damping: 10,
-                duration: 0.1,
-                delay: 0.1 * (index + 1),
-              },
-            }}
-            className="rounded-3xl bg-white p-2 md:p-3"
-          >
-            <Image
-              src={imageUrl}
-              alt={imageUrl}
-              className="rounded-2xl"
-              width="360"
-              height="640"
-              priority={index < 5}
-            />
-          </motion.div>
-        ))}
-      </div>
     </>
   )
 }
