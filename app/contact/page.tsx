@@ -36,7 +36,7 @@ const ContactPage: React.FC = () => {
             >
               hello@nirnejak.com
             </AppLink>
-            <div className="-ml-3.5 mt-4">
+            <div className="-ml-3.5 -mb-3 mt-4">
               <SocialLinks />
             </div>
           </div>
