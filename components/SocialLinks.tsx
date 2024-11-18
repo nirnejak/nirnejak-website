@@ -2,13 +2,7 @@
 import * as React from "react"
 
 import * as Tooltip from "@radix-ui/react-tooltip"
-import {
-  ArrowRight,
-  ProductHuntFill,
-  DribbbleFill,
-  GithubFill,
-  XFill,
-} from "akar-icons"
+import { ArrowRight, XFill, LinkedinFill, InstagramFill } from "akar-icons"
 
 const renderSocialLink = (
   text: string,
@@ -30,6 +24,7 @@ const renderSocialLink = (
         <Tooltip.Content
           className="select-none rounded-md bg-zinc-800 px-3.5 py-2.5 text-sm leading-none text-zinc-300 will-change-[transform,opacity] data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade"
           sideOffset={5}
+          side="bottom"
         >
           {text}
           <Tooltip.Arrow className="fill-zinc-800" />
@@ -41,19 +36,14 @@ const renderSocialLink = (
 
 const socialLinks = [
   {
-    title: "Github",
-    url: "https://github.com/nirnejak/",
-    icon: <GithubFill size={21} />,
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/in/nirnejak/",
+    icon: <LinkedinFill size={21} />,
   },
   {
-    title: "Dribbble",
-    url: "https://dribbble.com/nirnejak",
-    icon: <DribbbleFill size={21} />,
-  },
-  {
-    title: "ProductHunt",
-    url: "https://www.producthunt.com/@nirnejak",
-    icon: <ProductHuntFill size={21} />,
+    title: "Instagram",
+    url: "https://www.instagram.com/jitendra.nirnejak/",
+    icon: <InstagramFill size={21} />,
   },
 ]
 
