@@ -55,7 +55,7 @@ const ContactForm: React.FC = () => {
     <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
       <input
         type="text"
-        className="rounded-md bg-zinc-800 px-4 py-3 text-xs text-zinc-400 placeholder:text-zinc-600"
+        className="rounded-md bg-zinc-800 px-4 py-3 text-xs font-medium text-zinc-300 placeholder:text-zinc-500"
         placeholder="Name"
         name="name"
         value={state.name}
@@ -64,7 +64,7 @@ const ContactForm: React.FC = () => {
       />
       <input
         type="email"
-        className="rounded-md bg-zinc-800 px-4 py-3 text-xs text-zinc-400 placeholder:text-zinc-600"
+        className="rounded-md bg-zinc-800 px-4 py-3 text-xs font-medium text-zinc-300 placeholder:text-zinc-500"
         placeholder="Email"
         name="email"
         value={state.email}
@@ -72,7 +72,7 @@ const ContactForm: React.FC = () => {
         required
       />
       <textarea
-        className="rounded-md bg-zinc-800 px-4 py-3 text-xs text-zinc-400 placeholder:text-zinc-600"
+        className="rounded-md bg-zinc-800 px-4 py-3 text-xs font-medium text-zinc-300 placeholder:text-zinc-500"
         placeholder="Message"
         rows={3}
         name="message"
@@ -82,7 +82,7 @@ const ContactForm: React.FC = () => {
       />
       <button
         disabled={isSending}
-        className="rounded-md bg-zinc-50 px-4 py-3 text-center text-sm font-bold uppercase tracking-wide text-zinc-900 transition-transform active:scale-95"
+        className="rounded-md bg-zinc-50 px-4 py-3 text-center text-sm font-semibold uppercase tracking-wide text-zinc-900 transition-transform active:scale-95"
       >
         {isSending ? "SENDING..." : isSent ? "SENT!" : "SEND"}
       </button>
