@@ -182,7 +182,7 @@ const HomePage: React.FC = () => {
                   rx="1.42174"
                   fill="currentColor"
                   stroke="currentColor"
-                  stroke-width="0.533154"
+                  strokeWidth="0.533154"
                 />
                 <rect
                   x="16.0835"
@@ -192,35 +192,35 @@ const HomePage: React.FC = () => {
                   rx="1.42174"
                   fill="currentColor"
                   stroke="currentColor"
-                  stroke-width="0.533154"
+                  strokeWidth="0.533154"
                 />
                 <path
                   d="M9.59677 5.50928L9.59677 3.82096"
                   stroke="#424249"
-                  stroke-width="1.06631"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.06631"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M12.0848 19.9044C12.0848 19.9044 16.6166 18.9269 17.0609 21.7704"
                   stroke="#424249"
-                  stroke-width="1.06631"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.06631"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M6.75328 19.9044C6.75328 19.9044 2.22148 18.9269 1.77718 21.7704"
                   stroke="#424249"
-                  stroke-width="1.06631"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.06631"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M9.59677 24.7916C3.55434 24.7916 4.97609 20.8867 4.9761 18.3049H14.2174C14.0397 20.8818 15.8169 24.7916 9.59677 24.7916Z"
                   fill="currentColor"
                   stroke="currentColor"
-                  stroke-width="0.177718"
-                  stroke-linejoin="round"
+                  strokeWidth="0.177718"
+                  strokeLinejoin="round"
                 />
                 <rect
                   x="1.24405"
@@ -237,7 +237,7 @@ const HomePage: React.FC = () => {
                   cy="1.9549"
                   r="1.42174"
                   stroke="currentColor"
-                  stroke-width="1.06631"
+                  strokeWidth="1.06631"
                 />
               </svg>
             </div>
