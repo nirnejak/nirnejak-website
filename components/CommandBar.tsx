@@ -67,7 +67,7 @@ const CommandBar: React.FC = () => {
     <Command
       className={
         isOpen
-          ? "fixed left-0 top-0 z-50 h-screen w-full bg-zinc-900/30 backdrop-blur-lg"
+          ? "fixed left-0 top-0 z-30 h-screen w-full bg-zinc-900/30 backdrop-blur-lg"
           : ""
       }
     >
@@ -80,7 +80,7 @@ const CommandBar: React.FC = () => {
           setValue(v)
         }}
         label="Global Command Menu"
-        className="fixed left-1/2 top-1/2 z-50 w-11/12 max-w-[680px] -translate-x-1/2 -translate-y-1/2 animate-rise select-none rounded-lg bg-zinc-800 p-3 text-sm md:w-full"
+        className="fixed left-1/2 top-1/2 z-30 w-11/12 max-w-[680px] -translate-x-1/2 -translate-y-1/2 animate-rise select-none rounded-lg bg-zinc-800 p-3 text-sm md:w-full"
       >
         <Command.Input
           className="w-full rounded-lg bg-zinc-900 px-4 py-3 text-sm text-zinc-300 outline-none placeholder:text-zinc-700"

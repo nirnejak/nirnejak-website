@@ -38,7 +38,7 @@ const Bulb: React.FC = () => {
   }
 
   return (
-    <div className="fixed top-0 hidden w-52 origin-top animate-swing lg:right-0 lg:block xl:right-24">
+    <div className="fixed top-0 z-20 hidden w-52 origin-top animate-swing lg:right-0 lg:block xl:right-24">
       <div className="relative left-[98px] h-[200px] w-1 bg-black" />
       <div className="relative left-[92px] h-[20px] w-4 bg-zinc-500">
         <div
