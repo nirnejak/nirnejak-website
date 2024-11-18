@@ -82,7 +82,7 @@ const ContactForm: React.FC = () => {
       />
       <button
         disabled={isSending}
-        className="rounded-md bg-zinc-50 px-4 py-3 text-center text-sm font-semibold uppercase tracking-wide text-zinc-900 transition-transform active:scale-95"
+        className="rounded-md bg-zinc-50 px-4 py-3 text-center text-sm font-semibold uppercase tracking-wide text-zinc-900 transition-all hover:bg-zinc-200 focus:bg-zinc-200 active:scale-95"
       >
         {isSending ? "SENDING..." : isSent ? "SENT!" : "SEND"}
       </button>
