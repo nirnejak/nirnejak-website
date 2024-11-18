@@ -31,7 +31,7 @@ const BlogsPage: React.FC = () => {
                 target="_blank"
                 className="hover-bg -mx-3 p-3 outline-none md:mx-0"
               >
-                <h2 className="font-bold text-zinc-300">{blog.title}</h2>
+                <h2 className="font-semibold text-zinc-300">{blog.title}</h2>
                 <p className="mt-1.5 text-xs text-zinc-500">
                   {blog.description}
                 </p>
@@ -49,7 +49,7 @@ const BlogsPage: React.FC = () => {
                 target="_blank"
                 className="hover-bg -mx-3 p-3 outline-none md:mx-0"
               >
-                <h2 className="font-bold text-zinc-300">{blog.title}</h2>
+                <h2 className="font-semibold text-zinc-300">{blog.title}</h2>
                 <p className="mt-1.5 text-xs text-zinc-500">
                   {blog.description}
                 </p>
@@ -67,7 +67,7 @@ const BlogsPage: React.FC = () => {
                 target="_blank"
                 className="hover-bg -mx-3 p-3 outline-none md:mx-0"
               >
-                <h2 className="font-bold text-zinc-300">{blog.title}</h2>
+                <h2 className="font-semibold text-zinc-300">{blog.title}</h2>
                 <p className="mt-1.5 text-xs text-zinc-500">
                   {blog.description}
                 </p>
@@ -85,7 +85,7 @@ const BlogsPage: React.FC = () => {
                 target="_blank"
                 className="hover-bg -mx-3 p-3 outline-none md:mx-0"
               >
-                <h2 className="font-bold text-zinc-300">{blog.title}</h2>
+                <h2 className="font-semibold text-zinc-300">{blog.title}</h2>
                 <p className="mt-1.5 text-xs text-zinc-500">
                   {blog.description}
                 </p>
@@ -103,7 +103,7 @@ const BlogsPage: React.FC = () => {
                 target="_blank"
                 className="hover-bg -mx-3 p-3 outline-none md:mx-0"
               >
-                <h2 className="font-bold text-zinc-300">{blog.title}</h2>
+                <h2 className="font-semibold text-zinc-300">{blog.title}</h2>
                 <p className="mt-1.5 text-xs text-zinc-500">
                   {blog.description}
                 </p>
