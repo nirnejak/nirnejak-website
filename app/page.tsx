@@ -40,18 +40,6 @@ const HomePage: React.FC = () => {
             web-animations.
           </span>
         </h1>
-
-        {/*
-            INFO:
-              1. Atollon Studio
-              2. MarchHQ
-              3. Draxlr
-              4. Inkoop
-              5. Supbot
-              6. Roboto Studio
-              7. MerkleScience
-              8. SwitchedON
-          */}
         <div className="grid grid-cols-3 gap-10 md:flex md:flex-row md:items-end md:justify-between md:gap-0">
           <div
             title="Atollon"
