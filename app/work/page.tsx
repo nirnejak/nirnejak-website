@@ -34,7 +34,9 @@ const WorkPage: React.FC = () => {
                 <p className="mb-1.5 font-semibold text-zinc-300">
                   {project.title}
                 </p>
-                <p className="text-xs text-zinc-500">{project.description}</p>
+                <p className="text-xs font-medium text-zinc-500">
+                  {project.description}
+                </p>
               </AppLink>
             ))}
           </div>
@@ -54,7 +56,9 @@ const WorkPage: React.FC = () => {
                 <p className="mb-1.5 font-semibold text-zinc-300">
                   {project.title}
                 </p>
-                <p className="text-xs text-zinc-500">{project.description}</p>
+                <p className="text-xs font-medium text-zinc-500">
+                  {project.description}
+                </p>
               </AppLink>
             ))}
           </div>
