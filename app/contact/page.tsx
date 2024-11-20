@@ -11,7 +11,7 @@ export const metadata: Metadata = generateMetadata({
   path: "/contact/",
   title: "Contact | Jitendra Nirnejak",
   description:
-    "Contact Jitendra Nirnejak, Fill the form or reach out via email",
+    "Contact Jitendra Nirnejak, get in touch on social media, fill the form or reach out via email",
 })
 
 const ContactPage: React.FC = () => {
