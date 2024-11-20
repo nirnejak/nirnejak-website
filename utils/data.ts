@@ -51,16 +51,11 @@ export const allProjects = {
         "A collection of React components animated with Framer Motion",
       link: "https://interactive-interfaces.vercel.app/",
     },
-    // {
-    //   title: "CSV Plot",
-    //   description: "Quickly plot CSV data into graphs(bar, pie, map, etc.)",
-    //   link: "https://plot-csv.vercel.app/",
-    // },
-    // {
-    //   title: "React Presentation Maker",
-    //   description: "Use your React components as presentation slides",
-    //   link: "https://react-presentation-maker.vercel.app/",
-    // },
+    {
+      title: "React Presentation Maker",
+      description: "Use your React components as presentation slides",
+      link: "https://github.com/nirnejak/react-presentation/",
+    },
   ],
   work: [
     {
