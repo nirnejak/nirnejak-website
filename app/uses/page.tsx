@@ -22,27 +22,29 @@ const UsesPage: React.FC = () => {
       <UsesImages />
       <section className="container mb-16 mt-10 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2">
         <div>
-          <p className="text-sm text-zinc-500">Computer</p>
+          <p className="text-sm font-medium text-zinc-500">Computer</p>
           <p className="mt-1.5 text-lg font-semibold text-zinc-300">
             iPad Pro 11, MacBook Air & <br />
             Apple Studio Display
           </p>
         </div>
         <div>
-          <p className="text-sm text-zinc-500">Camera & Gear</p>
+          <p className="text-sm font-medium text-zinc-500">Camera & Gear</p>
           <p className="mt-1.5 text-lg font-semibold text-zinc-300">
             iPhone 14 Pro, Insta 360 x3 & <br />
             DJI Osmo Mobile 4 SE
           </p>
         </div>
         <div>
-          <p className="text-sm text-zinc-500">Design Tools</p>
+          <p className="text-sm font-medium text-zinc-500">Design Tools</p>
           <p className="mt-1.5 text-lg font-semibold text-zinc-300">
             Figma, Rive & Procreate
           </p>
         </div>
         <div>
-          <p className="text-sm text-zinc-500">Languages & Frameworks</p>
+          <p className="text-sm font-medium text-zinc-500">
+            Languages & Frameworks
+          </p>
           <p className="mt-1.5 text-lg font-semibold text-zinc-300">
             TypeScript, React & Node.js
           </p>

@@ -24,11 +24,13 @@ const ContactPage: React.FC = () => {
       </section>
       <section className="container mt-10 grid gap-10 md:mt-16 md:grid-cols-5">
         <div className="col-span-2 flex flex-col">
-          <p className="text-xs text-zinc-500 md:text-sm">
+          <p className="text-xs font-medium text-zinc-500 md:text-sm">
             Let{"'"}s get in touch to discuss a project or maybe just say hi :)
           </p>
           <div className="mt-auto">
-            <p className="text-sm text-zinc-500">Reach me via email</p>
+            <p className="text-sm font-medium text-zinc-500">
+              Reach me via email
+            </p>
             <AppLink
               href="mailto:hello@nirnejak.com&subject=Project%20Enquiry"
               className="text-sm font-semibold text-zinc-300"
