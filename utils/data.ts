@@ -41,7 +41,7 @@ export const allProjects = {
       link: "https://svg-animations-gallery.vercel.app/",
     },
     {
-      title: "Tailwind Animations",
+      title: "TailwindCSS Animations",
       description: "Copy Paste animations for TailwindCSS",
       link: "https://tailwindanimations.vercel.app/",
     },
