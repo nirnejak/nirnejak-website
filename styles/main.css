@@ -53,14 +53,13 @@
 }
 
 .hover-bg {
-  @apply relative z-[1];
+  @apply relative z-[1] active:scale-95;
 
-  @apply after:bg-zinc-800;
-  @apply after:absolute after:bottom-0 after:left-0 after:z-[-1] after:size-full after:rounded-lg;
+  @apply after:rounded-lg after:bg-zinc-800;
+  @apply after:absolute after:bottom-0 after:left-0 after:z-[-1] after:size-full;
   @apply after:origin-center after:scale-90 after:opacity-0 after:transition-all;
 
   @apply hover:after:scale-100 hover:after:opacity-100 focus:after:scale-100 focus:after:opacity-100;
-  @apply active:scale-95;
 }
 
 .hover-bg.hover-bg-dark {
