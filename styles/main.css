@@ -9,13 +9,8 @@
 }
 
 * {
-  -webkit-font-smoothing: antialiased;
+  @apply antialiased;
   text-rendering: geometricPrecision;
-
-  box-sizing: border-box;
-  transition:
-    background-color 150ms ease-out,
-    color 150ms ease-out;
 }
 
 .text-gradient-blue {
