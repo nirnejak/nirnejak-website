@@ -10,7 +10,6 @@ import {
 } from "akar-icons"
 import { Command } from "cmdk"
 import { useRouter } from "next/navigation"
-import useSound from "use-sound"
 
 import { navLinks, socialLinks } from "utils/navigation"
 
@@ -19,9 +18,6 @@ const commandItemClass =
 
 const CommandBar: React.FC = () => {
   const router = useRouter()
-
-  const [playWhoop] = useSound("../sounds/whoop.wav")
-  const [playBlow] = useSound("../sounds/blow.mp3")
 
   const listRef = React.useRef(null)
   const inputRef = React.useRef<HTMLInputElement | null>(null)
@@ -47,19 +43,12 @@ const CommandBar: React.FC = () => {
     }
   }, [])
 
-  React.useEffect(() => {
-    if (isOpen && playBlow !== undefined) {
-      playBlow()
-    }
-  }, [isOpen, playBlow])
-
   const navigate = (href: string): void => {
     if (href.includes("http") || href.includes("mailto")) {
       window.open(href, "_blank")
     } else {
       router.push(href) // eslint-disable-line @typescript-eslint/no-floating-promises
     }
-    playWhoop()
     setIsOpen(false)
   }
 
