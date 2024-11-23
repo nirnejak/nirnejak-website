@@ -31,14 +31,10 @@ const HomePage: React.FC = () => {
         <h1 className="mb-20 text-2xl font-medium tracking-tight text-zinc-400 md:text-3xl">
           Hi, I&apos;m Jitendra Nirnejak — an independent developer & designer
           crafting tasteful, elegant{" "}
-          <span className="text-gradient-blue font-extrabold">websites,</span>{" "}
-          <span className="text-gradient-red font-extrabold">
-            user-interfaces,
-          </span>{" "}
+          <span className="text-gradient-blue font-bold">websites,</span>{" "}
+          <span className="text-gradient-red font-bold">user-interfaces,</span>{" "}
           and{" "}
-          <span className="text-gradient-green font-extrabold">
-            web-animations.
-          </span>
+          <span className="text-gradient-green font-bold">web-animations.</span>
         </h1>
         <div className="grid grid-cols-3 gap-10 md:flex md:flex-row md:items-end md:justify-between md:gap-0">
           <div
