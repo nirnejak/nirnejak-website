@@ -84,7 +84,7 @@ export const socialLinks = [
     icon: <UnsplashFill size={15} />,
   },
   {
-    content: "LinkedIn",
+    content: "LinkedIn  (💩)",
     href: "https://www.linkedin.com/in/nirnejak/",
     icon: <LinkedinFill size={15} />,
   },
