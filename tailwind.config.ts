@@ -17,6 +17,9 @@ const config: Config = {
         md: "680px",
       },
     },
+    fontFamily: {
+      sans: ["var(--sans-font)", "system-ui", "sans-serif"],
+    },
     extend: {
       keyframes: {
         slideDownAndFade: {
@@ -94,9 +97,6 @@ const config: Config = {
         rise: "rise 150ms cubic-bezier(0.4, 0, 0.2, 1)",
         shake: "shake 150ms cubic-bezier(0.4, 0, 0.2, 1)",
       },
-    },
-    fontFamily: {
-      sans: ["var(--sans-font)", "system-ui", "sans-serif"],
     },
   },
   variants: {
