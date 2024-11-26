@@ -19,10 +19,12 @@ const sansFont = localFont({
   src: [
     {
       path: "../fonts/GeneralSans-Variable.woff2",
+      weight: "300 800",
       style: "normal",
     },
     {
       path: "../fonts/GeneralSans-VariableItalic.woff2",
+      weight: "300 800",
       style: "italic",
     },
   ],
