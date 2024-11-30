@@ -44,8 +44,7 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
               type: "spring",
               stiffness: isLoaded ? 530 : 100,
               damping: isLoaded ? 20 : 10,
-              mass: 1,
-              duration: 0.1,
+              mass: 0.7,
 
               delay: isLoaded ? 0 : 0.05 * index,
             }}

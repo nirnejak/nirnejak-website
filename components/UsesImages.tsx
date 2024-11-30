@@ -46,7 +46,7 @@ const UsesImages: React.FC = () => {
             type: "spring",
             stiffness: isLoaded ? 530 : 100,
             damping: isLoaded ? 20 : 10,
-            mass: 1,
+            mass: 0.7,
             duration: 0.1,
 
             delay: isLoaded ? 0 : 0.05 * index,
