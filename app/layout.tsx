@@ -1,6 +1,7 @@
 import * as React from "react"
 
 import type { Viewport } from "next"
+import { ViewTransitions } from "next-view-transitions"
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import localFont from "next/font/local"
@@ -40,31 +41,33 @@ export const viewport: Viewport = {
 
 const HomeLayout: React.FC<Props> = ({ children }) => {
   return (
-    <html lang="en">
-      <head>
-        <script
-          defer
-          data-domain="nirnejak.com"
-          src="https://plausible.io/js/script.js"
-        />
-      </head>
-      <body
-        className={classNames(
-          "bg-zinc-900 overflow-x-hidden font-sans",
-          sansFont.variable
-        )}
-      >
-        <Navbar />
-        {children}
-        <Footer />
+    <ViewTransitions>
+      <html lang="en">
+        <head>
+          <script
+            defer
+            data-domain="nirnejak.com"
+            src="https://plausible.io/js/script.js"
+          />
+        </head>
+        <body
+          className={classNames(
+            "bg-zinc-900 overflow-x-hidden font-sans",
+            sansFont.variable
+          )}
+        >
+          <Navbar />
+          {children}
+          <Footer />
 
-        <Bulb />
-        <Background />
-        <CommandBar />
+          <Bulb />
+          <Background />
+          <CommandBar />
 
-        <SpeedInsights />
-      </body>
-    </html>
+          <SpeedInsights />
+        </body>
+      </html>
+    </ViewTransitions>
   )
 }
 

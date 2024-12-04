@@ -1,6 +1,8 @@
 "use client"
 import * as React from "react"
 
+import { useTransitionRouter } from "next-view-transitions"
+
 import {
   ArrowDown,
   ArrowForward,
@@ -9,7 +11,6 @@ import {
   LinkOut,
 } from "akar-icons"
 import { Command } from "cmdk"
-import { useRouter } from "next/navigation"
 
 import { navLinks, socialLinks } from "utils/navigation"
 
@@ -17,7 +18,7 @@ const commandItemClass =
   "command-item px-3.5 py-3 cursor-pointer hover-bg hover-bg-dark flex items-center gap-2.5 outline-none"
 
 const CommandBar: React.FC = () => {
-  const router = useRouter()
+  const router = useTransitionRouter()
 
   const listRef = React.useRef(null)
   const inputRef = React.useRef<HTMLInputElement | null>(null)
