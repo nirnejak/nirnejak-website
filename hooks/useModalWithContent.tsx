@@ -1,25 +1,27 @@
 import * as React from "react"
 
+import { type StaticImageData } from "next/image"
+
 interface HookReturn {
   isOpen: boolean
-  content: string
-  openModal: (imageUrl: string) => void
+  content: StaticImageData | null
+  openModal: (image: StaticImageData) => void
   closeModal: () => void
 }
 
 const useModalWithContent = (): HookReturn => {
   const [isOpen, setIsOpen] = React.useState(false)
-  const [content, setContent] = React.useState("")
+  const [content, setContent] = React.useState<StaticImageData | null>(null)
 
-  const openModal = (imageUrl: string): void => {
-    setContent(imageUrl)
+  const openModal = (image: StaticImageData): void => {
+    setContent(image)
     setIsOpen(true)
     document.body.style.overflowY = "hidden"
   }
 
   const closeModal = React.useCallback(() => {
     setIsOpen(false)
-    setContent("")
+    setContent(null)
     document.body.style.overflowY = "unset"
   }, [])
 

@@ -33,10 +33,10 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
             role="button"
             tabIndex={0}
             onClick={() => {
-              openModal(photo.src)
+              openModal(photo)
             }}
             onKeyUp={(e) => {
-              e.key === "Enter" && openModal(photo.src)
+              e.key === "Enter" && openModal(photo)
             }}
             initial={{ opacity: 0, scale: 0.02, rotate: 15 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -63,7 +63,7 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
           </motion.div>
         ))}
       </div>
-      {isOpen && (
+      {isOpen && content !== null && (
         <div className="fixed left-0 top-0 z-30 grid h-screen w-full place-items-center bg-zinc-900/30 backdrop-blur-lg">
           <button
             className="fixed right-5 top-5 rounded-full bg-zinc-700 p-1.5 text-zinc-300 hover:bg-zinc-500"
@@ -77,14 +77,14 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
             initial={{ opacity: 0, scale: 0.8, filter: "blur(20px)" }}
             animate={{ opacity: 1, scale: 1, filter: "none" }}
             exit={{ opacity: 0 }}
-            className="flex p-5"
+            className="flex p-5 md:h-[calc(100vh-50px)]"
             ref={ref}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={content}
-              alt={content}
-              className="h-[calc(100vh-50px)] rounded-2xl"
+              alt={content?.src}
+              placeholder="blur"
+              className="w-min rounded-2xl"
             />
           </motion.div>
         </div>
