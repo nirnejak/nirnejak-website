@@ -54,6 +54,7 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
               src={imageUrl}
               alt={imageUrl}
               className="rounded-2xl"
+              placeholder="blur"
               width="360"
               height="640"
               priority={index < 11}
