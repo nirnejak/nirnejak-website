@@ -21,7 +21,7 @@ const PhotosPage: React.FC = () => {
         </h1>
       </section>
       <section className="mb-16 mt-10 flex min-h-screen items-start px-3 md:mt-16">
-        <PhotoGallery images={photos} />
+        <PhotoGallery photos={photos} />
       </section>
     </main>
   )

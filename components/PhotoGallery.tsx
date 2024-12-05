@@ -1,18 +1,19 @@
 "use client"
+
 import * as React from "react"
 
 import { XSmall } from "akar-icons"
 import { motion } from "framer-motion"
-import Image from "next/image"
+import Image, { type StaticImageData } from "next/image"
 
 import useClickOutside from "hooks/useClickOutside"
 import useModalWithContent from "hooks/useModalWithContent"
 
 interface Props {
-  images: string[]
+  photos: StaticImageData[]
 }
 
-const PhotoGallery: React.FC<Props> = ({ images }) => {
+const PhotoGallery: React.FC<Props> = ({ photos }) => {
   const { isOpen, content, openModal, closeModal } = useModalWithContent()
 
   const ref = useClickOutside(closeModal)
@@ -26,16 +27,16 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
   return (
     <>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-        {images.map((imageUrl, index) => (
+        {photos.map((photo, index) => (
           <motion.div
             key={index}
             role="button"
             tabIndex={0}
             onClick={() => {
-              openModal(imageUrl)
+              openModal(photo.src)
             }}
             onKeyUp={(e) => {
-              e.key === "Enter" && openModal(imageUrl)
+              e.key === "Enter" && openModal(photo.src)
             }}
             initial={{ opacity: 0, scale: 0.02, rotate: 15 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -51,8 +52,8 @@ const PhotoGallery: React.FC<Props> = ({ images }) => {
             className="rounded-3xl bg-white p-2 hover:shadow-2xl md:p-3"
           >
             <Image
-              src={imageUrl}
-              alt={imageUrl}
+              src={photo}
+              alt={photo.src}
               className="rounded-2xl"
               placeholder="blur"
               width="360"
