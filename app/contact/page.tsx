@@ -42,7 +42,7 @@ const ContactPage: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-3 flex flex-col">
+        <div className="col-span-3">
           <ContactForm />
         </div>
       </section>
