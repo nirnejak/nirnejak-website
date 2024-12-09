@@ -41,7 +41,7 @@ const UsesImages: React.FC = () => {
           className={index > 3 ? "-mt-4 md:mt-0" : ""}
           initial={{ opacity: 0, scale: 0.02 }}
           animate={{ opacity: 1, scale: 1, rotate: rotation[index % 3] }}
-          whileHover={{ scale: 1.3, rotate: 0, zIndex: 5 }}
+          whileHover={{ scale: 1.1, rotate: 0, zIndex: 5 }}
           transition={{
             type: "spring",
             stiffness: isLoaded ? 530 : 100,
