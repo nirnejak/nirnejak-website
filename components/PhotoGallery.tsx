@@ -49,12 +49,11 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
 
               delay: isLoaded ? 0 : 0.05 * index,
             }}
-            className="rounded-3xl bg-white p-2 hover:shadow-2xl md:p-3"
+            className="relative overflow-hidden rounded-3xl after:absolute after:inset-0 after:rounded-3xl after:border-8 after:border-white/30 hover:shadow-2xl"
           >
             <Image
               src={photo}
               alt={photo.src}
-              className="rounded-2xl"
               placeholder="blur"
               width="360"
               height="640"
