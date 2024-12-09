@@ -17,7 +17,7 @@
     "akar-icons": "^1.9.31",
     "cmdk": "^1.0.4",
     "dotenv": "^16.4.7",
-    "framer-motion": "^11.13.1",
+    "framer-motion": "^11.13.3",
     "next": "^14.2.20",
     "next-pwa": "^5.6.0",
     "next-view-transitions": "^0.3.4",
@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.1",
-    "@types/react": "^18.3.13",
+    "@types/react": "^18.3.14",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "autoprefixer": "^10.4.20",
