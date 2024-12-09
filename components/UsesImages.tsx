@@ -52,7 +52,11 @@ const UsesImages: React.FC = () => {
             delay: isLoaded ? 0 : 0.05 * index,
           }}
         >
-          <div className="w-[calc(100%+10px)] rounded-3xl bg-white p-2 shadow-xl md:w-[calc(100%+20px)] md:p-3">
+          <div
+            className="relative w-[calc(100%+10px)] overflow-hidden rounded-3xl shadow-xl after:absolute after:inset-0 after:rounded-3xl
+            after:border-[6px] after:border-white/30 hover:shadow-2xl md:w-[calc(100%+20px)]
+            md:after:border-8"
+          >
             <Image
               width={400}
               src={image}
