@@ -17,7 +17,7 @@
     "akar-icons": "^1.9.31",
     "cmdk": "^1.0.4",
     "dotenv": "^16.4.7",
-    "framer-motion": "^11.14.2",
+    "framer-motion": "^11.14.4",
     "next": "^15.1.0",
     "next-pwa": "^5.6.0",
     "next-view-transitions": "^0.3.4",
