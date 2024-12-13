@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -26,6 +26,8 @@
     "**/*.ts",
     "**/*.tsx",
     "tailwind.config.ts",
+    "prettier.config.mjs",
+    "postcss.config.mjs",
     ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
