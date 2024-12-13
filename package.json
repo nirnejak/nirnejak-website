@@ -12,12 +12,12 @@
     "type-check": "tsc --pretty --noEmit"
   },
   "dependencies": {
-    "@radix-ui/react-tooltip": "^1.1.4",
+    "@radix-ui/react-tooltip": "^1.1.5",
     "@vercel/speed-insights": "^1.1.0",
     "akar-icons": "^1.9.31",
     "cmdk": "^1.0.4",
     "dotenv": "^16.4.7",
-    "framer-motion": "^11.13.5",
+    "framer-motion": "^11.14.2",
     "next": "^14.2.20",
     "next-pwa": "^5.6.0",
     "next-view-transitions": "^0.3.4",
