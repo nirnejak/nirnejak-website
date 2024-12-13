@@ -8,7 +8,7 @@ const renderSocialLink = (
   text: string,
   link: string,
   icon: React.ReactNode
-): JSX.Element => {
+): React.ReactNode => {
   return (
     <Tooltip.Root key={text}>
       <Tooltip.Trigger asChild>
@@ -52,8 +52,9 @@ const SocialLinks: React.FC = () => {
     <Tooltip.Provider delayDuration={200}>
       <div className="flex justify-between gap-1">
         <div>
-          {socialLinks.map(({ title, url, icon }) =>
-            renderSocialLink(title, url, icon)
+          {socialLinks.map(
+            async ({ title, url, icon }) =>
+              await renderSocialLink(title, url, icon)
           )}
         </div>
         <div>
