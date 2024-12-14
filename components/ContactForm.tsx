@@ -44,8 +44,8 @@ const ContactForm: React.FC = () => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(state),
-    })
-      .then(async (response) => await response.json())
+    }) // eslint-disable-next-line @typescript-eslint/promise-function-async
+      .then((response) => response.json())
       .then((data: ResponseDataType) => {
         setFormState("Sent!")
         if (data.ok) {

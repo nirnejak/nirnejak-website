@@ -3,12 +3,13 @@ import * as React from "react"
 
 import * as Tooltip from "@radix-ui/react-tooltip"
 import { ArrowRight, XFill, LinkedinFill, InstagramFill } from "akar-icons"
+import { type JSX } from "react/jsx-runtime"
 
 const renderSocialLink = (
   text: string,
   link: string,
   icon: React.ReactNode
-): React.ReactNode => {
+): JSX.Element => {
   return (
     <Tooltip.Root key={text}>
       <Tooltip.Trigger asChild>
@@ -52,9 +53,8 @@ const SocialLinks: React.FC = () => {
     <Tooltip.Provider delayDuration={200}>
       <div className="flex justify-between gap-1">
         <div>
-          {socialLinks.map(
-            async ({ title, url, icon }) =>
-              await renderSocialLink(title, url, icon)
+          {socialLinks.map(({ title, url, icon }) =>
+            renderSocialLink(title, url, icon)
           )}
         </div>
         <div>
