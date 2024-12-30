@@ -4,14 +4,14 @@ import * as React from "react"
 import * as motion from "framer-motion/client"
 import Image from "next/image"
 
-import MysticallyAwkward from "assets/uses/IMG_0849.jpeg"
-import GoodVibesGreatCoffee from "assets/uses/IMG_2056.jpeg"
-import ChurchStreet from "assets/uses/IMG_2249.jpeg"
-import TopDownBnW from "assets/uses/IMG_2448.jpeg"
-import Bunny from "assets/uses/IMG_4289.jpeg"
-import BlueTokai from "assets/uses/IMG_4772.jpeg"
-import GirlDrawing from "assets/uses/IMG_4890.jpeg"
-import TacoXbox from "assets/uses/IMG_8559.jpeg"
+import MysticallyAwkward from "@/assets/uses/IMG_0849.jpeg"
+import GoodVibesGreatCoffee from "@/assets/uses/IMG_2056.jpeg"
+import ChurchStreet from "@/assets/uses/IMG_2249.jpeg"
+import TopDownBnW from "@/assets/uses/IMG_2448.jpeg"
+import Bunny from "@/assets/uses/IMG_4289.jpeg"
+import BlueTokai from "@/assets/uses/IMG_4772.jpeg"
+import GirlDrawing from "@/assets/uses/IMG_4890.jpeg"
+import TacoXbox from "@/assets/uses/IMG_8559.jpeg"
 
 const rotation = [-3, 3, -6, 6]
 

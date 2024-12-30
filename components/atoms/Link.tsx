@@ -3,14 +3,14 @@ import * as React from "react"
 
 import { Link } from "next-view-transitions"
 
-import classNames from "utils/classNames"
+import classNames from "@/utils/classNames"
 
 interface Props {
   href: string
   children: React.ReactNode
   className?: string
   activeClassName?: string
-  onClick?: (e: any) => void
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void
   target?: "_blank" | "_self" | "_parent" | "_top" // add 'string' as option here if using for frameset
 }
 

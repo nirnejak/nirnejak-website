@@ -1,11 +1,11 @@
 import * as React from "react"
 
-import { type Metadata } from "next"
+import type { Metadata } from "next"
 
 import Image from "next/image"
 
-import AppLink from "components/atoms/Link"
-import generateMetadata from "utils/seo"
+import AppLink from "@/components/atoms/Link"
+import generateMetadata from "@/utils/seo"
 
 export const metadata: Metadata = generateMetadata({
   path: "/",

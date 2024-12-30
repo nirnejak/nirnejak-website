@@ -1,11 +1,11 @@
 import * as React from "react"
 
-import { type Metadata } from "next"
+import type { Metadata } from "next"
 
 import { CircleFill } from "akar-icons"
 
-import SocialIcons from "components/SocialIcons"
-import generateMetadata from "utils/seo"
+import SocialIcons from "@/components/SocialIcons"
+import generateMetadata from "@/utils/seo"
 
 export const metadata: Metadata = generateMetadata({
   path: "/",

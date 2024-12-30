@@ -6,8 +6,8 @@ import { XSmall } from "akar-icons"
 import { motion } from "framer-motion"
 import Image, { type StaticImageData } from "next/image"
 
-import useClickOutside from "hooks/useClickOutside"
-import useModalWithContent from "hooks/useModalWithContent"
+import useClickOutside from "@/hooks/useClickOutside"
+import useModalWithContent from "@/hooks/useModalWithContent"
 
 interface Props {
   photos: StaticImageData[]
@@ -81,7 +81,7 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
           >
             <Image
               src={content}
-              alt={content?.src}
+              alt={content.src}
               placeholder="blur"
               className="w-min rounded-2xl"
             />

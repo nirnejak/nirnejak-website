@@ -5,8 +5,8 @@ import { LinkOut, ThreeLineHorizontal } from "akar-icons"
 
 import AppLink from "./atoms/Link"
 import NavigationTabs from "./NavigationTabs"
-import classNames from "utils/classNames"
-import { navLinks } from "utils/navigation"
+import classNames from "@/utils/classNames"
+import { navLinks } from "@/utils/navigation"
 
 interface Props {
   theme?: string
@@ -80,7 +80,9 @@ const Navbar: React.FC<Props> = () => {
               className={navLinkClass}
               href={SCHEDULE_CALL_LINK}
               target="_blank"
-              onClick={() => window.plausible("Schedule a call Clicked")}
+              onClick={() => {
+                window.plausible("Schedule a call Clicked")
+              }}
             >
               Schedule call
             </AppLink>

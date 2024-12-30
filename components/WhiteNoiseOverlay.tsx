@@ -9,23 +9,22 @@ const WhiteNoiseOverlay: React.FC<Props> = ({ opacity = 0.05 }) => {
   const canvasRef = React.useRef<HTMLCanvasElement | null>(null)
 
   React.useEffect(() => {
-    const canvas = canvasRef.current
+    const { current: canvas } = canvasRef
     if (canvas === null) return
 
-    const ctx = canvas?.getContext("2d")
+    const ctx = canvas.getContext("2d")
     if (ctx === null) return
-    let animationFrameId: number
+    let animationFrameId = 0
 
     const resizeCanvas = (): void => {
-      if (canvas !== null) {
-        canvas.width = window.innerWidth
-        canvas.height = window.innerHeight
-      }
+      const { innerWidth, innerHeight } = window
+      canvas.width = innerWidth
+      canvas.height = innerHeight
     }
 
     const generateNoise = (): void => {
       const imageData = ctx.createImageData(canvas.width, canvas.height)
-      const data = imageData.data
+      const { data } = imageData
 
       for (let i = 0; i < data.length; i += 4) {
         const value = Math.random() * 255

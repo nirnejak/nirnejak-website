@@ -3,7 +3,7 @@ import * as React from "react"
 
 import useSound from "use-sound"
 
-let timer: any = null
+let timer: NodeJS.Timeout | null = null
 
 const Bulb: React.FC = () => {
   const [isSwitchOn, setIsSwitchOn] = React.useState(false)

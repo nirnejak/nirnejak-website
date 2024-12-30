@@ -2,7 +2,7 @@ import * as React from "react"
 
 import { Link } from "next-view-transitions"
 
-import { navLinks } from "utils/navigation"
+import { navLinks } from "@/utils/navigation"
 
 const tabsData = navLinks
 
@@ -32,12 +32,14 @@ const NavigationTabs: React.FC = () => {
 
   const repositionHighlight = (
     e:
-      | React.MouseEvent<HTMLAnchorElement, MouseEvent>
+      | React.MouseEvent<HTMLAnchorElement>
       | React.FocusEvent<HTMLAnchorElement>,
     tab: TAB_TYPE
   ): void => {
-    setTabBoundingBox((e.target as HTMLAnchorElement).getBoundingClientRect())
-    if (wrapperRef?.current != null)
+    setTabBoundingBox(
+      (e.currentTarget as HTMLAnchorElement).getBoundingClientRect()
+    )
+    if (wrapperRef.current != null)
       setWrapperBoundingBox(wrapperRef.current.getBoundingClientRect())
     setIsHoveredFromNull(highlightedTab == null)
     setHighlightedTab(tab)
@@ -78,9 +80,7 @@ const NavigationTabs: React.FC = () => {
           href={tab.link}
           key={tab.value}
           className="relative inline-block px-4 py-2 text-xs font-medium text-zinc-50 outline-none active:scale-95"
-          onMouseOver={(
-            ev: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-          ) => {
+          onMouseOver={(ev: React.MouseEvent<HTMLAnchorElement>) => {
             repositionHighlight(ev, tab)
           }}
           onFocus={(ev: React.FocusEvent<HTMLAnchorElement>) => {

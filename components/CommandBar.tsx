@@ -12,7 +12,7 @@ import {
 } from "akar-icons"
 import { Command } from "cmdk"
 
-import { navLinks, socialLinks } from "utils/navigation"
+import { navLinks, socialLinks } from "@/utils/navigation"
 
 const commandItemClass =
   "command-item px-3.5 py-3 cursor-pointer hover-bg hover-bg-dark flex items-center gap-2.5 outline-none"
@@ -27,13 +27,10 @@ const CommandBar: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false)
 
   React.useEffect(() => {
-    inputRef?.current?.focus()
+    inputRef.current?.focus()
 
-    const eventHandler = (e: any | React.KeyboardEvent): void => {
-      if (
-        (e as KeyboardEvent).key === "k" &&
-        ((e as KeyboardEvent).metaKey || (e as KeyboardEvent).ctrlKey)
-      ) {
+    const eventHandler = (e: KeyboardEvent): void => {
+      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
         setIsOpen(true)
       }
     }
@@ -48,7 +45,7 @@ const CommandBar: React.FC = () => {
     if (href.includes("http") || href.includes("mailto")) {
       window.open(href, "_blank")
     } else {
-      router.push(href) // eslint-disable-line @typescript-eslint/no-floating-promises
+      router.push(href)
     }
     setIsOpen(false)
   }

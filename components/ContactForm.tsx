@@ -9,7 +9,7 @@ interface ResponseDataType {
 
 declare global {
   interface Window {
-    plausible: any
+    plausible: (event: string) => void
   }
 }
 
@@ -54,6 +54,7 @@ const ContactForm: React.FC = () => {
             setState(INITIAL_STATE)
           }, 1500)
         }
+        return data.ok
       })
       .catch(() => {
         setFormState("Send")

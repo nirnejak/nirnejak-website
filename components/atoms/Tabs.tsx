@@ -1,8 +1,8 @@
 "use client"
 import * as React from "react"
 
-import useLinkHighlight from "hooks/useLinkHighlight"
-import classNames from "utils/classNames"
+import useLinkHighlight from "@/hooks/useLinkHighlight"
+import classNames from "@/utils/classNames"
 
 interface Props {
   tabsOptions: string[]
