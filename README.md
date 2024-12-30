@@ -41,7 +41,7 @@ bun install
 **Setup Pre-commit**
 
 ```bash
-npm run prepare
+bun run prepare
 ```
 
 **Start Development Server**
