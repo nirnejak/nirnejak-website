@@ -7,6 +7,10 @@ export const allSites = {
     { title: "Draxlr", link: "https://www.draxlr.com/" },
     // { title: "Sup Bot", link: "https://www.supbot.com/" },
     { title: "Inkoop", link: "https://www.inkoop.io/" },
+    {
+      title: "Dev Tools Academy",
+      link: "https://www.devtoolsacademy.com/",
+    },
   ],
   cms: [
     { title: "Wills Property", link: "https://www.willsproperty.com.au/" },
