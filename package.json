@@ -25,7 +25,6 @@
     "next-view-transitions": "^0.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-medium-image-zoom": "^5.2.13",
     "sharp": "^0.33.5",
     "use-sound": "^4.0.3"
   },
