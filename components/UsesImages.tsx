@@ -1,7 +1,7 @@
 "use client"
 import * as React from "react"
 
-import * as motion from "framer-motion/client"
+import { motion } from "motion/react"
 import Image from "next/image"
 
 import MysticallyAwkward from "@/assets/uses/IMG_0849.jpeg"

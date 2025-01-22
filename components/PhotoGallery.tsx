@@ -3,7 +3,7 @@
 import * as React from "react"
 
 import { XSmall } from "akar-icons"
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 import Image, { type StaticImageData } from "next/image"
 
 import useClickOutside from "@/hooks/useClickOutside"
