@@ -18,14 +18,6 @@ const HomePage: React.FC = () => {
     <main className="min-h-[73.5vh]">
       <section className="container mt-32 md:mt-48">
         <div className="mb-8 flex items-center justify-between">
-          {/* <span className="relative flex items-center gap-1.5 rounded-full bg-pink-800/20 py-2.5 pl-7 pr-4 font-mono text-xs uppercase leading-3 tracking-tighter text-pink-600">
-            <CircleFill
-              size={5}
-              className="absolute left-3.5 animate-ping text-pink-600"
-            />
-            <CircleFill size={5} className="absolute left-3.5 text-pink-600" />
-            Open to projects
-          </span> */}
           <span className="relative flex items-center gap-1.5 rounded-full bg-zinc-800 py-2 pl-7 pr-4 text-xs font-medium text-zinc-400">
             <CircleFill
               size={5}
