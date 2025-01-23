@@ -14,7 +14,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@radix-ui/react-tooltip": "^1.1.6",
+    "@radix-ui/react-tooltip": "^1.1.7",
     "@vercel/speed-insights": "^1.1.0",
     "akar-icons": "^1.9.31",
     "cmdk": "^1.0.4",
@@ -30,8 +30,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.18.0",
-    "@types/node": "^22.10.7",
-    "@types/react": "^19.0.7",
+    "@types/node": "^22.10.9",
+    "@types/react": "^19.0.8",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.18.0",
     "eslint-config-love": "^117.0.0",
@@ -44,7 +44,7 @@
     "eslint-plugin-tailwindcss": "^3.18.0",
     "globals": "^15.14.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.4.1",
+    "lint-staged": "^15.4.2",
     "postcss": "^8.5.1",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.10",
