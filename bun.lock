@@ -24,7 +24,7 @@
         "@types/react": "^19.0.8",
         "autoprefixer": "^10.4.20",
         "eslint": "^9.19.0",
-        "eslint-config-love": "^117.0.0",
+        "eslint-config-love": "^118.0.0",
         "eslint-config-next": "^15.1.6",
         "eslint-config-prettier": "^10.0.1",
         "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -712,7 +712,7 @@
 
     "eslint-compat-utils": ["eslint-compat-utils@0.5.1", "", { "dependencies": { "semver": "^7.5.4" }, "peerDependencies": { "eslint": ">=6.0.0" } }, "sha512-3z3vFexKIEnjHE3zCMRo6fn/e44U7T1khUjg+Hp0ZQMCigh28rALD0nPFBcGZuiLC5rLZa2ubQHDRln09JfU2Q=="],
 
-    "eslint-config-love": ["eslint-config-love@117.0.0", "", { "dependencies": { "@typescript-eslint/utils": "^8.20.0", "eslint-plugin-eslint-comments": "^3.2.0", "eslint-plugin-import": "^2.31.0", "eslint-plugin-n": "^17.0.0", "eslint-plugin-promise": "^7.0.0", "typescript-eslint": "^8.20.0" }, "peerDependencies": { "eslint": "^9.12.0", "typescript": "*" } }, "sha512-IHe2PSOntF5VmJ0nS4f7yRYqkRyz+vNjxMmAAzthWHATlgdMk7hLouEqJ67r/GHhrkvgtxNKuudhONnWqL/NiQ=="],
+    "eslint-config-love": ["eslint-config-love@118.0.0", "", { "dependencies": { "@typescript-eslint/utils": "^8.20.0", "eslint-plugin-eslint-comments": "^3.2.0", "eslint-plugin-import": "^2.31.0", "eslint-plugin-n": "^17.0.0", "eslint-plugin-promise": "^7.0.0", "typescript-eslint": "^8.20.0" }, "peerDependencies": { "eslint": "^9.12.0", "typescript": "*" } }, "sha512-f5lN+bRHCCY7PvpbszNJnm8VLPbrPICbD4LWg+GVX1L8UOBgN5bCZXnqlaU3IPinZ58wUKwVfjv8qbaJPyDuzA=="],
 
     "eslint-config-next": ["eslint-config-next@15.1.6", "", { "dependencies": { "@next/eslint-plugin-next": "15.1.6", "@rushstack/eslint-patch": "^1.10.3", "@typescript-eslint/eslint-plugin": "^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0", "@typescript-eslint/parser": "^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0", "eslint-import-resolver-node": "^0.3.6", "eslint-import-resolver-typescript": "^3.5.2", "eslint-plugin-import": "^2.31.0", "eslint-plugin-jsx-a11y": "^6.10.0", "eslint-plugin-react": "^7.37.0", "eslint-plugin-react-hooks": "^5.0.0" }, "peerDependencies": { "eslint": "^7.23.0 || ^8.0.0 || ^9.0.0", "typescript": ">=3.3.1" }, "optionalPeers": ["typescript"] }, "sha512-Wd1uy6y7nBbXUSg9QAuQ+xYEKli5CgUhLjz1QHW11jLDis5vK5XB3PemL6jEmy7HrdhaRFDz+GTZ/3FoH+EUjg=="],
 
