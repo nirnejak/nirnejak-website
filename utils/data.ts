@@ -5,7 +5,10 @@ export const allSites = {
   ],
   websites: [
     { title: "Draxlr", link: "https://www.draxlr.com/" },
-    // { title: "Sup Bot", link: "https://www.supbot.com/" },
+    {
+      title: "Sup Bot",
+      link: "https://dribbble.com/shots/21362314-Sup-bot-Landing-Site",
+    },
     { title: "Inkoop", link: "https://www.inkoop.io/" },
     {
       title: "Dev Tools Academy",
