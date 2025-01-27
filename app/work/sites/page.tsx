@@ -31,7 +31,7 @@ const SitesPage: React.FC = () => {
                 key={index}
                 href={project.link}
                 target="_blank"
-                className="hover-bg -mx-3 rounded-md p-3 outline-none md:mx-0"
+                className="hover-bg -mx-3 rounded-md p-3 outline-hidden md:mx-0"
               >
                 <p className="mb-1.5 font-semibold">{project.title}</p>
                 <p className="text-xs font-medium text-zinc-500">
@@ -51,7 +51,7 @@ const SitesPage: React.FC = () => {
                 key={index}
                 href={project.link}
                 target="_blank"
-                className="hover-bg -mx-3 rounded-md p-3 outline-none md:mx-0"
+                className="hover-bg -mx-3 rounded-md p-3 outline-hidden md:mx-0"
               >
                 <p className="mb-1.5 font-semibold">{project.title}</p>
                 <p className="text-xs font-medium text-zinc-500">
@@ -71,7 +71,7 @@ const SitesPage: React.FC = () => {
                 key={index}
                 href={project.link}
                 target="_blank"
-                className="hover-bg -mx-3 rounded-md p-3 outline-none md:mx-0"
+                className="hover-bg -mx-3 rounded-md p-3 outline-hidden md:mx-0"
               >
                 <p className="mb-1.5 font-semibold">{project.title}</p>
                 <p className="text-xs font-medium text-zinc-500">

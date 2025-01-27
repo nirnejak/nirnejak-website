@@ -28,7 +28,7 @@ const BlogsPage: React.FC = () => {
                 key={index}
                 href={blog.url}
                 target="_blank"
-                className="hover-bg -mx-3 p-3 outline-none md:mx-0"
+                className="hover-bg -mx-3 p-3 outline-hidden md:mx-0"
               >
                 <p className="font-semibold text-zinc-300">{blog.title}</p>
                 <p className="mt-1.5 text-xs font-medium text-zinc-500">

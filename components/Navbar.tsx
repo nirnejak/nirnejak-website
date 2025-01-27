@@ -15,7 +15,7 @@ interface Props {
 const SCHEDULE_CALL_LINK = "https://cal.com/nirnejak/15min"
 
 const navLinkClass =
-  "font-medium text-xs rounded-md px-4 py-2 hover-bg outline-none"
+  "font-medium text-xs rounded-md px-4 py-2 hover-bg outline-hidden"
 
 const Navbar: React.FC<Props> = () => {
   const [isOpen, setIsOpen] = React.useState(false)

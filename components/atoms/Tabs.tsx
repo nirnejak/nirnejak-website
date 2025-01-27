@@ -31,7 +31,7 @@ const Tabs: React.FC<Props> = ({
       {tabsOptions.map((tab, index) => (
         <button
           key={index}
-          className="relative inline-block rounded-lg px-3.5 py-1.5 outline-none"
+          className="relative inline-block rounded-lg px-3.5 py-1.5 outline-hidden"
           onClick={() => {
             setActiveTab(index)
           }}

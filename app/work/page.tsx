@@ -29,7 +29,7 @@ const WorkPage: React.FC = () => {
                 key={index}
                 href={project.link}
                 target="_blank"
-                className="hover-bg -mx-3 rounded-md p-3 outline-none md:mx-0"
+                className="hover-bg -mx-3 rounded-md p-3 outline-hidden md:mx-0"
               >
                 <p className="mb-1.5 font-semibold text-zinc-300">
                   {project.title}
@@ -51,7 +51,7 @@ const WorkPage: React.FC = () => {
                 key={index}
                 href={project.link}
                 target="_blank"
-                className="hover-bg -mx-3 rounded-md p-3 outline-none md:mx-0"
+                className="hover-bg -mx-3 rounded-md p-3 outline-hidden md:mx-0"
               >
                 <p className="mb-1.5 font-semibold text-zinc-300">
                   {project.title}

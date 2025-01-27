@@ -15,7 +15,7 @@ import { Command } from "cmdk"
 import { navLinks, socialLinks } from "@/utils/navigation"
 
 const commandItemClass =
-  "command-item px-3.5 py-3 cursor-pointer hover-bg hover-bg-dark flex items-center gap-2.5 outline-none"
+  "command-item px-3.5 py-3 cursor-pointer hover-bg hover-bg-dark flex items-center gap-2.5 outline-hidden"
 
 const CommandBar: React.FC = () => {
   const router = useTransitionRouter()
@@ -70,7 +70,7 @@ const CommandBar: React.FC = () => {
         className="fixed left-1/2 top-1/2 z-30 w-11/12 max-w-[680px] -translate-x-1/2 -translate-y-1/2 animate-rise select-none rounded-lg bg-zinc-800 p-3 text-sm md:w-full"
       >
         <Command.Input
-          className="w-full rounded-lg bg-zinc-900 px-4 py-3 text-sm text-zinc-300 outline-none placeholder:text-zinc-700"
+          className="w-full rounded-lg bg-zinc-900 px-4 py-3 text-sm text-zinc-300 outline-hidden placeholder:text-zinc-700"
           placeholder="Search Link"
           ref={inputRef}
         />
