@@ -42,7 +42,7 @@ export const viewport: Viewport = {
 const HomeLayout: React.FC<Props> = ({ children }) => {
   return (
     <ViewTransitions>
-      <html lang="en">
+      <html lang="en" className={sansFont.variable}>
         <head>
           <script
             defer
