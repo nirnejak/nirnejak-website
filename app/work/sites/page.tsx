@@ -3,7 +3,6 @@ import * as React from "react"
 import type { Metadata } from "next"
 
 import AppLink from "@/components/atoms/Link"
-import { allSites } from "@/utils/data"
 import getMetadata from "@/utils/seo"
 
 export const metadata: Metadata = getMetadata({
@@ -87,3 +86,45 @@ const SitesPage: React.FC = () => {
 }
 
 export default SitesPage
+
+export const allSites = {
+  ecommerce: [
+    { title: "Jessica Coppet", link: "https://jessicacoppetstudio.com/" },
+    { title: "ROCC Naturals", link: "https://roccnaturals.com.au/" },
+  ],
+  websites: [
+    { title: "Draxlr", link: "https://www.draxlr.com/" },
+    {
+      title: "Sup Bot",
+      link: "https://dribbble.com/shots/21362314-Sup-bot-Landing-Site",
+    },
+    { title: "Inkoop", link: "https://www.inkoop.io/" },
+    {
+      title: "Dev Tools Academy",
+      link: "https://www.devtoolsacademy.com/",
+    },
+  ],
+  cms: [
+    { title: "Wills Property", link: "https://www.willsproperty.com.au/" },
+    { title: "Warlimont & Nutt", link: "https://www.wnre.com.au/" },
+    // { title: "Sciberras Group", link: "https://sciberrasgroupre.com.au/" },
+    { title: "Matthews Agency", link: "https://matthews.agency/" },
+    { title: "Wingspan Capital", link: "https://wingspancapital.com.au/" },
+    { title: "Harris Wood", link: "https://www.harriswood.com.au/" },
+    { title: "Movable", link: "https://www.movable.com.au/" },
+    { title: "LBD Studios", link: "https://www.lbdstudios.com.au/" },
+    {
+      title: "Whitefox Real Estate",
+      link: "https://www.whitefoxrealestate.com.au/",
+    },
+    // { title: "Kooyong Travel", link: "https://kooyongtravel.com.au/" },
+    { title: "Maven", link: "https://maven.com.au/" },
+    { title: "Arkhaus", link: "https://arkhaus.com.au/" },
+    { title: "iRock Finishes", link: "https://irockfinishes.com.au/" },
+    { title: "Flip Films", link: "https://flipfilms.com.au/" },
+    {
+      title: "Stuart Family Lawyers",
+      link: "https://www.stuartfamilylawyers.com.au/",
+    },
+  ],
+}
