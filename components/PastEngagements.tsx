@@ -100,8 +100,28 @@ const engagements = [
     year: 2020,
   },
   {
+    name: "Ballers Bridge",
+    work: "Frontend Development",
+    year: 2019,
+  },
+  {
+    name: "Simula",
+    work: "Full Stack Development",
+    year: 2019,
+  },
+  {
     name: "AMS Network",
     work: "Frontend Development",
+    year: 2019,
+  },
+  {
+    name: "Brunch Finder",
+    work: "Full Stack Development",
+    year: 2019,
+  },
+  {
+    name: "Destinations of New York State",
+    work: "Full Stack Development",
     year: 2019,
   },
 ]
