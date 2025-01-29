@@ -4,9 +4,9 @@ import type { Metadata } from "next"
 
 import PhotoGallery from "@/components/PhotoGallery"
 import { photos } from "@/utils/photos"
-import generateMetadata from "@/utils/seo"
+import getMetadata from "@/utils/seo"
 
-export const metadata: Metadata = generateMetadata({
+export const metadata: Metadata = getMetadata({
   path: "/photos/",
   title: "Photos | Jitendra Nirnejak",
   description: "A gallery of Photos captured by Jitendra Nirnejak",

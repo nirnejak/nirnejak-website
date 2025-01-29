@@ -31,7 +31,7 @@ const config = {
   ],
 }
 
-const generateMetadata = ({
+const getMetadata = ({
   path,
   title,
   description,
@@ -97,4 +97,4 @@ const generateMetadata = ({
   return metadata
 }
 
-export default generateMetadata
+export default getMetadata

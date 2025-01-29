@@ -3,9 +3,9 @@ import * as React from "react"
 import type { Metadata } from "next"
 
 import UsesImages from "@/components/UsesImages"
-import generateMetadata from "@/utils/seo"
+import getMetadata from "@/utils/seo"
 
-export const metadata: Metadata = generateMetadata({
+export const metadata: Metadata = getMetadata({
   path: "/uses/",
   title: "Uses | Jitendra Nirnejak",
   description: "Gears, tools and technologies used by Jitendra Nirnejak",

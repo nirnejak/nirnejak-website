@@ -5,9 +5,9 @@ import type { Metadata } from "next"
 import AppLink from "@/components/atoms/Link"
 import ContactForm from "@/components/ContactForm"
 import SocialLinks from "@/components/SocialLinks"
-import generateMetadata from "@/utils/seo"
+import getMetadata from "@/utils/seo"
 
-export const metadata: Metadata = generateMetadata({
+export const metadata: Metadata = getMetadata({
   path: "/contact/",
   title: "Contact | Jitendra Nirnejak",
   description:

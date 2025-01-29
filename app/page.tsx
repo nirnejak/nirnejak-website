@@ -5,9 +5,9 @@ import type { Metadata } from "next"
 import { CircleFill } from "akar-icons"
 
 import SocialIcons from "@/components/SocialIcons"
-import generateMetadata from "@/utils/seo"
+import getMetadata from "@/utils/seo"
 
-export const metadata: Metadata = generateMetadata({
+export const metadata: Metadata = getMetadata({
   path: "/",
   title: "Jitendra Nirnejak - Developer & Designer",
   description: "Portfolio Website of Jitendra Nirnejak, Developer and Designer",

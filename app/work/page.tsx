@@ -4,9 +4,9 @@ import type { Metadata } from "next"
 
 import AppLink from "@/components/atoms/Link"
 import { allProjects } from "@/utils/data"
-import generateMetadata from "@/utils/seo"
+import getMetadata from "@/utils/seo"
 
-export const metadata: Metadata = generateMetadata({
+export const metadata: Metadata = getMetadata({
   path: "/work/",
   title: "Work | Jitendra Nirnejak",
   description: "Projects built by Jitendra Nirnejak",

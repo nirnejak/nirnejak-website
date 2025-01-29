@@ -5,9 +5,9 @@ import type { Metadata } from "next"
 import Image from "next/image"
 
 import AppLink from "@/components/atoms/Link"
-import generateMetadata from "@/utils/seo"
+import getMetadata from "@/utils/seo"
 
-export const metadata: Metadata = generateMetadata({
+export const metadata: Metadata = getMetadata({
   path: "/",
   title: "Not Found | Jitendra Nirnejak",
   description: "Portfolio Website of Jitendra Nirnejak, Developer and Designer",
