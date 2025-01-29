@@ -44,7 +44,7 @@ const BlogsPage: React.FC = () => {
 
 export default BlogsPage
 
-export const allBlogs = [
+const allBlogs = [
   {
     author: "Jitendra Nirnejak",
     date: "8 May 2023",

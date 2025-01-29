@@ -87,7 +87,7 @@ const SitesPage: React.FC = () => {
 
 export default SitesPage
 
-export const allSites = {
+export allSites = {
   ecommerce: [
     { title: "Jessica Coppet", link: "https://jessicacoppetstudio.com/" },
     { title: "ROCC Naturals", link: "https://roccnaturals.com.au/" },
