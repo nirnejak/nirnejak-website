@@ -1,17 +1,18 @@
 import * as React from "react"
 
 import type { Viewport } from "next"
+import localFont from "next/font/local"
 import { ViewTransitions } from "next-view-transitions"
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import localFont from "next/font/local"
+
+import classNames from "@/utils/classNames"
 
 import Background from "@/components/Background"
 import Bulb from "@/components/Bulb"
 import CommandBar from "@/components/CommandBar"
 import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
-import classNames from "@/utils/classNames"
 
 import "@/styles/main.css"
 
