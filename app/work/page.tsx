@@ -5,6 +5,7 @@ import type { Metadata } from "next"
 import AppLink from "@/components/atoms/Link"
 import { allProjects } from "@/utils/data"
 import getMetadata from "@/utils/seo"
+import PastEngagements from "@/components/PastEngagements"
 
 export const metadata: Metadata = getMetadata({
   path: "/work/",
@@ -21,6 +22,9 @@ const WorkPage: React.FC = () => {
         </h1>
       </section>
       <section className="container mb-16 mt-10 text-sm md:mt-16">
+        <PastEngagements />
+      </section>
+      <section className="container mb-16 text-sm md:mt-16">
         <div className="mb-16 flex flex-col md:flex-row">
           <p className="mb-3 flex-1 text-zinc-300 md:mt-2">Projects</p>
           <div className="mx-0 flex flex-1 flex-col gap-1 md:mx-3">
