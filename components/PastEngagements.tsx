@@ -66,7 +66,7 @@ const engagements = [
   },
   {
     name: "Draxlr",
-    work: "Design & Frontend Development",
+    work: "Product Design & Development",
     year: 2024,
   },
   {
@@ -78,6 +78,16 @@ const engagements = [
     name: "SwitchedOn",
     work: "Product Design and Mobile Development",
     year: 2021,
+  },
+  {
+    name: "Atollon",
+    work: "Frontend Development",
+    year: 2020,
+  },
+  {
+    name: "Inkoop",
+    work: "Website Design and Development",
+    year: 2020,
   },
   {
     name: "Inkoop",
