@@ -1,8 +1,6 @@
 import * as React from "react"
 
-interface Props {}
-
-const Brands: React.FC<Props> = () => {
+const Brands: React.FC = () => {
   return (
     <div className="grid grid-cols-3 gap-10 md:flex md:flex-row md:items-end md:justify-between md:gap-0">
       <div
