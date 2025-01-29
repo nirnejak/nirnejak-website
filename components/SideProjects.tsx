@@ -1,4 +1,3 @@
-import { link } from "fs"
 import * as React from "react"
 
 interface Props {}
@@ -6,6 +5,9 @@ interface Props {}
 const SideProjects: React.FC<Props> = () => {
   return (
     <div className="-mx-3">
+      <p className="text-zinc-200 text-center mb-6 uppercase tracking-wider font-medium">
+        SIDE PROJECTS
+      </p>
       {projects.map((project, index) => (
         <a
           href={project.link}
