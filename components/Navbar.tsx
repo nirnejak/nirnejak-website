@@ -43,11 +43,11 @@ const Navbar: React.FC<Props> = () => {
             href={SCHEDULE_CALL_LINK}
             target="_blank"
           >
-            <span className="animate-slideLeft group-hover:animate-slideRight group-focus:animate-slideRight">
+            <span className="animate-slide-left group-hover:animate-slide-right group-focus:animate-slide-right">
               Schedule call
             </span>
             <LinkOut
-              className="hidden animate-slideLeftAndFade hover:block group-hover:block group-focus-visible:block"
+              className="hidden animate-slide-left-and-fade hover:block group-hover:block group-focus-visible:block"
               size={14}
             />
           </AppLink>
