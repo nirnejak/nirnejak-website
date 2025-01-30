@@ -34,10 +34,9 @@
 
   --animate-marquee: marquee 25s linear infinite;
   --animate-swing: swing 1s infinite ease-in-out alternate;
+  --animate-rise: rise 150ms cubic-bezier(0.4, 0, 0.2, 1);
   --animate-scale: scale 150ms cubic-bezier(0.4, 0, 0.2, 1);
   --animate-shake: shake 150ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  --animate-rise: rise 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container {
@@ -218,10 +217,10 @@
 
 @keyframes rise {
   from {
-    transform: translate(-50%, -40%) scale(0.95);
+    transform: translateY(10%) scale(0.95);
   }
   to {
-    transform: translate(-50%, -50%) scale(1);
+    transform: translateY(0) scale(1);
   }
 }
 
