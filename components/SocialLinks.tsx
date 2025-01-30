@@ -43,7 +43,7 @@ const socialLinks = [
   },
   {
     title: "Instagram",
-    url: "https://www.instagram.com/jitendra.nirnejak/",
+    url: "https://www.instagram.com/jeetnirnejak/",
     icon: <InstagramFill size={21} />,
   },
 ]
