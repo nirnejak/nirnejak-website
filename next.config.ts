@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+import type { NextConfig } from "next"
 
 import nextPwa from "next-pwa"
 
@@ -9,7 +9,7 @@ const withPWA = nextPwa({
   disable: process.env.NODE_ENV === "development",
 })
 
-const nextConfig = {
+const nextConfig: NextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
   poweredByHeader: false,
@@ -69,4 +69,4 @@ const nextConfig = {
   },
 }
 
-export default withPWA(nextConfig)
+export default withPWA(nextConfig as any)
