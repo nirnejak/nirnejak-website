@@ -11,7 +11,7 @@ import SocialIcons from "@/components/SocialIcons"
 export const metadata: Metadata = getMetadata({
   path: "/work/",
   title: "Work | Jitendra Nirnejak",
-  description: "Projects built by Jitendra Nirnejak",
+  description: "History of past work and collaborations by Jitendra Nirnejak",
 })
 
 const WorkPage: React.FC = () => {
