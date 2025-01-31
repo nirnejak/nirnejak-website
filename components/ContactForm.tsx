@@ -84,7 +84,7 @@ const ContactForm: React.FC = () => {
       <textarea
         className="rounded-md bg-zinc-800 px-4 py-3 text-xs font-medium text-zinc-300 outline-hidden placeholder:text-zinc-500"
         placeholder="Message"
-        rows={3}
+        rows={5}
         name="message"
         value={state.message}
         onChange={handleChange}
