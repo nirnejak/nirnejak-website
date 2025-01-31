@@ -31,7 +31,7 @@ const SocialIcons: React.FC = () => {
             <Tooltip.Trigger asChild>
               <button
                 onClick={() => window.open(url, "_blank")}
-                className="hover-bg group rounded-md p-3 text-zinc-400 outline-hidden"
+                className="hover-bg group rounded-md p-3 text-zinc-400 outline-hidden cursor-pointer"
                 aria-label={title}
               >
                 {icon}
