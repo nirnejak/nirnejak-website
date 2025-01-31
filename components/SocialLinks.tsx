@@ -1,9 +1,9 @@
 "use client"
 import * as React from "react"
+import type { JSX } from "react/jsx-runtime"
 
 import * as Tooltip from "@radix-ui/react-tooltip"
 import { ArrowRight, XFill, LinkedinFill, InstagramFill } from "akar-icons"
-import type { JSX } from "react/jsx-runtime"
 
 const renderSocialLink = (
   text: string,
