@@ -7,12 +7,14 @@ import {
   ArrowDown,
   ArrowForward,
   ArrowUp,
+  Calendar,
   GithubFill,
   LinkOut,
 } from "akar-icons"
 import { Command } from "cmdk"
 
 import { navLinks, socialLinks } from "@/utils/navigation"
+import { SCHEDULE_CALL_LINK } from "./Navbar"
 
 const commandItemClass =
   "command-item px-3.5 py-3 cursor-pointer hover-bg hover-bg-dark flex items-center gap-2.5 outline-hidden"
@@ -81,6 +83,19 @@ const CommandBar: React.FC = () => {
           className="my-2 max-h-[280px] overflow-y-scroll overscroll-contain text-zinc-300"
           ref={listRef}
         >
+          <Command.Item
+            className={commandItemClass}
+            tabIndex={0}
+            value={SCHEDULE_CALL_LINK}
+            onSelect={() => {
+              navigate(SCHEDULE_CALL_LINK)
+            }}
+          >
+            <Calendar size={15} />
+            <span>Schedule Call</span>
+            <LinkOut size={13} className="ml-auto" />
+          </Command.Item>
+          <Command.Separator className="my-1 h-[0.5px] bg-zinc-700" />
           {socialLinks.map((link, index) => (
             <Command.Item
               key={index}

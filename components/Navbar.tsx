@@ -12,7 +12,7 @@ interface Props {
   theme?: string
 }
 
-const SCHEDULE_CALL_LINK = "https://cal.com/nirnejak/15min"
+export const SCHEDULE_CALL_LINK = "https://cal.com/nirnejak/15min"
 
 const navLinkClass =
   "font-medium text-xs rounded-md px-4 py-2 hover-bg outline-hidden"
