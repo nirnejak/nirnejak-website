@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 
 import PhotoGallery from "@/components/PhotoGallery"
 import { photos } from "@/utils/photos"
-import getMetadata from "@/utils/seo"
+import getMetadata from "@/utils/metadata"
 
 export const metadata: Metadata = getMetadata({
   path: "/photos/",

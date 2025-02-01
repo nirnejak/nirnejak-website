@@ -3,7 +3,7 @@ import * as React from "react"
 import type { Metadata } from "next"
 
 import config from "@/config"
-import getMetadata from "@/utils/seo"
+import getMetadata from "@/utils/metadata"
 
 import AppLink from "@/components/atoms/Link"
 import ContactForm from "@/components/ContactForm"

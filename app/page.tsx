@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 
 import { CircleFill } from "akar-icons"
 
-import getMetadata from "@/utils/seo"
+import getMetadata from "@/utils/metadata"
 import SocialIcons from "@/components/SocialIcons"
 import Brands from "@/components/Brands"
 

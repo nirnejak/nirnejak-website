@@ -5,7 +5,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 
 import AppLink from "@/components/atoms/Link"
-import getMetadata from "@/utils/seo"
+import getMetadata from "@/utils/metadata"
 
 export const metadata: Metadata = getMetadata({
   path: "/",
