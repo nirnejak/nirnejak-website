@@ -13,8 +13,8 @@ import {
 } from "akar-icons"
 import { Command } from "cmdk"
 
+import { SCHEDULE_CALL_LINK } from "@/config"
 import { navLinks, socialLinks } from "@/utils/navigation"
-import { SCHEDULE_CALL_LINK } from "./Navbar"
 
 const commandItemClass =
   "command-item px-3.5 py-3 cursor-pointer hover-bg hover-bg-dark flex items-center gap-2.5 outline-hidden"

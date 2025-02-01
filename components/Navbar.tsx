@@ -3,16 +3,17 @@ import * as React from "react"
 
 import { LinkOut, ThreeLineHorizontal } from "akar-icons"
 
-import AppLink from "./atoms/Link"
-import NavigationTabs from "./NavigationTabs"
+import { SCHEDULE_CALL_LINK } from "@/config"
+
 import classNames from "@/utils/classNames"
 import { navLinks } from "@/utils/navigation"
+
+import AppLink from "@/components/atoms/Link"
+import NavigationTabs from "@/components/NavigationTabs"
 
 interface Props {
   theme?: string
 }
-
-export const SCHEDULE_CALL_LINK = "https://cal.com/nirnejak/15min"
 
 const navLinkClass =
   "font-medium text-xs rounded-md px-4 py-2 hover-bg outline-hidden"
