@@ -2,10 +2,12 @@ import * as React from "react"
 
 import type { Metadata } from "next"
 
+import { CONTACT_EMAIL } from "@/config"
+import getMetadata from "@/utils/seo"
+
 import AppLink from "@/components/atoms/Link"
 import ContactForm from "@/components/ContactForm"
 import SocialLinks from "@/components/SocialLinks"
-import getMetadata from "@/utils/seo"
 
 export const metadata: Metadata = getMetadata({
   path: "/contact/",
@@ -32,10 +34,10 @@ const ContactPage: React.FC = () => {
               Reach me via email
             </p>
             <AppLink
-              href="mailto:hello@nirnejak.com&subject=Project%20Enquiry"
+              href={`mailto:${CONTACT_EMAIL}&subject=Project%20Enquiry`}
               className="text-sm font-semibold text-zinc-300"
             >
-              hello@nirnejak.com
+              {CONTACT_EMAIL}
             </AppLink>
             <div className="-mb-3 -ml-3.5 mt-4">
               <SocialLinks />
