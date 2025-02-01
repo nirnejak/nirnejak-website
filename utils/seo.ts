@@ -1,34 +1,12 @@
 import { type Metadata } from "next"
 
+import config from "@/config"
+
 interface MetadataArgs {
   path: string
   title: string
   description: string
   image?: string
-}
-
-const config = {
-  baseUrl: "https://nirnejak.com",
-  appName: "Jitendra Nirnejak",
-  author: "Jitendra Nirnejak",
-  authorUrl: "https://nirnejak.com/",
-  twitter: "jeetnirnejak",
-  keywords: [
-    "Designer",
-    "Developer",
-    "Figma",
-    "Rive",
-    "Spline",
-    "Framer",
-    "Webflow",
-    "React",
-    "Next.js",
-    "Gatsby",
-    "Node",
-    "TypeScript",
-    "JavaScript",
-    "Postgres",
-  ],
 }
 
 const getMetadata = ({

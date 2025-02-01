@@ -13,7 +13,7 @@ import {
 } from "akar-icons"
 import { Command } from "cmdk"
 
-import { SCHEDULE_CALL_LINK } from "@/config"
+import config from "@/config"
 import { navLinks, socialLinks } from "@/utils/navigation"
 
 const commandItemClass =
@@ -86,9 +86,9 @@ const CommandBar: React.FC = () => {
           <Command.Item
             className={commandItemClass}
             tabIndex={0}
-            value={SCHEDULE_CALL_LINK}
+            value={config.SCHEDULE_CALL_LINK}
             onSelect={() => {
-              navigate(SCHEDULE_CALL_LINK)
+              navigate(config.SCHEDULE_CALL_LINK)
             }}
           >
             <Calendar size={15} />

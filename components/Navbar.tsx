@@ -3,7 +3,7 @@ import * as React from "react"
 
 import { LinkOut, ThreeLineHorizontal } from "akar-icons"
 
-import { SCHEDULE_CALL_LINK } from "@/config"
+import config from "@/config"
 
 import classNames from "@/utils/classNames"
 import { navLinks } from "@/utils/navigation"
@@ -41,7 +41,7 @@ const Navbar: React.FC<Props> = () => {
               navLinkClass,
               "group flex items-center gap-1.5"
             )}
-            href={SCHEDULE_CALL_LINK}
+            href={config.SCHEDULE_CALL_LINK}
             target="_blank"
           >
             <span className="animate-slide-left group-hover:animate-slide-right group-focus:animate-slide-right">
@@ -79,7 +79,7 @@ const Navbar: React.FC<Props> = () => {
             <br />
             <AppLink
               className={navLinkClass}
-              href={SCHEDULE_CALL_LINK}
+              href={config.SCHEDULE_CALL_LINK}
               target="_blank"
               onClick={() => {
                 window.plausible("Schedule a call Clicked")
