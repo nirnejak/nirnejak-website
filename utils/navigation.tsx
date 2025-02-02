@@ -74,6 +74,11 @@ export const socialLinks = [
     icon: <DribbbleFill size={15} />,
   },
   {
+    content: "LinkedIn",
+    href: "https://www.linkedin.com/in/nirnejak/",
+    icon: <LinkedinFill size={15} />,
+  },
+  {
     content: "ProductHunt",
     href: "https://www.producthunt.com/@nirnejak",
     icon: <ProductHuntFill size={15} />,
@@ -82,10 +87,5 @@ export const socialLinks = [
     content: "Unsplash",
     href: "https://unsplash.com/@nirnejak/",
     icon: <UnsplashFill size={15} />,
-  },
-  {
-    content: "LinkedIn  (💩)",
-    href: "https://www.linkedin.com/in/nirnejak/",
-    icon: <LinkedinFill size={15} />,
   },
 ]
