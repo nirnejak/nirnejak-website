@@ -6,7 +6,6 @@ import { LinkOut, ThreeLineHorizontal } from "akar-icons"
 import config from "@/config"
 
 import classNames from "@/utils/classNames"
-import { navLinks } from "@/utils/navigation"
 
 import AppLink from "@/components/atoms/Link"
 import NavigationTabs from "@/components/NavigationTabs"
@@ -14,6 +13,15 @@ import NavigationTabs from "@/components/NavigationTabs"
 interface Props {
   theme?: string
 }
+
+export const navLinks = [
+  { content: "Home", link: "/" },
+  { content: "Work", link: "/work/" },
+  { content: "Blogs", link: "/blogs/" },
+  { content: "Photos", link: "/photos/" },
+  { content: "Uses", link: "/uses/" },
+  { content: "Contact", link: "/contact/" },
+]
 
 const navLinkClass =
   "font-medium text-xs rounded-md px-4 py-2 hover-bg outline-hidden"
@@ -33,7 +41,7 @@ const Navbar: React.FC<Props> = () => {
     <nav className="fixed top-0 z-10 w-full backdrop-blur-lg">
       <div className="container hidden items-center py-3 md:flex">
         <div className="-mx-3.5">
-          <NavigationTabs />
+          <NavigationTabs navLinks={navLinks} />
         </div>
         <div className="ml-auto">
           <AppLink
@@ -67,12 +75,8 @@ const Navbar: React.FC<Props> = () => {
               setIsOpen(false)
             }}
           >
-            {navLinks.map((navLink) => (
-              <AppLink
-                key={navLink.value}
-                className={navLinkClass}
-                href={navLink.link}
-              >
+            {navLinks.map((navLink, index) => (
+              <AppLink key={index} className={navLinkClass} href={navLink.link}>
                 {navLink.content}
               </AppLink>
             ))}

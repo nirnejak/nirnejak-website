@@ -2,10 +2,6 @@ import * as React from "react"
 
 import { Link } from "next-view-transitions"
 
-import { navLinks } from "@/utils/navigation"
-
-const tabsData = navLinks
-
 interface TAB_BOUNDING_BOX_TYPE {
   left: number
   width: number
@@ -13,11 +9,16 @@ interface TAB_BOUNDING_BOX_TYPE {
 
 interface TAB_TYPE {
   content: string
-  value: string
   link: string
 }
 
-const NavigationTabs: React.FC = () => {
+interface Props {
+  navLinks: TAB_TYPE[]
+}
+
+const NavigationTabs: React.FC<Props> = ({ navLinks }) => {
+  const tabsData = navLinks
+
   const [tabBoundingBox, setTabBoundingBox] =
     React.useState<TAB_BOUNDING_BOX_TYPE | null>(null)
   const [wrapperBoundingBox, setWrapperBoundingBox] =
@@ -75,10 +76,10 @@ const NavigationTabs: React.FC = () => {
           ...highlightStyles,
         }}
       />
-      {tabsData.map((tab) => (
+      {tabsData.map((tab, index) => (
         <Link
+          key={index}
           href={tab.link}
-          key={tab.value}
           className="relative inline-block px-4 py-2 text-xs font-medium text-zinc-50 outline-hidden active:scale-95"
           onMouseOver={(ev: React.MouseEvent<HTMLAnchorElement>) => {
             repositionHighlight(ev, tab)

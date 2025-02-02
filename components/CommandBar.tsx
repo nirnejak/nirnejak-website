@@ -10,11 +10,21 @@ import {
   Calendar,
   GithubFill,
   LinkOut,
+  DribbbleFill,
+  LinkedinFill,
+  XFill,
+  Frame,
+  UnsplashFill,
+  ProductHuntFill,
+  HomeAlt1,
+  LaptopDevice,
+  Pencil,
+  Camera,
+  Phone,
 } from "akar-icons"
 import { Command } from "cmdk"
 
 import config from "@/config"
-import { navLinks, socialLinks } from "@/utils/navigation"
 
 const commandItemClass =
   "command-item px-3.5 py-3 cursor-pointer hover-bg hover-bg-dark flex items-center gap-2.5 outline-hidden"
@@ -112,7 +122,7 @@ const CommandBar: React.FC = () => {
             </Command.Item>
           ))}
           <Command.Separator className="my-1 h-[0.5px] bg-zinc-700" />
-          {navLinks.map((link, index) => (
+          {siteLinks.map((link, index) => (
             <Command.Item
               key={index}
               className={commandItemClass}
@@ -166,3 +176,80 @@ const CommandBar: React.FC = () => {
 }
 
 export default CommandBar
+
+export const socialLinks = [
+  {
+    content: "X",
+    href: "https://twitter.com/jeetnirnejak/",
+    icon: <XFill size={15} />,
+  },
+  {
+    content: "Github",
+    href: "https://github.com/nirnejak/",
+    icon: <GithubFill size={15} />,
+  },
+  {
+    content: "Layers",
+    href: "https://layers.to/nirnejak/",
+    icon: <Frame size={15} />,
+  },
+  {
+    content: "Dribbble",
+    href: "https://dribbble.com/nirnejak/",
+    icon: <DribbbleFill size={15} />,
+  },
+  {
+    content: "LinkedIn",
+    href: "https://www.linkedin.com/in/nirnejak/",
+    icon: <LinkedinFill size={15} />,
+  },
+  {
+    content: "ProductHunt",
+    href: "https://www.producthunt.com/@nirnejak",
+    icon: <ProductHuntFill size={15} />,
+  },
+  {
+    content: "Unsplash",
+    href: "https://unsplash.com/@nirnejak/",
+    icon: <UnsplashFill size={15} />,
+  },
+]
+
+export const siteLinks = [
+  {
+    content: "Home",
+    value: "home",
+    link: "/",
+    icon: <HomeAlt1 size={15} />,
+  },
+  {
+    content: "Work",
+    value: "work",
+    link: "/work/",
+    icon: <LaptopDevice size={15} />,
+  },
+  {
+    content: "Blogs",
+    value: "blogs",
+    link: "/blogs/",
+    icon: <Pencil size={15} />,
+  },
+  {
+    content: "Photos",
+    value: "photos",
+    link: "/photos/",
+    icon: <Camera size={15} />,
+  },
+  {
+    content: "Uses",
+    value: "uses",
+    link: "/uses/",
+    icon: <LaptopDevice size={15} />,
+  },
+  {
+    content: "Contact",
+    value: "contact",
+    link: "/contact/",
+    icon: <Phone size={15} />,
+  },
+]
