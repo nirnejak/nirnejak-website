@@ -24,10 +24,10 @@ const WorkPage: React.FC = () => {
         <SocialIcons />
       </section>
       <section className="container mb-16 mt-10 text-sm md:mt-16">
-        <PastEngagements />
+        <SideProjects />
       </section>
       <section className="container mb-16 mt-10 text-sm md:mt-16">
-        <SideProjects />
+        <PastEngagements />
       </section>
     </main>
   )

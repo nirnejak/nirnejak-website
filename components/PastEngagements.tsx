@@ -3,6 +3,9 @@ import * as React from "react"
 const PastEngagements: React.FC = () => {
   return (
     <div className="-mx-3">
+      <p className="text-zinc-200 text-center mb-6 uppercase tracking-wider font-medium">
+        PROJECTS & ENGAGEMENTS
+      </p>
       {engagements.map((client, index) => (
         <div key={index} className="flex items-center gap-2 font-medium p-3">
           <p className="text-zinc-300">{client.name}</p>
