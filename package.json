@@ -19,7 +19,7 @@
     "akar-icons": "^1.9.31",
     "cmdk": "^1.0.4",
     "dotenv": "^16.4.7",
-    "motion": "^12.4.0",
+    "motion": "^12.4.1",
     "next": "^15.1.6",
     "next-pwa": "^5.6.0",
     "next-view-transitions": "^0.3.4",
@@ -29,12 +29,12 @@
     "use-sound": "^4.0.3"
   },
   "devDependencies": {
-    "@eslint/js": "^9.19.0",
+    "@eslint/js": "^9.20.0",
     "@tailwindcss/postcss": "^4.0.4",
     "@types/next-pwa": "^5.6.9",
     "@types/node": "^22.13.1",
     "@types/react": "^19.0.8",
-    "eslint": "^9.19.0",
+    "eslint": "^9.20.0",
     "eslint-config-love": "^118.0.0",
     "eslint-config-next": "^15.1.6",
     "eslint-config-prettier": "^10.0.1",
