@@ -7,7 +7,10 @@ const PastEngagements: React.FC = () => {
         PROJECTS & ENGAGEMENTS
       </p>
       {engagements.map((client, index) => (
-        <div key={index} className="flex items-center gap-2 font-medium p-3">
+        <div
+          key={index}
+          className="flex flex-col md:flex-row md:items-center gap-2 font-medium p-3"
+        >
           <p className="text-zinc-300">{client.name}</p>
           <div className="flex-1 border-t border-dashed border-zinc-700" />
           <p className="flex items-center gap-1 text-zinc-500">
