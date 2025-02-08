@@ -25,7 +25,7 @@ const socialLinks = [
 const SocialIcons: React.FC = () => {
   return (
     <Tooltip.Provider delayDuration={200}>
-      <div className="-mr-3.5 flex items-center gap-1">
+      <div className="flex items-center gap-1">
         {socialLinks.map(({ title, url, icon }) => (
           <Tooltip.Root key={title}>
             <Tooltip.Trigger asChild>
