@@ -4,7 +4,7 @@ const PastEngagements: React.FC = () => {
   return (
     <div className="-mx-3">
       <p className="text-zinc-200 text-center mb-6 uppercase tracking-wider font-medium">
-        PROJECTS & ENGAGEMENTS
+        Projects & Engagements
       </p>
       {engagements.map((client, index) => (
         <div

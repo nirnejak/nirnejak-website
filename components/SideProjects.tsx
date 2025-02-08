@@ -6,7 +6,7 @@ const SideProjects: React.FC<Props> = () => {
   return (
     <div className="-mx-3">
       <p className="text-zinc-200 text-center mb-6 uppercase tracking-wider font-medium">
-        SIDE PROJECTS
+        Side Projects
       </p>
       {projects.map((project, index) => (
         <a
