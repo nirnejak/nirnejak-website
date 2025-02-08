@@ -20,65 +20,64 @@ const SitesPage: React.FC = () => {
         </h1>
       </section>
       <section className="container mb-16 mt-10 text-sm md:mt-16">
-        <div className="mb-16 flex flex-col md:flex-row">
-          <p className="mb-3 flex-1 text-zinc-300 md:mt-2">
-            E-commerce Sites(with Shopify Backend)
+        <div className="-mx-3 mb-16">
+          <p className="text-zinc-200 text-center mb-6 uppercase tracking-wider font-medium">
+            ECOMMERCE SITES
           </p>
-          <div className="mx-0 flex flex-1 flex-col gap-1 md:mx-3">
-            {allSites.ecommerce.map((project, index) => (
-              <AppLink
-                key={index}
-                href={project.link}
-                target="_blank"
-                className="hover-bg -mx-3 rounded-md p-3 outline-hidden md:mx-0"
-              >
-                <p className="mb-1.5 font-semibold">{project.title}</p>
-                <p className="text-xs font-medium text-zinc-500">
-                  {project.link}
-                </p>
-              </AppLink>
-            ))}
-          </div>
+          {allSites.ecommerce.map((project, index) => (
+            <AppLink
+              key={index}
+              href={project.link}
+              target="_blank"
+              className="hover-bg flex flex-col md:flex-row md:items-center gap-0.5 md:gap-2 font-medium p-3"
+            >
+              <p className="text-zinc-300">{project.title}</p>
+              <div className="flex-1 border-t border-dashed border-zinc-700" />
+              <p className="flex items-center gap-1 text-zinc-500">
+                {project.link}
+              </p>
+            </AppLink>
+          ))}
         </div>
-        <div className="mb-16 flex flex-col md:flex-row">
-          <p className="mb-3 flex-1 text-zinc-300 md:mt-2">
-            Websites(with CMS Integration)
+
+        <div className="-mx-3 mb-16">
+          <p className="text-zinc-200 text-center mb-6 uppercase tracking-wider font-medium">
+            Websites(with CMS)
           </p>
-          <div className="mx-0 flex flex-1 flex-col gap-1 md:mx-3">
-            {allSites.cms.map((project, index) => (
-              <AppLink
-                key={index}
-                href={project.link}
-                target="_blank"
-                className="hover-bg -mx-3 rounded-md p-3 outline-hidden md:mx-0"
-              >
-                <p className="mb-1.5 font-semibold">{project.title}</p>
-                <p className="text-xs font-medium text-zinc-500">
-                  {project.link}
-                </p>
-              </AppLink>
-            ))}
-          </div>
+          {allSites.cms.map((project, index) => (
+            <AppLink
+              key={index}
+              href={project.link}
+              target="_blank"
+              className="hover-bg flex flex-col md:flex-row md:items-center gap-0.5 md:gap-2 font-medium p-3"
+            >
+              <p className="text-zinc-300">{project.title}</p>
+              <div className="flex-1 border-t border-dashed border-zinc-700" />
+              <p className="flex items-center gap-1 text-zinc-500">
+                {project.link}
+              </p>
+            </AppLink>
+          ))}
         </div>
-        <div className="mb-16 flex flex-col md:flex-row">
-          <p className="mb-3 flex-1 text-zinc-300 md:mt-2">
-            Websites(without CMS Integration)
+
+        <div className="-mx-3 mb-16">
+          <p className="text-zinc-200 text-center mb-6 uppercase tracking-wider font-medium">
+            Websites(without CMS)
           </p>
-          <div className="mx-0 flex flex-1 flex-col gap-1 md:mx-3">
-            {allSites.websites.map((project, index) => (
-              <AppLink
-                key={index}
-                href={project.link}
-                target="_blank"
-                className="hover-bg -mx-3 rounded-md p-3 outline-hidden md:mx-0"
-              >
-                <p className="mb-1.5 font-semibold">{project.title}</p>
-                <p className="text-xs font-medium text-zinc-500">
-                  {project.link}
-                </p>
-              </AppLink>
-            ))}
-          </div>
+          {allSites.websites.map((project, index) => (
+            <AppLink
+              key={index}
+              href={project.link}
+              target="_blank"
+              className="hover-bg flex flex-col md:flex-row md:items-center gap-0.5 md:gap-2 font-medium p-3"
+            >
+              <p className="text-zinc-300">{project.title}</p>
+              <div className="flex-1 border-t border-dashed border-zinc-700" />
+              <p className="flex items-center gap-1 text-zinc-500">
+                {project.link}
+              </p>
+            </AppLink>
+          ))}
         </div>
       </section>
     </main>
