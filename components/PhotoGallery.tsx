@@ -25,7 +25,7 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
   }, [])
 
   return (
-    <section className="mb-16 mt-10 flex min-h-screen items-start px-3 md:mt-16">
+    <section>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {photos.map((photo, index) => (
           <motion.div
