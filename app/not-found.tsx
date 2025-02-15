@@ -26,7 +26,7 @@ const NotFound: React.FC = () => {
 
   return (
     <main className="container">
-      <section className="grid min-h-screen place-content-center">
+      <section className="grid min-h-dvh place-content-center">
         <div className="">
           <Image src={GIFs[index]} alt="Lost" width={480} height={270} />
           <h1 className="mb-3 mt-10 text-center text-3xl font-bold tracking-tight text-zinc-300 md:text-4xl">

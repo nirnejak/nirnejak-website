@@ -20,7 +20,7 @@ export const metadata: Metadata = getMetadata({
 
 const HomePage: React.FC = () => {
   return (
-    <main className="min-h-screen flex flex-col justify-center">
+    <main className="min-h-dvh flex flex-col justify-center">
       <section className="container my-24 sm:my-0">
         <Image
           src={Photo}
