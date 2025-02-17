@@ -16,8 +16,8 @@ const rotationClasses = ["-rotate-3", "rotate-6", "-rotate-3", "rotate-6"]
 
 const PhotoCards: React.FC = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center py-32 bg-zinc-800 rounded-lg">
-      <div className="relative h-52 w-[340px] md:w-[500px] rotate">
+    <div className="relative flex flex-col items-center justify-center pt-20 md:pt-30 md:pb-24 bg-zinc-800 rounded-lg">
+      <div className="relative h-44 w-[340px] md:w-[400px] rotate">
         {images.map((image, index) => (
           <motion.div
             initial={{ scale: 0.02, opacity: 0 }}
@@ -38,7 +38,7 @@ const PhotoCards: React.FC = () => {
             <div
               className={classNames(
                 rotationClasses[index],
-                "size-32 md:size-52 rounded-3xl bg-white p-2 md:p-3 shadow-xl"
+                "size-28 md:size-36 rounded-3xl bg-white p-2 shadow-xl"
               )}
             >
               <div
