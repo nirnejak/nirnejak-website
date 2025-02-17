@@ -2,6 +2,7 @@
 import * as React from "react"
 
 import { motion } from "motion/react"
+import { CircleCheckFill } from "akar-icons"
 
 import classNames from "@/utils/classNames"
 
@@ -58,9 +59,9 @@ const JellyTags: React.FC = () => {
   return (
     <motion.div
       layout
-      className="h-full rounded-lg bg-zinc-800 p-12 py-12 text-sm"
+      className="h-96 rounded-lg bg-zinc-800 grid place-content-center"
     >
-      <h1 className="mb-6 font-instrument-serif text-xl text-zinc-300 font-medium">
+      <h1 className="mb-6 text-xl text-zinc-300 font-medium">
         What are your favorite cuisines?
       </h1>
       <div className="flex max-w-[630px] flex-wrap items-start justify-start gap-2">
@@ -87,29 +88,7 @@ const JellyTags: React.FC = () => {
           >
             <p className="max-w-min">{tag.value}</p>
 
-            {tag.isSelected && (
-              <div className="w-5">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10 18.3334C14.6025 18.3334 18.3334 14.6025 18.3334 10C18.3334 5.39752 14.6025 1.66669 10 1.66669C5.39752 1.66669 1.66669 5.39752 1.66669 10C1.66669 14.6025 5.39752 18.3334 10 18.3334Z"
-                    fill="#27272a"
-                  />
-                  <path
-                    d="M5.83331 10.4166L8.33331 12.9166L14.1666 7.08331"
-                    stroke="#e4e4e7"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-            )}
+            {tag.isSelected && <CircleCheckFill size={20} />}
           </motion.button>
         ))}
       </div>
