@@ -1,16 +1,17 @@
 "use client"
 import * as React from "react"
 
-import Tabs from "../atoms/Tabs"
+import Tabs from "@/components/atoms/Tabs"
+
+const tabOptions = ["Tab 1", "Tab 2", "Tab 3"]
 
 const SliderTabs: React.FC = () => {
   const [activeTab, setActiveTab] = React.useState(0)
 
   return (
-    <div className="flex items-center justify-center gap-6 bg-black min-h-96 rounded-lg">
+    <div className="flex items-center justify-center gap-6 bg-zinc-800 min-h-96 rounded-lg">
       <Tabs
-        className="text-zinc-200"
-        tabsOptions={["Tab 1", "Tab 2", "Tab 3"]}
+        tabsOptions={tabOptions}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
       />
