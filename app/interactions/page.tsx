@@ -5,7 +5,7 @@ import type { Metadata } from "next"
 import getMetadata from "@/utils/metadata"
 
 import PhotoCards from "@/components/interactions/PhotoCards"
-import Bulb from "@/components/interactions/Bulb"
+import InteractiveBulb from "@/components/interactions/InteractiveBulb"
 import JellyTags from "@/components/interactions/JellyTags"
 import UpvoteButton from "@/components/interactions/UpvoteButton"
 import SliderTabs from "@/components/interactions/SliderTabs"
@@ -34,7 +34,7 @@ const InteractionsPage: React.FC = () => {
         <UpvoteButton />
       </section>
       <section className="container my-10">
-        <Bulb />
+        <InteractiveBulb />
       </section>
       <section className="container my-10">
         <SliderTabs />
