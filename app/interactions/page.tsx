@@ -11,10 +11,9 @@ import UpvoteButton from "@/components/interactions/UpvoteButton"
 import SliderTabs from "@/components/interactions/SliderTabs"
 
 export const metadata: Metadata = getMetadata({
-  path: "/contact/",
-  title: "Contact | Jitendra Nirnejak",
-  description:
-    "Contact Jitendra Nirnejak, get in touch on social media, fill the form or reach out via email",
+  path: "/interactions/",
+  title: "Interactions | Jitendra Nirnejak",
+  description: "Interactive UI components built by Jitendra Nirnejak",
 })
 
 const InteractionsPage: React.FC = () => {
