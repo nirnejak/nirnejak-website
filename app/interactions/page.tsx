@@ -2,12 +2,13 @@ import * as React from "react"
 
 import type { Metadata } from "next"
 
-import config from "@/config"
 import getMetadata from "@/utils/metadata"
 
-import AppLink from "@/components/atoms/Link"
-import ContactForm from "@/components/ContactForm"
-import SocialLinks from "@/components/SocialLinks"
+import PhotoCards from "@/components/interactions/PhotoCards"
+import Bulb from "@/components/interactions/Bulb"
+import JellyTags from "@/components/interactions/JellyTags"
+import UpvoteButton from "@/components/interactions/UpvoteButton"
+import SliderTabs from "@/components/interactions/SliderTabs"
 
 export const metadata: Metadata = getMetadata({
   path: "/contact/",
@@ -24,7 +25,21 @@ const InteractionsPage: React.FC = () => {
           Interactions
         </h1>
       </section>
-      <section className="container mb-16 mt-10 text-sm md:mt-16"></section>
+      <section className="container my-10">
+        <PhotoCards />
+      </section>
+      <section className="container my-10">
+        <JellyTags />
+      </section>
+      <section className="container my-10">
+        <UpvoteButton />
+      </section>
+      <section className="container my-10">
+        <Bulb />
+      </section>
+      <section className="container my-10">
+        <SliderTabs />
+      </section>
     </main>
   )
 }
