@@ -30,11 +30,6 @@ export default SideProjects
 
 const projects = [
   {
-    name: "Oven Studio",
-    work: "A Logo design and digital branding agency",
-    link: "https://oven.studio/",
-  },
-  {
     name: "SVG Animations Gallery",
     work: "A Gallery of SVG Animations built with Framer Motion",
     link: "https://svg-animations-gallery.vercel.app/",
@@ -53,6 +48,11 @@ const projects = [
     name: "Done Done",
     work: "A Simple Stupid Interactive Todo List",
     link: "https://interactive-interfaces.vercel.app/",
+  },
+  {
+    name: "Oven Studio",
+    work: "A Logo design and digital branding agency",
+    link: "https://oven.studio/",
   },
   {
     name: "React Presentation Maker",
