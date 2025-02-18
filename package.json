@@ -19,7 +19,7 @@
     "akar-icons": "^1.9.31",
     "cmdk": "^1.0.4",
     "dotenv": "^16.4.7",
-    "motion": "^12.4.3",
+    "motion": "^12.4.4",
     "next": "^15.1.7",
     "next-pwa": "^5.6.0",
     "next-view-transitions": "^0.3.4",
@@ -31,7 +31,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.20.0",
-    "@tailwindcss/postcss": "^4.0.6",
+    "@tailwindcss/postcss": "^4.0.7",
     "@types/next-pwa": "^5.6.9",
     "@types/node": "^22.13.4",
     "@types/react": "^19.0.10",
@@ -49,7 +49,7 @@
     "lint-staged": "^15.4.3",
     "prettier": "^3.5.1",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^4.0.6",
+    "tailwindcss": "^4.0.7",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.24.1"
   },
