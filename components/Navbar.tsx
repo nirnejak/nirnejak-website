@@ -17,10 +17,10 @@ interface Props {
 export const navLinks = [
   { content: "Home", link: "/" },
   { content: "Work", link: "/work/" },
+  { content: "Interactions", link: "/interactions/" },
   { content: "Blogs", link: "/blogs/" },
   { content: "Photos", link: "/photos/" },
   { content: "Uses", link: "/uses/" },
-  { content: "Contact", link: "/contact/" },
 ]
 
 const navLinkClass =
@@ -49,11 +49,11 @@ const Navbar: React.FC<Props> = () => {
               navLinkClass,
               "group flex items-center gap-1.5"
             )}
-            href={config.SCHEDULE_CALL_LINK}
+            href={"/contact/"}
             target="_blank"
           >
             <span className="animate-slide-left group-hover:animate-slide-right group-focus:animate-slide-right">
-              Schedule call
+              Contact
             </span>
             <LinkOut
               className="hidden animate-slide-left-and-fade hover:block group-hover:block group-focus-visible:block"
@@ -65,7 +65,7 @@ const Navbar: React.FC<Props> = () => {
       <div className="flex md:hidden">
         {isOpen ? (
           <div
-            className="flex h-screen w-screen flex-col items-center justify-center gap-5 bg-zinc-900 px-20"
+            className="flex h-dvh w-screen flex-col items-center justify-center gap-5 bg-zinc-900 px-20"
             role="button"
             tabIndex={0}
             onKeyUp={(e) => {
@@ -83,13 +83,13 @@ const Navbar: React.FC<Props> = () => {
             <br />
             <AppLink
               className={navLinkClass}
-              href={config.SCHEDULE_CALL_LINK}
+              href={"/contact/"}
               target="_blank"
               onClick={() => {
                 window.plausible("Schedule a call Clicked")
               }}
             >
-              Schedule call
+              Contact
             </AppLink>
           </div>
         ) : (

@@ -8,25 +8,16 @@ interface Props {
   tabsOptions: string[]
   activeTab: number
   setActiveTab: (value: number) => void
-  className?: string
 }
 
-const Tabs: React.FC<Props> = ({
-  tabsOptions,
-  activeTab,
-  setActiveTab,
-  className,
-}) => {
+const Tabs: React.FC<Props> = ({ tabsOptions, activeTab, setActiveTab }) => {
   const { wrapperRef, highlightStyles } = useLinkHighlight(activeTab)
 
   return (
-    <nav
-      className={classNames("relative flex gap-1", className)}
-      ref={wrapperRef}
-    >
+    <nav className={"relative flex gap-1 text-zinc-200"} ref={wrapperRef}>
       <div
         style={highlightStyles}
-        className="absolute left-0 h-full rounded-lg bg-zinc-800 transition-all"
+        className="absolute left-0 h-full rounded-lg bg-zinc-900 transition-all"
       />
       {tabsOptions.map((tab, index) => (
         <button
