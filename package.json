@@ -19,7 +19,7 @@
     "akar-icons": "^1.9.31",
     "cmdk": "^1.0.4",
     "dotenv": "^16.4.7",
-    "motion": "^12.4.4",
+    "motion": "^12.4.5",
     "next": "^15.1.7",
     "next-pwa": "^5.6.0",
     "next-view-transitions": "^0.3.4",
