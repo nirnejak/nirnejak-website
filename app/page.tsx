@@ -3,7 +3,7 @@ import * as React from "react"
 import type { Metadata } from "next"
 import Image from "next/image"
 
-import { ArrowRight, CircleFill } from "akar-icons"
+import { ArrowRight } from "akar-icons"
 
 import getMetadata from "@/utils/metadata"
 import SocialIcons from "@/components/SocialIcons"
