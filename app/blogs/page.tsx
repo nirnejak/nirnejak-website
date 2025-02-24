@@ -47,6 +47,14 @@ export default BlogsPage
 const allBlogs = [
   {
     author: "Jitendra Nirnejak",
+    date: "24 Feb 2025",
+    description:
+      "Discover how the View Transitions API enhances web experiences with seamless animations and smooth page transitions, improving user engagement and performance.",
+    title: "Enhancing Web Experiences with the View Transitions API",
+    url: "https://www.devtoolsacademy.com/blog/enhancing-web-experiences-with-the-view-transitions-api/",
+  },
+  {
+    author: "Jitendra Nirnejak",
     date: "8 May 2023",
     description:
       "Discover the power of SVGs! Learn the basics and advanced techniques for creating and animating stunning, scalable graphics for web",
