@@ -1,9 +1,7 @@
 "use client"
 import * as React from "react"
 
-import { LinkOut, ThreeLineHorizontal } from "akar-icons"
-
-import config from "@/config"
+import { ArrowRight, ThreeLineHorizontal } from "akar-icons"
 
 import classNames from "@/utils/classNames"
 
@@ -50,12 +48,11 @@ const Navbar: React.FC<Props> = () => {
               "group flex items-center gap-1.5"
             )}
             href={"/contact/"}
-            target="_blank"
           >
             <span className="animate-slide-left group-hover:animate-slide-right group-focus:animate-slide-right">
               Contact
             </span>
-            <LinkOut
+            <ArrowRight
               className="hidden animate-slide-left-and-fade hover:block group-hover:block group-focus-visible:block"
               size={14}
             />
@@ -84,7 +81,6 @@ const Navbar: React.FC<Props> = () => {
             <AppLink
               className={navLinkClass}
               href={"/contact/"}
-              target="_blank"
               onClick={() => {
                 window.plausible("Schedule a call Clicked")
               }}
