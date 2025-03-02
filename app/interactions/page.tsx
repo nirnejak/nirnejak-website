@@ -22,32 +22,18 @@ const InteractionsPage: React.FC = () => {
   return (
     <main className="min-h-[77vh]">
       <section className="container mt-32 md:mt-40">
-        <div className="flex items-start">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-300 md:text-5xl">
-            Interactions
-          </h1>
-          <span className="text-zinc-300 font-medium">(WIP)</span>
-        </div>
+        <h1 className="text-4xl font-bold tracking-tight text-zinc-300 md:text-5xl">
+          Interactions
+        </h1>
       </section>
-      <section className="container my-10">
+
+      <section className="container flex flex-col gap-6 my-10">
         <PhotoCards />
-      </section>
-      <section className="container my-10">
         <VolumeSlider />
-      </section>
-      <section className="container my-10">
         <Dock />
-      </section>
-      <section className="container my-10">
         <JellyTags />
-      </section>
-      <section className="container my-10">
         <UpvoteButton />
-      </section>
-      <section className="container my-10">
         <InteractiveBulb />
-      </section>
-      <section className="container my-10">
         <SliderTabs />
       </section>
     </main>
