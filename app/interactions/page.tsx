@@ -10,6 +10,7 @@ import JellyTags from "@/components/interactions/JellyTags"
 import UpvoteButton from "@/components/interactions/UpvoteButton"
 import SliderTabs from "@/components/interactions/SliderTabs"
 import VolumeSlider from "@/components/interactions/VolumeSlider"
+import Dock from "@/components/interactions/Dock"
 
 export const metadata: Metadata = getMetadata({
   path: "/interactions/",
@@ -33,6 +34,9 @@ const InteractionsPage: React.FC = () => {
       </section>
       <section className="container my-10">
         <VolumeSlider />
+      </section>
+      <section className="container my-10">
+        <Dock />
       </section>
       <section className="container my-10">
         <JellyTags />
