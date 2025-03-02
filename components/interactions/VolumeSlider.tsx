@@ -8,7 +8,7 @@ import {
   useMotionValue,
   useMotionValueEvent,
   useTransform,
-} from "framer-motion"
+} from "motion/react"
 import { SoundOff, SoundOn } from "akar-icons"
 
 const MAX_OVERFLOW = 50
