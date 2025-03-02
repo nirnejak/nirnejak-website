@@ -59,7 +59,7 @@ const JellyTags: React.FC = () => {
   return (
     <motion.div
       layout
-      className="h-96 rounded-lg bg-zinc-800 grid place-content-center"
+      className="h-96 bg-zinc-800 grid place-content-center rounded-2xl"
     >
       <h1 className="mb-6 text-xl text-zinc-300 font-medium">
         What are your favorite cuisines?

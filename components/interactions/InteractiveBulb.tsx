@@ -38,7 +38,7 @@ const InteractiveBulb: React.FC = () => {
   }
 
   return (
-    <div className="h-96 w-full rounded-lg bg-zinc-800">
+    <div className="h-96 w-full bg-zinc-800 rounded-2xl">
       <div className="origin-top animate-swing">
         <div className="relative left-1/2 h-40 w-1 -translate-x-1/2 bg-black" />
         <div className="relative left-1/2 h-[20px] w-4 -translate-x-1/2 bg-zinc-500">

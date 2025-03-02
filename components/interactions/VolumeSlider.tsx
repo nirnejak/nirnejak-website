@@ -45,7 +45,7 @@ const VolumeSlider: React.FC<Props> = () => {
   })
 
   return (
-    <div className="flex items-center justify-center gap-6 bg-zinc-800 min-h-96 rounded-lg">
+    <div className="flex items-center justify-center gap-6 bg-zinc-800 min-h-96 rounded-2xl">
       <motion.div
         onHoverStart={() => animate(scale, 1.2)}
         onHoverEnd={() => animate(scale, 1)}

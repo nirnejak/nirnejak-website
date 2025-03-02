@@ -9,7 +9,7 @@ const SliderTabs: React.FC = () => {
   const [activeTab, setActiveTab] = React.useState(0)
 
   return (
-    <div className="flex items-center justify-center gap-6 bg-zinc-800 min-h-96 rounded-lg">
+    <div className="flex items-center justify-center gap-6 bg-zinc-800 min-h-96 rounded-2xl">
       <Tabs
         tabsOptions={tabOptions}
         activeTab={activeTab}

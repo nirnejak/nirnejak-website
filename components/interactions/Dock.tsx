@@ -52,7 +52,7 @@ const Dock = () => {
   const rightSpring = useSpring(right, SPRING)
 
   return (
-    <div className="flex items-center justify-center gap-6 bg-zinc-800 min-h-96 rounded-lg">
+    <div className="flex items-center justify-center gap-6 bg-zinc-800 min-h-96 rounded-2xl">
       <motion.div
         onMouseMove={(e) => {
           const { left, right } = e.currentTarget.getBoundingClientRect()

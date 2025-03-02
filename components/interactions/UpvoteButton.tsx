@@ -37,7 +37,7 @@ const UpvoteButton: React.FC = () => {
   }, [count])
 
   return (
-    <div className="h-96 w-full rounded-lg bg-zinc-800 grid place-content-center">
+    <div className="h-96 w-full bg-zinc-800 grid place-content-center rounded-2xl">
       <button
         onClick={() => {
           upvote()
