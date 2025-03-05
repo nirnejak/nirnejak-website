@@ -40,7 +40,7 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
             }}
             initial={{ opacity: 0, scale: 0.02, rotate: 15 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
-            whileHover={{ scale: 1.16, rotate: 0, zIndex: 5 }}
+            whileHover={{ scale: 1.03, rotate: 0, zIndex: 5 }}
             transition={{
               type: "spring",
               stiffness: isLoaded ? 530 : 100,
@@ -49,7 +49,7 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
 
               delay: isLoaded ? 0 : 0.05 * index,
             }}
-            className="relative overflow-hidden rounded-3xl after:absolute after:inset-0 after:rounded-3xl after:border-8 after:border-white/30 hover:shadow-2xl"
+            className="relative cursor-pointer overflow-hidden rounded-3xl after:absolute after:inset-0 after:rounded-3xl after:border-8 after:border-white/30 hover:shadow-2xl"
           >
             <Image
               src={photo}
