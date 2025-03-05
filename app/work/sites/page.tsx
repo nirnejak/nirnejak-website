@@ -111,6 +111,7 @@ const allSites = {
     { title: "Wingspan Capital", link: "https://wingspancapital.com.au/" },
     { title: "Harris Wood", link: "https://www.harriswood.com.au/" },
     { title: "Movable", link: "https://www.movable.com.au/" },
+    { title: "Montano", link: "https://www.montano.net.au/" },
     { title: "LBD Studios", link: "https://www.lbdstudios.com.au/" },
     {
       title: "Whitefox Real Estate",
