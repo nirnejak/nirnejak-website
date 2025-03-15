@@ -62,7 +62,7 @@ const SitesPage: React.FC = () => {
 
         <div className="-mx-3 mb-16">
           <p className="text-zinc-200 text-center mb-6 uppercase tracking-wider font-medium">
-            Websites(without CMS)
+            Full-Stack Projects
           </p>
           {allSites.websites.map((project, index) => (
             <AppLink
