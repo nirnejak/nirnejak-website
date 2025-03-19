@@ -30,6 +30,11 @@ export default SideProjects
 
 const projects = [
   {
+    name: "Invoy (WIP)",
+    work: "Create, send and track beautiful invoices",
+    link: "https://invoy.work/",
+  },
+  {
     name: "SVG Animations Gallery",
     work: "A Gallery of SVG Animations built with Framer Motion",
     link: "https://svg-animations-gallery.vercel.app/",
