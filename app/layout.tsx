@@ -51,12 +51,7 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
             src="https://plausible.io/js/script.js"
           />
         </head>
-        <body
-          className={classNames(
-            "bg-zinc-900 overflow-x-hidden font-sans",
-            sansFont.variable
-          )}
-        >
+        <body className="bg-zinc-900 overflow-x-hidden font-sans">
           <Navbar />
           {children}
           <Footer />
