@@ -6,8 +6,6 @@ import { ViewTransitions } from "next-view-transitions"
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
-import classNames from "@/utils/classNames"
-
 import Background from "@/components/Background"
 import Bulb from "@/components/Bulb"
 import CommandBar from "@/components/CommandBar"
