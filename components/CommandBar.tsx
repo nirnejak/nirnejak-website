@@ -11,7 +11,6 @@ import {
   GithubFill,
   LinkOut,
   DribbbleFill,
-  LinkedinFill,
   XFill,
   Frame,
   UnsplashFill,
@@ -197,11 +196,6 @@ export const socialLinks = [
     content: "Dribbble",
     href: "https://dribbble.com/nirnejak/",
     icon: <DribbbleFill size={15} />,
-  },
-  {
-    content: "LinkedIn",
-    href: "https://www.linkedin.com/in/nirnejak/",
-    icon: <LinkedinFill size={15} />,
   },
   {
     content: "ProductHunt",
