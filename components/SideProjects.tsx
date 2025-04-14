@@ -52,7 +52,7 @@ const projects = [
   {
     name: "Done Done",
     work: "A Simple Stupid Interactive Todo List",
-    link: "https://interactive-interfaces.vercel.app/",
+    link: "https://done-done-beta.vercel.app/",
   },
   {
     name: "Oven Studio",
