@@ -35,6 +35,11 @@ const projects = [
     link: "https://invoy.work/",
   },
   {
+    name: "Peerlist UI Animation Challenge",
+    work: "My submission for Peerlist UI animation challenge",
+    link: "https://ui-animation-challenge.vercel.app",
+  },
+  {
     name: "SVG Animations Gallery",
     work: "A Gallery of SVG Animations built with Framer Motion",
     link: "https://svg-animations-gallery.vercel.app/",
