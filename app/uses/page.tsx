@@ -36,6 +36,20 @@ const UsesPage: React.FC = () => {
           </p>
         </div>
         <div>
+          <p className="text-sm font-medium text-zinc-500">Audio</p>
+          <p className="mt-1.5 text-lg font-semibold text-zinc-300">
+            Rode NT Mini, JBL Charge 4 <br />
+            Marshall Major IV
+          </p>
+        </div>
+        <div>
+          <p className="text-sm font-medium text-zinc-500">Accessories</p>
+          <p className="mt-1.5 text-lg font-semibold text-zinc-300">
+            Keychron K4 V2 (Hot Swappable)
+            <br /> Apple Magic Mouse
+          </p>
+        </div>
+        <div>
           <p className="text-sm font-medium text-zinc-500">Design Tools</p>
           <p className="mt-1.5 text-lg font-semibold text-zinc-300">
             Figma, Rive & Procreate
