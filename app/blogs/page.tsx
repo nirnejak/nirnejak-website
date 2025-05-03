@@ -47,7 +47,15 @@ export default BlogsPage
 const allBlogs = [
   {
     author: "Jitendra Nirnejak",
-    date: "24 Feb 2025",
+    date: "17 April 2025",
+    description:
+      "Choosing the right Node.js CMS: A technical guide. Explore the APIs, data models, code architecture, and performance benchmarks of Strapi, Sanity, Keystone, Payload, Dato, Ghost, and Tina to find the best fit.",
+    title: "A Developer's Guide to Choosing the Right Headless CMS for Node.js",
+    url: "https://yourbrandmate.agency/blog/a-developer-s-guide-to-choosing-the-right-headless-cms-for-node-js",
+  },
+  {
+    author: "Jitendra Nirnejak",
+    date: "24 February 2025",
     description:
       "Discover how the View Transitions API enhances web experiences with seamless animations and smooth page transitions, improving user engagement and performance.",
     title: "Enhancing Web Experiences with the View Transitions API",
@@ -113,7 +121,7 @@ const allBlogs = [
   },
   {
     author: "Jitendra Nirnejak",
-    date: "11 Feb 2021",
+    date: "11 February 2021",
     description:
       "Integrate your Shopify Store with Gatsby Site, build e-commerce website using Gatsby and Shopify.",
     title: "How to integrate Gatsby with Shopify Store",
@@ -129,7 +137,7 @@ const allBlogs = [
   },
   {
     author: "Jitendra Nirnejak",
-    date: "10 Feb 2020",
+    date: "10 February 2020",
     description:
       "A guide to building input forms that are easy to use and aesthetically pleasing. UX design tips & tricks to provide better visuals & great user experience.",
     title:
