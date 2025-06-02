@@ -5,12 +5,15 @@ import localFont from "next/font/local"
 import { ViewTransitions } from "next-view-transitions"
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Clarity from "@microsoft/clarity"
 
 import Background from "@/components/Background"
 import CommandBar from "@/components/CommandBar"
 import Bulb from "@/components/Bulb"
 import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
+
+import config from "@/config"
 
 import "@/styles/main.css"
 
@@ -37,6 +40,8 @@ interface Props {
 export const viewport: Viewport = {
   themeColor: "#1D1D20",
 }
+
+Clarity.init(config.CLARITY_PROJECT_ID)
 
 const HomeLayout: React.FC<Props> = ({ children }) => {
   return (

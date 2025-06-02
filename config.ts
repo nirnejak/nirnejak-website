@@ -1,6 +1,7 @@
 const config = {
   SCHEDULE_CALL_LINK: "https://cal.com/nirnejak/15min",
   CONTACT_EMAIL: "hello@nirnejak.com",
+  CLARITY_PROJECT_ID: "rteja4w2ze",
 
   baseUrl: "https://nirnejak.com",
   appName: "Jitendra Nirnejak",
