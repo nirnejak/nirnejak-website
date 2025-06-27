@@ -25,7 +25,7 @@ const PhotoCards: React.FC = () => {
             transition={{
               type: "spring",
               duration: 0.2,
-              easing: "ease-out",
+              ease: "easeOut",
               delay: 0.05 * index,
               stiffness: 65,
               damping: 12,
