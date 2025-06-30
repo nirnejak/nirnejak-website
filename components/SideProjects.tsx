@@ -61,7 +61,7 @@ const projects = [
   },
   {
     name: "Oven Studio",
-    work: "A Logo design and digital branding agency",
+    work: "A design and engineering studio",
     link: "https://oven.studio/",
   },
   {
