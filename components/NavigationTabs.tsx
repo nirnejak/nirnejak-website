@@ -17,7 +17,7 @@ interface Props {
 }
 
 const NavigationTabs: React.FC<Props> = ({ navLinks }) => {
-  const tabsData = navLinks
+  const TABS_LINKS = navLinks
 
   const [tabBoundingBox, setTabBoundingBox] =
     React.useState<TAB_BOUNDING_BOX_TYPE | null>(null)
@@ -76,7 +76,7 @@ const NavigationTabs: React.FC<Props> = ({ navLinks }) => {
           ...highlightStyles,
         }}
       />
-      {tabsData.map((tab, index) => (
+      {TABS_LINKS.map((tab, index) => (
         <Link
           key={index}
           href={tab.link}
