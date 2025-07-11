@@ -43,7 +43,7 @@ const HomePage: React.FC = () => {
           and seamless interactivity that makes people fall in love with a
           product.
         </p>
-        <div className="mb-32 flex md:items-center flex-col md:flex-row gap-6">
+        <div className="flex md:items-center flex-col md:flex-row gap-6">
           <div className="flex items-center gap-6">
             <a
               className="inline-flex group items-center gap-1.5 rounded-full bg-zinc-300 pr-4 pl-5 py-3 text-sm font-medium leading-none text-zinc-900 outline-hidden transition-colors hover:bg-zinc-200 focus:bg-zinc-200"
@@ -70,7 +70,6 @@ const HomePage: React.FC = () => {
             <SocialIcons />
           </div>
         </div>
-        <Brands />
       </section>
     </main>
   )
