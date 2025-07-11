@@ -7,7 +7,6 @@ import { ArrowRight } from "akar-icons"
 
 import getMetadata from "@/utils/metadata"
 import SocialIcons from "@/components/SocialIcons"
-import Brands from "@/components/Brands"
 
 import Photo from "@/assets/photo.jpg"
 import config from "@/config"
