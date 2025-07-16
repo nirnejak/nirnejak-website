@@ -6,7 +6,6 @@ import { ViewTransitions } from "next-view-transitions"
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
-import MicrosoftClarity from "@/components/MicrosoftClarity"
 import Background from "@/components/Background"
 import CommandBar from "@/components/CommandBar"
 import Bulb from "@/components/Bulb"
@@ -61,7 +60,6 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
           <CommandBar />
 
           <SpeedInsights />
-          <MicrosoftClarity />
         </body>
       </html>
     </ViewTransitions>
