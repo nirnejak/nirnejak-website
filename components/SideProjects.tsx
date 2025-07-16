@@ -60,11 +60,6 @@ const projects = [
     link: "https://done-done-beta.vercel.app/",
   },
   {
-    name: "Oven Studio",
-    work: "A design and engineering studio",
-    link: "https://oven.studio/",
-  },
-  {
     name: "React Presentation Maker",
     work: "Use your React components as presentation slides",
     link: "https://github.com/nirnejak/react-presentation/",
