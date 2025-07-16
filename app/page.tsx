@@ -28,8 +28,15 @@ const HomePage: React.FC = () => {
           className="rounded-full mb-6 w-16"
         />
         <h1 className="mb-3 text-2xl max-w-[36ch] font-medium tracking-tighter text-zinc-400 md:text-3xl">
-          Hi, I&apos;m Jitendra Nirnejak — developer, designer & founder at Oven
-          Studio. Crafting tasteful, elegant{" "}
+          Hi, I&apos;m Jitendra Nirnejak — developer, designer & founder at{" "}
+          <a
+            target="_blank"
+            href="https://oven.studio/"
+            className="hover:text-zinc-200 transition-colors"
+          >
+            Oven Studio
+          </a>
+          . Crafting tasteful, elegant{" "}
           <span className="text-gradient-blue font-bold">websites,</span>{" "}
           <span className="text-gradient-red font-bold">user-interfaces,</span>{" "}
           and{" "}
