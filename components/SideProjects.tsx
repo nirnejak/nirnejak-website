@@ -1,8 +1,6 @@
 import * as React from "react"
 
-interface Props {}
-
-const SideProjects: React.FC<Props> = () => {
+const SideProjects: React.FC = () => {
   return (
     <div className="-mx-3">
       <p className="text-zinc-200 text-center mb-6 uppercase tracking-wider font-medium">
