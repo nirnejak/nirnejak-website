@@ -26,6 +26,20 @@ export default PastEngagements
 
 const engagements = [
   {
+    name: "Arounda ATS",
+    work: "Product and Website Design",
+    year: 2025,
+    country: "USA",
+    link: "https://example.com/",
+  },
+  {
+    name: "Datavidhya",
+    work: "Frontend Development",
+    year: 2025,
+    country: "India",
+    link: "https://datavidhya.com/",
+  },
+  {
     name: "Radical Labs",
     work: "Logo & Branding",
     year: 2025,
