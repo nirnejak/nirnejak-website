@@ -7,7 +7,6 @@ import getMetadata from "@/utils/metadata"
 
 import AppLink from "@/components/atoms/Link"
 import ContactForm from "@/components/ContactForm"
-import SocialLinks from "@/components/SocialLinks"
 
 export const metadata: Metadata = getMetadata({
   path: "/contact/",
@@ -39,9 +38,6 @@ const ContactPage: React.FC = () => {
             >
               {config.CONTACT_EMAIL}
             </AppLink>
-            <div className="-mb-3 -ml-3.5 mt-4">
-              <SocialLinks />
-            </div>
           </div>
         </div>
         <div className="col-span-3">
