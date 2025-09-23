@@ -92,6 +92,7 @@ const allSites = {
     { title: "ROCC Naturals", link: "https://roccnaturals.com.au/" },
   ],
   websites: [
+    { title: "DataVidhya", link: "https://datavidhya.com/" },
     {
       title: "Dev Tools Academy",
       link: "https://www.devtoolsacademy.com/",
