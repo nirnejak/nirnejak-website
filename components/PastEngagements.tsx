@@ -26,7 +26,7 @@ export default PastEngagements
 
 const engagements = [
   {
-    name: "Arounda ATS",
+    name: "Nexxel",
     work: "Product and Website Design",
     year: 2025,
     country: "USA",
