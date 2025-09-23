@@ -34,7 +34,7 @@ const engagements = [
   },
   {
     name: "Datavidhya",
-    work: "Frontend Development",
+    work: "Full Stack Development",
     year: 2025,
     country: "India",
     link: "https://datavidhya.com/",
