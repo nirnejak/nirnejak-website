@@ -147,7 +147,7 @@ function AppIcon({
                 duration: 0.7,
               })
             }}
-            className="aspect-square block w-10 rounded-full bg-white shadow origin-bottom z-10"
+            className="aspect-square block w-10 rounded-full bg-white shadow-sm origin-bottom z-10"
           >
             {TOOLS[children as keyof typeof TOOLS]}
           </motion.button>
@@ -155,7 +155,7 @@ function AppIcon({
         <Tooltip.Portal>
           <Tooltip.Content
             sideOffset={10}
-            className="bg-zinc-700 px-3 py-1.5 text-sm rounded text-zinc-100 font-medium fill-zinc-700"
+            className="bg-zinc-700 px-3 py-1.5 text-sm rounded-sm text-zinc-100 font-medium fill-zinc-700"
           >
             {children}
             <Tooltip.Arrow />
