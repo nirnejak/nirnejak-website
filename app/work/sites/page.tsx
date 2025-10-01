@@ -22,9 +22,9 @@ const SitesPage: React.FC = () => {
       <section className="container mb-16 mt-10 text-sm md:mt-16">
         <div className="-mx-3 mb-16">
           <p className="text-zinc-200 text-center mb-6 uppercase tracking-wider font-medium">
-            ECOMMERCE SITES
+            Full Stack Projects
           </p>
-          {allSites.ecommerce.map((project, index) => (
+          {allSites.websites.map((project, index) => (
             <AppLink
               key={index}
               href={project.link}
@@ -59,26 +59,6 @@ const SitesPage: React.FC = () => {
             </AppLink>
           ))}
         </div>
-
-        <div className="-mx-3 mb-16">
-          <p className="text-zinc-200 text-center mb-6 uppercase tracking-wider font-medium">
-            Full-Stack Projects
-          </p>
-          {allSites.websites.map((project, index) => (
-            <AppLink
-              key={index}
-              href={project.link}
-              target="_blank"
-              className="hover-bg flex flex-col md:flex-row md:items-center gap-0.5 md:gap-2 font-medium p-3"
-            >
-              <p className="text-zinc-300">{project.title}</p>
-              <div className="flex-1 border-t border-dashed border-zinc-700" />
-              <p className="flex items-center gap-1 text-zinc-500">
-                {project.link}
-              </p>
-            </AppLink>
-          ))}
-        </div>
       </section>
     </main>
   )
@@ -87,12 +67,10 @@ const SitesPage: React.FC = () => {
 export default SitesPage
 
 const allSites = {
-  ecommerce: [
-    { title: "Jessica Coppet", link: "https://jessicacoppetstudio.com/" },
-    { title: "ROCC Naturals", link: "https://roccnaturals.com.au/" },
-  ],
   websites: [
     { title: "DataVidhya", link: "https://datavidhya.com/" },
+    { title: "Jessica Coppet", link: "https://jessicacoppetstudio.com/" },
+    { title: "ROCC Naturals", link: "https://roccnaturals.com.au/" },
     {
       title: "Dev Tools Academy",
       link: "https://www.devtoolsacademy.com/",
