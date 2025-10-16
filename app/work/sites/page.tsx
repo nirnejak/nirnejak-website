@@ -69,18 +69,23 @@ export default SitesPage
 const allSites = {
   websites: [
     { title: "DataVidhya", link: "https://datavidhya.com/" },
-    { title: "Jessica Coppet", link: "https://jessicacoppetstudio.com/" },
-    { title: "ROCC Naturals", link: "https://roccnaturals.com.au/" },
+    {
+      title: "MerkleScience - Compass",
+      link: "https://www.merklescience.com/platform/transaction-wallet-monitoring",
+    },
+    {
+      title: "MerkleScience - KYBB",
+      link: "https://www.merklescience.com/platform/intelligence-reports",
+    },
+    { title: "Draxlr", link: "https://www.draxlr.com/" },
+
     {
       title: "Dev Tools Academy",
       link: "https://www.devtoolsacademy.com/",
     },
-    { title: "Draxlr", link: "https://www.draxlr.com/" },
-    { title: "Inkoop", link: "https://www.inkoop.io/" },
-    {
-      title: "Sup Bot",
-      link: "https://dribbble.com/shots/21362314-Sup-bot-Landing-Site",
-    },
+    { title: "MarchHQ (Discontinued)", link: "https://march.cat/" },
+    { title: "Jessica Coppet", link: "https://jessicacoppetstudio.com/" },
+    { title: "ROCC Naturals", link: "https://roccnaturals.com.au/" },
   ],
   cms: [
     { title: "Wills Property", link: "https://www.willsproperty.com.au/" },
@@ -104,6 +109,11 @@ const allSites = {
     {
       title: "Stuart Family Lawyers",
       link: "https://www.stuartfamilylawyers.com.au/",
+    },
+    { title: "Inkoop", link: "https://www.inkoop.io/" },
+    {
+      title: "Sup Bot",
+      link: "https://dribbble.com/shots/21362314-Sup-bot-Landing-Site",
     },
   ],
 }
