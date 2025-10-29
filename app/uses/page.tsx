@@ -31,7 +31,7 @@ const UsesPage: React.FC = () => {
         <div>
           <p className="text-sm font-medium text-zinc-500">Camera & Gear</p>
           <p className="mt-1.5 text-lg font-semibold text-zinc-300">
-            iPhone 14 Pro, Insta 360 x3 & <br />
+            iPhone 14 Pro, Insta 360 X3 & <br />
             DJI Osmo Mobile 4 SE
           </p>
         </div>
