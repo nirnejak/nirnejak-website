@@ -10,6 +10,7 @@ interface Props {
   children: React.ReactNode
   className?: string
   activeClassName?: string
+  isFollowLink?: boolean
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void
   target?: "_blank" | "_self" | "_parent" | "_top" // add 'string' as option here if using for frameset
 }
@@ -19,6 +20,7 @@ const AppLink: React.FC<Props> = ({
   children,
   className,
   activeClassName,
+  isFollowLink,
   onClick,
   ...restProps
 }) => {
@@ -30,7 +32,9 @@ const AppLink: React.FC<Props> = ({
         onClick={(e) => {
           if (onClick !== undefined) onClick(e)
         }}
-        rel="noopener noreferrer nofollow"
+        rel={
+          isFollowLink ? "noopener noreferrer" : "noopener noreferrer nofollow"
+        }
         {...restProps}
       >
         {children}
