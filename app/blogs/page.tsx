@@ -28,6 +28,7 @@ const BlogsPage: React.FC = () => {
                 href={blog.url}
                 target="_blank"
                 className="hover-bg -mx-3 p-3 outline-hidden md:mx-0"
+                isFollowLink
               >
                 <p className="font-semibold text-zinc-300">{blog.title}</p>
                 <p className="mt-1.5 text-xs font-medium text-zinc-500">
