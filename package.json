@@ -35,7 +35,7 @@
     "@tailwindcss/postcss": "^4.1.17",
     "@types/next-pwa": "^5.6.9",
     "@types/node": "^24.10.1",
-    "@types/react": "^19.2.5",
+    "@types/react": "^19.2.6",
     "eslint": "^9.39.1",
     "eslint-config-love": "^133.0.0",
     "eslint-config-next": "^16.0.3",
@@ -52,7 +52,7 @@
     "prettier-plugin-tailwindcss": "^0.7.1",
     "tailwindcss": "^4.1.17",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.4"
+    "typescript-eslint": "^8.47.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint"
