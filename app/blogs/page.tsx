@@ -48,6 +48,15 @@ export default BlogsPage
 const allBlogs = [
   {
     author: "Jitendra Nirnejak",
+    date: "12 November 2025",
+    description:
+      "Discover Ruff and uv, Rust-fueled beasts revolutionizing Python dev. Blast through linting, packaging, and deps with 10x speed gains. Level up your code game now.",
+    title:
+      "UV and Ruff: Turbocharging Python Development with Rust-Powered Tools",
+    url: "https://www.devtoolsacademy.com/blog/uv-and-ruff-turbocharging-python-development-with-rust-powered-tools/",
+  },
+  {
+    author: "Jitendra Nirnejak",
     date: "17 April 2025",
     description:
       "Choosing the right Node.js CMS: A technical guide. Explore the APIs, data models, code architecture, and performance benchmarks of Strapi, Sanity, Keystone, Payload, Dato, Ghost, and Tina to find the best fit.",
