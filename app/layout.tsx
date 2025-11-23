@@ -8,7 +8,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import Background from "@/components/Background"
 import CommandBar from "@/components/CommandBar"
-import Bulb from "@/components/Bulb"
 import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
 
@@ -55,7 +54,6 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
           {children}
           <Footer />
 
-          <Bulb />
           <Background />
           <CommandBar />
 
