@@ -6,9 +6,9 @@ import AppLink from "@/components/atoms/Link"
 import getMetadata from "@/utils/metadata"
 
 export const metadata: Metadata = getMetadata({
-  path: "/work/sites/",
-  title: "Sites | Jitendra Nirnejak",
-  description: "Websites built by Jitendra Nirnejak",
+  path: "/work/projects/",
+  title: "Projects | Jitendra Nirnejak",
+  description: "Projects built by Jitendra Nirnejak",
 })
 
 const SitesPage: React.FC = () => {
@@ -16,7 +16,7 @@ const SitesPage: React.FC = () => {
     <main>
       <section className="container mt-32 md:mt-40">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-300 md:text-5xl">
-          Sites
+          Projects
         </h1>
       </section>
       <section className="container mb-16 mt-10 text-sm md:mt-16">
