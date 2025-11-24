@@ -3,7 +3,7 @@ import * as React from "react"
 import type { Viewport } from "next"
 import localFont from "next/font/local"
 import { ViewTransitions } from "next-view-transitions"
-
+import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import Background from "@/components/Background"
@@ -57,6 +57,7 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
           <Background />
           <CommandBar />
 
+          <Analytics />
           <SpeedInsights />
         </body>
       </html>
