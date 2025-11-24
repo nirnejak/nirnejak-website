@@ -11,7 +11,7 @@ export const metadata: Metadata = getMetadata({
   description: "Projects built by Jitendra Nirnejak",
 })
 
-const SitesPage: React.FC = () => {
+const ProjectsPage: React.FC = () => {
   return (
     <main>
       <section className="container mt-32 md:mt-40">
@@ -22,7 +22,7 @@ const SitesPage: React.FC = () => {
       <section className="container mb-16 mt-10 text-sm md:mt-16">
         <div className="-mx-3 mb-16">
           <p className="text-zinc-200 text-center mb-6 uppercase tracking-wider font-medium">
-            Full Stack Projects
+            Full-Stack Projects
           </p>
           {allSites.websites.map((project, index) => (
             <AppLink
@@ -34,7 +34,7 @@ const SitesPage: React.FC = () => {
               <p className="text-zinc-300">{project.title}</p>
               <div className="flex-1 border-t border-dashed border-zinc-700" />
               <p className="flex items-center gap-1 text-zinc-500">
-                {project.link}
+                {project.link === "#" ? "Discontinued" : project.link}
               </p>
             </AppLink>
           ))}
@@ -64,11 +64,16 @@ const SitesPage: React.FC = () => {
   )
 }
 
-export default SitesPage
+export default ProjectsPage
 
 const allSites = {
   websites: [
     { title: "DataVidhya", link: "https://datavidhya.com/" },
+    { title: "Draxlr", link: "https://www.draxlr.com/" },
+    {
+      title: "Dev Tools Academy",
+      link: "https://www.devtoolsacademy.com/",
+    },
     {
       title: "MerkleScience - Compass",
       link: "https://www.merklescience.com/platform/transaction-wallet-monitoring",
@@ -77,15 +82,12 @@ const allSites = {
       title: "MerkleScience - KYBB",
       link: "https://www.merklescience.com/platform/intelligence-reports",
     },
-    { title: "Draxlr", link: "https://www.draxlr.com/" },
-
-    {
-      title: "Dev Tools Academy",
-      link: "https://www.devtoolsacademy.com/",
-    },
-    { title: "MarchHQ (Discontinued)", link: "https://march.cat/" },
     { title: "Jessica Coppet", link: "https://jessicacoppetstudio.com/" },
     { title: "ROCC Naturals", link: "https://roccnaturals.com.au/" },
+    {
+      title: "MarchHQ (Discontinued and Open Sourced)",
+      link: "https://github.com/marchhq/march",
+    },
   ],
   cms: [
     { title: "Wills Property", link: "https://www.willsproperty.com.au/" },
