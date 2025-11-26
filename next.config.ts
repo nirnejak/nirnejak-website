@@ -21,6 +21,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/interactions/",
+        destination: "/work/",
+        permanent: true,
+      },
+      {
         source: "/work/sites/",
         destination: "/work/projects/",
         permanent: true,
