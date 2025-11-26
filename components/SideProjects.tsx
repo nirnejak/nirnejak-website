@@ -47,16 +47,16 @@ const projects = [
     work: "UI experiments with React & Framer Motion",
     link: "https://interactive-interfaces.vercel.app/",
   },
-  {
-    name: "TailwindCSS Animations",
-    work: "Copy Paste animations for TailwindCSS",
-    link: "https://tailwindanimations.vercel.app/",
-  },
-  {
-    name: "Done Done",
-    work: "A Simple Stupid Interactive Todo List",
-    link: "https://done-done-beta.vercel.app/",
-  },
+  // {
+  //   name: "TailwindCSS Animations",
+  //   work: "Copy Paste animations for TailwindCSS",
+  //   link: "https://tailwindanimations.vercel.app/",
+  // },
+  // {
+  //   name: "Done Done",
+  //   work: "A Simple Stupid Interactive Todo List",
+  //   link: "https://done-done-beta.vercel.app/",
+  // },
   {
     name: "React Presentation Maker",
     work: "Use your React components as presentation slides",
