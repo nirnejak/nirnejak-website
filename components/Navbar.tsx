@@ -15,7 +15,6 @@ interface Props {
 export const navLinks = [
   { content: "Home", link: "/" },
   { content: "Work", link: "/work/" },
-  { content: "Interactions", link: "/interactions/" },
   { content: "Blogs", link: "/blogs/" },
   { content: "Photos", link: "/photos/" },
   { content: "Uses", link: "/uses/" },
