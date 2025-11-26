@@ -2,8 +2,6 @@ import * as React from "react"
 
 import { Link } from "next-view-transitions"
 
-import config from "@/config"
-
 const PastEngagements: React.FC = () => {
   return (
     <div className="-mx-3">
@@ -12,8 +10,7 @@ const PastEngagements: React.FC = () => {
           Projects & Engagements
         </p>
         <Link
-          href={config.SCHEDULE_CALL_LINK}
-          target="_blank"
+          href={"/contact/"}
           className="absolute rotate-12 -top-3 -right-3 py-1 px-1.5 rounded-md text-xs text-blue-600 bg-blue-500/5 border border-dashed border-blue-600"
         >
           Contact for full portfolio
