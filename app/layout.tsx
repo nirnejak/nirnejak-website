@@ -1,6 +1,7 @@
 import * as React from "react"
 
 import type { Viewport } from "next"
+import Script from "next/script"
 import localFont from "next/font/local"
 import { ViewTransitions } from "next-view-transitions"
 import { Analytics } from "@vercel/analytics/next"
@@ -42,10 +43,16 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
     <ViewTransitions>
       <html lang="en" className={sansFont.variable}>
         <head>
-          <script
+          <Script
             defer
             data-domain="nirnejak.com"
             src="https://plausible.io/js/script.js"
+            strategy="afterInteractive"
+          />
+          <Script
+            src="https://analytics.ahrefs.com/analytics.js"
+            data-key="gbZIqgdBQxOyNwjN+z3uWA"
+            strategy="afterInteractive"
           />
         </head>
 
