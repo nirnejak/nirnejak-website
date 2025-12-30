@@ -48,6 +48,14 @@ export default BlogsPage
 const allBlogs = [
   {
     author: "Jitendra Nirnejak",
+    date: "30 December 2025",
+    description:
+      "A developer's guide to serverless databases: Understand the technical differences from traditional setups and explore tools like Prisma Postgres, Neon, and Turso.",
+    title: "The Shift to Serverless: A Guide to Modern Database Architecture",
+    url: "https://datavidhya.com/blog/serverless-sql-database/",
+  },
+  {
+    author: "Jitendra Nirnejak",
     date: "12 November 2025",
     description:
       "Discover Ruff and uv, Rust-fueled beasts revolutionizing Python dev. Blast through linting, packaging, and deps with 10x speed gains. Level up your code game now.",
