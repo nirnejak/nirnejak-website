@@ -80,4 +80,5 @@ const nextConfig: NextConfig = {
   },
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default withPWA(nextConfig as any)

@@ -17,16 +17,36 @@ export const metadata: Metadata = getMetadata({
 const WorkPage: React.FC = () => {
   return (
     <main>
-      <section className="container mt-32 md:mt-40 flex items-center justify-between">
-        <h1 className="text-4xl font-bold tracking-tight text-zinc-300 md:text-5xl">
+      <section
+        className="
+          container mt-32 flex items-center justify-between
+          md:mt-40
+        "
+      >
+        <h1
+          className="
+            text-4xl font-bold tracking-tight text-zinc-300
+            md:text-5xl
+          "
+        >
           Work
         </h1>
         <SocialIcons />
       </section>
-      <section className="container mb-16 mt-10 text-sm md:mt-16">
+      <section
+        className="
+          container mt-10 mb-16 text-sm
+          md:mt-16
+        "
+      >
         <SideProjects />
       </section>
-      <section className="container mb-16 mt-10 text-sm md:mt-16">
+      <section
+        className="
+          container mt-10 mb-16 text-sm
+          md:mt-16
+        "
+      >
         <PastEngagements />
       </section>
     </main>

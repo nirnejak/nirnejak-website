@@ -3,7 +3,11 @@ import * as React from "react"
 const SideProjects: React.FC = () => {
   return (
     <div className="-mx-3">
-      <p className="text-zinc-200 text-center mb-6 uppercase tracking-wider font-medium">
+      <p
+        className="
+          mb-6 text-center font-medium tracking-wider text-zinc-200 uppercase
+        "
+      >
         Side Projects
       </p>
       {projects.map((project, index) => (
@@ -11,7 +15,10 @@ const SideProjects: React.FC = () => {
           href={project.link}
           key={index}
           target="_blank"
-          className="flex flex-col md:flex-row md:items-center gap-0.5 md:gap-2 font-medium hover-bg p-3"
+          className="
+            hover-bg flex flex-col gap-0.5 p-3 font-medium
+            md:flex-row md:items-center md:gap-2
+          "
         >
           <p className="text-zinc-300">{project.name}</p>
           <div className="flex-1 border-t border-dashed border-zinc-700" />

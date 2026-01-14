@@ -6,12 +6,19 @@ const PastEngagements: React.FC = () => {
   return (
     <div className="-mx-3">
       <div className="relative">
-        <p className="text-zinc-200 text-center mb-6 uppercase tracking-wider font-medium">
+        <p
+          className="
+            mb-6 text-center font-medium tracking-wider text-zinc-200 uppercase
+          "
+        >
           Projects & Engagements
         </p>
         <Link
           href={"/contact/"}
-          className="absolute rotate-12 -top-3 -right-3 py-1 px-1.5 rounded-md text-xs text-blue-600 bg-blue-500/5 border border-dashed border-blue-600"
+          className="
+            absolute -top-3 -right-3 rotate-12 rounded-md border border-dashed
+            border-blue-600 bg-blue-500/5 px-1.5 py-1 text-xs text-blue-600
+          "
         >
           Contact for full portfolio
         </Link>
@@ -19,7 +26,10 @@ const PastEngagements: React.FC = () => {
       {engagements.map((client, index) => (
         <div
           key={index}
-          className="flex flex-col md:flex-row md:items-center gap-0.5 md:gap-2 font-medium p-3"
+          className="
+            flex flex-col gap-0.5 p-3 font-medium
+            md:flex-row md:items-center md:gap-2
+          "
         >
           <p className="text-zinc-300">{client.name}</p>
           <div className="flex-1 border-t border-dashed border-zinc-700" />

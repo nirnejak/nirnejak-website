@@ -2,7 +2,6 @@
 import * as React from "react"
 
 import useLinkHighlight from "@/hooks/useLinkHighlight"
-import classNames from "@/utils/classNames"
 
 interface Props {
   tabsOptions: string[]
@@ -22,7 +21,10 @@ const Tabs: React.FC<Props> = ({ tabsOptions, activeTab, setActiveTab }) => {
       {tabsOptions.map((tab, index) => (
         <button
           key={index}
-          className="relative inline-block rounded-lg px-3.5 py-1.5 outline-hidden cursor-pointer"
+          className="
+            relative inline-block cursor-pointer rounded-lg px-3.5 py-1.5
+            outline-hidden
+          "
           onClick={() => {
             setActiveTab(index)
           }}

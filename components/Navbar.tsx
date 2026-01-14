@@ -36,7 +36,12 @@ const Navbar: React.FC<Props> = () => {
 
   return (
     <nav className="fixed top-0 z-10 w-full backdrop-blur-lg">
-      <div className="container hidden items-center py-3 md:flex">
+      <div
+        className="
+          container hidden items-center py-3
+          md:flex
+        "
+      >
         <div className="-mx-3.5">
           <NavigationTabs navLinks={navLinks} />
         </div>
@@ -48,24 +53,43 @@ const Navbar: React.FC<Props> = () => {
             )}
             href={"/contact/"}
           >
-            <span className="animate-slide-left group-hover:animate-slide-right group-focus:animate-slide-right">
+            <span
+              className="
+                animate-slide-left
+                group-hover:animate-slide-right
+                group-focus:animate-slide-right
+              "
+            >
               Contact
             </span>
             <ArrowRight
-              className="hidden animate-slide-left-and-fade hover:block group-hover:block group-focus-visible:block"
+              className="
+                hidden animate-slide-left-and-fade
+                group-hover:block
+                group-focus-visible:block
+                hover:block
+              "
               size={14}
             />
           </AppLink>
         </div>
       </div>
-      <div className="flex md:hidden">
+      <div
+        className="
+          flex
+          md:hidden
+        "
+      >
         {isOpen ? (
           <div
-            className="flex h-dvh w-screen flex-col items-center justify-center gap-5 bg-zinc-900 px-20"
+            className="
+              flex h-dvh w-screen flex-col items-center justify-center gap-5
+              bg-zinc-900 px-20
+            "
             role="button"
             tabIndex={0}
             onKeyUp={(e) => {
-              e.key === "Enter" && setIsOpen(false)
+              if (e.key === "Enter") setIsOpen(false)
             }}
             onClick={() => {
               setIsOpen(false)

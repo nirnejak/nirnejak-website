@@ -14,14 +14,34 @@ export const metadata: Metadata = getMetadata({
 const ProjectsPage: React.FC = () => {
   return (
     <main>
-      <section className="container mt-32 md:mt-40">
-        <h1 className="text-4xl font-bold tracking-tight text-zinc-300 md:text-5xl">
+      <section
+        className="
+          container mt-32
+          md:mt-40
+        "
+      >
+        <h1
+          className="
+            text-4xl font-bold tracking-tight text-zinc-300
+            md:text-5xl
+          "
+        >
           Projects
         </h1>
       </section>
-      <section className="container mb-16 mt-10 text-sm md:mt-16">
+      <section
+        className="
+          container mt-10 mb-16 text-sm
+          md:mt-16
+        "
+      >
         <div className="-mx-3 mb-16">
-          <p className="text-zinc-200 text-center mb-6 uppercase tracking-wider font-medium">
+          <p
+            className="
+              mb-6 text-center font-medium tracking-wider text-zinc-200
+              uppercase
+            "
+          >
             Full-Stack Projects
           </p>
           {allSites.websites.map((project, index) => (
@@ -29,7 +49,10 @@ const ProjectsPage: React.FC = () => {
               key={index}
               href={project.link}
               target="_blank"
-              className="hover-bg flex flex-col md:flex-row md:items-center gap-0.5 md:gap-2 font-medium p-3"
+              className="
+                hover-bg flex flex-col gap-0.5 p-3 font-medium
+                md:flex-row md:items-center md:gap-2
+              "
             >
               <p className="text-zinc-300">{project.title}</p>
               <div className="flex-1 border-t border-dashed border-zinc-700" />
@@ -41,7 +64,12 @@ const ProjectsPage: React.FC = () => {
         </div>
 
         <div className="-mx-3 mb-16">
-          <p className="text-zinc-200 text-center mb-6 uppercase tracking-wider font-medium">
+          <p
+            className="
+              mb-6 text-center font-medium tracking-wider text-zinc-200
+              uppercase
+            "
+          >
             Websites(with CMS)
           </p>
           {allSites.cms.map((project, index) => (
@@ -49,7 +77,10 @@ const ProjectsPage: React.FC = () => {
               key={index}
               href={project.link}
               target="_blank"
-              className="hover-bg flex flex-col md:flex-row md:items-center gap-0.5 md:gap-2 font-medium p-3"
+              className="
+                hover-bg flex flex-col gap-0.5 p-3 font-medium
+                md:flex-row md:items-center md:gap-2
+              "
             >
               <p className="text-zinc-300">{project.title}</p>
               <div className="flex-1 border-t border-dashed border-zinc-700" />

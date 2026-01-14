@@ -34,11 +34,23 @@ const UsesImages: React.FC = () => {
   }, [])
 
   return (
-    <section className="relative -ml-4 mt-10 grid w-[calc(100vw+32px)] grid-cols-4 md:-ml-5 md:mt-20 md:grid-cols-8">
+    <section
+      className="
+        relative mt-10 -ml-4 grid w-[calc(100vw+32px)] grid-cols-4
+        md:mt-20 md:-ml-5 md:grid-cols-8
+      "
+    >
       {images.map((image, index) => (
         <motion.div
           key={index}
-          className={index > 3 ? "-mt-4 md:mt-0" : ""}
+          className={
+            index > 3
+              ? `
+                -mt-4
+                md:mt-0
+              `
+              : ""
+          }
           initial={{ opacity: 0, scale: 0.02 }}
           animate={{ opacity: 1, scale: 1, rotate: rotation[index % 3] }}
           whileHover={{ scale: 1.1, rotate: 0, zIndex: 5 }}
@@ -53,9 +65,14 @@ const UsesImages: React.FC = () => {
           }}
         >
           <div
-            className="relative w-[calc(100%+10px)] overflow-hidden rounded-3xl shadow-xl after:absolute after:inset-0 after:rounded-3xl
-            after:border-[6px] after:border-white/30 hover:shadow-2xl md:w-[calc(100%+20px)]
-            md:after:border-8"
+            className="
+              relative w-[calc(100%+10px)] overflow-hidden rounded-3xl shadow-xl
+              after:absolute after:inset-0 after:rounded-3xl after:border-[6px]
+              after:border-white/30
+              hover:shadow-2xl
+              md:w-[calc(100%+20px)]
+              md:after:border-8
+            "
           >
             <Image
               width={400}

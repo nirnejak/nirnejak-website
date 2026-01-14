@@ -15,6 +15,14 @@
   -webkit-text-fill-color: white;
 }
 
+.container {
+  @apply mx-auto md:w-177.5 px-4 md:px-0;
+}
+
+.command-item[aria-selected="true"] {
+  @apply after:scale-100 after:opacity-100;
+}
+
 @theme {
   --font-sans: var(--sans-font);
 
@@ -39,61 +47,55 @@
   --animate-shake: shake 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.container {
-  @apply mx-auto md:w-[710px] px-4 md:px-0;
-}
+@layer components {
+  .hover-bg {
+    @apply relative z-1 active:scale-95;
 
-.command-item[aria-selected="true"] {
-  @apply after:scale-100 after:opacity-100;
-}
+    @apply after:rounded-lg after:bg-zinc-800;
+    @apply after:absolute after:inset-0 after:z-[-1];
+    @apply after:origin-center after:scale-90 after:opacity-0 after:transition-all;
 
-.hover-bg {
-  @apply relative z-1 active:scale-95;
+    @apply hover:after:scale-100 hover:after:opacity-100 focus:after:scale-100 focus:after:opacity-100;
+  }
 
-  @apply after:rounded-lg after:bg-zinc-800;
-  @apply after:absolute after:inset-0 after:z-[-1];
-  @apply after:origin-center after:scale-90 after:opacity-0 after:transition-all;
+  .hover-bg.hover-bg-dark {
+    @apply after:bg-zinc-900;
+  }
 
-  @apply hover:after:scale-100 hover:after:opacity-100 focus:after:scale-100 focus:after:opacity-100;
-}
+  .text-gradient-blue {
+    background: -webkit-linear-gradient(top left, #03cffe, #397dd6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-.hover-bg.hover-bg-dark {
-  @apply after:bg-zinc-900;
-}
+  .text-gradient-red {
+    background: -webkit-linear-gradient(top left, #e95d0f, #d61f5f);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-.text-gradient-blue {
-  background: -webkit-linear-gradient(top left, #03cffe, #397dd6);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+  .text-gradient-yellow {
+    background: -webkit-linear-gradient(top left, #ffc900, #ffa101);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-.text-gradient-red {
-  background: -webkit-linear-gradient(top left, #e95d0f, #d61f5f);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+  .text-gradient-green {
+    background: -webkit-linear-gradient(top left, #04c100, #038100);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-.text-gradient-yellow {
-  background: -webkit-linear-gradient(top left, #ffc900, #ffa101);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gradient-green {
-  background: -webkit-linear-gradient(top left, #04c100, #038100);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gradient-purple {
-  background: -webkit-linear-gradient(top left, #ff00a8, #cc0086);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  .text-gradient-purple {
+    background: -webkit-linear-gradient(top left, #ff00a8, #cc0086);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 /* Keyframe Definitions */

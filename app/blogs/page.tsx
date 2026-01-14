@@ -14,20 +14,48 @@ export const metadata: Metadata = getMetadata({
 const BlogsPage: React.FC = () => {
   return (
     <main>
-      <section className="container mt-32 md:mt-40">
-        <h1 className="text-4xl font-bold tracking-tight text-zinc-300 md:text-5xl">
+      <section
+        className="
+          container mt-32
+          md:mt-40
+        "
+      >
+        <h1
+          className="
+            text-4xl font-bold tracking-tight text-zinc-300
+            md:text-5xl
+          "
+        >
           Blogs
         </h1>
       </section>
-      <section className="container mb-16 mt-10 text-sm md:mt-16">
-        <div className="mb-16 flex flex-col gap-8 md:flex-row md:gap-24">
-          <div className="flex flex-col gap-1 md:-mx-3">
+      <section
+        className="
+          container mt-10 mb-16 text-sm
+          md:mt-16
+        "
+      >
+        <div
+          className="
+            mb-16 flex flex-col gap-8
+            md:flex-row md:gap-24
+          "
+        >
+          <div
+            className="
+              flex flex-col gap-1
+              md:-mx-3
+            "
+          >
             {allBlogs.map((blog, index) => (
               <AppLink
                 key={index}
                 href={blog.url}
                 target="_blank"
-                className="hover-bg -mx-3 p-3 outline-hidden md:mx-0"
+                className="
+                  hover-bg -mx-3 p-3 outline-hidden
+                  md:mx-0
+                "
                 isFollowLink
               >
                 <p className="font-semibold text-zinc-300">{blog.title}</p>

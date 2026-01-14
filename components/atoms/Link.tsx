@@ -9,7 +9,6 @@ interface Props {
   href: string
   children: React.ReactNode
   className?: string
-  activeClassName?: string
   isFollowLink?: boolean
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void
   target?: "_blank" | "_self" | "_parent" | "_top" // add 'string' as option here if using for frameset
@@ -19,7 +18,6 @@ const AppLink: React.FC<Props> = ({
   href,
   children,
   className,
-  activeClassName,
   isFollowLink,
   onClick,
   ...restProps

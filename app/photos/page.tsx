@@ -15,13 +15,28 @@ export const metadata: Metadata = getMetadata({
 const PhotosPage: React.FC = () => {
   return (
     <main>
-      <section className="container mt-32 md:mt-40">
-        <h1 className="text-4xl font-bold tracking-tight text-zinc-300 md:text-5xl">
+      <section
+        className="
+          container mt-32
+          md:mt-40
+        "
+      >
+        <h1
+          className="
+            text-4xl font-bold tracking-tight text-zinc-300
+            md:text-5xl
+          "
+        >
           Photos
         </h1>
       </section>
 
-      <section className="mb-16 mt-10 px-3 md:mt-16">
+      <section
+        className="
+          mt-10 mb-16 px-3
+          md:mt-16
+        "
+      >
         <PhotoGallery photos={photos} />
       </section>
     </main>

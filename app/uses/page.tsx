@@ -14,13 +14,28 @@ export const metadata: Metadata = getMetadata({
 const UsesPage: React.FC = () => {
   return (
     <main className="max-w-[100vw] overflow-hidden">
-      <section className="container mt-32 md:mt-40">
-        <h1 className="text-4xl font-bold tracking-tight text-zinc-300 md:text-5xl">
+      <section
+        className="
+          container mt-32
+          md:mt-40
+        "
+      >
+        <h1
+          className="
+            text-4xl font-bold tracking-tight text-zinc-300
+            md:text-5xl
+          "
+        >
           Uses
         </h1>
       </section>
       <UsesImages />
-      <section className="container mb-16 mt-10 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2">
+      <section
+        className="
+          container mt-10 mb-16 grid grid-cols-1 gap-8
+          md:mt-16 md:grid-cols-2
+        "
+      >
         <div>
           <p className="text-sm font-medium text-zinc-500">Computer</p>
           <p className="mt-1.5 text-lg font-semibold text-zinc-300">

@@ -56,7 +56,7 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
           />
         </head>
 
-        <body className="bg-zinc-900 overflow-x-hidden font-sans">
+        <body className="overflow-x-hidden bg-zinc-900 font-sans">
           <Navbar />
           {children}
           <Footer />

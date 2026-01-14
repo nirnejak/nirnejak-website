@@ -44,7 +44,7 @@ const ContactForm: React.FC = () => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(state),
-    }) // eslint-disable-next-line @typescript-eslint/promise-function-async
+    })
       .then((response) => response.json())
       .then((data: ResponseDataType) => {
         setFormState("Sent!")
@@ -65,7 +65,11 @@ const ContactForm: React.FC = () => {
     <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
       <input
         type="text"
-        className="rounded-md bg-zinc-800 px-4 py-3 text-xs font-medium text-zinc-300 outline-hidden placeholder:text-zinc-500"
+        className="
+          rounded-md bg-zinc-800 px-4 py-3 text-xs font-medium text-zinc-300
+          outline-hidden
+          placeholder:text-zinc-500
+        "
         placeholder="Name"
         name="name"
         value={state.name}
@@ -74,7 +78,11 @@ const ContactForm: React.FC = () => {
       />
       <input
         type="email"
-        className="rounded-md bg-zinc-800 px-4 py-3 text-xs font-medium text-zinc-300 outline-hidden placeholder:text-zinc-500"
+        className="
+          rounded-md bg-zinc-800 px-4 py-3 text-xs font-medium text-zinc-300
+          outline-hidden
+          placeholder:text-zinc-500
+        "
         placeholder="Email"
         name="email"
         value={state.email}
@@ -82,7 +90,11 @@ const ContactForm: React.FC = () => {
         required
       />
       <textarea
-        className="rounded-md bg-zinc-800 px-4 py-3 text-xs font-medium text-zinc-300 outline-hidden placeholder:text-zinc-500"
+        className="
+          rounded-md bg-zinc-800 px-4 py-3 text-xs font-medium text-zinc-300
+          outline-hidden
+          placeholder:text-zinc-500
+        "
         placeholder="Message"
         rows={5}
         name="message"
@@ -92,7 +104,14 @@ const ContactForm: React.FC = () => {
       />
       <button
         disabled={formState === "Sending..." || formState === "Sent!"}
-        className="rounded-md bg-zinc-50 px-4 py-3 text-center text-sm font-semibold uppercase tracking-wide text-zinc-900 outline-hidden transition-all hover:bg-zinc-200 focus:bg-zinc-200 active:scale-95 disabled:cursor-not-allowed disabled:bg-zinc-400"
+        className="
+          rounded-md bg-zinc-50 px-4 py-3 text-center text-sm font-semibold
+          tracking-wide text-zinc-900 uppercase outline-hidden transition-all
+          hover:bg-zinc-200
+          focus:bg-zinc-200
+          active:scale-95
+          disabled:cursor-not-allowed disabled:bg-zinc-400
+        "
       >
         <AnimatePresence mode="popLayout" initial={false}>
           <motion.span
