@@ -10,6 +10,7 @@ const withPWA = nextPwa({
 })
 
 const nextConfig: NextConfig = {
+  reactCompiler: true,
   trailingSlash: true,
   reactStrictMode: true,
   poweredByHeader: false,
