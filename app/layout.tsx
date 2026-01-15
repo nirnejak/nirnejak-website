@@ -7,6 +7,8 @@ import { ViewTransitions } from "next-view-transitions"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
+import { ReactLenis } from "lenis/react"
+
 import Background from "@/components/Background"
 import CommandBar from "@/components/CommandBar"
 import Footer from "@/components/Footer"
@@ -56,17 +58,19 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
           />
         </head>
 
-        <body className="overflow-x-hidden bg-zinc-900 font-sans">
-          <Navbar />
-          {children}
-          <Footer />
+        <ReactLenis root>
+          <body className="overflow-x-hidden bg-zinc-900 font-sans">
+            <Navbar />
+            {children}
+            <Footer />
 
-          <Background />
-          <CommandBar />
+            <Background />
+            <CommandBar />
 
-          <Analytics />
-          <SpeedInsights />
-        </body>
+            <Analytics />
+            <SpeedInsights />
+          </body>
+        </ReactLenis>
       </html>
     </ViewTransitions>
   )
