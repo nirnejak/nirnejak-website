@@ -14,7 +14,7 @@ import CommandBar from "@/components/CommandBar"
 import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
 
-import "@/styles/main.css"
+import "./main.css"
 
 const sansFont = localFont({
   variable: "--sans-font",
