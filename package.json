@@ -54,7 +54,7 @@
     "typescript": "^5.9.3"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint"
+    "*.{js,jsx,ts,tsx}": "bun run lint"
   },
   "volta": {
     "node": "24.12.0"
