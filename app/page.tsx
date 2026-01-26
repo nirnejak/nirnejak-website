@@ -81,6 +81,7 @@ const HomePage: React.FC = () => {
                 outline-hidden transition-colors
                 hover:bg-zinc-200
                 focus:bg-zinc-200
+                active:scale-98
               "
               href={config.SCHEDULE_CALL_LINK}
               target="_blank"
