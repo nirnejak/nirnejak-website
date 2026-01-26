@@ -1,6 +1,5 @@
 "use client"
 import * as React from "react"
-
 import { Link } from "next-view-transitions"
 
 import classNames from "@/utils/classNames"

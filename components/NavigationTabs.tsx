@@ -1,5 +1,4 @@
 import * as React from "react"
-
 import { Link } from "next-view-transitions"
 
 interface TAB_BOUNDING_BOX_TYPE {

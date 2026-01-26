@@ -1,14 +1,11 @@
 import * as React from "react"
-
 import type { Metadata } from "next"
 import Image from "next/image"
 
 import { ArrowRight } from "akar-icons"
 
 import config from "@/config"
-
 import getMetadata from "@/utils/metadata"
-
 import SocialIcons from "@/components/SocialIcons"
 
 import Photo from "@/assets/photo.jpg"

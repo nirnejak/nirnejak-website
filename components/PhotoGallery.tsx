@@ -1,10 +1,9 @@
 "use client"
-
 import * as React from "react"
-
-import { XSmall } from "akar-icons"
-import { motion } from "motion/react"
 import Image, { type StaticImageData } from "next/image"
+
+import { motion } from "motion/react"
+import { XSmall } from "akar-icons"
 
 import useClickOutside from "@/hooks/useClickOutside"
 import useModalWithContent from "@/hooks/useModalWithContent"

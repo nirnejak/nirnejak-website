@@ -1,11 +1,9 @@
 import * as React from "react"
-
 import type { Metadata } from "next"
-
 import Image from "next/image"
 
-import AppLink from "@/components/atoms/Link"
 import getMetadata from "@/utils/metadata"
+import AppLink from "@/components/atoms/Link"
 
 export const metadata: Metadata = getMetadata({
   path: "/",

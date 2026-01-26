@@ -4,7 +4,6 @@ import * as React from "react"
 import { ArrowRight, ThreeLineHorizontal } from "akar-icons"
 
 import classNames from "@/utils/classNames"
-
 import AppLink from "@/components/atoms/Link"
 import NavigationTabs from "@/components/NavigationTabs"
 

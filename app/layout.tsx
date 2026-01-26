@@ -1,5 +1,4 @@
 import * as React from "react"
-
 import type { Viewport } from "next"
 import Script from "next/script"
 import localFont from "next/font/local"
@@ -9,10 +8,10 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import { ReactLenis } from "lenis/react"
 
+import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
 import Background from "@/components/Background"
 import CommandBar from "@/components/CommandBar"
-import Footer from "@/components/Footer"
-import Navbar from "@/components/Navbar"
 
 import "./main.css"
 

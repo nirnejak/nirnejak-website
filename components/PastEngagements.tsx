@@ -1,5 +1,4 @@
 import * as React from "react"
-
 import { Link } from "next-view-transitions"
 
 const PastEngagements: React.FC = () => {

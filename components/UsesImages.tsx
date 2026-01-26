@@ -1,8 +1,8 @@
 "use client"
 import * as React from "react"
+import Image from "next/image"
 
 import { motion } from "motion/react"
-import Image from "next/image"
 
 import MysticallyAwkward from "@/assets/uses/IMG_0849.jpeg"
 import GoodVibesGreatCoffee from "@/assets/uses/IMG_2056.jpeg"

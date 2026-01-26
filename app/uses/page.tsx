@@ -1,9 +1,8 @@
 import * as React from "react"
-
 import type { Metadata } from "next"
 
-import UsesImages from "@/components/UsesImages"
 import getMetadata from "@/utils/metadata"
+import UsesImages from "@/components/UsesImages"
 
 export const metadata: Metadata = getMetadata({
   path: "/uses/",
