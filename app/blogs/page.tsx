@@ -75,6 +75,14 @@ export default BlogsPage
 const allBlogs = [
   {
     author: "Jitendra Nirnejak",
+    date: "30 January 2025",
+    description:
+      "Serverless databases compared. Compare Neon, Supabase, Turso, and PlanetScale based on cold starts, branching, and free tiers to find your perfect SQL stack",
+    title: "6 Best Serverless SQL Databases for Developers (2026 Comparison)",
+    url: "https://www.devtoolsacademy.com/blog/serverless-sql-databases/",
+  },
+  {
+    author: "Jitendra Nirnejak",
     date: "30 December 2025",
     description:
       "A developer's guide to serverless databases: Understand the technical differences from traditional setups and explore tools like Prisma Postgres, Neon, and Turso.",
