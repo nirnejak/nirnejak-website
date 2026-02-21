@@ -1,9 +1,8 @@
 "use client"
-import * as React from "react"
-import Image, { type StaticImageData } from "next/image"
-
-import { motion } from "motion/react"
 import { XSmall } from "akar-icons"
+import { motion } from "motion/react"
+import Image, { type StaticImageData } from "next/image"
+import * as React from "react"
 
 import useClickOutside from "@/hooks/useClickOutside"
 import useModalWithContent from "@/hooks/useModalWithContent"
@@ -24,18 +23,10 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
 
   return (
     <section>
-      <div
-        className="
-          grid grid-cols-2 gap-3
-          sm:grid-cols-3
-          md:grid-cols-4
-          lg:grid-cols-5
-          xl:grid-cols-6
-        "
-      >
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
         {photos.map((photo, index) => (
           <motion.div
-            key={index}
+            key={photo.src}
             role="button"
             tabIndex={0}
             onClick={() => {
@@ -55,12 +46,7 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
 
               delay: isLoaded ? 0 : 0.05 * index,
             }}
-            className="
-              relative cursor-pointer overflow-hidden rounded-3xl
-              after:absolute after:inset-0 after:rounded-3xl after:border-8
-              after:border-white/30
-              hover:shadow-2xl
-            "
+            className="relative cursor-pointer overflow-hidden rounded-3xl after:absolute after:inset-0 after:rounded-3xl after:border-8 after:border-white/30 hover:shadow-2xl"
           >
             <Image
               src={photo}
@@ -74,17 +60,10 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
         ))}
       </div>
       {isOpen && content !== null && (
-        <div
-          className="
-            fixed top-0 left-0 z-30 grid h-dvh w-full place-items-center
-            bg-zinc-900/30 backdrop-blur-lg
-          "
-        >
+        <div className="fixed top-0 left-0 z-30 grid h-dvh w-full place-items-center bg-zinc-900/30 backdrop-blur-lg">
           <button
-            className="
-              fixed top-5 right-5 rounded-full bg-zinc-700 p-1.5 text-zinc-300
-              hover:bg-zinc-500
-            "
+            type="button"
+            className="fixed top-5 right-5 rounded-full bg-zinc-700 p-1.5 text-zinc-300 hover:bg-zinc-500"
             onClick={() => {
               closeModal()
             }}
@@ -95,10 +74,7 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
             initial={{ opacity: 0, scale: 0.8, filter: "blur(20px)" }}
             animate={{ opacity: 1, scale: 1, filter: "none" }}
             exit={{ opacity: 0 }}
-            className="
-              flex p-5
-              md:h-[calc(100vh-50px)]
-            "
+            className="flex p-5 md:h-[calc(100vh-50px)]"
             ref={ref}
           >
             <Image

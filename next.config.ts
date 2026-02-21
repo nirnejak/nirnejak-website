@@ -80,5 +80,5 @@ const nextConfig: NextConfig = {
   },
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+// biome-ignore lint/suspicious/noExplicitAny: withPWA types are incompatible
 export default withPWA(nextConfig as any)

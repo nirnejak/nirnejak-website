@@ -1,5 +1,5 @@
-import * as React from "react"
 import { Link } from "next-view-transitions"
+import * as React from "react"
 
 interface TAB_BOUNDING_BOX_TYPE {
   left: number
@@ -75,15 +75,11 @@ const NavigationTabs: React.FC<Props> = ({ navLinks }) => {
           ...highlightStyles,
         }}
       />
-      {TABS_LINKS.map((tab, index) => (
+      {TABS_LINKS.map((tab) => (
         <Link
-          key={index}
+          key={tab.link}
           href={tab.link}
-          className="
-            relative inline-block px-4 py-2 text-xs font-medium text-zinc-50
-            outline-hidden
-            active:scale-95
-          "
+          className="relative inline-block px-4 py-2 font-medium text-xs text-zinc-50 outline-hidden active:scale-95"
           onMouseOver={(ev: React.MouseEvent<HTMLAnchorElement>) => {
             repositionHighlight(ev, tab)
           }}

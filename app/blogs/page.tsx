@@ -1,8 +1,7 @@
-import * as React from "react"
 import type { Metadata } from "next"
-
-import getMetadata from "@/utils/metadata"
+import type * as React from "react"
 import AppLink from "@/components/atoms/Link"
+import getMetadata from "@/utils/metadata"
 
 export const metadata: Metadata = getMetadata({
   path: "/blogs/",
@@ -13,52 +12,24 @@ export const metadata: Metadata = getMetadata({
 const BlogsPage: React.FC = () => {
   return (
     <main>
-      <section
-        className="
-          container mt-32
-          md:mt-40
-        "
-      >
-        <h1
-          className="
-            text-4xl font-bold tracking-tight text-zinc-300
-            md:text-5xl
-          "
-        >
+      <section className="container mt-32 md:mt-40">
+        <h1 className="font-bold text-4xl text-zinc-300 tracking-tight md:text-5xl">
           Blogs
         </h1>
       </section>
-      <section
-        className="
-          container mt-10 mb-16 text-sm
-          md:mt-16
-        "
-      >
-        <div
-          className="
-            mb-16 flex flex-col gap-8
-            md:flex-row md:gap-24
-          "
-        >
-          <div
-            className="
-              flex flex-col gap-1
-              md:-mx-3
-            "
-          >
-            {allBlogs.map((blog, index) => (
+      <section className="container mt-10 mb-16 text-sm md:mt-16">
+        <div className="mb-16 flex flex-col gap-8 md:flex-row md:gap-24">
+          <div className="flex flex-col gap-1 md:-mx-3">
+            {allBlogs.map((blog) => (
               <AppLink
-                key={index}
+                key={blog.url}
                 href={blog.url}
                 target="_blank"
-                className="
-                  hover-bg -mx-3 p-3 outline-hidden
-                  md:mx-0
-                "
+                className="hover-bg -mx-3 p-3 outline-hidden md:mx-0"
                 isFollowLink
               >
                 <p className="font-semibold text-zinc-300">{blog.title}</p>
-                <p className="mt-1.5 text-xs font-medium text-zinc-500">
+                <p className="mt-1.5 font-medium text-xs text-zinc-500">
                   {blog.description}
                 </p>
               </AppLink>

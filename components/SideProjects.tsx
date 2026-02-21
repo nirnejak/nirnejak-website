@@ -1,27 +1,20 @@
-import * as React from "react"
+import type * as React from "react"
 
 const SideProjects: React.FC = () => {
   return (
     <div className="-mx-3">
-      <p
-        className="
-          mb-6 text-center font-medium tracking-wider text-zinc-200 uppercase
-        "
-      >
+      <p className="mb-6 text-center font-medium text-zinc-200 uppercase tracking-wider">
         Side Projects
       </p>
-      {projects.map((project, index) => (
+      {projects.map((project) => (
         <a
           href={project.link}
-          key={index}
+          key={project.name}
           target="_blank"
-          className="
-            hover-bg flex flex-col gap-0.5 p-3 font-medium
-            md:flex-row md:items-center md:gap-2
-          "
+          className="hover-bg flex flex-col gap-0.5 p-3 font-medium md:flex-row md:items-center md:gap-2"
         >
           <p className="text-zinc-300">{project.name}</p>
-          <div className="flex-1 border-t border-dashed border-zinc-700" />
+          <div className="flex-1 border-zinc-700 border-t border-dashed" />
           <p className="flex items-center gap-1 text-zinc-500">
             {project.work}
           </p>

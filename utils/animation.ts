@@ -1,4 +1,4 @@
-import { AnimationGeneratorType } from "motion"
+import type { AnimationGeneratorType } from "motion"
 
 export const BASE_TRANSITION = {
   duration: 0.15,

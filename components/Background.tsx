@@ -1,12 +1,10 @@
-import * as React from "react"
+import type * as React from "react"
 
 const Background: React.FC = () => {
   return (
     <svg
-      className="
-        pointer-events-none fixed top-0 left-0 z-999 inline-block w-full
-        align-middle opacity-15
-      "
+      aria-hidden="true"
+      className="pointer-events-none fixed top-0 left-0 z-999 inline-block w-full align-middle opacity-15"
       style={{
         height: "calc(100vh + 200px)",
         transform: "translateY(0px)",

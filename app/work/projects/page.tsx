@@ -1,8 +1,7 @@
-import * as React from "react"
 import type { Metadata } from "next"
-
-import getMetadata from "@/utils/metadata"
+import type * as React from "react"
 import AppLink from "@/components/atoms/Link"
+import getMetadata from "@/utils/metadata"
 
 export const metadata: Metadata = getMetadata({
   path: "/work/projects/",
@@ -13,48 +12,25 @@ export const metadata: Metadata = getMetadata({
 const ProjectsPage: React.FC = () => {
   return (
     <main>
-      <section
-        className="
-          container mt-32
-          md:mt-40
-        "
-      >
-        <h1
-          className="
-            text-4xl font-bold tracking-tight text-zinc-300
-            md:text-5xl
-          "
-        >
+      <section className="container mt-32 md:mt-40">
+        <h1 className="font-bold text-4xl text-zinc-300 tracking-tight md:text-5xl">
           Projects
         </h1>
       </section>
-      <section
-        className="
-          container mt-10 mb-16 text-sm
-          md:mt-16
-        "
-      >
+      <section className="container mt-10 mb-16 text-sm md:mt-16">
         <div className="-mx-3 mb-16">
-          <p
-            className="
-              mb-6 text-center font-medium tracking-wider text-zinc-200
-              uppercase
-            "
-          >
+          <p className="mb-6 text-center font-medium text-zinc-200 uppercase tracking-wider">
             Full-Stack Projects
           </p>
-          {allSites.websites.map((project, index) => (
+          {allSites.websites.map((project) => (
             <AppLink
-              key={index}
+              key={project.title}
               href={project.link}
               target="_blank"
-              className="
-                hover-bg flex flex-col gap-0.5 p-3 font-medium
-                md:flex-row md:items-center md:gap-2
-              "
+              className="hover-bg flex flex-col gap-0.5 p-3 font-medium md:flex-row md:items-center md:gap-2"
             >
               <p className="text-zinc-300">{project.title}</p>
-              <div className="flex-1 border-t border-dashed border-zinc-700" />
+              <div className="flex-1 border-zinc-700 border-t border-dashed" />
               <p className="flex items-center gap-1 text-zinc-500">
                 {project.link === "#" ? "Discontinued" : project.link}
               </p>
@@ -63,26 +39,18 @@ const ProjectsPage: React.FC = () => {
         </div>
 
         <div className="-mx-3 mb-16">
-          <p
-            className="
-              mb-6 text-center font-medium tracking-wider text-zinc-200
-              uppercase
-            "
-          >
+          <p className="mb-6 text-center font-medium text-zinc-200 uppercase tracking-wider">
             Websites(with CMS)
           </p>
-          {allSites.cms.map((project, index) => (
+          {allSites.cms.map((project) => (
             <AppLink
-              key={index}
+              key={project.title}
               href={project.link}
               target="_blank"
-              className="
-                hover-bg flex flex-col gap-0.5 p-3 font-medium
-                md:flex-row md:items-center md:gap-2
-              "
+              className="hover-bg flex flex-col gap-0.5 p-3 font-medium md:flex-row md:items-center md:gap-2"
             >
               <p className="text-zinc-300">{project.title}</p>
-              <div className="flex-1 border-t border-dashed border-zinc-700" />
+              <div className="flex-1 border-zinc-700 border-t border-dashed" />
               <p className="flex items-center gap-1 text-zinc-500">
                 {project.link}
               </p>

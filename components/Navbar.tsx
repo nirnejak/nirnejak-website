@@ -1,11 +1,10 @@
 "use client"
-import * as React from "react"
 
 import { ArrowRight, ThreeLineHorizontal } from "akar-icons"
-
-import classNames from "@/utils/classNames"
+import * as React from "react"
 import AppLink from "@/components/atoms/Link"
 import NavigationTabs from "@/components/NavigationTabs"
+import classNames from "@/utils/classNames"
 
 interface Props {
   theme?: string
@@ -35,12 +34,7 @@ const Navbar: React.FC<Props> = () => {
 
   return (
     <nav className="fixed top-0 z-10 w-full backdrop-blur-lg">
-      <div
-        className="
-          container hidden items-center py-3
-          md:flex
-        "
-      >
+      <div className="container hidden items-center py-3 md:flex">
         <div className="-mx-3.5">
           <NavigationTabs navLinks={navLinks} />
         </div>
@@ -52,39 +46,21 @@ const Navbar: React.FC<Props> = () => {
             )}
             href={"/contact/"}
           >
-            <span
-              className="
-                animate-slide-left
-                group-hover:animate-slide-right
-                group-focus:animate-slide-right
-              "
-            >
+            <span className="animate-slide-left group-hover:animate-slide-right group-focus:animate-slide-right">
               Contact
             </span>
             <ArrowRight
-              className="
-                hidden animate-slide-left-and-fade
-                group-hover:block
-                group-focus-visible:block
-                hover:block
-              "
+              className="hidden animate-slide-left-and-fade hover:block group-hover:block group-focus-visible:block"
               size={14}
             />
           </AppLink>
         </div>
       </div>
-      <div
-        className="
-          flex
-          md:hidden
-        "
-      >
+      <div className="flex md:hidden">
         {isOpen ? (
+          // biome-ignore lint/a11y/useSemanticElements: backdrop overlay for closing menu
           <div
-            className="
-              flex h-dvh w-screen flex-col items-center justify-center gap-5
-              bg-zinc-900 px-20
-            "
+            className="flex h-dvh w-screen flex-col items-center justify-center gap-5 bg-zinc-900 px-20"
             role="button"
             tabIndex={0}
             onKeyUp={(e) => {
@@ -94,8 +70,12 @@ const Navbar: React.FC<Props> = () => {
               setIsOpen(false)
             }}
           >
-            {navLinks.map((navLink, index) => (
-              <AppLink key={index} className={navLinkClass} href={navLink.link}>
+            {navLinks.map((navLink) => (
+              <AppLink
+                key={navLink.link}
+                className={navLinkClass}
+                href={navLink.link}
+              >
                 {navLink.content}
               </AppLink>
             ))}
@@ -113,6 +93,7 @@ const Navbar: React.FC<Props> = () => {
         ) : (
           <div className="flex p-4">
             <button
+              type="button"
               onClick={() => {
                 setIsOpen(true)
               }}
