@@ -56,7 +56,7 @@ bun run dev
 bun run lint
 ```
 
-**Format all files with Prettier**
+**Format all files with Biome**
 
 ```bash
 bun run format
