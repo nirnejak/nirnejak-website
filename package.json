@@ -35,14 +35,14 @@
     "use-sound": "^5.0.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.2.0",
+    "@tailwindcss/postcss": "^4.2.1",
     "@types/next-pwa": "^5.6.9",
     "@types/node": "^25.3.0",
     "@types/react": "^19.2.14",
     "@biomejs/biome": "2.4.4",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
-    "tailwindcss": "^4.2.0",
+    "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3"
   },
   "lint-staged": {
