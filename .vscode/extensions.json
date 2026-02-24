@@ -1,7 +1,6 @@
 {
   "recommendations": [
     "biomejs.biome",
-    "editorconfig.editorconfig",
     "bradlc.vscode-tailwindcss",
     "csstools.postcss",
     "jock.svg",
