@@ -24,26 +24,33 @@ Next.js 16 portfolio site using App Router. Fully static — no CMS or API data 
 - `fonts/` — Self-hosted GeneralSans variable font
 - `config.ts` — Site-wide config (links, email, keywords)
 
+### Imports
+
+Path alias `@/*` maps to project root (e.g., `import config from "@/config"`).
+
 ### Routing
 
 Routes: `/`, `/work/`, `/work/projects/`, `/blogs/`, `/photos/`, `/uses/`, `/contact/`. Trailing slashes are enforced via `trailingSlash: true` in next.config.ts.
 
 ### Styling
 
-Tailwind CSS v4 via PostCSS. Custom animations and theme extensions defined in `app/main.css` using `@theme` and `@keyframes`. Biome enforces sorted Tailwind classes (`useSortedClasses: error`).
+Tailwind CSS v4 via PostCSS. Custom animations and theme extensions defined in `app/main.css` using `@theme` and `@keyframes`. Custom utility classes (`hover-bg`, `text-gradient-*`) defined in `app/main.css` via `@layer components`. Biome enforces sorted Tailwind classes (`useSortedClasses: error`).
 
 ### Key patterns
 
 - React Compiler is enabled — no need for manual `useMemo`/`useCallback`
-- View transitions via `next-view-transitions` (Link component wraps this)
+- View transitions via `next-view-transitions` — use `components/atoms/Link.tsx` instead of `next/link`
 - Smooth scrolling via Lenis (ReactLenis in root layout)
 - Motion library for component animations; animation presets in `utils/animation.ts`
 - PWA enabled via `next-pwa` (disabled in development)
 - `"use client"` directive required for components with interactivity
+- `utils/classNames.ts` is a custom conditional class joiner (not clsx) — usage: `classNames("foo", condition && "bar")`
+- `utils/metadata.ts` exports `getMetadata()` — use for page-level metadata in every `page.tsx`
+- Icons from `akar-icons`; UI primitives from Radix UI and `cmdk` (command palette)
 
 ## Code Style (Biome)
 
-- No semicolons, double quotes, trailing commas (ES5)
+- Semicolons as needed, double quotes, trailing commas (ES5)
 - 2-space indent, 80 char line width, LF line endings
 - Tailwind classes must be sorted (Biome `useSortedClasses` rule)
 - Pre-commit hook runs `biome check --fix` via lint-staged
