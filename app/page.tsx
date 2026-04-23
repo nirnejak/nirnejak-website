@@ -24,7 +24,10 @@ const HomePage: React.FC = () => {
           className="mb-6 w-16 rounded-full"
         />
         <h1 className="mb-3 max-w-[36ch] font-medium text-2xl text-zinc-400 tracking-tighter md:text-3xl">
-          Hi, I&apos;m Jitendra Nirnejak — developer, designer & founder at{" "}
+          Hi, I&apos;m Jitendra Nirnejak (Jeet)
+          <br />
+          Developer & Designer
+          {/* & founder at{" "}
           <a
             target="_blank"
             href="https://oven.studio/"
@@ -32,7 +35,7 @@ const HomePage: React.FC = () => {
             rel="noopener"
           >
             Oven Studio
-          </a>
+          </a> */}
           . Crafting tasteful, elegant{" "}
           <span className="font-bold text-gradient-blue">websites,</span>{" "}
           <span className="font-bold text-gradient-red">user-interfaces,</span>{" "}
@@ -52,6 +55,7 @@ const HomePage: React.FC = () => {
               className="group inline-flex items-center gap-1.5 rounded-full bg-zinc-300 py-3 pr-4 pl-5 font-medium text-sm text-zinc-900 leading-none outline-hidden transition-colors hover:bg-zinc-200 focus:bg-zinc-200 active:scale-98"
               href={config.SCHEDULE_CALL_LINK}
               target="_blank"
+              rel="noopener"
             >
               <span>Schedule call</span>
               <ArrowRight
