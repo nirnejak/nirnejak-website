@@ -46,11 +46,20 @@ export default BlogsPage
 const allBlogs = [
   {
     author: "Jitendra Nirnejak",
-    date: "30 January 2025",
+    date: "30 January 2026",
     description:
-      "Serverless databases compared. Compare Neon, Supabase, Turso, and PlanetScale based on cold starts, branching, and free tiers to find your perfect SQL stack",
+      "A deep dive into Payload CMS 3.0, the open-source, TypeScript-native headless CMS that installs directly into your Next.js app. Setup, collections, hooks, Local API, access control, deployment, and how it compares to Strapi, Sanity, and Contentful.",
     title: "6 Best Serverless SQL Databases for Developers (2026 Comparison)",
     url: "https://www.devtoolsacademy.com/blog/serverless-sql-databases/",
+  },
+  {
+    author: "Jitendra Nirnejak",
+    date: "13 January 2026",
+    description:
+      "Serverless databases compared. Compare Neon, Supabase, Turso, and PlanetScale based on cold starts, branching, and free tiers to find your perfect SQL stack",
+    title:
+      "Payload CMS - The TypeScript Headless CMS That Lives Inside Next.js",
+    url: "https://oven.studio/blog/payload-cms/",
   },
   {
     author: "Jitendra Nirnejak",
