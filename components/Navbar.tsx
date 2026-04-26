@@ -32,6 +32,17 @@ const Navbar: React.FC<Props> = () => {
     }
   }, [isOpen])
 
+  React.useEffect(() => {
+    if (!isOpen) return
+    const handleKey = (e: KeyboardEvent): void => {
+      if (e.key === "Escape") setIsOpen(false)
+    }
+    document.addEventListener("keydown", handleKey)
+    return () => {
+      document.removeEventListener("keydown", handleKey)
+    }
+  }, [isOpen])
+
   return (
     <nav className="fixed top-0 z-10 w-full backdrop-blur-lg">
       <div className="container hidden items-center py-3 md:flex">
