@@ -11,6 +11,7 @@ const SideProjects: React.FC = () => {
           href={project.link}
           key={project.name}
           target="_blank"
+          rel="noopener"
           className="hover-bg flex flex-col gap-0.5 p-3 font-medium md:flex-row md:items-center md:gap-2"
         >
           <p className="text-zinc-300">{project.name}</p>
