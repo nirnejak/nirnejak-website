@@ -7,6 +7,7 @@ interface MetadataArgs {
   title: string
   description: string
   image?: string
+  noIndex?: boolean
 }
 
 const getMetadata = ({
@@ -14,20 +15,27 @@ const getMetadata = ({
   title,
   description,
   image,
+  noIndex,
 }: MetadataArgs): Metadata => {
   const metaTitle = title
   const metaDescription = description
   const metaImage = image ?? `${config.baseUrl}/cover.png`
 
   const metadata: Metadata = {
+    metadataBase: new URL(config.baseUrl),
     title: metaTitle,
     description: metaDescription,
+
+    alternates: {
+      canonical: path,
+    },
 
     applicationName: config.appName,
     creator: config.author,
     authors: [{ name: config.author, url: config.authorUrl }],
-    robots:
-      "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    robots: noIndex
+      ? "noindex, nofollow"
+      : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
     keywords: config.keywords,
 
     icons: {
