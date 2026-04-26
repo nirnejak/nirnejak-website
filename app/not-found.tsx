@@ -5,9 +5,11 @@ import AppLink from "@/components/atoms/Link"
 import getMetadata from "@/utils/metadata"
 
 export const metadata: Metadata = getMetadata({
-  path: "/",
+  path: "/404",
   title: "Not Found | Jitendra Nirnejak",
-  description: "Portfolio Website of Jitendra Nirnejak, Developer and Designer",
+  description:
+    "The page you're looking for doesn't exist. Head back to nirnejak.com to browse work, blogs, photos, and more.",
+  noIndex: true,
 })
 
 const GIFs = [
