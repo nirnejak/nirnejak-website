@@ -10,12 +10,44 @@ import getMetadata from "@/utils/metadata"
 export const metadata: Metadata = getMetadata({
   path: "/",
   title: "Jitendra Nirnejak - Developer & Designer",
-  description: "Portfolio Website of Jitendra Nirnejak, Developer and Designer",
+  description:
+    "Independent designer and developer based in Bangalore, crafting tasteful websites, user-interfaces, and web animations for ambitious teams.",
 })
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Jitendra Nirnejak",
+  alternateName: "Jeet",
+  url: config.baseUrl,
+  image: `${config.baseUrl}/cover.png`,
+  jobTitle: "Designer & Developer",
+  description:
+    "Independent designer and developer based in Bangalore, crafting tasteful websites, user-interfaces, and web animations.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Bangalore",
+    addressCountry: "IN",
+  },
+  sameAs: [
+    "https://x.com/jeetnirnejak/",
+    "https://github.com/nirnejak/",
+    "https://dribbble.com/nirnejak/",
+    "https://www.producthunt.com/@nirnejak",
+    "https://unsplash.com/@nirnejak/",
+    "https://www.instagram.com/jeetnirnejak/",
+    "https://layers.to/nirnejak/",
+  ],
+}
 
 const HomePage: React.FC = () => {
   return (
     <main className="flex min-h-[calc(100dvh-46px)] flex-col justify-center">
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD requires raw script content
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       <section className="container my-24 sm:my-0">
         <Image
           src={Photo}
@@ -23,7 +55,7 @@ const HomePage: React.FC = () => {
           placeholder="blur"
           className="mb-6 w-16 rounded-full"
         />
-        <h1 className="mb-3 max-w-[36ch] font-medium text-2xl text-zinc-400 tracking-tighter md:text-3xl">
+        <h1 className="max-w-[36ch] font-medium text-2xl text-zinc-400 tracking-tighter md:text-3xl">
           Hi, I&apos;m Jitendra Nirnejak (Jeet)
           <br />
           Developer & Designer
@@ -66,7 +98,7 @@ const HomePage: React.FC = () => {
             <p className="font-medium text-sm text-zinc-500">
               or{" "}
               <a
-                href="mailto:hi@roasted.studio"
+                href="mailto:hello@nirnejak.com?subject=Project%20Enquiry"
                 className="ml-3 text-zinc-400 underline-offset-2 outline-hidden transition-colors hover:text-zinc-300 hover:underline focus:text-zinc-300 focus:underline"
               >
                 hello@nirnejak.com
