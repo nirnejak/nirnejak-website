@@ -11,6 +11,9 @@ const config = {
   keywords: [
     "Designer",
     "Developer",
+    "Design Engineer",
+    "Frontend",
+    "Web Animation",
     "Figma",
     "Rive",
     "Spline",
@@ -18,10 +21,11 @@ const config = {
     "Webflow",
     "React",
     "Next.js",
-    "Gatsby",
     "Node",
     "TypeScript",
     "JavaScript",
+    "Tailwind CSS",
+    "Motion",
     "Postgres",
   ],
 }
