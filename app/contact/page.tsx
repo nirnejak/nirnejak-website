@@ -9,7 +9,7 @@ export const metadata: Metadata = getMetadata({
   path: "/contact/",
   title: "Contact | Jitendra Nirnejak",
   description:
-    "Contact Jitendra Nirnejak, get in touch on social media, fill the form or reach out via email",
+    "Get in touch with Jitendra Nirnejak — schedule a call, send a project enquiry, or just say hi. Available for select design and frontend engagements.",
 })
 
 const ContactPage: React.FC = () => {
@@ -30,7 +30,7 @@ const ContactPage: React.FC = () => {
               Reach me via email
             </p>
             <AppLink
-              href={`mailto:${config.CONTACT_EMAIL}&subject=Project%20Enquiry`}
+              href={`mailto:${config.CONTACT_EMAIL}?subject=Project%20Enquiry`}
               className="font-semibold text-sm text-zinc-300"
             >
               {config.CONTACT_EMAIL}

@@ -8,7 +8,8 @@ import getMetadata from "@/utils/metadata"
 export const metadata: Metadata = getMetadata({
   path: "/work/",
   title: "Work | Jitendra Nirnejak",
-  description: "History of past work and collaborations by Jitendra Nirnejak",
+  description:
+    "Selected client work and engagements by Jitendra Nirnejak — design and frontend for SaaS, real estate, and product teams across the US, UK, Australia, and India.",
 })
 
 const WorkPage: React.FC = () => {

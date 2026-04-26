@@ -7,7 +7,8 @@ import { photos } from "@/utils/photos"
 export const metadata: Metadata = getMetadata({
   path: "/photos/",
   title: "Photos | Jitendra Nirnejak",
-  description: "A gallery of Photos captured by Jitendra Nirnejak",
+  description:
+    "Photography by Jitendra Nirnejak — landscapes, travel, and street shots captured on iPhone, DJI, and Insta360 across India and beyond.",
 })
 
 const PhotosPage: React.FC = () => {

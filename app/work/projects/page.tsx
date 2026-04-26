@@ -6,7 +6,8 @@ import getMetadata from "@/utils/metadata"
 export const metadata: Metadata = getMetadata({
   path: "/work/projects/",
   title: "Projects | Jitendra Nirnejak",
-  description: "Projects built by Jitendra Nirnejak",
+  description:
+    "Side projects and shipped builds by Jitendra Nirnejak, ranging from full-stack web apps to design-led marketing sites.",
 })
 
 const ProjectsPage: React.FC = () => {
@@ -40,7 +41,7 @@ const ProjectsPage: React.FC = () => {
 
         <div className="-mx-3 mb-16">
           <p className="mb-6 text-center font-medium text-zinc-200 uppercase tracking-wider">
-            Websites(with CMS)
+            Websites (with CMS)
           </p>
           {allSites.cms.map((project) => (
             <AppLink

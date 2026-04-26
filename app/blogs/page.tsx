@@ -6,7 +6,8 @@ import getMetadata from "@/utils/metadata"
 export const metadata: Metadata = getMetadata({
   path: "/blogs/",
   title: "Blogs | Jitendra Nirnejak",
-  description: "Blogs and articles written by Jitendra Nirnejak",
+  description:
+    "Long-form writing by Jitendra Nirnejak on React, TypeScript, design engineering, animation, Postgres, and the tools that make modern web work.",
 })
 
 const BlogsPage: React.FC = () => {
@@ -48,7 +49,7 @@ const allBlogs = [
     author: "Jitendra Nirnejak",
     date: "30 January 2026",
     description:
-      "A deep dive into Payload CMS 3.0, the open-source, TypeScript-native headless CMS that installs directly into your Next.js app. Setup, collections, hooks, Local API, access control, deployment, and how it compares to Strapi, Sanity, and Contentful.",
+      "Serverless databases compared. Compare Neon, Supabase, Turso, and PlanetScale based on cold starts, branching, and free tiers to find your perfect SQL stack.",
     title: "6 Best Serverless SQL Databases for Developers (2026 Comparison)",
     url: "https://www.devtoolsacademy.com/blog/serverless-sql-databases/",
   },
@@ -56,7 +57,7 @@ const allBlogs = [
     author: "Jitendra Nirnejak",
     date: "13 January 2026",
     description:
-      "Serverless databases compared. Compare Neon, Supabase, Turso, and PlanetScale based on cold starts, branching, and free tiers to find your perfect SQL stack",
+      "A deep dive into Payload CMS 3.0, the open-source, TypeScript-native headless CMS that installs directly into your Next.js app. Setup, collections, hooks, Local API, access control, deployment, and how it compares to Strapi, Sanity, and Contentful.",
     title:
       "Payload CMS - The TypeScript Headless CMS That Lives Inside Next.js",
     url: "https://oven.studio/blog/payload-cms/",
@@ -146,7 +147,7 @@ const allBlogs = [
   },
   {
     author: "Jitendra Nirnejak",
-    date: "1 Jun 2021",
+    date: "1 June 2021",
     description:
       "A closer look into the new image api of Gatsby 3. What's new, what's changed and what's gone.",
     title: "Gatsby 3 Image - A Deep-dive into the new image API features",
@@ -162,7 +163,7 @@ const allBlogs = [
   },
   {
     author: "Jitendra Nirnejak",
-    date: "19 Nov 2020",
+    date: "19 November 2020",
     description:
       "A Guide to setting up ESLint for React with Prettier, Pre-commit Hook and Visual Studio Code for better development with linting and code formatting that works with your editor.",
     title: "Setup ESLint for React with Prettier, pre-commit and VSCode",
@@ -179,7 +180,7 @@ const allBlogs = [
   },
   {
     author: "Jitendra Nirnejak",
-    date: "31 Jan 2020",
+    date: "31 January 2020",
     description:
       "A comprehensive list of extremely useful Gatsby Plugins that can help you build, deploy and monitor a great blog.",
     title: "Must have Gatsby plugins for a great blog",
@@ -187,7 +188,7 @@ const allBlogs = [
   },
   {
     author: "Jitendra Nirnejak",
-    date: "31 Dec 2019",
+    date: "31 December 2019",
     description:
       "A guide to building custom global vue.js plugins for app-wide accessible components, customs filters and custom directives.",
     title: "Building custom plugins for Vue.js | Supercharge Development",
@@ -195,7 +196,7 @@ const allBlogs = [
   },
   {
     author: "Jitendra Nirnejak",
-    date: "30 Nov 2019",
+    date: "30 November 2019",
     description:
       "Vuesax - The all-new Vue Component Library. Why Vuesax? How to Install & Integrate Vuesax? How to customize Vuesax Theme?",
     title: "Vuesax - The all new Vue Component Library",
@@ -203,7 +204,7 @@ const allBlogs = [
   },
   {
     author: "Jitendra Nirnejak",
-    date: "30 Oct 2019",
+    date: "30 October 2019",
     description:
       "A Guide to using JSDoc for generating documentation for react.js applications. Find out the benefits of using JSDoc and using JSDoc with React Component.",
     title:
@@ -212,7 +213,7 @@ const allBlogs = [
   },
   {
     author: "Jitendra Nirnejak",
-    date: "24 Sep 2019",
+    date: "24 September 2019",
     description:
       "AdminJS is a React JS based admin panel for Node JS. We talk about how to set it up and use it in Node JS applications with MongoDB and SQL Databases.",
     title:
