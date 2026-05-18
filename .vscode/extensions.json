@@ -1,8 +1,8 @@
 {
   "recommendations": [
-    "jock.svg",
-    "biomejs.biome",
+    "oxc.oxc-vscode",
     "csstools.postcss",
+    "unifiedjs.vscode-mdx",
     "bradlc.vscode-tailwindcss",
     "streetsidesoftware.code-spell-checker"
   ]
