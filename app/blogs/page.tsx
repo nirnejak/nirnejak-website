@@ -14,7 +14,7 @@ const BlogsPage: React.FC = () => {
   return (
     <main>
       <section className="container mt-32 md:mt-40">
-        <h1 className="font-bold text-4xl text-zinc-300 tracking-tight md:text-5xl">
+        <h1 className="text-4xl font-bold tracking-tight text-zinc-300 md:text-5xl">
           Blogs
         </h1>
       </section>
@@ -30,7 +30,7 @@ const BlogsPage: React.FC = () => {
                 isFollowLink
               >
                 <p className="font-semibold text-zinc-300">{blog.title}</p>
-                <p className="mt-1.5 font-medium text-xs text-zinc-500">
+                <p className="mt-1.5 text-xs font-medium text-zinc-500">
                   {blog.description}
                 </p>
               </AppLink>

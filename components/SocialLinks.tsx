@@ -24,7 +24,7 @@ const SocialLinks: React.FC = () => {
             </Tooltip.Trigger>
             <Tooltip.Portal>
               <Tooltip.Content
-                className="select-none rounded-md bg-zinc-800 px-3.5 py-2.5 text-sm text-zinc-300 leading-none will-change-[transform,opacity] data-[state=delayed-open]:data-[side=bottom]:animate-slide-up-and-fade data-[state=delayed-open]:data-[side=left]:animate-slide-right-and-fade data-[state=delayed-open]:data-[side=right]:animate-slide-left-and-fade data-[state=delayed-open]:data-[side=top]:animate-slide-down-and-fade"
+                className="data-[state=delayed-open]:data-[side=bottom]:animate-slide-up-and-fade data-[state=delayed-open]:data-[side=left]:animate-slide-right-and-fade data-[state=delayed-open]:data-[side=right]:animate-slide-left-and-fade data-[state=delayed-open]:data-[side=top]:animate-slide-down-and-fade rounded-md bg-zinc-800 px-3.5 py-2.5 text-sm leading-none text-zinc-300 will-change-[transform,opacity] select-none"
                 sideOffset={5}
                 side="bottom"
               >
@@ -51,7 +51,7 @@ const SocialLinks: React.FC = () => {
             </Tooltip.Trigger>
             <Tooltip.Portal>
               <Tooltip.Content
-                className="select-none rounded-md bg-zinc-800 px-3.5 py-2.5 text-sm text-zinc-300 leading-none will-change-[transform,opacity] data-[state=delayed-open]:data-[side=bottom]:animate-slide-up-and-fade data-[state=delayed-open]:data-[side=left]:animate-slide-right-and-fade data-[state=delayed-open]:data-[side=right]:animate-slide-left-and-fade data-[state=delayed-open]:data-[side=top]:animate-slide-down-and-fade"
+                className="data-[state=delayed-open]:data-[side=bottom]:animate-slide-up-and-fade data-[state=delayed-open]:data-[side=left]:animate-slide-right-and-fade data-[state=delayed-open]:data-[side=right]:animate-slide-left-and-fade data-[state=delayed-open]:data-[side=top]:animate-slide-down-and-fade rounded-md bg-zinc-800 px-3.5 py-2.5 text-sm leading-none text-zinc-300 will-change-[transform,opacity] select-none"
                 sideOffset={5}
                 side="bottom"
               >

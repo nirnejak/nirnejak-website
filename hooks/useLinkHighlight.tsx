@@ -8,7 +8,8 @@ interface HighlightProperties {
 }
 
 const useLinkHighlight = (activeTab: number): HighlightProperties => {
-  const _size = useWindowSize()
+  // Subscribes to window resize so the highlight re-measures on layout changes
+  useWindowSize()
 
   const wrapperRef = React.useRef<HTMLDivElement | null>(null)
 

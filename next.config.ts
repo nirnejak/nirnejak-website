@@ -80,5 +80,4 @@ const nextConfig: NextConfig = {
   },
 }
 
-// biome-ignore lint/suspicious/noExplicitAny: withPWA types are incompatible
 export default withPWA(nextConfig as any)

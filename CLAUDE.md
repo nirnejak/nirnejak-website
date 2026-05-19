@@ -6,9 +6,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - `bun dev` — Start dev server (uses webpack)
 - `bun run build` — Production build (uses webpack)
-- `bun run lint` — Lint with Biome (`biome check .`)
-- `bun run lint:fix` — Auto-fix lint issues (`biome check --fix .`)
-- `bun run format` — Format with Biome (`biome format --write .`)
+- `bun run lint` — Lint with oxlint (`oxlint`)
+- `bun run lint:fix` — Auto-fix lint issues (`oxlint --fix`)
+- `bun run format` — Format with oxfmt (`oxfmt`)
+- `bun run format:check` — Check formatting (`oxfmt --check`)
 - `bun run type-check` — TypeScript type checking (`tsc --pretty --noEmit`)
 
 ## Architecture
@@ -34,7 +35,7 @@ Routes: `/`, `/work/`, `/work/projects/`, `/blogs/`, `/photos/`, `/uses/`, `/con
 
 ### Styling
 
-Tailwind CSS v4 via PostCSS. Custom animations and theme extensions defined in `app/main.css` using `@theme` and `@keyframes`. Custom utility classes (`hover-bg`, `text-gradient-*`) defined in `app/main.css` via `@layer components`. Biome enforces sorted Tailwind classes (`useSortedClasses: error`).
+Tailwind CSS v4 via PostCSS. Custom animations and theme extensions defined in `app/main.css` using `@theme` and `@keyframes`. Custom utility classes (`hover-bg`, `text-gradient-*`) defined in `app/main.css` via `@layer components`. oxfmt automatically sorts Tailwind classes (`sortTailwindcss` — recognizes `className`, `classNames(...)`, `cva(...)`, `cx(...)`, `clsx(...)`, `twMerge(...)`).
 
 ### Key patterns
 
@@ -48,9 +49,11 @@ Tailwind CSS v4 via PostCSS. Custom animations and theme extensions defined in `
 - `utils/metadata.ts` exports `getMetadata()` — use for page-level metadata in every `page.tsx`
 - Icons from `akar-icons`; UI primitives from Radix UI and `cmdk` (command palette)
 
-## Code Style (Biome)
+## Code Style
 
-- Semicolons as needed, double quotes, trailing commas (ES5)
-- 2-space indent, 80 char line width, LF line endings
-- Tailwind classes must be sorted (Biome `useSortedClasses` rule)
-- Pre-commit hook runs `biome check --fix` via lint-staged
+oxlint handles linting and oxfmt handles formatting (no ESLint/Prettier/Biome). Key rules:
+
+- No semicolons, double quotes, ES5 trailing commas, 2-space indent, 80-char line width, LF line endings
+- Tailwind classes sorted automatically by oxfmt (`sortTailwindcss` — recognizes `className`, `classNames(...)`, `cva(...)`, `cx(...)`, `clsx(...)`, `twMerge(...)`)
+- oxlint config (`.oxlintrc.json`): `correctness` = error, `suspicious`/`perf` = warn, `style` = off; plugins: unicorn, oxc, typescript, react, nextjs, jsx-a11y, import
+- Pre-commit hook runs `oxlint --fix` and `oxfmt` via lint-staged

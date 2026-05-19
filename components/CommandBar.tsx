@@ -77,7 +77,7 @@ const CommandBar: React.FC = () => {
           setValue(v)
         }}
         label="Global Command Menu"
-        className="-translate-1/2 fixed top-1/2 left-1/2 z-30 w-11/12 max-w-[680px] animate-rise select-none rounded-lg bg-zinc-800 p-3 text-sm md:w-full"
+        className="animate-rise fixed top-1/2 left-1/2 z-30 w-11/12 max-w-[680px] -translate-1/2 rounded-lg bg-zinc-800 p-3 text-sm select-none md:w-full"
       >
         <Command.Input
           className="w-full rounded-lg bg-zinc-900 px-4 py-3 text-sm text-zinc-300 outline-hidden placeholder:text-zinc-700"
@@ -151,7 +151,7 @@ const CommandBar: React.FC = () => {
             <LinkOut size={13} className="ml-auto" />
           </Command.Item>
         </Command.List>
-        <div className="-mx-3 -mb-3 flex justify-between rounded-b-lg border-zinc-700 border-t-[0.5px] p-3 text-xs text-zinc-300">
+        <div className="-mx-3 -mb-3 flex justify-between rounded-b-lg border-t-[0.5px] border-zinc-700 p-3 text-xs text-zinc-300">
           <p className="flex items-center gap-1.5">
             <span>Navigate with</span>
             <span className="rounded-md bg-zinc-700 p-1">

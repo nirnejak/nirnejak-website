@@ -16,7 +16,7 @@
 }
 
 .container {
-  @apply mx-auto md:w-177.5 px-4 md:px-0;
+  @apply mx-auto px-4 md:w-177.5 md:px-0;
 }
 
 .command-item[aria-selected="true"] {

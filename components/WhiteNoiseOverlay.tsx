@@ -56,6 +56,7 @@ const WhiteNoiseOverlay: React.FC<Props> = ({ opacity = 0.05 }) => {
   return (
     <canvas
       ref={canvasRef}
+      aria-hidden="true"
       style={{
         position: "fixed",
         top: 0,

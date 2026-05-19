@@ -65,8 +65,9 @@ const ContactForm: React.FC = () => {
     <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
       <input
         type="text"
-        className="rounded-md bg-zinc-800 px-4 py-3 font-medium text-xs text-zinc-300 outline-hidden placeholder:text-zinc-500"
+        className="rounded-md bg-zinc-800 px-4 py-3 text-xs font-medium text-zinc-300 outline-hidden placeholder:text-zinc-500"
         placeholder="Name"
+        aria-label="Name"
         name="name"
         value={state.name}
         onChange={handleChange}
@@ -74,16 +75,18 @@ const ContactForm: React.FC = () => {
       />
       <input
         type="email"
-        className="rounded-md bg-zinc-800 px-4 py-3 font-medium text-xs text-zinc-300 outline-hidden placeholder:text-zinc-500"
+        className="rounded-md bg-zinc-800 px-4 py-3 text-xs font-medium text-zinc-300 outline-hidden placeholder:text-zinc-500"
         placeholder="Email"
+        aria-label="Email"
         name="email"
         value={state.email}
         onChange={handleChange}
         required
       />
       <textarea
-        className="rounded-md bg-zinc-800 px-4 py-3 font-medium text-xs text-zinc-300 outline-hidden placeholder:text-zinc-500"
+        className="rounded-md bg-zinc-800 px-4 py-3 text-xs font-medium text-zinc-300 outline-hidden placeholder:text-zinc-500"
         placeholder="Message"
+        aria-label="Message"
         rows={5}
         name="message"
         value={state.message}
@@ -92,8 +95,9 @@ const ContactForm: React.FC = () => {
       />
       <button
         type="submit"
+        aria-label="Send message"
         disabled={formState === "Sending..." || formState === "Sent!"}
-        className="rounded-md bg-zinc-50 px-4 py-3 text-center font-semibold text-sm text-zinc-900 uppercase tracking-wide outline-hidden transition-all hover:bg-zinc-200 focus:bg-zinc-200 active:scale-95 disabled:cursor-not-allowed disabled:bg-zinc-400"
+        className="rounded-md bg-zinc-50 px-4 py-3 text-center text-sm font-semibold tracking-wide text-zinc-900 uppercase outline-hidden transition-all hover:bg-zinc-200 focus:bg-zinc-200 active:scale-95 disabled:cursor-not-allowed disabled:bg-zinc-400"
       >
         <AnimatePresence mode="popLayout" initial={false}>
           <motion.span

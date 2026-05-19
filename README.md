@@ -56,7 +56,7 @@ bun run dev
 bun run lint
 ```
 
-**Format all files with Biome**
+**Format all files with oxfmt**
 
 ```bash
 bun run format

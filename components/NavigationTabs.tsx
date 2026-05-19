@@ -79,7 +79,7 @@ const NavigationTabs: React.FC<Props> = ({ navLinks }) => {
         <Link
           key={tab.link}
           href={tab.link}
-          className="relative inline-block px-4 py-2 font-medium text-xs text-zinc-50 outline-hidden active:scale-95"
+          className="relative inline-block px-4 py-2 text-xs font-medium text-zinc-50 outline-hidden active:scale-95"
           onMouseOver={(ev: React.MouseEvent<HTMLAnchorElement>) => {
             repositionHighlight(ev, tab)
           }}

@@ -61,7 +61,7 @@ const Navbar: React.FC<Props> = () => {
               Contact
             </span>
             <ArrowRight
-              className="hidden animate-slide-left-and-fade hover:block group-hover:block group-focus-visible:block"
+              className="animate-slide-left-and-fade hidden group-hover:block group-focus-visible:block hover:block"
               size={14}
             />
           </AppLink>
@@ -69,7 +69,6 @@ const Navbar: React.FC<Props> = () => {
       </div>
       <div className="flex md:hidden">
         {isOpen ? (
-          // biome-ignore lint/a11y/useSemanticElements: backdrop overlay for closing menu
           <div
             className="flex h-dvh w-screen flex-col items-center justify-center gap-5 bg-zinc-900 px-20"
             role="button"
