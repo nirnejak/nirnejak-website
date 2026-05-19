@@ -1,0 +1,29 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": false,
+  "singleQuote": false,
+  "jsxSingleQuote": false,
+  "trailingComma": "es5",
+  "endOfLine": "lf",
+  "insertFinalNewline": true,
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "sortTailwindcss": {
+    "functions": ["classNames", "cva", "cx", "clsx", "twMerge", "tw"]
+  },
+  "ignorePatterns": [
+    ".next",
+    "out",
+    "build",
+    "next-env.d.ts",
+    "public/sw.js",
+    "public/sw.js.map",
+    "public/workbox-*.js",
+    "public/workbox-*.js.map",
+    "public/worker-*.js",
+    "public/fallback-*.js"
+  ]
+}
