@@ -35,6 +35,34 @@ export default PastEngagements
 
 const engagements = [
   {
+    name: "Acquisity",
+    work: "Design Engineering",
+    year: 2026,
+    country: "USA",
+    link: "https://acquisity.ai/",
+  },
+  {
+    name: "Superserve",
+    work: "Design Engineering",
+    year: 2026,
+    country: "USA",
+    link: "https://www.superserve.ai/",
+  },
+  {
+    name: "Studio Saol",
+    work: "Design Engineering",
+    year: 2026,
+    country: "ireland",
+    link: "https://studiosaol.com/",
+  },
+  {
+    name: "AnywhereAI",
+    work: "Logo & Branding",
+    year: 2026,
+    country: "USA",
+    link: "https://anywhereai.co/",
+  },
+  {
     name: "Nexxel",
     work: "Product and Website Design",
     year: 2025,
