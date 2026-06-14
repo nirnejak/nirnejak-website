@@ -68,7 +68,7 @@ export default ProjectsPage
 const allSites = {
   websites: [
     { title: "Superserve - Dashboard", link: "https://console.superserve.ai/" },
-    { title: "Superserve -Website", link: "https://superserve.ai/" },
+    { title: "Superserve - Website", link: "https://superserve.ai/" },
     {
       title: "Superserve - Prev Website",
       link: "https://superserve-legacy.vercel.app/",
