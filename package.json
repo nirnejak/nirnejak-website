@@ -33,8 +33,8 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@radix-ui/react-slider": "^1.4.1",
-    "@radix-ui/react-tooltip": "^1.2.10",
+    "@radix-ui/react-slider": "^1.4.3",
+    "@radix-ui/react-tooltip": "^1.2.12",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "akar-icons": "^1.9.31",
@@ -42,26 +42,26 @@
     "cmdk": "^1.1.1",
     "dotenv": "^17.4.2",
     "lenis": "^1.3.25",
-    "motion": "^12.42.0",
-    "next": "^16.2.9",
+    "motion": "^12.42.2",
+    "next": "^16.2.10",
     "next-pwa": "^5.6.0",
     "next-view-transitions": "^0.3.5",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "sharp": "^0.35.2",
+    "sharp": "^0.35.3",
     "use-sound": "^5.0.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.3.1",
+    "@tailwindcss/postcss": "^4.3.2",
     "@types/next-pwa": "^5.6.9",
-    "@types/node": "^26.0.1",
+    "@types/node": "^26.1.1",
     "@types/react": "^19.2.17",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.8",
-    "oxfmt": "^0.56.0",
-    "oxlint": "^1.71.0",
-    "tailwindcss": "^4.3.1",
-    "typescript": "^6.0.3"
+    "oxfmt": "^0.58.0",
+    "oxlint": "^1.73.0",
+    "tailwindcss": "^4.3.2",
+    "typescript": "^7.0.2"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
