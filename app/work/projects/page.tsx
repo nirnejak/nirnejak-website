@@ -67,6 +67,7 @@ export default ProjectsPage
 
 const allSites = {
   websites: [
+    { title: "Acquisity", link: "https://acquisity.ai/" },
     { title: "Superserve - Dashboard", link: "https://console.superserve.ai/" },
     { title: "Superserve - Website", link: "https://superserve.ai/" },
     {
