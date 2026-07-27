@@ -71,7 +71,7 @@
     "*.json": "oxfmt"
   },
   "volta": {
-    "node": "24.12.0"
+    "node": "24.18.0"
   },
   "trustedDependencies": [
     "@vercel/speed-insights"
