@@ -1,7 +1,6 @@
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { ReactLenis } from "lenis/react"
-import type { Viewport } from "next"
 import localFont from "next/font/local"
 import Script from "next/script"
 import { ViewTransitions } from "next-view-transitions"
@@ -33,15 +32,16 @@ interface Props {
   children: React.ReactNode
 }
 
-export const viewport: Viewport = {
-  themeColor: "#1D1D20",
-}
-
 const HomeLayout: React.FC<Props> = ({ children }) => {
   return (
     <ViewTransitions>
       <html lang="en" className={sansFont.variable}>
         <head>
+          {/* Rendered here rather than via the `viewport` export: Next unmounts
+              metadata tags during client navigation, which flashes the browser
+              theme bar back to its default until the new page commits. */}
+          <meta name="theme-color" content="#1D1D20" />
+
           <Script
             defer
             data-domain="nirnejak.com"
