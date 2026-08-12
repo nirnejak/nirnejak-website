@@ -70,6 +70,13 @@ const engagements = [
     link: "https://example.com/",
   },
   {
+    name: "GoVisionary",
+    work: "Product Design",
+    year: 2025,
+    city: "Milan",
+    link: "https://govisionary.biz/",
+  },
+  {
     name: "Datavidhya",
     work: "Full Stack Development",
     year: 2025,
