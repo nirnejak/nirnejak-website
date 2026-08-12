@@ -52,7 +52,7 @@ const engagements = [
     name: "Studio Saol",
     work: "Design Engineering",
     year: 2026,
-    country: "ireland",
+    country: "Ireland",
     link: "https://studiosaol.com/",
   },
   {
