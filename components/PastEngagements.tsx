@@ -141,17 +141,10 @@ const engagements = [
   },
   {
     name: "Sup Bot",
-    work: "Logo, Product Design & Website",
+    work: "Brand, Website & Product Design",
     year: 2023,
     country: "India",
     link: "https://www.supbot.com/",
-  },
-  {
-    name: "Draxlr",
-    work: "Website Design, Animation and Development",
-    year: 2022,
-    country: "India",
-    link: "https://www.draxlr.com/",
   },
   {
     name: "SwitchedOn",
@@ -175,32 +168,11 @@ const engagements = [
     link: "https://www.inkoop.io/",
   },
   {
-    name: "Inkoop",
-    work: "Social Media Design",
-    year: 2020,
-    country: "India",
-    link: "https://www.instagram.com/inkoopteam/",
-  },
-  {
     name: "Vnext",
     work: "Product Design",
     year: 2020,
     country: "India",
     link: "https://vnext.in/",
-  },
-  {
-    name: "Draxlr",
-    work: "Product Design and Development",
-    year: 2020,
-    country: "India",
-    link: "https://www.draxlr.com/",
-  },
-  {
-    name: "Draxlr",
-    work: "Logo and Branding",
-    year: 2019,
-    country: "India",
-    link: "https://www.draxlr.com/",
   },
   {
     name: "Ballers Bridge",
