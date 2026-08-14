@@ -36,7 +36,7 @@ const projects = [
   {
     name: "Interactive Interfaces",
     work: "UI experiments with React & Framer Motion",
-    link: "https://interactive-interfaces.vercel.app/",
+    link: "https://interfaces.show/",
   },
   {
     name: "Peerlist UI Animation Challenge",
