@@ -35,7 +35,7 @@ const projects = [
   },
   {
     name: "Interactive Interfaces",
-    work: "UI experiments with React & Framer Motion",
+    work: "UI experiments with React & Motion.dev",
     link: "https://interfaces.show/",
   },
   {
