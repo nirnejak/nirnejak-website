@@ -5,14 +5,37 @@
   text-rendering: geometricPrecision;
 }
 
+/* Lets the browser theme native scrollbars, form controls and autofill to
+   match. Absent before this, which is why the dark site had light scrollbars. */
+:root {
+  color-scheme: light dark;
+
+  --grain-opacity: 0.05;
+  --grain-filter: contrast(30%) brightness(180%);
+
+  /* Gradient headline stops. The dark set below was picked against a near
+     black page and washes out on white (the bright green falls to ~2.3:1).
+     These are the most saturated stops that still clear AA-large (3:1, which
+     is the bar here — the spans are bold at 24-30px); tuning purely for
+     contrast drains the chroma and they read muddy. */
+  --gradient-blue-from: #0099cc;
+  --gradient-blue-to: #0066ff;
+  --gradient-red-from: #f15d00;
+  --gradient-red-to: #ff006d;
+  --gradient-green-from: #00a300;
+  --gradient-green-to: #00781f;
+}
+
+/* -webkit-text-fill-color has to move in lockstep with the text colour, or
+   selecting gradient text (which relies on a transparent fill) breaks. */
 ::-moz-selection {
-  @apply bg-zinc-600 text-white;
-  -webkit-text-fill-color: white;
+  @apply bg-selection text-selection-text;
+  -webkit-text-fill-color: var(--color-selection-text);
 }
 
 ::selection {
-  @apply bg-zinc-600 text-white;
-  -webkit-text-fill-color: white;
+  @apply bg-selection text-selection-text;
+  -webkit-text-fill-color: var(--color-selection-text);
 }
 
 .container {
@@ -25,6 +48,74 @@
 
 @theme {
   --font-sans: var(--sans-font);
+
+  /* ── Colour ────────────────────────────────────────────────────────────
+     Role-named tokens. Light is the default; the dark palette lives in the
+     `prefers-color-scheme: dark` block below and is byte-identical to what
+     shipped before the theme work. There is no toggle — the system decides.
+
+     Must stay `@theme`, not `@theme inline` — inline resolves values at
+     build time and the media override would silently do nothing.
+
+     Dark-mode elevation is carried by lightness (900 → 800 → 700). Light
+     mode can't do that above white, so it leans on --color-line and
+     shadows instead; the ramp is deliberately not a mirror. */
+
+  /* Surfaces */
+  --color-surface: var(--color-zinc-50);
+  --color-surface-raised: var(--color-white);
+  --color-surface-inset: var(--color-zinc-200);
+  --color-inset-hover: var(--color-zinc-300);
+  --color-line: var(--color-zinc-200);
+
+  /* Hover fills behind .hover-bg. Both move away from their own surface:
+     -inset is for controls sitting inside an already-raised surface. */
+  --color-hover: var(--color-zinc-200);
+  --color-hover-inset: var(--color-zinc-100);
+
+  /* Text. --color-title is page headings; --color-title-soft is the home
+     hero line, which is a sentence rather than a one-word title and carries
+     the gradient spans, so it sits a step back. Both are their own tokens
+     rather than reusing body/dim so light can go darker without dragging
+     every paragraph with it. */
+  --color-strong: var(--color-zinc-900);
+  --color-strong-hover: var(--color-zinc-800);
+  --color-title: var(--color-zinc-900);
+  --color-title-soft: var(--color-zinc-800);
+  --color-label: var(--color-zinc-800);
+  --color-body: var(--color-zinc-700);
+  --color-dim: var(--color-zinc-600);
+  --color-muted: var(--color-zinc-500);
+  /* Not the mirror of dark's zinc-700 — that lands at zinc-300 on white,
+     roughly 1.5:1, i.e. invisible. */
+  --color-placeholder: var(--color-zinc-400);
+
+  /* Inverted buttons */
+  --color-inverse: var(--color-zinc-900);
+  --color-inverse-soft: var(--color-zinc-800);
+  --color-inverse-hover: var(--color-zinc-700);
+  --color-inverse-disabled: var(--color-zinc-400);
+  --color-on-inverse: var(--color-zinc-50);
+
+  --color-accent: var(--color-blue-600);
+
+  /* Overlays. Alpha is baked into the token rather than left on the utility
+     so each scheme can pick its own strength.
+     --color-scrim-media backs the photo lightbox and stays dark in BOTH
+     schemes — photographs need a dark surround regardless of system theme —
+     but light mode needs more of it to read against a near-white page. */
+  --color-scrim: color-mix(in oklab, var(--color-zinc-50) 70%, transparent);
+  --color-scrim-media: color-mix(
+    in oklab,
+    var(--color-zinc-900) 60%,
+    transparent
+  );
+  /* Translucent white reads as a glass bevel on dark and vanishes on light,
+     so light gets an opaque matte instead. */
+  --color-frame: var(--color-white);
+
+  --color-selection: var(--color-zinc-300);
+  --color-selection-text: var(--color-zinc-900);
 
   --easing: cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -47,11 +138,79 @@
   --animate-shake: shake 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Deliberately unlayered: unlayered CSS outranks everything in @layer theme,
+   so these override the @theme defaults with no specificity tricks. Values
+   here are exactly the palette that shipped before the light theme existed. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-surface: var(--color-zinc-900);
+    --color-surface-raised: var(--color-zinc-800);
+    --color-surface-inset: var(--color-zinc-700);
+    --color-inset-hover: var(--color-zinc-500);
+    --color-line: var(--color-zinc-700);
+
+    --color-hover: var(--color-zinc-800);
+    --color-hover-inset: var(--color-zinc-900);
+
+    --color-strong: var(--color-zinc-50);
+    --color-strong-hover: var(--color-zinc-100);
+    --color-title: var(--color-zinc-300);
+    --color-title-soft: var(--color-zinc-400);
+    --color-label: var(--color-zinc-200);
+    --color-body: var(--color-zinc-300);
+    --color-dim: var(--color-zinc-400);
+    /* Off-ramp on purpose. zinc-500 here is 3.67:1 on zinc-900 — under AA,
+       and most of this text is 12–14px. zinc-400 would clear it at 6.74:1
+       but is already --color-dim, so muted and dim would collapse into one
+       colour and flatten the hierarchy (the home page pairs a dim h1 with a
+       muted paragraph). This sits between them: 5.05:1 on the surface, still
+       1.33:1 dimmer than dim. Chroma and hue are zinc's, so it stays on-ramp. */
+    --color-muted: oklch(63% 0.016 285.938);
+    --color-placeholder: var(--color-zinc-700);
+
+    --color-inverse: var(--color-zinc-50);
+    --color-inverse-soft: var(--color-zinc-300);
+    --color-inverse-hover: var(--color-zinc-200);
+    --color-inverse-disabled: var(--color-zinc-400);
+    --color-on-inverse: var(--color-zinc-900);
+
+    --color-selection: var(--color-zinc-600);
+    --color-selection-text: #fff;
+
+    --color-scrim: color-mix(in oklab, var(--color-zinc-900) 30%, transparent);
+    --color-scrim-media: color-mix(
+      in oklab,
+      var(--color-zinc-900) 30%,
+      transparent
+    );
+    --color-frame: rgb(255 255 255 / 0.3);
+
+    /* The grain is a darkened grey field. Over a dark page that reads as
+       subtle texture; over a light one it reads as dirt — so light mode
+       lifts it above mid-grey and cuts the opacity. */
+    --grain-opacity: 0.15;
+    --grain-filter: contrast(30%) brightness(70%);
+
+    --gradient-blue-from: #03cffe;
+    --gradient-blue-to: #397dd6;
+    --gradient-red-from: #e95d0f;
+    --gradient-red-to: #d61f5f;
+    --gradient-green-from: #04c100;
+    --gradient-green-to: #038100;
+  }
+}
+
 @layer components {
+  /* Lives in the components layer so a `text-*` utility passed by the caller
+     always wins — the default only applies when no colour is specified. */
+  .app-link {
+    @apply text-strong hover:text-strong-hover;
+  }
+
   .hover-bg {
     @apply relative z-1 active:scale-95;
 
-    @apply after:rounded-lg after:bg-zinc-800;
+    @apply after:bg-hover after:rounded-lg;
     @apply after:absolute after:inset-0 after:z-[-1];
     @apply after:origin-center after:scale-90 after:opacity-0 after:transition-all;
 
@@ -59,39 +218,46 @@
   }
 
   .hover-bg.hover-bg-dark {
-    @apply after:bg-zinc-900;
+    @apply after:bg-hover-inset;
   }
 
+  /* Full-viewport noise overlay. Both knobs swap with the scheme — see the
+     :root blocks above. */
+  .grain {
+    opacity: var(--grain-opacity);
+    filter: var(--grain-filter);
+  }
+
+  /* `to bottom right` is the standard equivalent of the old
+     `-webkit-linear-gradient(top left, …)`, which named the start corner. */
   .text-gradient-blue {
-    background: -webkit-linear-gradient(top left, #03cffe, #397dd6);
+    background: linear-gradient(
+      to bottom right,
+      var(--gradient-blue-from),
+      var(--gradient-blue-to)
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .text-gradient-red {
-    background: -webkit-linear-gradient(top left, #e95d0f, #d61f5f);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .text-gradient-yellow {
-    background: -webkit-linear-gradient(top left, #ffc900, #ffa101);
+    background: linear-gradient(
+      to bottom right,
+      var(--gradient-red-from),
+      var(--gradient-red-to)
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .text-gradient-green {
-    background: -webkit-linear-gradient(top left, #04c100, #038100);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .text-gradient-purple {
-    background: -webkit-linear-gradient(top left, #ff00a8, #cc0086);
+    background: linear-gradient(
+      to bottom right,
+      var(--gradient-green-from),
+      var(--gradient-green-to)
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
