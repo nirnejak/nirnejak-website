@@ -68,10 +68,11 @@ const HomePage: React.FC = () => {
             Oven Studio
           </a> */}
           . Crafting tasteful, elegant{" "}
-          <span className="text-gradient-blue font-bold">websites,</span>{" "}
-          <span className="text-gradient-red font-bold">user-interfaces,</span>{" "}
-          and{" "}
-          <span className="text-gradient-green font-bold">web-animations.</span>
+          <span className="text-gradient-blue font-bold">
+            user-interfaces,
+          </span>{" "}
+          <span className="text-gradient-red font-bold">web-animations,</span>{" "}
+          and <span className="text-gradient-green font-bold">websites.</span>
         </h1>
         <p className="text-muted mb-16 text-sm font-medium sm:text-base">
           I thrive at the intersection of design and code, obsessing over the
