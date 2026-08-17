@@ -46,7 +46,7 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
 
               delay: isLoaded ? 0 : 0.05 * index,
             }}
-            className="relative cursor-pointer overflow-hidden rounded-3xl after:absolute after:inset-0 after:rounded-3xl after:border-8 after:border-white/30 hover:shadow-2xl"
+            className="after:border-frame relative cursor-pointer overflow-hidden rounded-3xl after:absolute after:inset-0 after:rounded-3xl after:border-8 hover:shadow-2xl"
           >
             <Image
               src={photo}
@@ -60,10 +60,10 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
         ))}
       </div>
       {isOpen && content !== null && (
-        <div className="fixed top-0 left-0 z-30 grid h-dvh w-full place-items-center bg-zinc-900/30 backdrop-blur-lg">
+        <div className="bg-scrim-media fixed top-0 left-0 z-30 grid h-dvh w-full place-items-center backdrop-blur-lg">
           <button
             type="button"
-            className="fixed top-5 right-5 rounded-full bg-zinc-700 p-1.5 text-zinc-300 hover:bg-zinc-500"
+            className="bg-surface-inset text-body hover:bg-inset-hover fixed top-5 right-5 rounded-full p-1.5"
             onClick={() => {
               closeModal()
             }}

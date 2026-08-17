@@ -16,22 +16,20 @@ const ContactPage: React.FC = () => {
   return (
     <main className="min-h-[77vh]">
       <section className="container mt-32 md:mt-40">
-        <h1 className="text-4xl font-bold tracking-tight text-zinc-300 md:text-5xl">
+        <h1 className="text-title text-4xl font-bold tracking-tight md:text-5xl">
           Contact
         </h1>
       </section>
       <section className="container mt-10 grid gap-10 md:mt-16 md:grid-cols-5">
         <div className="col-span-2 flex flex-col">
-          <p className="text-xs font-medium text-zinc-500 md:text-sm">
+          <p className="text-muted text-xs font-medium md:text-sm">
             Let{"'"}s get in touch to discuss a project or maybe just say hi :)
           </p>
           <div className="mt-auto">
-            <p className="text-sm font-medium text-zinc-500">
-              Reach me via email
-            </p>
+            <p className="text-muted text-sm font-medium">Reach me via email</p>
             <AppLink
               href={`mailto:${config.CONTACT_EMAIL}?subject=Project%20Enquiry`}
-              className="text-sm font-semibold text-zinc-300"
+              className="text-body text-sm font-semibold"
             >
               {config.CONTACT_EMAIL}
             </AppLink>

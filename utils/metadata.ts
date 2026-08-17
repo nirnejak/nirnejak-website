@@ -67,7 +67,9 @@ const getMetadata = ({
       capable: true,
       title: metaTitle,
       startupImage: metaImage,
-      statusBarStyle: "black-translucent",
+      // "black-translucent" forces white status-bar text, which disappears
+      // against a light page. "default" follows the system scheme.
+      statusBarStyle: "default",
     },
 
     formatDetection: {

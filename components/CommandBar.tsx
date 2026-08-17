@@ -26,7 +26,7 @@ import * as React from "react"
 import config from "@/config"
 
 const commandItemClass =
-  "command-item px-3.5 py-3 cursor-pointer hover-bg hover-bg-dark flex items-center gap-2.5 outline-hidden"
+  "command-item px-3 py-2.5 cursor-pointer hover-bg hover-bg-dark flex items-center gap-2 outline-hidden"
 
 const CommandBar: React.FC = () => {
   const router = useTransitionRouter()
@@ -73,7 +73,7 @@ const CommandBar: React.FC = () => {
     <Command
       className={
         isOpen
-          ? `fixed top-0 left-0 z-30 h-dvh w-full bg-zinc-900/30 backdrop-blur-lg`
+          ? `bg-scrim fixed top-0 left-0 z-30 h-dvh w-full backdrop-blur-lg`
           : ""
       }
     >
@@ -86,18 +86,18 @@ const CommandBar: React.FC = () => {
           setValue(v)
         }}
         label="Global Command Menu"
-        className="animate-rise fixed top-1/2 left-1/2 z-30 w-11/12 max-w-[680px] -translate-1/2 rounded-lg bg-zinc-800 p-3 text-sm select-none md:w-full"
+        className="animate-rise bg-surface-raised border-line fixed top-1/2 left-1/2 z-30 w-11/12 max-w-[560px] -translate-1/2 rounded-xl border p-2 text-[13px] shadow-2xl select-none md:w-full"
       >
         <Command.Input
-          className="w-full rounded-lg bg-zinc-900 px-4 py-3 text-sm text-zinc-300 outline-hidden placeholder:text-zinc-700"
+          className="bg-surface text-body placeholder:text-placeholder border-line w-full rounded-xl border px-3 py-2.5 text-[13px] outline-hidden"
           placeholder="Search Link"
           ref={inputRef}
         />
-        <Command.Empty className="mt-10 mb-8 w-full text-center text-zinc-300">
+        <Command.Empty className="text-body mt-8 mb-6 w-full text-center">
           No results found.
         </Command.Empty>
         <Command.List
-          className="my-2 max-h-[280px] overflow-y-scroll overscroll-contain text-zinc-300"
+          className="text-body my-1.5 max-h-[240px] overflow-y-scroll overscroll-contain"
           ref={listRef}
           data-lenis-prevent
         >
@@ -109,11 +109,11 @@ const CommandBar: React.FC = () => {
               navigate(config.SCHEDULE_CALL_LINK)
             }}
           >
-            <Calendar size={15} />
+            <Calendar size={14} />
             <span>Schedule Call</span>
-            <LinkOut size={13} className="ml-auto" />
+            <LinkOut size={12} className="ml-auto" />
           </Command.Item>
-          <Command.Separator className="my-1 h-[0.5px] bg-zinc-700" />
+          <Command.Separator className="bg-line my-1 h-[0.5px]" />
           {socialLinks.map((link) => (
             <Command.Item
               key={link.content}
@@ -126,10 +126,10 @@ const CommandBar: React.FC = () => {
             >
               {link.icon}
               <span>{link.content}</span>
-              <LinkOut size={13} className="ml-auto" />
+              <LinkOut size={12} className="ml-auto" />
             </Command.Item>
           ))}
-          <Command.Separator className="my-1 h-[0.5px] bg-zinc-700" />
+          <Command.Separator className="bg-line my-1 h-[0.5px]" />
           {siteLinks.map((link) => (
             <Command.Item
               key={link.content}
@@ -144,7 +144,7 @@ const CommandBar: React.FC = () => {
               <span>{link.content}</span>
             </Command.Item>
           ))}
-          <Command.Separator className="my-1 h-[0.5px] bg-zinc-700" />
+          <Command.Separator className="bg-line my-1 h-[0.5px]" />
           <Command.Item
             className={commandItemClass}
             tabIndex={0}
@@ -156,25 +156,25 @@ const CommandBar: React.FC = () => {
               )
             }}
           >
-            <GithubFill size={15} />
+            <GithubFill size={14} />
             <span>View Source</span>
-            <LinkOut size={13} className="ml-auto" />
+            <LinkOut size={12} className="ml-auto" />
           </Command.Item>
         </Command.List>
-        <div className="-mx-3 -mb-3 flex justify-between rounded-b-lg border-t-[0.5px] border-zinc-700 p-3 text-xs text-zinc-300">
-          <p className="flex items-center gap-1.5">
+        <div className="border-line text-body -mx-2 -mb-2 flex justify-between rounded-b-xl border-t-[0.5px] p-2.5 text-[11px]">
+          <p className="flex items-center gap-1">
             <span>Navigate with</span>
-            <span className="rounded-md bg-zinc-700 p-1">
-              <ArrowUp size={10} />
+            <span className="bg-surface-inset rounded-lg p-0.5">
+              <ArrowUp size={9} />
             </span>
-            <span className="rounded-md bg-zinc-700 p-1">
-              <ArrowDown size={10} />
+            <span className="bg-surface-inset rounded-lg p-0.5">
+              <ArrowDown size={9} />
             </span>
           </p>
-          <p className="flex items-center gap-1.5">
+          <p className="flex items-center gap-1">
             <span>Open Link</span>
-            <span className="rotate-180 rounded-md bg-zinc-700 p-1">
-              <ArrowForward size={10} />
+            <span className="bg-surface-inset rotate-180 rounded-lg p-0.5">
+              <ArrowForward size={9} />
             </span>
           </p>
         </div>
@@ -189,32 +189,32 @@ export const socialLinks = [
   {
     content: "X",
     href: "https://twitter.com/jeetnirnejak/",
-    icon: <XFill size={15} />,
+    icon: <XFill size={14} />,
   },
   {
     content: "Github",
     href: "https://github.com/nirnejak/",
-    icon: <GithubFill size={15} />,
+    icon: <GithubFill size={14} />,
   },
   {
     content: "Layers",
     href: "https://layers.to/nirnejak/",
-    icon: <Frame size={15} />,
+    icon: <Frame size={14} />,
   },
   {
     content: "Dribbble",
     href: "https://dribbble.com/nirnejak/",
-    icon: <DribbbleFill size={15} />,
+    icon: <DribbbleFill size={14} />,
   },
   {
     content: "ProductHunt",
     href: "https://www.producthunt.com/@nirnejak",
-    icon: <ProductHuntFill size={15} />,
+    icon: <ProductHuntFill size={14} />,
   },
   {
     content: "Unsplash",
     href: "https://unsplash.com/@nirnejak/",
-    icon: <UnsplashFill size={15} />,
+    icon: <UnsplashFill size={14} />,
   },
 ]
 
@@ -223,36 +223,36 @@ export const siteLinks = [
     content: "Home",
     value: "home",
     link: "/",
-    icon: <HomeAlt1 size={15} />,
+    icon: <HomeAlt1 size={14} />,
   },
   {
     content: "Work",
     value: "work",
     link: "/work/",
-    icon: <LaptopDevice size={15} />,
+    icon: <LaptopDevice size={14} />,
   },
   {
     content: "Blogs",
     value: "blogs",
     link: "/blogs/",
-    icon: <Pencil size={15} />,
+    icon: <Pencil size={14} />,
   },
   {
     content: "Photos",
     value: "photos",
     link: "/photos/",
-    icon: <Camera size={15} />,
+    icon: <Camera size={14} />,
   },
   {
     content: "Uses",
     value: "uses",
     link: "/uses/",
-    icon: <LaptopDevice size={15} />,
+    icon: <LaptopDevice size={14} />,
   },
   {
     content: "Contact",
     value: "contact",
     link: "/contact/",
-    icon: <Phone size={15} />,
+    icon: <Phone size={14} />,
   },
 ]

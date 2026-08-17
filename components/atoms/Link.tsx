@@ -25,7 +25,7 @@ const AppLink: React.FC<Props> = ({
     return (
       <a
         href={href}
-        className={classNames(className, "text-zinc-50 hover:text-zinc-100")}
+        className={classNames("app-link", className)}
         onClick={(e) => {
           if (onClick !== undefined) onClick(e)
         }}
@@ -41,7 +41,7 @@ const AppLink: React.FC<Props> = ({
     return (
       <Link
         href={href}
-        className={classNames(className, "text-zinc-50 hover:text-zinc-100")}
+        className={classNames("app-link", className)}
         onClick={(e) => {
           if (onClick !== undefined) onClick(e)
         }}

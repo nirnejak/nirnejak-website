@@ -40,7 +40,16 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
           {/* Rendered here rather than via the `viewport` export: Next unmounts
               metadata tags during client navigation, which flashes the browser
               theme bar back to its default until the new page commits. */}
-          <meta name="theme-color" content="#1D1D20" />
+          <meta
+            name="theme-color"
+            media="(prefers-color-scheme: light)"
+            content="#FAFAFA"
+          />
+          <meta
+            name="theme-color"
+            media="(prefers-color-scheme: dark)"
+            content="#1D1D20"
+          />
 
           <Script
             defer
@@ -56,7 +65,7 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
         </head>
 
         <ReactLenis root>
-          <body className="overflow-x-hidden bg-zinc-900 font-sans">
+          <body className="bg-surface overflow-x-hidden font-sans">
             <Navbar />
             {children}
             <Footer />
