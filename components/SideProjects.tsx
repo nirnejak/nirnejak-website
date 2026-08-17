@@ -48,16 +48,6 @@ const projects = [
     work: "A Gallery of SVG Animations built with Framer Motion",
     link: "https://svg-animations-gallery.vercel.app/",
   },
-  // {
-  //   name: "TailwindCSS Animations",
-  //   work: "Copy Paste animations for TailwindCSS",
-  //   link: "https://tailwindanimations.vercel.app/",
-  // },
-  // {
-  //   name: "Done Done",
-  //   work: "A Simple Stupid Interactive Todo List",
-  //   link: "https://done-done-beta.vercel.app/",
-  // },
   {
     name: "React Presentation Maker",
     work: "Use your React components as presentation slides",
