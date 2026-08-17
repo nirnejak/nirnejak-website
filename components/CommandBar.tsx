@@ -19,6 +19,7 @@ import {
   XFill,
 } from "akar-icons"
 import { Command } from "cmdk"
+import { useLenis } from "lenis/react"
 import { useTransitionRouter } from "next-view-transitions"
 import * as React from "react"
 
@@ -29,6 +30,7 @@ const commandItemClass =
 
 const CommandBar: React.FC = () => {
   const router = useTransitionRouter()
+  const lenis = useLenis()
 
   const listRef = React.useRef(null)
   const inputRef = React.useRef<HTMLInputElement | null>(null)
@@ -50,6 +52,13 @@ const CommandBar: React.FC = () => {
       document.removeEventListener("keydown", eventHandler)
     }
   }, [])
+
+  // Lenis hijacks wheel events on the whole page, so pause it while the
+  // command bar is open — the list opts back in via `data-lenis-prevent`.
+  React.useEffect(() => {
+    if (isOpen) lenis?.stop()
+    else lenis?.start()
+  }, [isOpen, lenis])
 
   const navigate = (href: string): void => {
     if (href.includes("http") || href.includes("mailto")) {
@@ -90,6 +99,7 @@ const CommandBar: React.FC = () => {
         <Command.List
           className="my-2 max-h-[280px] overflow-y-scroll overscroll-contain text-zinc-300"
           ref={listRef}
+          data-lenis-prevent
         >
           <Command.Item
             className={commandItemClass}
