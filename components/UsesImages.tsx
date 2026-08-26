@@ -27,11 +27,11 @@ const images = [
 ]
 
 const UsesImages: React.FC = () => {
-  const [isLoaded, setIsLoaded] = React.useState(false)
-
-  React.useEffect(() => {
-    setIsLoaded(true)
-  }, [])
+  // The entrance plays on a slow, staggered spring; every gesture after it
+  // uses a snappier one. Motion captures a transition when it creates the
+  // animation, so flipping this once the entrance settles only ever affects
+  // the hover animations that come later.
+  const [hasEntered, setHasEntered] = React.useState(false)
 
   return (
     <section className="relative mt-10 -ml-4 grid w-[calc(100vw+32px)] grid-cols-4 md:mt-20 md:-ml-5 md:grid-cols-8">
@@ -44,12 +44,15 @@ const UsesImages: React.FC = () => {
           whileHover={{ scale: 1.1, rotate: 0, zIndex: 5 }}
           transition={{
             type: "spring",
-            stiffness: isLoaded ? 530 : 100,
-            damping: isLoaded ? 20 : 10,
+            stiffness: hasEntered ? 530 : 100,
+            damping: hasEntered ? 20 : 10,
             mass: 0.7,
             duration: 0.1,
 
-            delay: isLoaded ? 0 : 0.05 * index,
+            delay: hasEntered ? 0 : 0.05 * index,
+          }}
+          onAnimationComplete={() => {
+            setHasEntered(true)
           }}
         >
           <div className="after:border-frame relative w-[calc(100%+10px)] overflow-hidden rounded-3xl shadow-xl after:absolute after:inset-0 after:rounded-3xl after:border-[6px] hover:shadow-2xl md:w-[calc(100%+20px)] md:after:border-8">

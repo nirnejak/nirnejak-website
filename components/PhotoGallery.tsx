@@ -14,10 +14,11 @@ interface Props {
 const PhotoGallery: React.FC<Props> = ({ photos }) => {
   const { isOpen, content, openModal, closeModal } = useModalWithContent()
 
-  const [isLoaded, setIsLoaded] = React.useState(false)
-  React.useEffect(() => {
-    setIsLoaded(true)
-  }, [])
+  // The entrance plays on a slow, staggered spring; every gesture after it
+  // uses a snappier one. Motion captures a transition when it creates the
+  // animation, so flipping this once the entrance settles only ever affects
+  // the hover animations that come later.
+  const [hasEntered, setHasEntered] = React.useState(false)
 
   const ref = useClickOutside(closeModal)
 
@@ -40,11 +41,14 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
             whileHover={{ scale: 1.03, rotate: 0, zIndex: 5 }}
             transition={{
               type: "spring",
-              stiffness: isLoaded ? 530 : 100,
-              damping: isLoaded ? 20 : 10,
+              stiffness: hasEntered ? 530 : 100,
+              damping: hasEntered ? 20 : 10,
               mass: 0.7,
 
-              delay: isLoaded ? 0 : 0.05 * index,
+              delay: hasEntered ? 0 : 0.05 * index,
+            }}
+            onAnimationComplete={() => {
+              setHasEntered(true)
             }}
             className="after:border-frame relative cursor-pointer overflow-hidden rounded-3xl after:absolute after:inset-0 after:rounded-3xl after:border-8 hover:shadow-2xl"
           >
