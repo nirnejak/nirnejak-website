@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowRight, ThreeLineHorizontal } from "akar-icons"
+import { ArrowRight, ThreeLineHorizontal, XSmall } from "akar-icons"
 import * as React from "react"
 import AppLink from "@/components/atoms/Link"
 import NavigationTabs from "@/components/NavigationTabs"
@@ -44,7 +44,7 @@ const Navbar: React.FC<Props> = () => {
   }, [isOpen])
 
   return (
-    <nav className="fixed top-0 z-10 w-full backdrop-blur-lg">
+    <nav className="bg-surface/70 fixed top-0 z-10 w-full backdrop-blur-lg">
       <div className="container hidden items-center py-3 md:flex">
         <div className="-mx-3.5">
           <NavigationTabs navLinks={navLinks} />
@@ -69,22 +69,28 @@ const Navbar: React.FC<Props> = () => {
       </div>
       <div className="flex md:hidden">
         {isOpen ? (
-          <div
-            className="flex h-dvh w-screen flex-col items-center justify-center gap-5 bg-zinc-900 px-20"
-            role="button"
-            tabIndex={0}
-            onKeyUp={(e) => {
-              if (e.key === "Enter") setIsOpen(false)
-            }}
-            onClick={() => {
-              setIsOpen(false)
-            }}
-          >
+          // Closing is handled by a real button, by the links themselves,
+          // and by Escape — rather than a role="button" wrapper around
+          // interactive children.
+          <div className="bg-surface relative flex h-dvh w-screen flex-col items-center justify-center gap-5 px-20">
+            <button
+              type="button"
+              className="hover-bg text-strong absolute top-4 right-4 rounded-md p-2 outline-hidden"
+              onClick={() => {
+                setIsOpen(false)
+              }}
+              aria-label="Close Menu"
+            >
+              <XSmall />
+            </button>
             {navLinks.map((navLink) => (
               <AppLink
                 key={navLink.link}
                 className={navLinkClass}
                 href={navLink.link}
+                onClick={() => {
+                  setIsOpen(false)
+                }}
               >
                 {navLink.content}
               </AppLink>
@@ -95,6 +101,7 @@ const Navbar: React.FC<Props> = () => {
               href={"/contact/"}
               onClick={() => {
                 window.plausible("Schedule a call Clicked")
+                setIsOpen(false)
               }}
             >
               Contact
@@ -109,7 +116,7 @@ const Navbar: React.FC<Props> = () => {
               }}
               aria-label="Open Menu"
             >
-              <ThreeLineHorizontal className="text-zinc-50" />
+              <ThreeLineHorizontal className="text-strong" />
             </button>
           </div>
         )}

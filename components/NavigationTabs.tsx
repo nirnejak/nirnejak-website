@@ -61,35 +61,39 @@ const NavigationTabs: React.FC<Props> = ({ navLinks }) => {
   }
 
   return (
-    <nav
-      className="relative flex gap-1"
-      ref={wrapperRef}
-      onMouseLeave={resetHighlight}
-    >
+    <nav>
+      {/* The pointer tracking is presentational, so it lives on the layout
+          container rather than the navigation landmark. */}
       <div
-        className="absolute left-0 h-full rounded-md bg-zinc-800"
-        ref={highlightRef}
-        style={{
-          transition: "0.15s ease",
-          transitionProperty: "width, transform, opacity",
-          ...highlightStyles,
-        }}
-      />
-      {TABS_LINKS.map((tab) => (
-        <Link
-          key={tab.link}
-          href={tab.link}
-          className="relative inline-block px-4 py-2 text-xs font-medium text-zinc-50 outline-hidden active:scale-95"
-          onMouseOver={(ev: React.MouseEvent<HTMLAnchorElement>) => {
-            repositionHighlight(ev, tab)
+        className="relative flex gap-1"
+        ref={wrapperRef}
+        onMouseLeave={resetHighlight}
+      >
+        <div
+          className="bg-hover absolute left-0 h-full rounded-md"
+          ref={highlightRef}
+          style={{
+            transition: "0.15s ease",
+            transitionProperty: "width, transform, opacity",
+            ...highlightStyles,
           }}
-          onFocus={(ev: React.FocusEvent<HTMLAnchorElement>) => {
-            repositionHighlight(ev, tab)
-          }}
-        >
-          {tab.content}
-        </Link>
-      ))}
+        />
+        {TABS_LINKS.map((tab) => (
+          <Link
+            key={tab.link}
+            href={tab.link}
+            className="text-strong relative inline-block px-4 py-2 text-xs font-medium outline-hidden active:scale-95"
+            onMouseOver={(ev: React.MouseEvent<HTMLAnchorElement>) => {
+              repositionHighlight(ev, tab)
+            }}
+            onFocus={(ev: React.FocusEvent<HTMLAnchorElement>) => {
+              repositionHighlight(ev, tab)
+            }}
+          >
+            {tab.content}
+          </Link>
+        ))}
+      </div>
     </nav>
   )
 }

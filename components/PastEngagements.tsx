@@ -1,39 +1,69 @@
-import { Link } from "next-view-transitions"
 import type * as React from "react"
+import { Link } from "next-view-transitions"
+
+interface Engagement {
+  name: string
+  work: string
+  // Not rendered — it orders the list and keeps duplicate client names unique.
+  year: number
+  city: string
+  link?: string
+}
+
+const rowClass =
+  "flex flex-col gap-0.5 p-3 font-medium md:flex-row md:items-center md:gap-2"
 
 const PastEngagements: React.FC = () => {
   return (
     <div className="-mx-3">
       <div className="relative">
-        <p className="mb-6 text-center font-medium tracking-wider text-zinc-200 uppercase">
+        <p className="text-label mb-6 text-center font-medium tracking-wider uppercase">
           Projects & Engagements
         </p>
         <Link
           href={"/contact/"}
-          className="absolute -top-3 -right-3 rotate-12 rounded-md border border-dashed border-blue-600 bg-blue-500/5 px-1.5 py-1 text-xs text-blue-600"
+          className="border-accent bg-accent/5 text-accent absolute -top-3 -right-3 rotate-12 rounded-md border border-dashed px-1.5 py-1 text-xs"
         >
-          Contact for full portfolio
+          More work on request
         </Link>
       </div>
-      {engagements.map((client) => (
-        <div
-          key={client.name}
-          className="flex flex-col gap-0.5 p-3 font-medium md:flex-row md:items-center md:gap-2"
-        >
-          <p className="text-zinc-300">{client.name}</p>
-          <div className="flex-1 border-t border-dashed border-zinc-700" />
-          <p className="flex items-center gap-1 text-zinc-500">
-            {client.work} / <span className="text-zinc-300">{client.city}</span>
-          </p>
-        </div>
-      ))}
+      {engagements.map((client) => {
+        // Atollon appears in two separate years, so the key needs both parts.
+        const key = `${client.name}-${client.year}`
+        const row = (
+          <>
+            <p className="text-body">{client.name}</p>
+            <div className="border-line flex-1 border-t border-dashed" />
+            <p className="text-muted flex items-center gap-1">
+              {client.work} / <span className="text-body">{client.city}</span>
+            </p>
+          </>
+        )
+
+        // A handful of the oldest engagements have nothing left to link to.
+        return client.link === undefined ? (
+          <div key={key} className={rowClass}>
+            {row}
+          </div>
+        ) : (
+          <a
+            key={key}
+            href={client.link}
+            target="_blank"
+            rel="noopener"
+            className={`hover-bg ${rowClass}`}
+          >
+            {row}
+          </a>
+        )
+      })}
     </div>
   )
 }
 
 export default PastEngagements
 
-const engagements = [
+const engagements: Engagement[] = [
   {
     name: "Acquisity",
     work: "Design Engineering",
@@ -52,7 +82,7 @@ const engagements = [
     name: "Studio Saol",
     work: "Design Engineering",
     year: 2026,
-    city: "Ireland",
+    city: "Dublin",
     link: "https://studiosaol.com/",
   },
   {
@@ -66,8 +96,7 @@ const engagements = [
     name: "Nexxel",
     work: "Product and Website Design",
     year: 2025,
-    city: "San Francisco",
-    link: "https://example.com/",
+    city: "Chicago",
   },
   {
     name: "GoVisionary",

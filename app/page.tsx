@@ -3,87 +3,58 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import type * as React from "react"
 import Photo from "@/assets/photo.jpg"
+import Tooltip from "@/components/atoms/Tooltip"
+import JsonLd from "@/components/JsonLd"
 import SocialIcons from "@/components/SocialIcons"
 import config from "@/config"
 import getMetadata from "@/utils/metadata"
+import { personSchema, websiteSchema } from "@/utils/schema"
 
 export const metadata: Metadata = getMetadata({
   path: "/",
-  title: "Jitendra Nirnejak - Developer & Designer",
+  ogType: "profile",
+  title: "Jitendra Nirnejak — Design Engineer",
   description:
-    "Independent designer and developer based in Bangalore, crafting tasteful websites, user-interfaces, and web animations for ambitious teams.",
+    "Design engineer based in Bangalore, crafting tasteful websites, user-interfaces, and web animations for ambitious product teams.",
 })
-
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Jitendra Nirnejak",
-  alternateName: "Jeet",
-  url: config.baseUrl,
-  image: `${config.baseUrl}/cover.png`,
-  jobTitle: "Designer & Developer",
-  description:
-    "Independent designer and developer based in Bangalore, crafting tasteful websites, user-interfaces, and web animations.",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Bangalore",
-    addressCountry: "IN",
-  },
-  sameAs: [
-    "https://x.com/jeetnirnejak/",
-    "https://github.com/nirnejak/",
-    "https://dribbble.com/nirnejak/",
-    "https://www.producthunt.com/@nirnejak",
-    "https://unsplash.com/@nirnejak/",
-    "https://www.instagram.com/jeetnirnejak/",
-    "https://layers.to/nirnejak/",
-  ],
-}
 
 const HomePage: React.FC = () => {
   return (
     <main className="flex min-h-[calc(100dvh-46px)] flex-col justify-center">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
+      <JsonLd schema={[personSchema, websiteSchema]} />
       <section className="container my-24 sm:my-0">
         <Image
           src={Photo}
-          alt="Jitendra Nirnejak's Photo"
+          alt="Jitendra Nirnejak"
           placeholder="blur"
           className="mb-6 w-16 rounded-full"
         />
-        <h1 className="max-w-[36ch] text-2xl font-medium tracking-tighter text-zinc-400 md:text-3xl">
-          Hi, I&apos;m Jitendra Nirnejak (Jeet)
-          <br />
-          Developer & Designer
-          {/* & founder at{" "}
-          <a
-            target="_blank"
-            href="https://oven.studio/"
-            className="transition-colors hover:text-zinc-200"
-            rel="noopener"
-          >
-            Oven Studio
-          </a> */}
-          . Crafting tasteful, elegant{" "}
-          <span className="text-gradient-blue font-bold">websites,</span>{" "}
-          <span className="text-gradient-red font-bold">user-interfaces,</span>{" "}
-          and{" "}
-          <span className="text-gradient-green font-bold">web-animations.</span>
+        <h1 className="text-title-soft mb-2 max-w-[30ch] text-2xl font-medium tracking-tighter md:text-3xl">
+          Ciao, I&apos;m{" "}
+          <Tooltip label="Jitendra Nirnejak">
+            <button
+              type="button"
+              className="decoration-placeholder hover:decoration-dim focus-visible:decoration-dim cursor-help underline decoration-dotted decoration-1 underline-offset-[6px] outline-hidden transition-colors"
+            >
+              Jeet
+            </button>
+          </Tooltip>
+          , designer & engineer. Crafting{" "}
+          <span className="text-gradient-green font-bold">fast</span>,{" "}
+          <span className="text-gradient-red font-bold">obsessive </span>,{" "}
+          <span className="text-gradient-blue font-bold">motion-rich</span>{" "}
+          interfaces, web-animations, and websites.
         </h1>
-        <p className="mb-16 text-sm font-medium text-zinc-500 sm:text-base">
+        <p className="text-muted mb-12 max-w-161 text-sm font-medium sm:text-base">
           I thrive at the intersection of design and code, obsessing over the
           smallest details to craft experiences that are both functional and
           delightful. My work is driven by a passion for elegance, precision,
-          and seamless interactivity that makes people fall in love with a
-          product.
+          and interactivity that makes people fall in love with a product.
         </p>
         <div className="flex flex-col gap-6 md:flex-row md:items-center">
           <div className="flex items-center gap-6">
             <a
-              className="group inline-flex items-center gap-1.5 rounded-full bg-zinc-300 py-3 pr-4 pl-5 text-sm leading-none font-medium text-zinc-900 outline-hidden transition-colors hover:bg-zinc-200 focus:bg-zinc-200 active:scale-98"
+              className="group bg-inverse-soft text-on-inverse hover:bg-inverse-hover focus:bg-inverse-hover inline-flex items-center gap-1.5 rounded-full py-3 pr-4 pl-5 text-sm leading-none font-medium outline-hidden transition-colors active:scale-98"
               href={config.SCHEDULE_CALL_LINK}
               target="_blank"
               rel="noopener"
@@ -94,11 +65,11 @@ const HomePage: React.FC = () => {
                 className="transition-transform group-hover:-rotate-45 group-focus:-rotate-45"
               />
             </a>
-            <p className="text-sm font-medium text-zinc-500">
+            <p className="text-muted text-sm font-medium">
               or{" "}
               <a
                 href="mailto:hello@nirnejak.com?subject=Project%20Enquiry"
-                className="ml-3 text-zinc-400 underline-offset-2 outline-hidden transition-colors hover:text-zinc-300 hover:underline focus:text-zinc-300 focus:underline"
+                className="text-dim hover:text-body focus:text-body ml-3 underline-offset-2 outline-hidden transition-colors hover:underline focus:underline"
               >
                 hello@nirnejak.com
               </a>

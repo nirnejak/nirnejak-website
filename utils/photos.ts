@@ -1,3 +1,5 @@
+import type { StaticImageData } from "next/image"
+
 import Photo104 from "@/assets/photos/2588D839-1C32-4D20-86A1-E1B215D274F8.jpg"
 import Photo85 from "@/assets/photos/DJI_20211230_180133_585.jpg"
 import Photo17 from "@/assets/photos/DJI_20220130_093513_544.jpg"
@@ -133,7 +135,7 @@ import Photo78 from "@/assets/photos/IMG_9380.jpeg"
 import Photo91 from "@/assets/photos/IMG_9421.jpeg"
 import Photo119 from "@/assets/photos/IMG_9431.jpeg"
 
-export const photos = [
+const photoImages = [
   Photo1,
   Photo2,
   Photo3,
@@ -270,19 +272,15 @@ export const photos = [
   Photo134,
 ]
 
-export const archivedPhotos = [
-  "/photos/archive/DJI_20211230_180216_620.JPG",
-  "/photos/archive/IMG_0076.jpeg",
-  "/photos/archive/IMG_7178.jpeg",
-  "/photos/archive/IMG_7008.jpeg",
-  "/photos/archive/IMG_7254.jpeg",
-  "/photos/archive/DJI_20220611_124058_027.JPG",
-  "/photos/archive/IMG_1506.jpeg",
-  "/photos/archive/IMG_2258.jpeg",
-  "/photos/archive/IMG_1397.jpeg",
-  "/photos/archive/IMG_7231.jpeg",
-  "/photos/archive/IMG_7247.jpeg",
-  "/photos/archive/IMG_7248.jpeg",
-  "/photos/archive/IMG_7254.jpeg",
-  "/photos/archive/IMG_7197.jpeg",
-]
+export interface Photo {
+  image: StaticImageData
+  alt: string
+}
+
+// Alt text is generic for now. These photographs are the page's primary
+// content, so replacing each entry with a real description is worth doing as
+// captions get written — but anything beats the webpack hash this used to emit.
+export const photos: Photo[] = photoImages.map((image) => ({
+  image,
+  alt: "Photograph by Jitendra Nirnejak",
+}))

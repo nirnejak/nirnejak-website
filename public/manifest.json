@@ -1,12 +1,12 @@
 {
-  "theme_color": "#1D1D20",
-  "background_color": "#1D1D20",
+  "theme_color": "#FDFDFD",
+  "background_color": "#FDFDFD",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
   "name": "Jitendra Nirnejak Portfolio",
   "short_name": "Nirnejak",
-  "description": "Jitendra Nirnejak is a developer and designer based out of Bangalore, India. He has expertise in React, TypeScript, Node.js, UI Design and Prototyping.",
+  "description": "Jitendra Nirnejak is a design engineer based in Bangalore, India, crafting tasteful websites, user-interfaces, and web animations.",
   "icons": [
     {
       "src": "/icons/icon-192x192.png",

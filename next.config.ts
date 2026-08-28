@@ -80,4 +80,8 @@ const nextConfig: NextConfig = {
   },
 }
 
-export default withPWA(nextConfig as any)
+// @types/next-pwa ships its own older copy of Next's types, and the two
+// NextConfig definitions are structurally incompatible (readonly i18n domains).
+// Asserting to the parameter type keeps the rest of the config type-checked,
+// where the previous `as any` disabled checking entirely.
+export default withPWA(nextConfig as Parameters<typeof withPWA>[0])

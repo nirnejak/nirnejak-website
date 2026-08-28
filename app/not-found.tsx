@@ -20,18 +20,21 @@ const GIFs = [
   "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWJkY3E2c2FpcjduMGk0OWFjb2F4ZHh5ejd6M3JhdXEydnJhOHF5eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6G4lHr2Lv6vQoqWTw4/giphy.gif",
 ]
 
-const index = Math.floor(Math.random() * 5)
+// Picked once per build, so the GIF rotates on deploy rather than per visit —
+// unavoidable on a prerendered page, and calling Math.random() during render
+// instead would break React purity.
+const gif = GIFs[Math.floor(Math.random() * GIFs.length)]
 
 const NotFound: React.FC = () => {
   return (
     <main className="container">
       <section className="grid min-h-dvh place-content-center">
         <div className="">
-          <Image src={GIFs[index]} alt="Lost" width={480} height={270} />
-          <h1 className="mt-10 mb-3 text-center text-3xl font-bold tracking-tight text-zinc-300 md:text-4xl">
+          <Image src={gif} alt="" width={480} height={270} />
+          <h1 className="text-title mt-10 mb-3 text-center text-3xl font-bold tracking-tight md:text-4xl">
             You lost buddy?
           </h1>
-          <p className="text-center text-zinc-400">
+          <p className="text-dim text-center">
             Let me take you{" "}
             <AppLink href="/" className="font-semibold">
               home

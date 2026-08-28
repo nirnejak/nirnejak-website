@@ -1,47 +1,25 @@
 import type { MetadataRoute } from "next"
 
+import { allBlogs } from "@/utils/blogs"
 import config from "@/config"
 
 const { baseUrl } = config
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const staticRoutes = [
-    {
-      url: `${baseUrl}/`,
-      changeFrequency: "daily" as const,
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/work/`,
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/work/projects/`,
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/blogs/`,
-      changeFrequency: "daily" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/photos/`,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/uses/`,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/contact/`,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-  ]
+  // Google reads lastModified and ignores changeFrequency/priority, so this
+  // reports it only where there is a real date behind it. A build timestamp on
+  // every route would just be noise Google learns to distrust.
+  const latestPost = new Date(
+    Math.max(...allBlogs.map((blog) => new Date(blog.date).getTime()))
+  )
 
-  return staticRoutes
+  return [
+    { url: `${baseUrl}/` },
+    { url: `${baseUrl}/work/` },
+    { url: `${baseUrl}/work/projects/` },
+    { url: `${baseUrl}/blogs/`, lastModified: latestPost },
+    { url: `${baseUrl}/photos/` },
+    { url: `${baseUrl}/uses/` },
+    { url: `${baseUrl}/contact/` },
+  ]
 }

@@ -6,7 +6,7 @@ interface MetadataArgs {
   path: string
   title: string
   description: string
-  image?: string
+  ogType?: "website" | "profile"
   noIndex?: boolean
 }
 
@@ -14,12 +14,11 @@ const getMetadata = ({
   path,
   title,
   description,
-  image,
+  ogType,
   noIndex,
 }: MetadataArgs): Metadata => {
   const metaTitle = title
   const metaDescription = description
-  const metaImage = image ?? `${config.baseUrl}/cover.png`
 
   const metadata: Metadata = {
     metadataBase: new URL(config.baseUrl),
@@ -45,13 +44,15 @@ const getMetadata = ({
     },
     manifest: `${config.baseUrl}/manifest.json`,
 
+    // `images` is deliberately absent from openGraph and twitter: the
+    // app/**/opengraph-image.tsx files own og:image and emit its type, width,
+    // and height. Declaring it here too would produce duplicate tags.
     openGraph: {
-      type: "website",
+      type: ogType ?? "website",
       url: `${config.baseUrl}${path}`,
       siteName: config.appName,
       title: metaTitle,
       description: metaDescription,
-      images: metaImage,
     },
 
     twitter: {
@@ -60,14 +61,15 @@ const getMetadata = ({
       creator: `@${config.twitter}`,
       title: metaTitle,
       description: metaDescription,
-      images: metaImage,
     },
 
     appleWebApp: {
       capable: true,
       title: metaTitle,
-      startupImage: metaImage,
-      statusBarStyle: "black-translucent",
+      startupImage: `${config.baseUrl}/icons/icon-512x512.png`,
+      // "black-translucent" forces white status-bar text, which disappears
+      // against a light page. "default" follows the system scheme.
+      statusBarStyle: "default",
     },
 
     formatDetection: {

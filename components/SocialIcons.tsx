@@ -32,7 +32,7 @@ const SocialIcons: React.FC = () => {
               <button
                 type="button"
                 onClick={() => window.open(url, "_blank")}
-                className="hover-bg group cursor-pointer rounded-md p-3 text-zinc-400 outline-hidden"
+                className="hover-bg group text-dim cursor-pointer rounded-md p-3 outline-hidden"
                 aria-label={title}
               >
                 {icon}
@@ -40,11 +40,11 @@ const SocialIcons: React.FC = () => {
             </Tooltip.Trigger>
             <Tooltip.Portal>
               <Tooltip.Content
-                className="data-[state=delayed-open]:data-[side=bottom]:animate-slide-up-and-fade data-[state=delayed-open]:data-[side=left]:animate-slide-right-and-fade data-[state=delayed-open]:data-[side=right]:animate-slide-left-and-fade data-[state=delayed-open]:data-[side=top]:animate-slide-down-and-fade rounded-md bg-zinc-800 px-3.5 py-2.5 text-sm leading-none text-zinc-300 will-change-[transform,opacity] select-none"
+                className="data-[state=delayed-open]:data-[side=bottom]:animate-slide-up-and-fade data-[state=delayed-open]:data-[side=left]:animate-slide-right-and-fade data-[state=delayed-open]:data-[side=right]:animate-slide-left-and-fade data-[state=delayed-open]:data-[side=top]:animate-slide-down-and-fade bg-surface-raised text-body border-line rounded-md border px-3.5 py-2.5 text-sm leading-none shadow-lg will-change-[transform,opacity] select-none"
                 sideOffset={5}
               >
                 {title}
-                <Tooltip.Arrow className="fill-zinc-800" />
+                <Tooltip.Arrow className="fill-surface-raised" />
               </Tooltip.Content>
             </Tooltip.Portal>
           </Tooltip.Root>

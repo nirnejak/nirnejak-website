@@ -1,23 +1,26 @@
 "use client"
 import { XSmall } from "akar-icons"
 import { motion } from "motion/react"
-import Image, { type StaticImageData } from "next/image"
+import Image from "next/image"
 import * as React from "react"
 
 import useClickOutside from "@/hooks/useClickOutside"
 import useModalWithContent from "@/hooks/useModalWithContent"
+import type { Photo } from "@/utils/photos"
 
 interface Props {
-  photos: StaticImageData[]
+  photos: Photo[]
 }
 
 const PhotoGallery: React.FC<Props> = ({ photos }) => {
-  const { isOpen, content, openModal, closeModal } = useModalWithContent()
+  const { isOpen, content, openModal, closeModal } =
+    useModalWithContent<Photo>()
 
-  const [isLoaded, setIsLoaded] = React.useState(false)
-  React.useEffect(() => {
-    setIsLoaded(true)
-  }, [])
+  // The entrance plays on a slow, staggered spring; every gesture after it
+  // uses a snappier one. Motion captures a transition when it creates the
+  // animation, so flipping this once the entrance settles only ever affects
+  // the hover animations that come later.
+  const [hasEntered, setHasEntered] = React.useState(false)
 
   const ref = useClickOutside(closeModal)
 
@@ -26,7 +29,7 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
         {photos.map((photo, index) => (
           <motion.div
-            key={photo.src}
+            key={photo.image.src}
             role="button"
             tabIndex={0}
             onClick={() => {
@@ -40,17 +43,20 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
             whileHover={{ scale: 1.03, rotate: 0, zIndex: 5 }}
             transition={{
               type: "spring",
-              stiffness: isLoaded ? 530 : 100,
-              damping: isLoaded ? 20 : 10,
+              stiffness: hasEntered ? 530 : 100,
+              damping: hasEntered ? 20 : 10,
               mass: 0.7,
 
-              delay: isLoaded ? 0 : 0.05 * index,
+              delay: hasEntered ? 0 : 0.05 * index,
             }}
-            className="relative cursor-pointer overflow-hidden rounded-3xl after:absolute after:inset-0 after:rounded-3xl after:border-8 after:border-white/30 hover:shadow-2xl"
+            onAnimationComplete={() => {
+              setHasEntered(true)
+            }}
+            className="after:border-frame relative cursor-pointer overflow-hidden rounded-3xl after:absolute after:inset-0 after:rounded-3xl after:border-8 hover:shadow-2xl"
           >
             <Image
-              src={photo}
-              alt={photo.src}
+              src={photo.image}
+              alt={photo.alt}
               placeholder="blur"
               width="360"
               height="640"
@@ -60,10 +66,10 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
         ))}
       </div>
       {isOpen && content !== null && (
-        <div className="fixed top-0 left-0 z-30 grid h-dvh w-full place-items-center bg-zinc-900/30 backdrop-blur-lg">
+        <div className="bg-scrim-media fixed top-0 left-0 z-30 grid h-dvh w-full place-items-center backdrop-blur-lg">
           <button
             type="button"
-            className="fixed top-5 right-5 rounded-full bg-zinc-700 p-1.5 text-zinc-300 hover:bg-zinc-500"
+            className="bg-surface-inset text-body hover:bg-inset-hover fixed top-5 right-5 rounded-full p-1.5"
             onClick={() => {
               closeModal()
             }}
@@ -78,8 +84,8 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
             ref={ref}
           >
             <Image
-              src={content}
-              alt={content.src}
+              src={content.image}
+              alt={content.alt}
               placeholder="blur"
               className="w-min rounded-2xl"
             />
