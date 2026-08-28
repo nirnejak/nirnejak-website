@@ -29,7 +29,7 @@ const HomePage: React.FC = () => {
           placeholder="blur"
           className="mb-6 w-16 rounded-full"
         />
-        <h1 className="text-title-soft mb-2 max-w-[32ch] text-2xl font-medium tracking-tighter md:text-3xl">
+        <h1 className="text-title-soft mb-2 max-w-[30ch] text-2xl font-medium tracking-tighter md:text-3xl">
           Ciao, I&apos;m{" "}
           <Tooltip label="Jitendra Nirnejak">
             <button
@@ -39,11 +39,8 @@ const HomePage: React.FC = () => {
               Jeet
             </button>
           </Tooltip>
-          , designer & engineer.
-          <br />
-          Crafting <span className="text-gradient-green font-bold">
-            fast
-          </span>,{" "}
+          , designer & engineer. Crafting{" "}
+          <span className="text-gradient-green font-bold">fast</span>,{" "}
           <span className="text-gradient-red font-bold">obsessive </span>,{" "}
           <span className="text-gradient-blue font-bold">motion-rich</span>{" "}
           interfaces, web-animations, and websites.
