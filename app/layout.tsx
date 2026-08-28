@@ -53,7 +53,7 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
           <meta
             name="theme-color"
             media="(prefers-color-scheme: light)"
-            content="#FAFAFA"
+            content="#FDFDFD"
           />
           <meta
             name="theme-color"

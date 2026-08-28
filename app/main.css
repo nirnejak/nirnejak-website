@@ -68,8 +68,10 @@
      mode can't do that above white, so it leans on --color-line and
      shadows instead; the ramp is deliberately not a mirror. */
 
-  /* Surfaces */
-  --color-surface: var(--color-zinc-50);
+  /* Surfaces. The page sits a touch above zinc-50 (98.5%) — bright enough to
+     read as white-ish without going pure white, which would leave the raised
+     surfaces below with no tonal step at all. */
+  --color-surface: oklch(99.3% 0 none);
   --color-surface-raised: var(--color-white);
   --color-surface-inset: var(--color-zinc-200);
   --color-inset-hover: var(--color-zinc-300);
@@ -111,7 +113,7 @@
      --color-scrim-media backs the photo lightbox and stays dark in BOTH
      schemes — photographs need a dark surround regardless of system theme —
      but light mode needs more of it to read against a near-white page. */
-  --color-scrim: color-mix(in oklab, var(--color-zinc-50) 70%, transparent);
+  --color-scrim: color-mix(in oklab, var(--color-surface) 70%, transparent);
   --color-scrim-media: color-mix(
     in oklab,
     var(--color-zinc-900) 60%,
