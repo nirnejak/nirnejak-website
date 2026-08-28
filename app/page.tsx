@@ -30,7 +30,7 @@ const HomePage: React.FC = () => {
           className="mb-6 w-16 rounded-full"
         />
         <h1 className="text-title-soft mb-2 max-w-[36ch] text-2xl font-medium tracking-tighter md:text-3xl">
-          I&apos;m{" "}
+          Hi, I&apos;m{" "}
           <Tooltip label="Jitendra Nirnejak">
             <button
               type="button"
@@ -39,11 +39,14 @@ const HomePage: React.FC = () => {
               Jeet
             </button>
           </Tooltip>
-          , designer & engineer,
+          , a designer & engineer,
           <br />
-          crafting fast, obsessive, motion-rich <br />
-          <span className="text-gradient-blue font-bold">interfaces,</span>{" "}
-          <span className="text-gradient-red font-bold">web-animations,</span>{" "}
+          crafting <span className="text-gradient-blue font-bold">fast</span>,
+          obsessive, motion-rich <br />
+          user-interfaces,{" "}
+          <span className="text-gradient-red font-bold">
+            web-animations,
+          </span>{" "}
           and <span className="text-gradient-green font-bold">sites.</span>
         </h1>
         <p className="text-muted mb-6 text-sm font-medium sm:text-base">
