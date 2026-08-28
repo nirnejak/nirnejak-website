@@ -39,9 +39,9 @@ const HomePage: React.FC = () => {
               Jeet
             </button>
           </Tooltip>
-          , designer & engineer,
+          , designer & engineer.
           <br />
-          crafting <span className="text-gradient-green font-bold">
+          Crafting <span className="text-gradient-green font-bold">
             fast
           </span>,{" "}
           <span className="text-gradient-red font-bold">obsessive </span>,{" "}
