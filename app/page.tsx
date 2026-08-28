@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import type * as React from "react"
 import Photo from "@/assets/photo.jpg"
+import Tooltip from "@/components/atoms/Tooltip"
 import JsonLd from "@/components/JsonLd"
 import SocialIcons from "@/components/SocialIcons"
 import config from "@/config"
@@ -29,7 +30,16 @@ const HomePage: React.FC = () => {
           className="mb-6 w-16 rounded-full"
         />
         <h1 className="text-title-soft mb-2 max-w-[36ch] text-2xl font-medium tracking-tighter md:text-3xl">
-          I&apos;m Jeet, designer & engineer,
+          I&apos;m{" "}
+          <Tooltip label="Jitendra Nirnejak">
+            <button
+              type="button"
+              className="decoration-placeholder hover:decoration-dim focus-visible:decoration-dim cursor-help underline decoration-dotted decoration-1 underline-offset-[6px] outline-hidden transition-colors"
+            >
+              Jeet
+            </button>
+          </Tooltip>
+          , designer & engineer,
           <br />
           crafting fast, obsessive, motion-rich <br />
           <span className="text-gradient-blue font-bold">interfaces,</span>{" "}
