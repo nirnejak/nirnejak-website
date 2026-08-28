@@ -29,7 +29,7 @@ const HomePage: React.FC = () => {
           placeholder="blur"
           className="mb-6 w-16 rounded-full"
         />
-        <h1 className="text-title-soft mb-2 max-w-[36ch] text-2xl font-medium tracking-tighter md:text-3xl">
+        <h1 className="text-title-soft mb-2 max-w-[32ch] text-2xl font-medium tracking-tighter md:text-3xl">
           Ciao, I&apos;m{" "}
           <Tooltip label="Jitendra Nirnejak">
             <button
@@ -46,10 +46,9 @@ const HomePage: React.FC = () => {
           </span>,{" "}
           <span className="text-gradient-red font-bold">obsessive </span>,{" "}
           <span className="text-gradient-blue font-bold">motion-rich</span>{" "}
-          <br />
           interfaces, web-animations, and websites.
         </h1>
-        <p className="text-muted mb-6 w-161 text-sm font-medium sm:text-base">
+        <p className="text-muted mb-12 max-w-161 text-sm font-medium sm:text-base">
           I thrive at the intersection of design and code, obsessing over the
           smallest details to craft experiences that are both functional and
           delightful. My work is driven by a passion for elegance, precision,
