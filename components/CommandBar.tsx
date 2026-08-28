@@ -8,7 +8,6 @@ import {
   Calendar,
   Camera,
   DribbbleFill,
-  Frame,
   GithubFill,
   HomeAlt1,
   LaptopDevice,
@@ -87,7 +86,7 @@ const CommandBar: React.FC = () => {
           setValue(v)
         }}
         label="Global Command Menu"
-        className="animate-rise bg-surface-raised border-line fixed top-1/2 left-1/2 z-30 w-11/12 max-w-[560px] -translate-1/2 rounded-xl border p-2 text-[13px] shadow-2xl select-none md:w-full"
+        className="animate-rise bg-surface-raised border-line fixed top-1/2 left-1/2 z-30 w-11/12 max-w-[560px] -translate-1/2 rounded-2xl border p-2 text-[13px] shadow-2xl select-none md:w-full"
       >
         <Command.Input
           className="bg-surface text-body placeholder:text-placeholder border-line w-full rounded-xl border px-3 py-2.5 text-[13px] outline-hidden"
@@ -196,11 +195,6 @@ export const socialLinks = [
     content: "Github",
     href: "https://github.com/nirnejak/",
     icon: <GithubFill size={14} />,
-  },
-  {
-    content: "Layers",
-    href: "https://layers.to/nirnejak/",
-    icon: <Frame size={14} />,
   },
   {
     content: "Dribbble",

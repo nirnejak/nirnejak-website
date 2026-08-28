@@ -34,7 +34,6 @@ export const personSchema = {
     "https://www.producthunt.com/@nirnejak",
     "https://unsplash.com/@nirnejak/",
     "https://www.instagram.com/jeetnirnejak/",
-    "https://layers.to/nirnejak/",
   ],
 }
 
