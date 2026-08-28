@@ -4,13 +4,23 @@ import { ReactLenis } from "lenis/react"
 import localFont from "next/font/local"
 import Script from "next/script"
 import { ViewTransitions } from "next-view-transitions"
+import type { Metadata } from "next"
 import type * as React from "react"
 import Background from "@/components/Background"
 import CommandBar from "@/components/CommandBar"
 import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
 
+import config from "@/config"
+
 import "./main.css"
+
+// Declared on the root layout so every route — including the generated
+// opengraph-image handlers — can resolve relative metadata URLs to absolute
+// ones without falling back to localhost.
+export const metadata: Metadata = {
+  metadataBase: new URL(config.baseUrl),
+}
 
 const sansFont = localFont({
   variable: "--sans-font",

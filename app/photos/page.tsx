@@ -6,7 +6,7 @@ import { photos } from "@/utils/photos"
 
 export const metadata: Metadata = getMetadata({
   path: "/photos/",
-  title: "Photos | Jitendra Nirnejak",
+  title: "Photos — Travel & Street Photography | Jitendra Nirnejak",
   description:
     "Photography by Jitendra Nirnejak — landscapes, travel, and street shots captured on iPhone, DJI, and Insta360 across India and beyond.",
 })

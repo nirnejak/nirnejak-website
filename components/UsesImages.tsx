@@ -16,14 +16,14 @@ import TacoXbox from "@/assets/uses/IMG_8559.jpeg"
 const rotation = [-3, 3, -6, 6]
 
 const images = [
-  MysticallyAwkward,
-  TopDownBnW,
-  GirlDrawing,
-  Bunny,
-  BlueTokai,
-  TacoXbox,
-  GoodVibesGreatCoffee,
-  ChurchStreet,
+  { image: MysticallyAwkward, alt: "Mystically Awkward" },
+  { image: TopDownBnW, alt: "Top Down, Black & White" },
+  { image: GirlDrawing, alt: "Girl Drawing" },
+  { image: Bunny, alt: "Bunny" },
+  { image: BlueTokai, alt: "Blue Tokai" },
+  { image: TacoXbox, alt: "Taco Xbox" },
+  { image: GoodVibesGreatCoffee, alt: "Good Vibes, Great Coffee" },
+  { image: ChurchStreet, alt: "Church Street" },
 ]
 
 const UsesImages: React.FC = () => {
@@ -35,9 +35,9 @@ const UsesImages: React.FC = () => {
 
   return (
     <section className="relative mt-10 -ml-4 grid w-[calc(100vw+32px)] grid-cols-4 md:mt-20 md:-ml-5 md:grid-cols-8">
-      {images.map((image, index) => (
+      {images.map((photo, index) => (
         <motion.div
-          key={image.src}
+          key={photo.image.src}
           className={index > 3 ? `-mt-4 md:mt-0` : ""}
           initial={{ opacity: 0, scale: 0.02 }}
           animate={{ opacity: 1, scale: 1, rotate: rotation[index % 3] }}
@@ -58,8 +58,8 @@ const UsesImages: React.FC = () => {
           <div className="after:border-frame relative w-[calc(100%+10px)] overflow-hidden rounded-3xl shadow-xl after:absolute after:inset-0 after:rounded-3xl after:border-[6px] hover:shadow-2xl md:w-[calc(100%+20px)] md:after:border-8">
             <Image
               width={400}
-              src={image}
-              alt="Image"
+              src={photo.image}
+              alt={photo.alt}
               className="rounded-2xl"
               placeholder="blur"
               quality={100}

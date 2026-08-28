@@ -5,7 +5,7 @@ import getMetadata from "@/utils/metadata"
 
 export const metadata: Metadata = getMetadata({
   path: "/uses/",
-  title: "Uses | Jitendra Nirnejak",
+  title: "Uses — Hardware, Software & Gear | Jitendra Nirnejak",
   description:
     "The hardware, software, and gear Jitendra Nirnejak uses every day for design, development, photography, and writing.",
 })

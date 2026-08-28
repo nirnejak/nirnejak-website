@@ -1,18 +1,20 @@
 "use client"
 import { XSmall } from "akar-icons"
 import { motion } from "motion/react"
-import Image, { type StaticImageData } from "next/image"
+import Image from "next/image"
 import * as React from "react"
 
 import useClickOutside from "@/hooks/useClickOutside"
 import useModalWithContent from "@/hooks/useModalWithContent"
+import type { Photo } from "@/utils/photos"
 
 interface Props {
-  photos: StaticImageData[]
+  photos: Photo[]
 }
 
 const PhotoGallery: React.FC<Props> = ({ photos }) => {
-  const { isOpen, content, openModal, closeModal } = useModalWithContent()
+  const { isOpen, content, openModal, closeModal } =
+    useModalWithContent<Photo>()
 
   // The entrance plays on a slow, staggered spring; every gesture after it
   // uses a snappier one. Motion captures a transition when it creates the
@@ -27,7 +29,7 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
         {photos.map((photo, index) => (
           <motion.div
-            key={photo.src}
+            key={photo.image.src}
             role="button"
             tabIndex={0}
             onClick={() => {
@@ -53,8 +55,8 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
             className="after:border-frame relative cursor-pointer overflow-hidden rounded-3xl after:absolute after:inset-0 after:rounded-3xl after:border-8 hover:shadow-2xl"
           >
             <Image
-              src={photo}
-              alt={photo.src}
+              src={photo.image}
+              alt={photo.alt}
               placeholder="blur"
               width="360"
               height="640"
@@ -82,8 +84,8 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
             ref={ref}
           >
             <Image
-              src={content}
-              alt={content.src}
+              src={content.image}
+              alt={content.alt}
               placeholder="blur"
               className="w-min rounded-2xl"
             />

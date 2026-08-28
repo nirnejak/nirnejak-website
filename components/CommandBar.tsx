@@ -4,6 +4,7 @@ import {
   ArrowDown,
   ArrowForward,
   ArrowUp,
+  Briefcase,
   Calendar,
   Camera,
   DribbbleFill,
@@ -230,6 +231,12 @@ export const siteLinks = [
     value: "work",
     link: "/work/",
     icon: <LaptopDevice size={14} />,
+  },
+  {
+    content: "Projects",
+    value: "projects",
+    link: "/work/projects/",
+    icon: <Briefcase size={14} />,
   },
   {
     content: "Blogs",

@@ -3,78 +3,40 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import type * as React from "react"
 import Photo from "@/assets/photo.jpg"
+import JsonLd from "@/components/JsonLd"
 import SocialIcons from "@/components/SocialIcons"
 import config from "@/config"
 import getMetadata from "@/utils/metadata"
+import { personSchema, websiteSchema } from "@/utils/schema"
 
 export const metadata: Metadata = getMetadata({
   path: "/",
-  title: "Jitendra Nirnejak - Developer & Designer",
+  ogType: "profile",
+  title: "Jitendra Nirnejak — Design Engineer",
   description:
-    "Independent designer and developer based in Bangalore, crafting tasteful websites, user-interfaces, and web animations for ambitious teams.",
+    "Design engineer based in Bangalore, crafting tasteful websites, user-interfaces, and web animations for ambitious product teams.",
 })
-
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Jitendra Nirnejak",
-  alternateName: "Jeet",
-  url: config.baseUrl,
-  image: `${config.baseUrl}/cover.png`,
-  jobTitle: "Designer & Developer",
-  description:
-    "Independent designer and developer based in Bangalore, crafting tasteful websites, user-interfaces, and web animations.",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Bangalore",
-    addressCountry: "IN",
-  },
-  sameAs: [
-    "https://x.com/jeetnirnejak/",
-    "https://github.com/nirnejak/",
-    "https://dribbble.com/nirnejak/",
-    "https://www.producthunt.com/@nirnejak",
-    "https://unsplash.com/@nirnejak/",
-    "https://www.instagram.com/jeetnirnejak/",
-    "https://layers.to/nirnejak/",
-  ],
-}
 
 const HomePage: React.FC = () => {
   return (
     <main className="flex min-h-[calc(100dvh-46px)] flex-col justify-center">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
+      <JsonLd schema={[personSchema, websiteSchema]} />
       <section className="container my-24 sm:my-0">
         <Image
           src={Photo}
-          alt="Jitendra Nirnejak's Photo"
+          alt="Jitendra Nirnejak"
           placeholder="blur"
           className="mb-6 w-16 rounded-full"
         />
-        <h1 className="text-title-soft max-w-[36ch] text-2xl font-medium tracking-tighter md:text-3xl">
-          Hi, I&apos;m Jitendra Nirnejak (Jeet)
+        <h1 className="text-title-soft mb-2 max-w-[36ch] text-2xl font-medium tracking-tighter md:text-3xl">
+          I&apos;m Jeet, designer & engineer,
           <br />
-          Developer & Designer
-          {/* & founder at{" "}
-          <a
-            target="_blank"
-            href="https://oven.studio/"
-            className="transition-colors hover:text-label"
-            rel="noopener"
-          >
-            Oven Studio
-          </a> */}
-          . Crafting tasteful, elegant{" "}
-          <span className="text-gradient-blue font-bold">
-            user-interfaces,
-          </span>{" "}
+          crafting fast, obsessive, motion-rich <br />
+          <span className="text-gradient-blue font-bold">interfaces,</span>{" "}
           <span className="text-gradient-red font-bold">web-animations,</span>{" "}
-          and <span className="text-gradient-green font-bold">websites.</span>
+          and <span className="text-gradient-green font-bold">sites.</span>
         </h1>
-        <p className="text-muted mb-16 text-sm font-medium sm:text-base">
+        <p className="text-muted mb-6 text-sm font-medium sm:text-base">
           I thrive at the intersection of design and code, obsessing over the
           smallest details to craft experiences that are both functional and
           delightful. My work is driven by a passion for elegance, precision,
