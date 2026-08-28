@@ -49,12 +49,11 @@ const HomePage: React.FC = () => {
           <br />
           interfaces, web-animations, and websites.
         </h1>
-        <p className="text-muted mb-6 text-sm font-medium sm:text-base">
+        <p className="text-muted mb-6 w-161 text-sm font-medium sm:text-base">
           I thrive at the intersection of design and code, obsessing over the
           smallest details to craft experiences that are both functional and
           delightful. My work is driven by a passion for elegance, precision,
-          and seamless interactivity that makes people fall in love with a
-          product.
+          and interactivity that makes people fall in love with a product.
         </p>
         <div className="flex flex-col gap-6 md:flex-row md:items-center">
           <div className="flex items-center gap-6">
