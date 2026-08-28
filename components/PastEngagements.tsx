@@ -4,6 +4,7 @@ import { Link } from "next-view-transitions"
 interface Engagement {
   name: string
   work: string
+  // Not rendered — it orders the list and keeps duplicate client names unique.
   year: number
   city: string
   link?: string
@@ -13,15 +14,6 @@ const rowClass =
   "flex flex-col gap-0.5 p-3 font-medium md:flex-row md:items-center md:gap-2"
 
 const PastEngagements: React.FC = () => {
-  // Grouped rather than sorted: the list is already newest-first, and a Map
-  // keeps that order while tolerating an entry added out of sequence.
-  const byYear = new Map<number, Engagement[]>()
-  for (const client of engagements) {
-    const bucket = byYear.get(client.year)
-    if (bucket === undefined) byYear.set(client.year, [client])
-    else bucket.push(client)
-  }
-
   return (
     <div className="-mx-3">
       <div className="relative">
@@ -35,39 +27,36 @@ const PastEngagements: React.FC = () => {
           More work on request
         </Link>
       </div>
-      {[...byYear].map(([year, clients]) => (
-        <div key={year} className="mb-6">
-          <p className="text-muted mb-1 px-3 text-xs font-medium">{year}</p>
-          {clients.map((client) =>
-            client.link === undefined ? (
-              // A handful of the oldest engagements have nothing left to link to.
-              <div key={`${client.name}-${client.year}`} className={rowClass}>
-                <p className="text-body">{client.name}</p>
-                <div className="border-line flex-1 border-t border-dashed" />
-                <p className="text-muted flex items-center gap-1">
-                  {client.work} /{" "}
-                  <span className="text-body">{client.city}</span>
-                </p>
-              </div>
-            ) : (
-              <a
-                key={`${client.name}-${client.year}`}
-                href={client.link}
-                target="_blank"
-                rel="noopener"
-                className={`hover-bg ${rowClass}`}
-              >
-                <p className="text-body">{client.name}</p>
-                <div className="border-line flex-1 border-t border-dashed" />
-                <p className="text-muted flex items-center gap-1">
-                  {client.work} /{" "}
-                  <span className="text-body">{client.city}</span>
-                </p>
-              </a>
-            )
-          )}
-        </div>
-      ))}
+      {engagements.map((client) => {
+        // Atollon appears in two separate years, so the key needs both parts.
+        const key = `${client.name}-${client.year}`
+        const row = (
+          <>
+            <p className="text-body">{client.name}</p>
+            <div className="border-line flex-1 border-t border-dashed" />
+            <p className="text-muted flex items-center gap-1">
+              {client.work} / <span className="text-body">{client.city}</span>
+            </p>
+          </>
+        )
+
+        // A handful of the oldest engagements have nothing left to link to.
+        return client.link === undefined ? (
+          <div key={key} className={rowClass}>
+            {row}
+          </div>
+        ) : (
+          <a
+            key={key}
+            href={client.link}
+            target="_blank"
+            rel="noopener"
+            className={`hover-bg ${rowClass}`}
+          >
+            {row}
+          </a>
+        )
+      })}
     </div>
   )
 }
@@ -93,7 +82,7 @@ const engagements: Engagement[] = [
     name: "Studio Saol",
     work: "Design Engineering",
     year: 2026,
-    city: "Ireland",
+    city: "Dublin",
     link: "https://studiosaol.com/",
   },
   {
@@ -107,7 +96,7 @@ const engagements: Engagement[] = [
     name: "Nexxel",
     work: "Product and Website Design",
     year: 2025,
-    city: "San Francisco",
+    city: "Chicago",
   },
   {
     name: "GoVisionary",

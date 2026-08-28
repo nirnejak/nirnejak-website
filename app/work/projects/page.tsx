@@ -31,7 +31,7 @@ const ProjectsPage: React.FC = () => {
       <section className="container mt-10 mb-16 text-sm md:mt-16">
         <div className="-mx-3 mb-16">
           <p className="text-label mb-6 text-center font-medium tracking-wider uppercase">
-            Full-Stack Projects
+            Products
           </p>
           {allSites.websites.map((project) => (
             <AppLink
@@ -51,7 +51,7 @@ const ProjectsPage: React.FC = () => {
 
         <div className="-mx-3 mb-16">
           <p className="text-label mb-6 text-center font-medium tracking-wider uppercase">
-            Websites (with CMS)
+            Websites
           </p>
           {allSites.cms.map((project) => (
             <AppLink

@@ -37,7 +37,9 @@ const WorkPage: React.FC = () => {
           href="/work/projects/"
           className="hover-bg group -mx-3 flex items-center gap-2 p-3 font-medium"
         >
-          <span className="text-body">Browse every shipped project</span>
+          <span className="text-body">
+            Browse a selection of shipped projects
+          </span>
           <div className="border-line flex-1 border-t border-dashed" />
           <span className="text-muted flex items-center gap-1.5">
             {projectCount} projects

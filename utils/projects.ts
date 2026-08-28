@@ -6,12 +6,7 @@ export interface Project {
 export const allSites: { websites: Project[]; cms: Project[] } = {
   websites: [
     { title: "Acquisity", link: "https://acquisity.ai/" },
-    { title: "Superserve - Dashboard", link: "https://console.superserve.ai/" },
-    { title: "Superserve - Website", link: "https://superserve.ai/" },
-    {
-      title: "Superserve - Prev Website",
-      link: "https://superserve-legacy.vercel.app/",
-    },
+    { title: "Superserve - Platform", link: "https://console.superserve.ai/" },
     { title: "DataVidhya", link: "https://datavidhya.com/" },
     { title: "Draxlr", link: "https://www.draxlr.com/" },
     {
@@ -26,14 +21,19 @@ export const allSites: { websites: Project[]; cms: Project[] } = {
       title: "MerkleScience - KYBB",
       link: "https://www.merklescience.com/platform/intelligence-reports",
     },
-    { title: "Jessica Coppet", link: "https://jessicacoppetstudio.com/" },
-    { title: "ROCC Naturals", link: "https://roccnaturals.com.au/" },
     {
       title: "MarchHQ (Discontinued and Open Sourced)",
       link: "https://github.com/marchhq/march",
     },
   ],
   cms: [
+    { title: "Superserve - Website", link: "https://superserve.ai/" },
+    {
+      title: "Superserve - Prev Website",
+      link: "https://superserve-legacy.vercel.app/",
+    },
+    { title: "Jessica Coppet", link: "https://jessicacoppetstudio.com/" },
+    { title: "ROCC Naturals", link: "https://roccnaturals.com.au/" },
     { title: "Wills Property", link: "https://www.willsproperty.com.au/" },
     { title: "Warlimont & Nutt", link: "https://www.wnre.com.au/" },
     // { title: "Sciberras Group", link: "https://sciberrasgroupre.com.au/" },
