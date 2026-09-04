@@ -60,13 +60,6 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
             media="(prefers-color-scheme: dark)"
             content="#1D1D20"
           />
-
-          <Script
-            defer
-            data-domain="nirnejak.com"
-            src="https://plausible.io/js/script.js"
-            strategy="afterInteractive"
-          />
           <Script
             src="https://analytics.ahrefs.com/analytics.js"
             data-key="gbZIqgdBQxOyNwjN+z3uWA"
