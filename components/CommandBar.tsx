@@ -7,7 +7,10 @@ import {
   Briefcase,
   Calendar,
   Camera,
+  Check,
+  Copy,
   DribbbleFill,
+  Envelope,
   GithubFill,
   HomeAlt1,
   LaptopDevice,
@@ -37,6 +40,18 @@ const CommandBar: React.FC = () => {
 
   const [value, setValue] = React.useState("X")
   const [isOpen, setIsOpen] = React.useState(false)
+  const [hasCopiedEmail, setHasCopiedEmail] = React.useState(false)
+
+  // Copying is the only command here with no visible result of its own, so the
+  // dialog stays open just long enough to confirm it before dismissing itself.
+  const dismissTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  React.useEffect(
+    () => () => {
+      if (dismissTimer.current !== null) clearTimeout(dismissTimer.current)
+    },
+    []
+  )
 
   React.useEffect(() => {
     inputRef.current?.focus()
@@ -60,6 +75,34 @@ const CommandBar: React.FC = () => {
     else lenis?.start()
   }, [isOpen, lenis])
 
+  const handleOpenChange = (open: boolean): void => {
+    // Dismissing by hand cancels a pending auto-dismiss, so reopening straight
+    // after a copy does not get closed again by the old timer.
+    if (dismissTimer.current !== null) {
+      clearTimeout(dismissTimer.current)
+      dismissTimer.current = null
+    }
+    setHasCopiedEmail(false)
+    setIsOpen(open)
+  }
+
+  const copyEmail = (): void => {
+    void navigator.clipboard.writeText(config.CONTACT_EMAIL).then(
+      () => {
+        setHasCopiedEmail(true)
+        dismissTimer.current = setTimeout(() => {
+          setIsOpen(false)
+          setHasCopiedEmail(false)
+        }, 900)
+      },
+      () => {
+        // Clipboard denied or unavailable — close rather than confirm a copy
+        // that did not happen.
+        setIsOpen(false)
+      }
+    )
+  }
+
   const navigate = (href: string): void => {
     if (href.includes("http") || href.includes("mailto")) {
       window.open(href, "_blank")
@@ -79,7 +122,7 @@ const CommandBar: React.FC = () => {
     >
       <Command.Dialog
         open={isOpen}
-        onOpenChange={setIsOpen}
+        onOpenChange={handleOpenChange}
         loop={true}
         value={value}
         onValueChange={(v) => {
@@ -112,6 +155,20 @@ const CommandBar: React.FC = () => {
             <Calendar size={14} />
             <span>Schedule Call</span>
             <LinkOut size={12} className="ml-auto" />
+          </Command.Item>
+          <Command.Item
+            className={commandItemClass}
+            tabIndex={0}
+            value="Copy Email"
+            onSelect={copyEmail}
+          >
+            <Envelope size={14} />
+            <span>{hasCopiedEmail ? "Copied" : "Copy Email"}</span>
+            {hasCopiedEmail ? (
+              <Check size={12} className="ml-auto" />
+            ) : (
+              <Copy size={12} className="ml-auto" />
+            )}
           </Command.Item>
           <Command.Separator className="bg-line my-1 h-[0.5px]" />
           {socialLinks.map((link) => (
