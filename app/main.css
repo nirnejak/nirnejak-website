@@ -13,6 +13,17 @@
   --grain-opacity: 0.05;
   --grain-filter: contrast(30%) brightness(180%);
 
+  /* Lift for small floating surfaces. Tailwind's stock shadows are black at
+     low alpha, which reads on a near-white page and disappears entirely on a
+     dark one — so this swaps with the scheme like the grain knobs do. Light
+     needs only a hint, since --color-line already draws the edge; dark has to
+     do the work with the shadow, because zinc-800 on zinc-900 is barely a
+     step. Not a mirror, on purpose. Lives here rather than in @theme because
+     Tailwind's shadow utilities inline their value at build time and would
+     ignore the override below. */
+  --shadow-float:
+    0 4px 14px -3px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.06);
+
   /* Gradient headline stops. The dark set below was picked against a near
      black page and washes out on white (the bright green falls to ~2.3:1).
      These are the most saturated stops that still clear AA-large (3:1, which
@@ -128,6 +139,40 @@
 
   --easing: cubic-bezier(0.16, 1, 0.3, 1);
 
+  /* The /uses page images enter on a Motion spring — stiffness 530, damping
+     20, mass 0.7. This is that exact curve sampled into a linear() easing, so
+     the same bounce is available to plain CSS animations and runs off the main
+     thread. It overshoots its target by ~15% of the travel before settling. */
+  --spring-bounce: linear(
+    0,
+    0.0989,
+    0.3229,
+    0.5816,
+    0.8139,
+    0.988,
+    1.0952,
+    1.1425,
+    1.145,
+    1.1201,
+    1.0832,
+    1.0457,
+    1.0148,
+    0.9934,
+    0.9817,
+    0.978,
+    0.9798,
+    0.9845,
+    0.9902,
+    0.9954,
+    0.9994,
+    1.0019,
+    1.0031,
+    1.0032,
+    1.0027,
+    1.0019,
+    1.0011
+  );
+
   --animate-slide-down-and-fade: slide-down-and-fade 400ms var(--easing);
   --animate-slide-left-and-fade: slide-left-and-fade 400ms var(--easing);
   --animate-slide-up-and-fade: slide-up-and-fade 400ms var(--easing);
@@ -139,6 +184,17 @@
   --animate-slide-right: slide-right 400ms var(--easing);
 
   --animate-fade-in: fade-in 400ms var(--easing);
+
+  /* Two animations, because scale and opacity want different curves. The
+     scale rides the spring the full 460ms, but the overshoot peaks at ~130ms
+     and the rest is settling you feel more than see. The fade is short and
+     flat so the chip is legible well before the bounce finishes — springing
+     opacity too would just clip against 1 and read as a flicker. Leaving is
+     the system responding rather than the user deciding, so the exit is a
+     quick tween with no bounce. */
+  --animate-tooltip-in:
+    tooltip-pop 460ms var(--spring-bounce), fade-in 120ms var(--easing);
+  --animate-tooltip-out: tooltip-out 110ms var(--easing);
 
   --animate-marquee: marquee 25s linear infinite;
   --animate-swing: swing 1s infinite ease-in-out alternate;
@@ -186,6 +242,9 @@
     --color-selection: var(--color-zinc-600);
     --color-selection-text: #fff;
 
+    --shadow-float:
+      0 6px 16px -6px rgb(0 0 0 / 0.6), 0 1px 3px -1px rgb(0 0 0 / 0.45);
+
     --color-scrim: color-mix(in oklab, var(--color-zinc-900) 30%, transparent);
     --color-scrim-media: color-mix(
       in oklab,
@@ -228,6 +287,48 @@
 
   .hover-bg.hover-bg-dark {
     @apply after:bg-hover-inset;
+  }
+
+  /* Floating chip shared by every tooltip on the site. It grows out of the
+     edge facing its trigger, centred on that edge, so a tooltip above the
+     trigger rises straight up out of it. Radix's own
+     --radix-tooltip-content-transform-origin would put the origin at the
+     aligned corner instead, which makes the chip unfurl sideways when the
+     content is start- or end-aligned. */
+  .tooltip {
+    transform-origin: center;
+    box-shadow: var(--shadow-float);
+  }
+
+  .tooltip[data-side="top"] {
+    transform-origin: bottom center;
+  }
+
+  .tooltip[data-side="bottom"] {
+    transform-origin: top center;
+  }
+
+  .tooltip[data-side="left"] {
+    transform-origin: center right;
+  }
+
+  .tooltip[data-side="right"] {
+    transform-origin: center left;
+  }
+
+  .tooltip[data-state="delayed-open"] {
+    animation: var(--animate-tooltip-in);
+  }
+
+  .tooltip[data-state="closed"] {
+    animation: var(--animate-tooltip-out);
+  }
+
+  /* Opened inside the provider's skip window: the pointer moved straight from
+     one trigger to the next, so this one arrives with no delay and no
+     animation. Re-playing it would make a row of icons feel sluggish. */
+  .tooltip[data-state="instant-open"] {
+    animation: none;
   }
 
   /* Full-viewport noise overlay. Both knobs swap with the scheme — see the
@@ -372,6 +473,37 @@
   }
 }
 
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* No translate: with the origin pinned to the trigger, the scale already moves
+   the far edge. Adding a slide on top reads as two animations fighting. */
+@keyframes tooltip-pop {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes tooltip-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+}
+
 @keyframes swing {
   from {
     transform: rotate(3deg);
@@ -434,5 +566,17 @@
   }
   100% {
     transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+/* Reduced motion keeps the fade — it still explains where the label came from —
+   and drops the scale, which is the part that moves. */
+@media (prefers-reduced-motion: reduce) {
+  .tooltip[data-state="delayed-open"] {
+    animation: fade-in 150ms var(--easing);
+  }
+
+  .tooltip[data-state="closed"] {
+    animation: fade-out 110ms var(--easing);
   }
 }

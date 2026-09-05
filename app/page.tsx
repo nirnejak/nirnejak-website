@@ -31,10 +31,22 @@ const HomePage: React.FC = () => {
         />
         <h1 className="text-title-soft mb-2 max-w-[30ch] text-2xl font-medium tracking-tighter md:text-3xl">
           Ciao, I&apos;m{" "}
-          <Tooltip label="Jitendra Nirnejak">
+          <Tooltip
+            label="Jitendra Nirnejak"
+            align="start"
+            // Cancels the pill's own left padding so the name starts on the
+            // same x as the "J" of Jeet — the short form visibly grows into
+            // the long one — and keeps the pill clear of the avatar.
+            alignOffset={-14}
+            showOnTap
+          >
+            {/* Dotted, because this really is an abbreviation and that is the
+                convention for one. Sized up from a hairline so it reads as
+                deliberate punctuation rather than a spellcheck squiggle, and
+                the word firms up a shade as you point at it. */}
             <button
               type="button"
-              className="decoration-placeholder hover:decoration-dim focus-visible:decoration-dim cursor-help underline decoration-dotted decoration-1 underline-offset-[6px] outline-hidden transition-colors"
+              className="decoration-placeholder hover:decoration-dim focus-visible:decoration-dim hover:text-title focus-visible:text-title cursor-help underline decoration-dotted decoration-2 underline-offset-[7px] outline-hidden transition-colors duration-150"
             >
               Jeet
             </button>

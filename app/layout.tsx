@@ -6,6 +6,7 @@ import Script from "next/script"
 import { ViewTransitions } from "next-view-transitions"
 import type { Metadata } from "next"
 import type * as React from "react"
+import { TooltipProvider } from "@/components/atoms/Tooltip"
 import Background from "@/components/Background"
 import CommandBar from "@/components/CommandBar"
 import Footer from "@/components/Footer"
@@ -69,12 +70,16 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
 
         <ReactLenis root>
           <body className="bg-surface overflow-x-hidden font-sans">
-            <Navbar />
-            {children}
-            <Footer />
+            {/* One provider for the whole site so tooltips share a delay timer
+                — moving between two triggers opens the second instantly. */}
+            <TooltipProvider>
+              <Navbar />
+              {children}
+              <Footer />
 
-            <Background />
-            <CommandBar />
+              <Background />
+              <CommandBar />
+            </TooltipProvider>
 
             <Analytics />
             <SpeedInsights />
