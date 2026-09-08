@@ -59,7 +59,7 @@ const HomePage: React.FC = () => {
         </h1>
         <p className="text-muted mb-12 max-w-161 text-sm font-medium sm:text-base">
           I thrive at the intersection of design and code, obsessing over the
-          smallest details to craft experiences that are both functional and
+          smallest details to craft experiences that are functional and
           delightful. My work is driven by a passion for elegance, precision,
           and interactivity that makes people fall in love with a product.
         </p>
