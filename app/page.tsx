@@ -48,16 +48,16 @@ const HomePage: React.FC = () => {
         </h1>
         <p className="text-title-soft mb-2 text-xl font-medium tracking-tighter md:text-2xl">
           Crafting <span className="text-gradient-green font-bold">fast</span>,{" "}
-          <span className="text-gradient-red font-bold">obsessive </span>,{" "}
+          <span className="text-gradient-red pr-px font-bold">obsessive</span>,{" "}
           <span className="text-gradient-blue font-bold">motion-rich</span> user
           interfaces, <br className="hidden md:flex" />
           web animations, and websites that users fall in love with.
         </p>
         <p className="text-muted mb-12 text-sm font-medium sm:text-[15px]">
-          I thrive at the intersection of design & code, obsessing over the
-          smallest details to craft experiences that are both functional and
-          delightful. My work is driven by a passion for elegance and precision,
-          that makes people fall in love with a product.
+          I bring a deep technical understanding of how products work, and I add
+          the design taste and polish on top, obsessing over the smallest
+          details, the ones nobody asks for and everybody notices, to build
+          experiences that are functional and delightful.
         </p>
         <div className="flex flex-col gap-6 md:flex-row md:items-center">
           <div className="flex items-center gap-6">
