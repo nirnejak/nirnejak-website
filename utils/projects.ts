@@ -21,10 +21,6 @@ export const allSites: { websites: Project[]; cms: Project[] } = {
       title: "MerkleScience - KYBB",
       link: "https://www.merklescience.com/platform/intelligence-reports",
     },
-    {
-      title: "MarchHQ (Discontinued and Open Sourced)",
-      link: "https://github.com/marchhq/march",
-    },
   ],
   cms: [
     { title: "Superserve - Website", link: "https://superserve.ai/" },
