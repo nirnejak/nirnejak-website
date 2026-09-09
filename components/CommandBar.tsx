@@ -9,7 +9,6 @@ import {
   Camera,
   Check,
   Copy,
-  DribbbleFill,
   Envelope,
   GithubFill,
   HomeAlt1,
@@ -17,8 +16,6 @@ import {
   LinkOut,
   Pencil,
   Phone,
-  ProductHuntFill,
-  UnsplashFill,
   XFill,
 } from "akar-icons"
 import { Command } from "cmdk"
@@ -252,21 +249,6 @@ export const socialLinks = [
     content: "Github",
     href: "https://github.com/nirnejak/",
     icon: <GithubFill size={14} />,
-  },
-  {
-    content: "Dribbble",
-    href: "https://dribbble.com/nirnejak/",
-    icon: <DribbbleFill size={14} />,
-  },
-  {
-    content: "ProductHunt",
-    href: "https://www.producthunt.com/@nirnejak",
-    icon: <ProductHuntFill size={14} />,
-  },
-  {
-    content: "Unsplash",
-    href: "https://unsplash.com/@nirnejak/",
-    icon: <UnsplashFill size={14} />,
   },
 ]
 

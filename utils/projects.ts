@@ -53,9 +53,5 @@ export const allSites: { websites: Project[]; cms: Project[] } = {
       link: "https://www.stuartfamilylawyers.com.au/",
     },
     { title: "Inkoop", link: "https://www.inkoop.io/" },
-    {
-      title: "Sup Bot",
-      link: "https://dribbble.com/shots/21362314-Sup-bot-Landing-Site",
-    },
   ],
 }

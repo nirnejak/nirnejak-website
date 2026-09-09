@@ -30,9 +30,6 @@ export const personSchema = {
   sameAs: [
     "https://x.com/jeetnirnejak/",
     "https://github.com/nirnejak/",
-    "https://dribbble.com/nirnejak/",
-    "https://www.producthunt.com/@nirnejak",
-    "https://unsplash.com/@nirnejak/",
     "https://www.instagram.com/jeetnirnejak/",
   ],
 }
