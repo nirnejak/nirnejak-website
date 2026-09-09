@@ -20,16 +20,16 @@ export const metadata: Metadata = getMetadata({
 
 const HomePage: React.FC = () => {
   return (
-    <main className="flex min-h-[calc(100dvh-46px)] flex-col justify-center">
+    <main className="mt-32 flex min-h-[calc(100dvh-173px)] flex-col md:mt-40 md:min-h-[calc(100dvh-206px)]">
       <JsonLd schema={[personSchema, websiteSchema]} />
-      <section className="container my-24 sm:my-0">
+      <section className="container sm:my-0">
         <Image
           src={Photo}
           alt="Jitendra Nirnejak"
           placeholder="blur"
           className="mb-6 w-16 rounded-full"
         />
-        <h1 className="text-title-soft text-2xl font-medium tracking-tighter md:text-2xl">
+        <h1 className="text-title-soft text-xl font-medium tracking-tighter md:text-2xl">
           Ciao, I&apos;m{" "}
           <Tooltip
             label="Jitendra Nirnejak"
@@ -46,11 +46,11 @@ const HomePage: React.FC = () => {
           </Tooltip>
           , designer & engineer.
         </h1>
-        <p className="text-title-soft mb-2 text-2xl font-medium tracking-tighter md:text-2xl">
+        <p className="text-title-soft mb-2 text-xl font-medium tracking-tighter md:text-2xl">
           Crafting <span className="text-gradient-green font-bold">fast</span>,{" "}
           <span className="text-gradient-red font-bold">obsessive </span>,{" "}
           <span className="text-gradient-blue font-bold">motion-rich</span> user
-          interfaces, <br />
+          interfaces, <br className="hidden md:flex" />
           web animations, and websites that users fall in love with.
         </p>
         <p className="text-muted mb-12 text-sm font-medium sm:text-[15px]">
