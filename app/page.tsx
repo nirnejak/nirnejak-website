@@ -29,7 +29,7 @@ const HomePage: React.FC = () => {
           placeholder="blur"
           className="mb-6 w-16 rounded-full"
         />
-        <h1 className="text-title-soft mb-2 max-w-[30ch] text-2xl font-medium tracking-tighter md:text-[26px]">
+        <h1 className="text-title-soft text-2xl font-medium tracking-tighter md:text-2xl">
           Ciao, I&apos;m{" "}
           <Tooltip
             label="Jitendra Nirnejak"
@@ -44,14 +44,17 @@ const HomePage: React.FC = () => {
               Jeet
             </button>
           </Tooltip>
-          , designer & engineer. Crafting{" "}
-          <span className="text-gradient-green font-bold">fast</span>,{" "}
-          <span className="text-gradient-red font-bold">obsessive </span>,{" "}
-          <span className="text-gradient-blue font-bold">motion-rich</span>{" "}
-          interfaces, web-animations, and websites.
+          , designer & engineer.
         </h1>
-        <p className="text-muted mb-12 max-w-161 text-sm font-medium sm:text-base">
-          I thrive at the intersection of design and code, obsessing over the
+        <p className="text-title-soft mb-2 text-2xl font-medium tracking-tighter md:text-2xl">
+          Crafting <span className="text-gradient-green font-bold">fast</span>,{" "}
+          <span className="text-gradient-red font-bold">obsessive </span>,{" "}
+          <span className="text-gradient-blue font-bold">motion-rich</span> user
+          interfaces, <br />
+          web animations, and websites that users fall in love with.
+        </p>
+        <p className="text-muted mb-12 text-sm font-medium sm:text-[15px]">
+          I thrive at the intersection of design & code, obsessing over the
           smallest details to craft experiences that are both functional and
           delightful. My work is driven by a passion for elegance and precision,
           that makes people fall in love with a product.
