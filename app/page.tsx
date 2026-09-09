@@ -29,7 +29,7 @@ const HomePage: React.FC = () => {
           placeholder="blur"
           className="mb-6 w-16 rounded-full"
         />
-        <h1 className="text-title-soft mb-2 max-w-[30ch] text-2xl font-medium tracking-tighter md:text-2xl">
+        <h1 className="text-title-soft mb-2 max-w-[30ch] text-2xl font-medium tracking-tighter md:text-[26px]">
           Ciao, I&apos;m{" "}
           <Tooltip
             label="Jitendra Nirnejak"
