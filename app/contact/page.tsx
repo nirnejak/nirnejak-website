@@ -20,7 +20,7 @@ const ContactPage: React.FC = () => {
           Contact
         </h1>
       </section>
-      <section className="container mt-10 grid gap-10 md:mt-16 md:grid-cols-5">
+      <section className="container mt-10 grid gap-4 md:mt-16 md:grid-cols-5 md:gap-10">
         <div className="col-span-2 flex flex-col">
           <p className="text-muted text-xs font-medium md:text-sm">
             Let{"'"}s get in touch to discuss a project or maybe just say hi :)
@@ -30,11 +30,13 @@ const ContactPage: React.FC = () => {
             engineering, product interfaces, and motion work. Expect a reply
             within two working days.
           </p>
-          <div className="mt-auto">
-            <p className="text-muted text-sm font-medium">Reach me via email</p>
+          <div className="mt-8 md:mt-auto">
+            <p className="text-muted text-xs font-medium md:text-sm">
+              Reach me via email
+            </p>
             <AppLink
               href={`mailto:${config.CONTACT_EMAIL}?subject=Project%20Enquiry`}
-              className="text-body text-sm font-semibold"
+              className="text-body text-xs font-semibold md:text-sm"
             >
               {config.CONTACT_EMAIL}
             </AppLink>
