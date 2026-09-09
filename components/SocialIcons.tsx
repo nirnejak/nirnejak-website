@@ -1,6 +1,6 @@
 "use client"
 
-import { DribbbleFill, GithubFill, XFill } from "akar-icons"
+import { GithubFill, XFill } from "akar-icons"
 import type * as React from "react"
 import Tooltip from "@/components/atoms/Tooltip"
 
@@ -9,11 +9,6 @@ const socialLinks = [
     title: "Github",
     url: "https://github.com/nirnejak/",
     icon: <GithubFill size={18} />,
-  },
-  {
-    title: "Dribbble",
-    url: "https://dribbble.com/nirnejak",
-    icon: <DribbbleFill size={18} />,
   },
   {
     title: "X",
