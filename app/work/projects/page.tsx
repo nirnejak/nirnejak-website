@@ -40,9 +40,9 @@ const ProjectsPage: React.FC = () => {
               target="_blank"
               className="hover-bg flex flex-col gap-0.5 p-3 font-medium md:flex-row md:items-center md:gap-2"
             >
-              <p className="text-body">{project.title}</p>
-              <div className="border-line flex-1 border-t border-dashed" />
-              <p className="text-muted flex items-center gap-1">
+              <p className="text-body shrink-0">{project.title}</p>
+              <div className="border-line min-w-6 flex-1 border-t border-dashed" />
+              <p className="text-muted min-w-0 truncate md:max-w-70">
                 {project.link === "#" ? "Discontinued" : project.link}
               </p>
             </AppLink>
@@ -60,9 +60,9 @@ const ProjectsPage: React.FC = () => {
               target="_blank"
               className="hover-bg flex flex-col gap-0.5 p-3 font-medium md:flex-row md:items-center md:gap-2"
             >
-              <p className="text-body">{project.title}</p>
-              <div className="border-line flex-1 border-t border-dashed" />
-              <p className="text-muted flex items-center gap-1">
+              <p className="text-body shrink-0">{project.title}</p>
+              <div className="border-line min-w-6 flex-1 border-t border-dashed" />
+              <p className="text-muted min-w-0 truncate md:max-w-70">
                 {project.link}
               </p>
             </AppLink>
