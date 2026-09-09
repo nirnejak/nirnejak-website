@@ -16,7 +16,7 @@ const ContactPage: React.FC = () => {
   return (
     <main className="min-h-[77vh]">
       <section className="container mt-32 md:mt-40">
-        <h1 className="text-title text-4xl font-bold tracking-tight md:text-5xl">
+        <h1 className="text-title text-2xl font-bold tracking-tight md:text-3xl">
           Contact
         </h1>
       </section>

@@ -21,7 +21,7 @@ const WorkPage: React.FC = () => {
   return (
     <main>
       <section className="container mt-32 flex items-center justify-between md:mt-40">
-        <h1 className="text-title text-4xl font-bold tracking-tight md:text-5xl">
+        <h1 className="text-title text-2xl font-bold tracking-tight md:text-3xl">
           Work
         </h1>
         <SocialIcons />
