@@ -56,6 +56,13 @@ export default PastEngagements
 
 const engagements: Engagement[] = [
   {
+    name: "Stonera",
+    work: "Design Engineering",
+    year: 2026,
+    city: "Canada",
+    link: "https://www.stonera.ai/",
+  },
+  {
     name: "Acquisity",
     work: "Design Engineering",
     year: 2026,
