@@ -18,9 +18,26 @@ interface Props {
 const MORPH = { type: "spring", duration: 0.42, bounce: 0.14 } as const
 const FADE = { duration: 0.25, ease: "easeOut" } as const
 
+// The grid renders every thumbnail at these exact dimensions. Reusing them in
+// the expanded view resolves to the same optimiser URL, so the browser serves
+// the already-decoded thumbnail from cache and the expand has something to
+// show on its first frame.
+const THUMB_WIDTH = 360
+const THUMB_HEIGHT = 640
+
+// Viewport padding around an expanded photo, in px. The frame's height is
+// derived from it rather than measured, so the box is the right size before
+// the full-size image exists — otherwise Motion gets handed a 0×0 box and the
+// expand snaps instead of flying.
+const INSET = 16
+
 const PhotoGallery: React.FC<Props> = ({ photos }) => {
   const { isOpen, content, openModal, closeModal } =
     useModalWithContent<Photo>()
+
+  // Keyed by src rather than a boolean so reopening a photo whose full-size
+  // render already arrived skips the crossfade entirely.
+  const [loadedSrc, setLoadedSrc] = React.useState<string | null>(null)
 
   // The entrance plays on a slow, staggered spring; every gesture after it
   // uses a snappier one. Motion captures a transition when it creates the
@@ -76,8 +93,8 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
                       src={photo.image}
                       alt={photo.alt}
                       placeholder="blur"
-                      width="360"
-                      height="640"
+                      width={THUMB_WIDTH}
+                      height={THUMB_HEIGHT}
                       priority={index < 11}
                       className="h-full w-full object-cover"
                     />
@@ -91,7 +108,10 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
 
       <AnimatePresence>
         {isOpen && content !== null && (
-          <div className="fixed inset-0 z-30 flex items-center justify-center p-4 md:p-6">
+          <div
+            className="fixed inset-0 z-30 flex items-center justify-center"
+            style={{ padding: INSET }}
+          >
             <motion.button
               type="button"
               aria-label="Close photo"
@@ -104,24 +124,50 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
               transition={FADE}
               className="bg-scrim-media absolute inset-0 cursor-zoom-out backdrop-blur-lg"
             />
-            {/* The photo shrink-wraps its own frame, and the caps are in
-                viewport units so the box is definite from the first frame —
-                sizing off the decoded bitmap instead would hand Motion a 0×0
-                box to morph from and the expand would snap rather than fly. */}
+            {/* Contain-fit worked out in CSS: whichever of the two limits
+                binds first wins, and the ratio derives the other axis. No
+                measurement, so the frame is the right size on frame one. */}
             <motion.div
               layoutId={content.image.src}
               transition={MORPH}
-              style={{ borderRadius: 12 }}
-              className="pointer-events-none relative w-fit overflow-hidden"
+              style={{
+                borderRadius: 12,
+                aspectRatio: content.image.width / content.image.height,
+                height: `min(calc(100dvh - ${INSET * 2}px), calc((100vw - ${
+                  INSET * 2
+                }px) * ${content.image.height / content.image.width}))`,
+              }}
+              className="pointer-events-none relative overflow-hidden"
             >
+              {/* The grid's own thumbnail, upscaled. It is already decoded, so
+                  it carries the expand the whole way while the full-size
+                  render is still in flight. */}
               <Image
                 src={content.image}
-                alt={content.alt}
-                width={content.image.width}
-                height={content.image.height}
+                alt=""
+                aria-hidden
+                width={THUMB_WIDTH}
+                height={THUMB_HEIGHT}
                 placeholder="blur"
-                className="h-auto max-h-[calc(100dvh-2rem)] w-auto max-w-[calc(100vw-2rem)] md:max-h-[calc(100dvh-3rem)] md:max-w-[calc(100vw-3rem)]"
+                className="absolute inset-0 h-full w-full object-cover"
               />
+              <motion.div
+                initial={false}
+                animate={{ opacity: loadedSrc === content.image.src ? 1 : 0 }}
+                transition={FADE}
+                className="absolute inset-0"
+              >
+                <Image
+                  src={content.image}
+                  alt={content.alt}
+                  width={content.image.width}
+                  height={content.image.height}
+                  onLoad={() => {
+                    setLoadedSrc(content.image.src)
+                  }}
+                  className="h-full w-full object-cover"
+                />
+              </motion.div>
             </motion.div>
             <motion.button
               type="button"
