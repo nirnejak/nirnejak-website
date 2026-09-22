@@ -130,9 +130,10 @@
     var(--color-zinc-900) 60%,
     transparent
   );
-  /* Translucent white reads as a glass bevel on dark and vanishes on light,
-     so light gets an opaque matte instead. */
-  --color-frame: var(--color-white);
+  /* A translucent white bevel: the photo tints through the frame instead of
+     being cut off by it. Light mode needs a heavier pour than dark — against
+     a near-white page a thin veil would read as a blur, not an edge. */
+  --color-frame: rgb(255 255 255 / 0.65);
 
   --color-selection: var(--color-zinc-300);
   --color-selection-text: var(--color-zinc-900);
