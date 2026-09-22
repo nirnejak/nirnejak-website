@@ -1,5 +1,4 @@
 import type * as React from "react"
-import { Link } from "next-view-transitions"
 
 interface Engagement {
   name: string
@@ -16,17 +15,9 @@ const rowClass =
 const PastEngagements: React.FC = () => {
   return (
     <div className="-mx-3">
-      <div className="relative">
-        <p className="text-label mb-6 text-center font-medium tracking-wider uppercase">
-          Projects & Engagements
-        </p>
-        <Link
-          href={"/contact/"}
-          className="border-accent bg-accent/5 text-accent absolute -top-3 -right-3 rotate-12 rounded-md border border-dashed px-1.5 py-1 text-xs"
-        >
-          More work on request
-        </Link>
-      </div>
+      <p className="text-label mb-6 text-center font-medium tracking-wider uppercase">
+        Projects & Engagements
+      </p>
       {engagements.map((client) => {
         // Atollon appears in two separate years, so the key needs both parts.
         const key = `${client.name}-${client.year}`
