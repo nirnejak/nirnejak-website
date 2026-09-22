@@ -59,7 +59,7 @@ const engagements: Engagement[] = [
     name: "Stonera",
     work: "Design Engineering",
     year: 2026,
-    city: "Canada",
+    city: "Ontario",
     link: "https://www.stonera.ai/",
   },
   {
