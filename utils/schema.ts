@@ -8,7 +8,7 @@ const WEBSITE_ID = `${baseUrl}/#website`
 const jobTitle = "Design Engineer"
 
 const bio =
-  "Design engineer based in Bangalore, crafting tasteful websites, user-interfaces, and web animations for ambitious product teams."
+  "Design engineer based in Mumbai, crafting tasteful websites, user-interfaces, and web animations for ambitious product teams."
 
 export const personSchema = {
   "@context": "https://schema.org",
@@ -24,7 +24,7 @@ export const personSchema = {
   knowsAbout: config.keywords,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Bangalore",
+    addressLocality: "Mumbai",
     addressCountry: "IN",
   },
   sameAs: [
