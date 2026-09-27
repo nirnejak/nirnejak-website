@@ -14,6 +14,10 @@ import Navbar from "@/components/Navbar"
 
 import config from "@/config"
 
+// Lenis ships its own stylesheet and needs it: it is what makes
+// `lenis.stop()` actually block native scrolling, and what keeps
+// `[data-lenis-prevent]` from chaining its scroll to the page.
+import "lenis/dist/lenis.css"
 import "./main.css"
 
 // Declared on the root layout so every route — including the generated
@@ -69,7 +73,11 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
         </head>
 
         <ReactLenis root>
-          <body className="bg-surface overflow-x-hidden font-sans">
+          {/* `clip`, never `hidden`: `overflow-x: hidden` on the body makes the
+              body a scroll container, which stops the viewport overflow from
+              propagating and leaves Lenis driving an element that no longer
+              scrolls. `clip` hides the same overflow without a scrollport. */}
+          <body className="bg-surface overflow-x-clip font-sans">
             {/* One provider for the whole site so tooltips share a delay timer
                 — moving between two triggers opens the second instantly. */}
             <TooltipProvider>

@@ -1,6 +1,7 @@
 "use client"
 
 import { ArrowRight, ThreeLineHorizontal, XSmall } from "akar-icons"
+import { useLenis } from "lenis/react"
 import * as React from "react"
 import AppLink from "@/components/atoms/Link"
 import NavigationTabs from "@/components/NavigationTabs"
@@ -24,13 +25,17 @@ const navLinkClass =
 const Navbar: React.FC<Props> = () => {
   const [isOpen, setIsOpen] = React.useState(false)
 
+  const lenis = useLenis()
+
+  // Lenis owns the page scroll, so the lock goes through it. Setting
+  // `overflow` on the body instead would turn the body back into a scroll
+  // container, which stops viewport overflow propagating and leaves Lenis
+  // driving an element that no longer scrolls.
   React.useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflowY = "hidden"
-    } else {
-      document.body.style.overflowY = "visible"
-    }
-  }, [isOpen])
+    if (!isOpen) return
+    lenis?.stop()
+    return () => lenis?.start()
+  }, [isOpen, lenis])
 
   React.useEffect(() => {
     if (!isOpen) return
