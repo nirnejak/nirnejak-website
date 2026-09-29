@@ -31,6 +31,70 @@ const THUMB_HEIGHT = 640
 // expand snaps instead of flying.
 const INSET = 16
 
+interface TileProps {
+  photo: Photo
+  index: number
+  isExpanded: boolean
+  hasEntered: boolean
+  onOpen: (photo: Photo) => void
+  onEntered: () => void
+}
+
+// Memoised because opening one photo changes `isExpanded` for exactly one
+// tile. Without this every one of the ~134 tiles re-renders on the same click
+// that starts the morph, and the resulting long task eats its opening frames.
+const PhotoTile = React.memo<TileProps>(
+  ({ photo, index, isExpanded, hasEntered, onOpen, onEntered }) => (
+    <motion.button
+      type="button"
+      aria-label={`Expand photo: ${photo.alt}`}
+      onClick={() => {
+        onOpen(photo)
+      }}
+      initial={{ opacity: 0, scale: 0.02, rotate: 15 }}
+      animate={{ opacity: 1, scale: 1, rotate: 0 }}
+      whileHover={{ scale: 1.03, rotate: 0, zIndex: 5 }}
+      transition={{
+        type: "spring",
+        stiffness: hasEntered ? 530 : 100,
+        damping: hasEntered ? 20 : 10,
+        mass: 0.7,
+
+        delay: hasEntered ? 0 : 0.05 * index,
+      }}
+      onAnimationComplete={onEntered}
+      className="after:border-frame bg-surface-inset relative block aspect-[9/16] cursor-pointer overflow-hidden rounded-3xl after:absolute after:inset-0 after:rounded-3xl after:border-8 hover:shadow-2xl"
+    >
+      {/* While a photo is expanded its thumbnail leaves the grid so the two
+          never exist at once — that handoff is what Motion morphs. The cell
+          keeps its 9:16 slot either way, so the grid never reflows underneath
+          the animation. */}
+      {!isExpanded && (
+        <motion.div
+          layoutId={photo.image.src}
+          transition={MORPH}
+          // Motion only corrects corner distortion during a morph when the
+          // radius is an inline pixel value.
+          style={{ borderRadius: 24 }}
+          className="absolute inset-0 overflow-hidden"
+        >
+          <Image
+            src={photo.image}
+            alt={photo.alt}
+            placeholder="blur"
+            width={THUMB_WIDTH}
+            height={THUMB_HEIGHT}
+            priority={index < 11}
+            className="h-full w-full object-cover"
+          />
+        </motion.div>
+      )}
+    </motion.button>
+  )
+)
+
+PhotoTile.displayName = "PhotoTile"
+
 const PhotoGallery: React.FC<Props> = ({ photos }) => {
   const { isOpen, content, openModal, closeModal } =
     useModalWithContent<Photo>()
@@ -45,79 +109,43 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
   // the hover animations that come later.
   const [hasEntered, setHasEntered] = React.useState(false)
 
+  const handleEntered = React.useCallback(() => {
+    setHasEntered(true)
+  }, [])
+
+  const expandedSrc = content?.image.src
+
   return (
     <MotionConfig reducedMotion="user">
       <section>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-          {photos.map((photo, index) => {
-            // While a photo is expanded its thumbnail leaves the grid so the
-            // two never exist at once — that handoff is what Motion morphs.
-            // The cell keeps its 9:16 slot either way, so the grid never
-            // reflows underneath the animation.
-            const isExpanded = content?.image.src === photo.image.src
-
-            return (
-              <motion.button
-                key={photo.image.src}
-                type="button"
-                aria-label={`Expand photo: ${photo.alt}`}
-                onClick={() => {
-                  openModal(photo)
-                }}
-                initial={{ opacity: 0, scale: 0.02, rotate: 15 }}
-                animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                whileHover={{ scale: 1.03, rotate: 0, zIndex: 5 }}
-                transition={{
-                  type: "spring",
-                  stiffness: hasEntered ? 530 : 100,
-                  damping: hasEntered ? 20 : 10,
-                  mass: 0.7,
-
-                  delay: hasEntered ? 0 : 0.05 * index,
-                }}
-                onAnimationComplete={() => {
-                  setHasEntered(true)
-                }}
-                className="after:border-frame bg-surface-inset relative block aspect-[9/16] cursor-pointer overflow-hidden rounded-3xl after:absolute after:inset-0 after:rounded-3xl after:border-8 hover:shadow-2xl"
-              >
-                {!isExpanded && (
-                  <motion.div
-                    layoutId={photo.image.src}
-                    transition={MORPH}
-                    // Motion only corrects corner distortion during a morph
-                    // when the radius is an inline pixel value.
-                    style={{ borderRadius: 24 }}
-                    className="absolute inset-0 overflow-hidden"
-                  >
-                    <Image
-                      src={photo.image}
-                      alt={photo.alt}
-                      placeholder="blur"
-                      width={THUMB_WIDTH}
-                      height={THUMB_HEIGHT}
-                      priority={index < 11}
-                      className="h-full w-full object-cover"
-                    />
-                  </motion.div>
-                )}
-              </motion.button>
-            )
-          })}
+          {photos.map((photo, index) => (
+            <PhotoTile
+              key={photo.image.src}
+              photo={photo}
+              index={index}
+              isExpanded={expandedSrc === photo.image.src}
+              hasEntered={hasEntered}
+              onOpen={openModal}
+              onEntered={handleEntered}
+            />
+          ))}
         </div>
       </section>
 
       <AnimatePresence>
         {isOpen && content !== null && (
           <div
+            key="lightbox"
             className="fixed inset-0 z-30 flex items-center justify-center"
             style={{ padding: INSET }}
           >
-            <motion.button
-              type="button"
-              aria-label="Close photo"
-              onClick={() => {
-                closeModal()
-              }}
+            {/* Presentational: Escape closes for keyboard users and the button
+                below is the labelled control, so this must not land in the tab
+                order as a second "Close photo". */}
+            <motion.div
+              aria-hidden
+              onClick={closeModal}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -172,9 +200,7 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
             <motion.button
               type="button"
               aria-label="Close photo"
-              onClick={() => {
-                closeModal()
-              }}
+              onClick={closeModal}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}

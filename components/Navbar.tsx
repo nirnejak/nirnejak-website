@@ -27,10 +27,10 @@ const Navbar: React.FC<Props> = () => {
 
   const lenis = useLenis()
 
-  // Lenis owns the page scroll, so the lock goes through it. Setting
-  // `overflow` on the body instead would turn the body back into a scroll
-  // container, which stops viewport overflow propagating and leaves Lenis
-  // driving an element that no longer scrolls.
+  // Lenis owns the page scroll, so the lock goes through it rather than
+  // through `body.style.overflow` — that only wins while Lenis happens to be
+  // smoothing, and it used to run on every mount, leaving a stray inline
+  // style on the body of every page.
   React.useEffect(() => {
     if (!isOpen) return
     lenis?.stop()

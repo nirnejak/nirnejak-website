@@ -14,20 +14,22 @@ const useModalWithContent = <T,>(): HookReturn<T> => {
 
   const lenis = useLenis()
 
-  const openModal = (item: T): void => {
+  // Memoised so consumers can hand it to memoised children without
+  // re-rendering them on every parent render.
+  const openModal = React.useCallback((item: T) => {
     setContent(item)
     setIsOpen(true)
-  }
+  }, [])
 
   const closeModal = React.useCallback(() => {
     setIsOpen(false)
     setContent(null)
   }, [])
 
-  // Lenis owns the page scroll, so the lock has to go through it. Setting
-  // `overflow` on the body instead would turn the body back into a scroll
-  // container, which is the thing that stops viewport overflow propagating
-  // and leaves Lenis driving an element that no longer scrolls.
+  // Lenis owns the page scroll, so the lock goes through it rather than
+  // through `body.style.overflow` — that only wins while Lenis happens to be
+  // smoothing, and on the native-scroll fallback it would leave the body a
+  // scroll container with a stray inline style behind it.
   React.useEffect(() => {
     if (!isOpen) return
     lenis?.stop()
