@@ -3,13 +3,23 @@
 import { ReactLenis } from "lenis/react"
 import * as React from "react"
 
-// Chromium and Gecko both stamp their own token into the UA, including on
-// their iOS builds where the engine underneath is WebKit anyway. What is left
-// claiming "Safari" is Safari.
-const isSafari = (): boolean => {
+// Safari on macOS, and the other WebKit browsers that ship there. iOS is
+// deliberately not included: every browser on the phone is WebKit too, and
+// Lenis behaves there.
+const isDesktopWebKit = (): boolean => {
   const ua = navigator.userAgent
+
+  // Chromium and Gecko stamp their own token in, including their iOS builds.
   if (/chrome|chromium|crios|edg|opr|firefox|fxios/i.test(ua)) return false
-  return /safari/i.test(ua)
+  if (!/applewebkit/i.test(ua)) return false
+
+  // iPhone and iPod say so outright. An iPad in its default desktop mode
+  // claims to be a Mac and is only given away by its touch points, which no
+  // Mac reports.
+  if (/iphone|ipad|ipod/i.test(ua)) return false
+  if (navigator.maxTouchPoints > 0) return false
+
+  return /macintosh|mac os x/i.test(ua)
 }
 
 // The UA is an external, client-only value, so it is read through a store
@@ -17,24 +27,25 @@ const isSafari = (): boolean => {
 // swaps in the real one straight after, with no mismatch and no extra state.
 const subscribe = (): (() => void) => () => {}
 
-const useIsSafari = (): boolean =>
+const useIsDesktopWebKit = (): boolean =>
   React.useSyncExternalStore(
     subscribe,
-    () => isSafari(),
+    () => isDesktopWebKit(),
     () => false
   )
 
 const SmoothScroll: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  // Safari gets the native scroller. Lenis stays mounted rather than being
-  // torn out of the tree — swapping the provider in and out would remount
-  // every component under it — but with `smoothWheel` off it returns from its
-  // wheel handler before `preventDefault`, so scrolling is the browser's own.
+  // Desktop Safari gets the native scroller. Lenis stays mounted rather than
+  // being torn out of the tree — swapping the provider in and out would
+  // remount every component under it — but with `smoothWheel` off it returns
+  // from its wheel handler before `preventDefault`, so scrolling is the
+  // browser's own.
   //
   // `stop()` still preventDefaults, so the command bar, mobile menu and photo
   // lightbox keep their scroll lock either way.
-  const smoothWheel = !useIsSafari()
+  const smoothWheel = !useIsDesktopWebKit()
 
   return (
     <ReactLenis root options={{ smoothWheel }}>
