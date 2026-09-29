@@ -1,6 +1,5 @@
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { ReactLenis } from "lenis/react"
 import localFont from "next/font/local"
 import Script from "next/script"
 import { ViewTransitions } from "next-view-transitions"
@@ -11,6 +10,7 @@ import Background from "@/components/Background"
 import CommandBar from "@/components/CommandBar"
 import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
+import SmoothScroll from "@/components/SmoothScroll"
 
 import config from "@/config"
 
@@ -72,11 +72,10 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
           />
         </head>
 
-        <ReactLenis root>
-          {/* `clip`, never `hidden`: `overflow-x: hidden` on the body makes the
-              body a scroll container, which stops the viewport overflow from
-              propagating and leaves Lenis driving an element that no longer
-              scrolls. `clip` hides the same overflow without a scrollport. */}
+        <SmoothScroll>
+          {/* `clip` rather than `hidden`: it hides the same overflow without
+              making the body a scroll container, so nothing downstream has to
+              reason about which element the viewport actually scrolls. */}
           <body className="bg-surface overflow-x-clip font-sans">
             {/* One provider for the whole site so tooltips share a delay timer
                 — moving between two triggers opens the second instantly. */}
@@ -92,7 +91,7 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
             <Analytics />
             <SpeedInsights />
           </body>
-        </ReactLenis>
+        </SmoothScroll>
       </html>
     </ViewTransitions>
   )
