@@ -21,6 +21,12 @@ const UsesPage: React.FC = () => {
       <UsesImages />
       <section className="container mt-10 mb-16 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2">
         <div>
+          <p className="text-muted text-sm font-medium">Productivity</p>
+          <p className="text-body mt-1.5 text-lg font-semibold">
+            Apple Notes, Notion & Slack
+          </p>
+        </div>
+        <div>
           <p className="text-muted text-sm font-medium">Design Tools</p>
           <p className="text-body mt-1.5 text-lg font-semibold">
             Figma, Paper & Rive
@@ -33,31 +39,27 @@ const UsesPage: React.FC = () => {
           </p>
         </div>
         <div>
+          <p className="text-muted text-sm font-medium">AI & Editor</p>
+          <p className="text-body mt-1.5 text-lg font-semibold">
+            Conductor, Claude Code & Zed
+          </p>
+        </div>
+        <div>
+          <p className="text-muted text-sm font-medium">Audio & Accessories</p>
+          <p className="text-body mt-1.5 text-lg font-semibold">
+            Rode NT Mini, JBL Charge
+          </p>
+        </div>
+        <div>
           <p className="text-muted text-sm font-medium">Computer</p>
           <p className="text-body mt-1.5 text-lg font-semibold">
-            iPad Pro 11", MacBook Air & <br />
-            Apple Studio Display
+            MacBook Air & Studio Display
           </p>
         </div>
-        <div>
+        <div className="col-span-2">
           <p className="text-muted text-sm font-medium">Camera & Gear</p>
           <p className="text-body mt-1.5 text-lg font-semibold">
-            iPhone 14 Pro, Insta 360 X3 & <br />
-            DJI Osmo Mobile
-          </p>
-        </div>
-        <div>
-          <p className="text-muted text-sm font-medium">Audio</p>
-          <p className="text-body mt-1.5 text-lg font-semibold">
-            Rode NT Mini, JBL Charge <br />
-            Marshall Major IV
-          </p>
-        </div>
-        <div>
-          <p className="text-muted text-sm font-medium">Accessories</p>
-          <p className="text-body mt-1.5 text-lg font-semibold">
-            Keychron K4 V2 (Hot Swappable)
-            <br /> Apple Magic Mouse
+            iPhone 14 Pro, Insta 360 X3 & DJI Osmo Mobile
           </p>
         </div>
       </section>
