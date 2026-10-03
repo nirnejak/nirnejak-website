@@ -60,10 +60,12 @@ const UsesImages: React.FC = () => {
               width={400}
               src={photo.image}
               alt={photo.alt}
+              // One column of the strip plus the frame's overhang: 8 columns
+              // of a 100vw + 32px row from md up, 4 below.
+              sizes="(min-width: 768px) calc(12.5vw + 24px), calc(25vw + 18px)"
               className="rounded-2xl"
               placeholder="blur"
-              quality={100}
-              priority
+              loading="eager"
             />
           </div>
         </motion.div>

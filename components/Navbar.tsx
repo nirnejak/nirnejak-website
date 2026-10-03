@@ -105,7 +105,6 @@ const Navbar: React.FC<Props> = () => {
               className={navLinkClass}
               href={"/contact/"}
               onClick={() => {
-                window.plausible("Schedule a call Clicked")
                 setIsOpen(false)
               }}
             >

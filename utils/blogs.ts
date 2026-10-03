@@ -17,15 +17,6 @@ export const allBlogs: Blog[] = [
   },
   {
     author: "Jitendra Nirnejak",
-    date: "13 January 2026",
-    description:
-      "A deep dive into Payload CMS 3.0, the open-source, TypeScript-native headless CMS that installs directly into your Next.js app. Setup, collections, hooks, Local API, access control, deployment, and how it compares to Strapi, Sanity, and Contentful.",
-    title:
-      "Payload CMS - The TypeScript Headless CMS That Lives Inside Next.js",
-    url: "https://oven.studio/blog/payload-cms/",
-  },
-  {
-    author: "Jitendra Nirnejak",
     date: "30 December 2025",
     description:
       "A developer's guide to serverless databases: Understand the technical differences from traditional setups and explore tools like Prisma Postgres, Neon, and Turso.",

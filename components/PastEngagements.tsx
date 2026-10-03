@@ -136,14 +136,12 @@ const engagements: Engagement[] = [
     work: "Logo & Branding",
     year: 2024,
     city: "Bangalore",
-    link: "https://kylaqstudio.com/",
   },
   {
     name: "MarchHQ",
     work: "Design Engineering",
     year: 2024,
     city: "San Francisco",
-    link: "https://march.cat/",
   },
   {
     name: "Atollon",

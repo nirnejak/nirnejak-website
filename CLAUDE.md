@@ -43,7 +43,7 @@ Tailwind CSS v4 via PostCSS. Custom animations and theme extensions defined in `
 - View transitions via `next-view-transitions` — use `components/atoms/Link.tsx` instead of `next/link`
 - Smooth scrolling via Lenis (ReactLenis in root layout)
 - Motion library for component animations; animation presets in `utils/animation.ts`
-- PWA enabled via `next-pwa` (disabled in development)
+- `public/sw.js` only unregisters the service worker the old `next-pwa` setup installed — there is no PWA; don't reintroduce precaching of `_next/static/media`
 - `"use client"` directive required for components with interactivity
 - `utils/classNames.ts` is a custom conditional class joiner (not clsx) — usage: `classNames("foo", condition && "bar")`
 - `utils/metadata.ts` exports `getMetadata()` — use for page-level metadata in every `page.tsx`

@@ -27,6 +27,9 @@ const HomePage: React.FC = () => {
           src={Photo}
           alt="Jitendra Nirnejak"
           placeholder="blur"
+          // Without a width Next sizes the srcset off the 1290px source and
+          // ships ~400 KB for a 64px avatar.
+          width={64}
           className="mb-6 w-16 rounded-full"
         />
         <h1 className="text-title-soft text-xl font-medium tracking-tighter md:text-2xl">

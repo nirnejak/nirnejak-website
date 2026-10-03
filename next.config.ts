@@ -1,14 +1,5 @@
 import type { NextConfig } from "next"
 
-import nextPwa from "next-pwa"
-
-const withPWA = nextPwa({
-  dest: "public",
-  register: true,
-  skipWaiting: true,
-  disable: process.env.NODE_ENV === "development",
-})
-
 const nextConfig: NextConfig = {
   reactCompiler: true,
   trailingSlash: true,
@@ -80,8 +71,4 @@ const nextConfig: NextConfig = {
   },
 }
 
-// @types/next-pwa ships its own older copy of Next's types, and the two
-// NextConfig definitions are structurally incompatible (readonly i18n domains).
-// Asserting to the parameter type keeps the rest of the config type-checked,
-// where the previous `as any` disabled checking entirely.
-export default withPWA(nextConfig as Parameters<typeof withPWA>[0])
+export default nextConfig

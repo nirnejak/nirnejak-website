@@ -84,7 +84,9 @@ const PhotoTile = React.memo<TileProps>(
             placeholder="blur"
             width={THUMB_WIDTH}
             height={THUMB_HEIGHT}
-            priority={index < 11}
+            // Two full rows at the widest breakpoint load straight away; the
+            // rest wait until they near the viewport.
+            loading={index < 12 ? "eager" : "lazy"}
             className="h-full w-full object-cover"
           />
         </motion.div>
@@ -190,6 +192,12 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
                   alt={content.alt}
                   width={content.image.width}
                   height={content.image.height}
+                  // The frame's own contain-fit width, so the browser picks a
+                  // source for the size it will actually paint rather than the
+                  // 3840px one a bare width would resolve to.
+                  sizes={`min(calc(100vw - ${INSET * 2}px), calc((100vh - ${
+                    INSET * 2
+                  }px) * ${content.image.width / content.image.height}))`}
                   onLoad={() => {
                     setLoadedSrc(content.image.src)
                   }}

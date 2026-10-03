@@ -3,16 +3,6 @@
 import { AnimatePresence, motion } from "motion/react"
 import * as React from "react"
 
-interface ResponseDataType {
-  ok: boolean
-}
-
-declare global {
-  interface Window {
-    plausible: (event: string) => void
-  }
-}
-
 const INITIAL_STATE = { name: "", email: "", message: "" }
 
 const ContactForm: React.FC = () => {
@@ -39,25 +29,27 @@ const ContactForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
     setFormState("Sending...")
-    window.plausible("Submitted Contact Form")
+    // Without `Accept: application/json` Formspree answers with an HTML
+    // redirect, and the status is the only reliable signal either way.
     fetch("https://formspree.io/f/xgerdbkz", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
       body: JSON.stringify(state),
     })
-      .then((response) => response.json())
-      .then((data: ResponseDataType) => {
+      .then((response) => {
+        if (!response.ok) throw new Error(`Formspree ${response.status}`)
         setFormState("Sent!")
-        if (data.ok) {
-          setTimeout(() => {
-            setFormState("Send")
-            setState(INITIAL_STATE)
-          }, 1500)
-        }
-        return data.ok
+        setTimeout(() => {
+          setFormState("Send")
+          setState(INITIAL_STATE)
+        }, 1500)
       })
       .catch(() => {
-        setFormState("Send")
+        // The message is still in the fields, so a retry is one click.
+        setFormState("Try again")
       })
   }
 
