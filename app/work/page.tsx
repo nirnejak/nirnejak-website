@@ -1,18 +1,20 @@
 import { ArrowRight } from "akar-icons"
 import type { Metadata } from "next"
 import type * as React from "react"
+import JsonLd from "@/components/JsonLd"
 import AppLink from "@/components/atoms/Link"
 import PastEngagements from "@/components/PastEngagements"
 import SideProjects from "@/components/SideProjects"
 import SocialIcons from "@/components/SocialIcons"
 import getMetadata from "@/utils/metadata"
+import { getBreadcrumbSchema } from "@/utils/schema"
 import { allSites } from "@/utils/projects"
 
 export const metadata: Metadata = getMetadata({
   path: "/work/",
   title: "Work — Design Engineering & Frontend | Jitendra Nirnejak",
   description:
-    "Selected client work and engagements by Jitendra Nirnejak — design and frontend for SaaS, real estate, and product teams across the US, UK, Australia, and India.",
+    "Selected client work and engagements by Jitendra Nirnejak — design and frontend for SaaS, real estate, and product teams across North America, Europe, Asia, and Australia.",
 })
 
 const projectCount = allSites.websites.length + allSites.cms.length
@@ -20,6 +22,12 @@ const projectCount = allSites.websites.length + allSites.cms.length
 const WorkPage: React.FC = () => {
   return (
     <main>
+      <JsonLd
+        schema={getBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Work", path: "/work/" },
+        ])}
+      />
       <section className="container mt-32 flex items-center justify-between md:mt-40">
         <h1 className="text-title text-2xl font-bold tracking-tight md:text-3xl">
           Work

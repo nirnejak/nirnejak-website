@@ -11,8 +11,10 @@ import {
   Copy,
   Envelope,
   GithubFill,
+  Headphone,
   HomeAlt1,
   LaptopDevice,
+  LinkedinBoxFill,
   LinkOut,
   Pencil,
   Phone,
@@ -24,6 +26,7 @@ import { useTransitionRouter } from "next-view-transitions"
 import * as React from "react"
 
 import config from "@/config"
+import isExternal from "@/utils/isExternal"
 
 const commandItemClass =
   "command-item px-3 py-2.5 cursor-pointer hover-bg hover-bg-dark flex items-center gap-2 outline-hidden"
@@ -32,10 +35,6 @@ const CommandBar: React.FC = () => {
   const router = useTransitionRouter()
   const lenis = useLenis()
 
-  const listRef = React.useRef(null)
-  const inputRef = React.useRef<HTMLInputElement | null>(null)
-
-  const [value, setValue] = React.useState("X")
   const [isOpen, setIsOpen] = React.useState(false)
   const [hasCopiedEmail, setHasCopiedEmail] = React.useState(false)
 
@@ -51,8 +50,6 @@ const CommandBar: React.FC = () => {
   )
 
   React.useEffect(() => {
-    inputRef.current?.focus()
-
     const eventHandler = (e: KeyboardEvent): void => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
         setIsOpen(true)
@@ -67,9 +64,12 @@ const CommandBar: React.FC = () => {
 
   // Lenis hijacks wheel events on the whole page, so pause it while the
   // command bar is open — the list opts back in via `data-lenis-prevent`.
+  // Only ever undoes its own stop: an unconditional start() on close would
+  // also release a lock the lightbox or mobile menu is still holding.
   React.useEffect(() => {
-    if (isOpen) lenis?.stop()
-    else lenis?.start()
+    if (!isOpen) return
+    lenis?.stop()
+    return () => lenis?.start()
   }, [isOpen, lenis])
 
   const handleOpenChange = (open: boolean): void => {
@@ -101,7 +101,7 @@ const CommandBar: React.FC = () => {
   }
 
   const navigate = (href: string): void => {
-    if (href.includes("http") || href.includes("mailto")) {
+    if (isExternal(href)) {
       window.open(href, "_blank")
     } else {
       router.push(href)
@@ -121,24 +121,18 @@ const CommandBar: React.FC = () => {
         open={isOpen}
         onOpenChange={handleOpenChange}
         loop={true}
-        value={value}
-        onValueChange={(v) => {
-          setValue(v)
-        }}
         label="Global Command Menu"
         className="animate-rise bg-surface-raised border-line fixed top-1/2 left-1/2 z-30 w-11/12 max-w-[560px] -translate-1/2 rounded-2xl border p-2 text-[13px] shadow-2xl select-none md:w-full"
       >
         <Command.Input
           className="bg-surface text-body placeholder:text-placeholder border-line w-full rounded-xl border px-3 py-2.5 text-[13px] outline-hidden"
           placeholder="Search Link"
-          ref={inputRef}
         />
         <Command.Empty className="text-body mt-8 mb-6 w-full text-center">
           No results found.
         </Command.Empty>
         <Command.List
           className="text-body my-1.5 max-h-[240px] overflow-y-scroll overscroll-contain"
-          ref={listRef}
           data-lenis-prevent
         >
           <Command.Item
@@ -204,10 +198,7 @@ const CommandBar: React.FC = () => {
             tabIndex={0}
             value="View Source"
             onSelect={() => {
-              window.open(
-                "https://github.com/nirnejak/nirnejak-website",
-                "_blank"
-              )
+              navigate(config.sourceUrl)
             }}
           >
             <GithubFill size={14} />
@@ -239,60 +230,30 @@ const CommandBar: React.FC = () => {
 
 export default CommandBar
 
-export const socialLinks = [
-  {
-    content: "X",
-    href: "https://twitter.com/jeetnirnejak/",
-    icon: <XFill size={14} />,
-  },
+const socialLinks = [
+  { content: "X", href: config.socials.x, icon: <XFill size={14} /> },
   {
     content: "Github",
-    href: "https://github.com/nirnejak/",
+    href: config.socials.github,
     icon: <GithubFill size={14} />,
+  },
+  {
+    content: "LinkedIn",
+    href: config.socials.linkedin,
+    icon: <LinkedinBoxFill size={14} />,
   },
 ]
 
-export const siteLinks = [
-  {
-    content: "Home",
-    value: "home",
-    link: "/",
-    icon: <HomeAlt1 size={14} />,
-  },
-  {
-    content: "Work",
-    value: "work",
-    link: "/work/",
-    icon: <LaptopDevice size={14} />,
-  },
+const siteLinks = [
+  { content: "Home", link: "/", icon: <HomeAlt1 size={14} /> },
+  { content: "Work", link: "/work/", icon: <LaptopDevice size={14} /> },
   {
     content: "Projects",
-    value: "projects",
     link: "/work/projects/",
     icon: <Briefcase size={14} />,
   },
-  {
-    content: "Blogs",
-    value: "blogs",
-    link: "/blogs/",
-    icon: <Pencil size={14} />,
-  },
-  {
-    content: "Photos",
-    value: "photos",
-    link: "/photos/",
-    icon: <Camera size={14} />,
-  },
-  {
-    content: "Uses",
-    value: "uses",
-    link: "/uses/",
-    icon: <LaptopDevice size={14} />,
-  },
-  {
-    content: "Contact",
-    value: "contact",
-    link: "/contact/",
-    icon: <Phone size={14} />,
-  },
+  { content: "Writing", link: "/blogs/", icon: <Pencil size={14} /> },
+  { content: "Photos", link: "/photos/", icon: <Camera size={14} /> },
+  { content: "Uses", link: "/uses/", icon: <Headphone size={14} /> },
+  { content: "Contact", link: "/contact/", icon: <Phone size={14} /> },
 ]

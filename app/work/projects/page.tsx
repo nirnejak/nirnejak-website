@@ -43,7 +43,7 @@ const ProjectsPage: React.FC = () => {
               <p className="text-body shrink-0">{project.title}</p>
               <div className="border-line min-w-6 flex-1 border-t border-dashed" />
               <p className="text-muted min-w-0 truncate md:max-w-70">
-                {project.link === "#" ? "Discontinued" : project.link}
+                {project.link}
               </p>
             </AppLink>
           ))}

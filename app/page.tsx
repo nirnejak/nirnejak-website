@@ -79,10 +79,10 @@ const HomePage: React.FC = () => {
             <p className="text-muted text-sm font-medium">
               or{" "}
               <a
-                href="mailto:hello@nirnejak.com?subject=Project%20Enquiry"
+                href={`mailto:${config.CONTACT_EMAIL}?subject=Project%20Enquiry`}
                 className="text-dim hover:text-body focus:text-body ml-3 underline-offset-2 outline-hidden transition-colors hover:underline focus:underline"
               >
-                hello@nirnejak.com
+                {config.CONTACT_EMAIL}
               </a>
             </p>
           </div>

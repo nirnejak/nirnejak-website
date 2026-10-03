@@ -17,6 +17,10 @@ interface Props {
 // to read as slow.
 const MORPH = { type: "spring", duration: 0.42, bounce: 0.14 } as const
 const FADE = { duration: 0.25, ease: "easeOut" } as const
+// Arrow keys swap photos in place. Both halves of that handoff — the old photo
+// returning to its slot behind the scrim and the new one leaving its own —
+// skip the morph, or the swap would fly two photos across the screen.
+const SNAP = { duration: 0 } as const
 
 // The grid renders every thumbnail at these exact dimensions. Reusing them in
 // the expanded view resolves to the same optimiser URL, so the browser serves
@@ -35,6 +39,7 @@ interface TileProps {
   photo: Photo
   index: number
   isExpanded: boolean
+  isSwapping: boolean
   hasEntered: boolean
   onOpen: (photo: Photo) => void
   onEntered: () => void
@@ -44,7 +49,7 @@ interface TileProps {
 // tile. Without this every one of the ~134 tiles re-renders on the same click
 // that starts the morph, and the resulting long task eats its opening frames.
 const PhotoTile = React.memo<TileProps>(
-  ({ photo, index, isExpanded, hasEntered, onOpen, onEntered }) => (
+  ({ photo, index, isExpanded, isSwapping, hasEntered, onOpen, onEntered }) => (
     <motion.button
       type="button"
       aria-label={`Expand photo: ${photo.alt}`}
@@ -72,7 +77,7 @@ const PhotoTile = React.memo<TileProps>(
       {!isExpanded && (
         <motion.div
           layoutId={photo.image.src}
-          transition={MORPH}
+          transition={isSwapping ? SNAP : MORPH}
           // Motion only corrects corner distortion during a morph when the
           // radius is an inline pixel value.
           style={{ borderRadius: 24 }}
@@ -116,19 +121,95 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
   }, [])
 
   const expandedSrc = content?.image.src
+  const expandedIndex =
+    content === null
+      ? -1
+      : photos.findIndex((photo) => photo.image.src === content.image.src)
+
+  const gridRef = React.useRef<HTMLDivElement>(null)
+  const closeRef = React.useRef<HTMLButtonElement>(null)
+
+  // The photos either side of an arrow-key swap. Only those two tiles get a
+  // changed prop, so the swap re-renders two tiles rather than the grid.
+  const [swap, setSwap] = React.useState<[string, string] | null>(null)
+  const isSwapping = isOpen && swap !== null
+
+  const handleOpen = React.useCallback(
+    (photo: Photo) => {
+      setSwap(null)
+      openModal(photo)
+    },
+    [openModal]
+  )
+
+  React.useEffect(() => {
+    if (!isOpen || expandedIndex === -1) return
+
+    // Advanced locally as well as through state, so presses that land before
+    // the next render (a held key) still step from the latest photo.
+    let current = expandedIndex
+
+    const step = (by: number): void => {
+      const nextIndex = (current + by + photos.length) % photos.length
+      const next = photos[nextIndex]
+      setSwap([photos[current].image.src, next.image.src])
+      current = nextIndex
+      openModal(next)
+      // Bring the new photo's slot on screen behind the scrim, so closing
+      // morphs it into a tile you can see rather than one off the bottom.
+      // Centred rather than "nearest": a tile still in its entrance is scaled
+      // down around its centre, and "nearest" would only reveal that sliver.
+      gridRef.current?.children[nextIndex]?.scrollIntoView({
+        block: "center",
+        behavior: "instant",
+      })
+    }
+
+    const handleKeyDown = (event: KeyboardEvent): void => {
+      if (event.key === "ArrowRight") step(1)
+      else if (event.key === "ArrowLeft") step(-1)
+      else if (event.key === "Tab") {
+        // The close button is the dialog's only control; keep focus on it
+        // rather than letting Tab wander into the page underneath.
+        event.preventDefault()
+        closeRef.current?.focus()
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown)
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [isOpen, expandedIndex, photos, openModal])
+
+  // Hand focus back to the tile of whichever photo was showing last, so a
+  // keyboard user picks up where the dialog left them.
+  const lastIndex = React.useRef(-1)
+  React.useEffect(() => {
+    if (expandedIndex !== -1) lastIndex.current = expandedIndex
+  }, [expandedIndex])
+  React.useEffect(() => {
+    if (isOpen) return
+    const tile = gridRef.current?.children[lastIndex.current]
+    if (tile instanceof HTMLElement) tile.focus({ preventScroll: true })
+  }, [isOpen])
 
   return (
     <MotionConfig reducedMotion="user">
       <section>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+        <div
+          ref={gridRef}
+          className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
+        >
           {photos.map((photo, index) => (
             <PhotoTile
               key={photo.image.src}
               photo={photo}
               index={index}
               isExpanded={expandedSrc === photo.image.src}
+              isSwapping={isSwapping && swap.includes(photo.image.src)}
               hasEntered={hasEntered}
-              onOpen={openModal}
+              onOpen={handleOpen}
               onEntered={handleEntered}
             />
           ))}
@@ -139,6 +220,9 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
         {isOpen && content !== null && (
           <div
             key="lightbox"
+            role="dialog"
+            aria-modal="true"
+            aria-label={`Photo ${expandedIndex + 1} of ${photos.length}`}
             className="fixed inset-0 z-30 flex items-center justify-center"
             style={{ padding: INSET }}
           >
@@ -158,8 +242,11 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
                 binds first wins, and the ratio derives the other axis. No
                 measurement, so the frame is the right size on frame one. */}
             <motion.div
+              // Keyed so an arrow-key swap mounts a fresh frame under the new
+              // layoutId instead of retargeting this one mid-flight.
+              key={content.image.src}
               layoutId={content.image.src}
-              transition={MORPH}
+              transition={isSwapping ? SNAP : MORPH}
               style={{
                 borderRadius: 12,
                 aspectRatio: content.image.width / content.image.height,
@@ -206,8 +293,11 @@ const PhotoGallery: React.FC<Props> = ({ photos }) => {
               </motion.div>
             </motion.div>
             <motion.button
+              ref={closeRef}
               type="button"
               aria-label="Close photo"
+              // The dialog's only control, so it takes focus on open.
+              autoFocus
               onClick={closeModal}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

@@ -1,5 +1,4 @@
 export interface Blog {
-  author: string
   date: string
   description: string
   title: string
@@ -8,7 +7,6 @@ export interface Blog {
 
 export const allBlogs: Blog[] = [
   {
-    author: "Jitendra Nirnejak",
     date: "30 January 2026",
     description:
       "Serverless databases compared. Compare Neon, Supabase, Turso, and PlanetScale based on cold starts, branching, and free tiers to find your perfect SQL stack.",
@@ -16,7 +14,6 @@ export const allBlogs: Blog[] = [
     url: "https://www.devtoolsacademy.com/blog/serverless-sql-databases/",
   },
   {
-    author: "Jitendra Nirnejak",
     date: "30 December 2025",
     description:
       "A developer's guide to serverless databases: Understand the technical differences from traditional setups and explore tools like Prisma Postgres, Neon, and Turso.",
@@ -24,7 +21,6 @@ export const allBlogs: Blog[] = [
     url: "https://datavidhya.com/blog/serverless-sql-database/",
   },
   {
-    author: "Jitendra Nirnejak",
     date: "12 November 2025",
     description:
       "Discover Ruff and uv, Rust-fueled beasts revolutionizing Python dev. Blast through linting, packaging, and deps with 10x speed gains. Level up your code game now.",
@@ -33,7 +29,6 @@ export const allBlogs: Blog[] = [
     url: "https://www.devtoolsacademy.com/blog/uv-and-ruff-turbocharging-python-development-with-rust-powered-tools/",
   },
   {
-    author: "Jitendra Nirnejak",
     date: "17 April 2025",
     description:
       "Choosing the right Node.js CMS: A technical guide. Explore the APIs, data models, code architecture, and performance benchmarks of Strapi, Sanity, Keystone, Payload, Dato, Ghost, and Tina to find the best fit.",
@@ -41,7 +36,6 @@ export const allBlogs: Blog[] = [
     url: "https://yourbrandmate.agency/blog/a-developer-s-guide-to-choosing-the-right-headless-cms-for-node-js",
   },
   {
-    author: "Jitendra Nirnejak",
     date: "24 February 2025",
     description:
       "Discover how the View Transitions API enhances web experiences with seamless animations and smooth page transitions, improving user engagement and performance.",
@@ -49,7 +43,6 @@ export const allBlogs: Blog[] = [
     url: "https://www.devtoolsacademy.com/blog/enhancing-web-experiences-with-the-view-transitions-api/",
   },
   {
-    author: "Jitendra Nirnejak",
     date: "8 May 2023",
     description:
       "Discover the power of SVGs! Learn the basics and advanced techniques for creating and animating stunning, scalable graphics for web",
@@ -57,7 +50,6 @@ export const allBlogs: Blog[] = [
     url: "https://www.inkoop.io/blog/svg-basics-element-styling-transformation-animations/",
   },
   {
-    author: "Jitendra Nirnejak",
     date: "23 March 2023",
     description:
       "An In-Depth Comparison of two popular Node.js Frameworks, and why choosing Fastify may be a better option.",
@@ -65,7 +57,6 @@ export const allBlogs: Blog[] = [
     url: "https://www.inkoop.io/blog/express-vs-fastify-in-depth-comparison-of-node-js-frameworks/",
   },
   {
-    author: "Jitendra Nirnejak",
     date: "25 November 2022",
     description:
       "A brief comparison of hstore and JSON data types in PostgreSQL. We learn about the pros and cons of both the data types and when to use them.",
@@ -74,7 +65,6 @@ export const allBlogs: Blog[] = [
     url: "https://www.draxlr.com/blogs/postgres-hstore-vs-json-comparing-different-unstructured-data-types-in-postgresql/",
   },
   {
-    author: "Jitendra Nirnejak",
     date: "11 November 2022",
     description:
       "A guide to hstore data type in postgres, details of various postgres hstore operators and functions, when and how to use them.",
@@ -82,7 +72,6 @@ export const allBlogs: Blog[] = [
     url: "https://www.draxlr.com/blogs/postgres-hstore-data-type-and-how-to-use-it/",
   },
   {
-    author: "Jitendra Nirnejak",
     date: "15 September 2022",
     description:
       "A guide to storing and querying json data in postgres, details of various postgres json operators and functions, when and how to use them.",
@@ -90,7 +79,6 @@ export const allBlogs: Blog[] = [
     url: "https://www.draxlr.com/blogs/postgres-json-data-type-and-how-to-query-it/",
   },
   {
-    author: "Jitendra Nirnejak",
     date: "19 July 2022",
     description:
       "Draxlr is the first BI tool with full support for PlanetScale Databases. Build Filter, Sort, Summarize and Visualize your MySQL Database from PlanetScale.",
@@ -99,7 +87,6 @@ export const allBlogs: Blog[] = [
     url: "https://www.draxlr.com/blogs/build-dashboards-and-setup-slack-alerts-on-your-planetScale-database/",
   },
   {
-    author: "Jitendra Nirnejak",
     date: "1 June 2021",
     description:
       "A closer look into the new image api of Gatsby 3. What's new, what's changed and what's gone.",
@@ -107,7 +94,6 @@ export const allBlogs: Blog[] = [
     url: "https://www.inkoop.io/blog/gatsby-3-image-a-deep-dive-into-the-new-image-api-features/",
   },
   {
-    author: "Jitendra Nirnejak",
     date: "11 February 2021",
     description:
       "Integrate your Shopify Store with Gatsby Site, build e-commerce website using Gatsby and Shopify.",
@@ -115,7 +101,6 @@ export const allBlogs: Blog[] = [
     url: "https://www.inkoop.io/blog/how-to-integrate-gatsby-with-shopify-store/",
   },
   {
-    author: "Jitendra Nirnejak",
     date: "19 November 2020",
     description:
       "A Guide to setting up ESLint for React with Prettier, Pre-commit Hook and Visual Studio Code for better development with linting and code formatting that works with your editor.",
@@ -123,7 +108,6 @@ export const allBlogs: Blog[] = [
     url: "https://www.inkoop.io/blog/setup-eslint-for-react-with-prettier-pre-commit-and-vscode/",
   },
   {
-    author: "Jitendra Nirnejak",
     date: "10 February 2020",
     description:
       "A guide to building input forms that are easy to use and aesthetically pleasing. UX design tips & tricks to provide better visuals & great user experience.",
@@ -132,7 +116,6 @@ export const allBlogs: Blog[] = [
     url: "https://www.inkoop.io/blog/how-to-ensure-great-user-experience-on-forms/",
   },
   {
-    author: "Jitendra Nirnejak",
     date: "31 January 2020",
     description:
       "A comprehensive list of extremely useful Gatsby Plugins that can help you build, deploy and monitor a great blog.",
@@ -140,7 +123,6 @@ export const allBlogs: Blog[] = [
     url: "https://www.inkoop.io/blog/must-have-gatsby-plugins-for-a-great-blog/",
   },
   {
-    author: "Jitendra Nirnejak",
     date: "31 December 2019",
     description:
       "A guide to building custom global vue.js plugins for app-wide accessible components, customs filters and custom directives.",
@@ -148,7 +130,6 @@ export const allBlogs: Blog[] = [
     url: "https://www.inkoop.io/blog/building-custom-plugins-for-vue/",
   },
   {
-    author: "Jitendra Nirnejak",
     date: "30 November 2019",
     description:
       "Vuesax - The all-new Vue Component Library. Why Vuesax? How to Install & Integrate Vuesax? How to customize Vuesax Theme?",
@@ -156,7 +137,6 @@ export const allBlogs: Blog[] = [
     url: "https://www.inkoop.io/blog/vuesax-the-all-new-vue-component-library/",
   },
   {
-    author: "Jitendra Nirnejak",
     date: "30 October 2019",
     description:
       "A Guide to using JSDoc for generating documentation for react.js applications. Find out the benefits of using JSDoc and using JSDoc with React Component.",
@@ -165,7 +145,6 @@ export const allBlogs: Blog[] = [
     url: "https://www.inkoop.io/blog/a-guide-to-js-docs-for-react-js/",
   },
   {
-    author: "Jitendra Nirnejak",
     date: "24 September 2019",
     description:
       "AdminJS is a React JS based admin panel for Node JS. We talk about how to set it up and use it in Node JS applications with MongoDB and SQL Databases.",

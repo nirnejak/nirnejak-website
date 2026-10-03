@@ -3,33 +3,30 @@
 import { GithubFill, XFill } from "akar-icons"
 import type * as React from "react"
 import Tooltip from "@/components/atoms/Tooltip"
+import config from "@/config"
 
 const socialLinks = [
-  {
-    title: "Github",
-    url: "https://github.com/nirnejak/",
-    icon: <GithubFill size={18} />,
-  },
-  {
-    title: "X",
-    url: "https://x.com/jeetnirnejak",
-    icon: <XFill size={18} />,
-  },
+  { title: "Github", url: config.socials.github, Icon: GithubFill },
+  { title: "X", url: config.socials.x, Icon: XFill },
 ]
 
 const SocialIcons: React.FC = () => {
   return (
     <div className="flex items-center gap-1">
-      {socialLinks.map(({ title, url, icon }) => (
+      {socialLinks.map(({ title, url, Icon }) => (
         <Tooltip key={title} label={title}>
-          <button
-            type="button"
-            onClick={() => window.open(url, "_blank")}
-            className="hover-bg group text-dim cursor-pointer rounded-md p-3 outline-hidden"
+          {/* Real links rather than buttons calling window.open: crawlable,
+              middle-clickable, and they show their URL on hover. `me` ties
+              the profiles back to this site for anything that checks. */}
+          <a
+            href={url}
+            target="_blank"
+            rel="me noopener"
+            className="hover-bg group text-dim rounded-md p-3 outline-hidden"
             aria-label={title}
           >
-            {icon}
-          </button>
+            <Icon size={18} />
+          </a>
         </Tooltip>
       ))}
     </div>

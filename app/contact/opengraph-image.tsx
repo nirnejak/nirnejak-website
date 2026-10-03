@@ -7,6 +7,6 @@ export default function Image() {
   return renderOgImage({
     title: "Contact",
     subtitle:
-      "Taking on a small number of projects for 2026. Let’s talk about yours.",
+      "Taking on a small number of projects at a time. Let’s talk about yours.",
   })
 }

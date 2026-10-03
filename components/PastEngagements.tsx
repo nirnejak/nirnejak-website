@@ -67,7 +67,7 @@ const engagements: Engagement[] = [
     work: "Design Engineering",
     year: 2026,
     city: "New York",
-    link: "https://acquisity.ai/",
+    link: "https://www.acquisity.ai/",
   },
   {
     name: "Superserve",
@@ -92,7 +92,7 @@ const engagements: Engagement[] = [
   },
   {
     name: "Nexxel",
-    work: "Product and Website Design",
+    work: "Product & Website Design",
     year: 2025,
     city: "Chicago",
   },
@@ -104,7 +104,7 @@ const engagements: Engagement[] = [
     link: "https://govisionary.biz/",
   },
   {
-    name: "Datavidhya",
+    name: "Data Vidhya",
     work: "Full Stack Development",
     year: 2025,
     city: "Mumbai",
@@ -147,7 +147,7 @@ const engagements: Engagement[] = [
     name: "Atollon",
     work: "Frontend & CMS Development",
     year: 2024,
-    city: "Australia",
+    city: "Melbourne",
     link: "https://atollon.com.au/",
   },
   {
@@ -180,10 +180,10 @@ const engagements: Engagement[] = [
   },
   {
     name: "SwitchedOn",
-    work: "Product Design and Mobile Development",
+    work: "Product Design & Mobile Development",
     year: 2021,
     city: "San Francisco",
-    link: "https://www.switchedontrainingapp.com/",
+    link: "https://www.switchedon.com/",
   },
   {
     name: "Atollon",
@@ -194,7 +194,7 @@ const engagements: Engagement[] = [
   },
   {
     name: "Inkoop",
-    work: "Website Design and Development",
+    work: "Website Design & Development",
     year: 2020,
     city: "Bangalore",
     link: "https://www.inkoop.io/",
@@ -211,7 +211,7 @@ const engagements: Engagement[] = [
     work: "Frontend Development",
     year: 2019,
     city: "Atlanta",
-    link: "https://www.ballersbridge.com/",
+    link: "https://ballersbridge.com/",
   },
   {
     name: "Simula",

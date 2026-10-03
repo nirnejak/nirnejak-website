@@ -3,7 +3,8 @@ import type { Metadata } from "next"
 import config from "@/config"
 
 interface MetadataArgs {
-  path: string
+  // Omitted for pages that should not claim a canonical URL, like the 404.
+  path?: string
   title: string
   description: string
   ogType?: "website" | "profile"
@@ -21,13 +22,10 @@ const getMetadata = ({
   const metaDescription = description
 
   const metadata: Metadata = {
-    metadataBase: new URL(config.baseUrl),
     title: metaTitle,
     description: metaDescription,
 
-    alternates: {
-      canonical: path,
-    },
+    alternates: path === undefined ? undefined : { canonical: path },
 
     applicationName: config.appName,
     creator: config.author,
@@ -49,7 +47,7 @@ const getMetadata = ({
     // and height. Declaring it here too would produce duplicate tags.
     openGraph: {
       type: ogType ?? "website",
-      url: `${config.baseUrl}${path}`,
+      url: path === undefined ? undefined : `${config.baseUrl}${path}`,
       siteName: config.appName,
       title: metaTitle,
       description: metaDescription,
@@ -65,22 +63,13 @@ const getMetadata = ({
 
     appleWebApp: {
       capable: true,
-      title: metaTitle,
-      startupImage: `${config.baseUrl}/icons/icon-512x512.png`,
+      // The home-screen label, not the document title — iOS truncates
+      // anything much past a dozen characters. Matches the manifest.
+      title: "Nirnejak",
       // "black-translucent" forces white status-bar text, which disappears
       // against a light page. "default" follows the system scheme.
       statusBarStyle: "default",
     },
-
-    formatDetection: {
-      telephone: true,
-      date: true,
-      address: true,
-      email: true,
-      url: true,
-    },
-
-    appLinks: {},
   }
   return metadata
 }

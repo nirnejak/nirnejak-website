@@ -3,6 +3,7 @@ import { Link } from "next-view-transitions"
 import type * as React from "react"
 
 import classNames from "@/utils/classNames"
+import isExternal from "@/utils/isExternal"
 
 interface Props {
   href: string
@@ -21,7 +22,7 @@ const AppLink: React.FC<Props> = ({
   onClick,
   ...restProps
 }) => {
-  if (href.includes("http") || href.includes("mailto")) {
+  if (isExternal(href)) {
     return (
       <a
         href={href}

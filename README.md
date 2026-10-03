@@ -17,16 +17,18 @@
 **Additional Libraries**
 
 - [Tailwind CSS](https://tailwindcss.com/) - for styling
+- [Motion](https://motion.dev/) - for animations
+- [Lenis](https://lenis.darkroom.engineering/) - for smooth scrolling
 - [Akar Icons](https://akaricons.com/) - for perfectly rounded icons
-- [Framer Motion](https://www.framer.com/motion/) - for animations
-- [Radix UI](https://www.radix-ui.com/) - for headless UI elements(tooltip)
-- [use-sound](https://www.npmjs.com/package/use-sound) - for using sound effects
-- [cmdk](https://cmdk.paco.me/) - for command menu(press cmd/ctrl+k)
+- [Radix UI](https://www.radix-ui.com/) - for headless UI elements (tooltip)
+- [cmdk](https://cmdk.paco.me/) - for the command menu (press cmd/ctrl+k)
+- [next-view-transitions](https://github.com/shuding/next-view-transitions) - for page transitions
 
 **Services**
 
-- Analytics - [Plausible Analytics](https://plausible.io/)
-- Hosting - [Vercel](https://vercel.com/)
+- Hosting & Analytics - [Vercel](https://vercel.com/) (Analytics and Speed Insights)
+- Analytics - [Ahrefs Web Analytics](https://ahrefs.com/web-analytics)
+- Contact form - [Formspree](https://formspree.io/)
 
 ---
 

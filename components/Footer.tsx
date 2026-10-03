@@ -1,4 +1,5 @@
 import type * as React from "react"
+import ModifierKey from "@/components/atoms/ModifierKey"
 
 const Footer: React.FC = () => {
   return (
@@ -9,13 +10,13 @@ const Footer: React.FC = () => {
         </div>
         <div className="hidden md:flex">
           <p className="text-dim flex items-center gap-1">
-            <span className="bg-surface-inset rounded-md px-1.5 py-1 text-[10px]">
-              ⌘
-            </span>
+            <kbd className="bg-surface-inset rounded-md px-1.5 py-1 font-sans text-[10px]">
+              <ModifierKey />
+            </kbd>
             <span> + </span>
-            <span className="bg-surface-inset rounded-md px-2 py-1 text-[10px]">
+            <kbd className="bg-surface-inset rounded-md px-2 py-1 font-sans text-[10px]">
               K
-            </span>
+            </kbd>
           </p>
         </div>
       </div>

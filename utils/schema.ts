@@ -27,11 +27,7 @@ export const personSchema = {
     addressLocality: "Mumbai",
     addressCountry: "IN",
   },
-  sameAs: [
-    "https://x.com/jeetnirnejak/",
-    "https://github.com/nirnejak/",
-    "https://www.instagram.com/jeetnirnejak/",
-  ],
+  sameAs: Object.values(config.socials),
 }
 
 // Declared alongside Person so search engines can attribute the site to a

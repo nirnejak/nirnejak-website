@@ -4,8 +4,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Commands
 
-- `bun dev` — Start dev server (uses webpack)
-- `bun run build` — Production build (uses webpack)
+- `bun dev` — Start dev server (Turbopack)
+- `bun run build` — Production build (Turbopack)
 - `bun run lint` — Lint with oxlint (`oxlint`)
 - `bun run lint:fix` — Auto-fix lint issues (`oxlint --fix`)
 - `bun run format` — Format with oxfmt (`oxfmt`)
@@ -19,10 +19,10 @@ Next.js 16 portfolio site using App Router. Fully static — no CMS or API data 
 ### Key directories
 
 - `app/` — Pages and layouts (App Router file-based routing)
-- `components/` — React components; `atoms/` for small primitives (Link, Tabs)
+- `components/` — React components; `atoms/` for small primitives (Link, Tooltip, ModifierKey)
 - `hooks/` — Custom React hooks
-- `utils/` — Helpers (animation configs, classNames, metadata, photo data)
-- `fonts/` — Self-hosted GeneralSans variable font
+- `utils/` — Helpers (classNames, isExternal, metadata, OG images, JSON-LD schema, blog/project/photo data)
+- `fonts/` — Self-hosted GeneralSans variable font, plus static Medium/Bold `.ttf` cuts for OG images (Satori can't read woff2 or variable fonts)
 - `config.ts` — Site-wide config (links, email, keywords)
 
 ### Imports
@@ -41,8 +41,9 @@ Tailwind CSS v4 via PostCSS. Custom animations and theme extensions defined in `
 
 - React Compiler is enabled — no need for manual `useMemo`/`useCallback`
 - View transitions via `next-view-transitions` — use `components/atoms/Link.tsx` instead of `next/link`
-- Smooth scrolling via Lenis (ReactLenis in root layout)
-- Motion library for component animations; animation presets in `utils/animation.ts`
+- Smooth scrolling via Lenis, wrapped by `components/SmoothScroll.tsx` in the root layout (native scrolling on desktop Safari). Lock scroll with `lenis.stop()` in an effect whose cleanup calls `start()` — never `start()` unconditionally, and never `body.style.overflow`
+- Motion library for component animations
+- Social profiles, contact email and repo URL live in `config.ts` — don't hard-code them
 - `public/sw.js` only unregisters the service worker the old `next-pwa` setup installed — there is no PWA; don't reintroduce precaching of `_next/static/media`
 - `"use client"` directive required for components with interactivity
 - `utils/classNames.ts` is a custom conditional class joiner (not clsx) — usage: `classNames("foo", condition && "bar")`

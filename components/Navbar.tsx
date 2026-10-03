@@ -7,14 +7,10 @@ import AppLink from "@/components/atoms/Link"
 import NavigationTabs from "@/components/NavigationTabs"
 import classNames from "@/utils/classNames"
 
-interface Props {
-  theme?: string
-}
-
 export const navLinks = [
   { content: "Home", link: "/" },
   { content: "Work", link: "/work/" },
-  { content: "Blogs", link: "/blogs/" },
+  { content: "Writing", link: "/blogs/" },
   { content: "Photos", link: "/photos/" },
   { content: "Uses", link: "/uses/" },
 ]
@@ -22,7 +18,7 @@ export const navLinks = [
 const navLinkClass =
   "font-medium text-xs rounded-md px-4 py-2 hover-bg outline-hidden"
 
-const Navbar: React.FC<Props> = () => {
+const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false)
 
   const lenis = useLenis()

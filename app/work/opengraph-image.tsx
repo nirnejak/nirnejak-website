@@ -7,6 +7,6 @@ export default function Image() {
   return renderOgImage({
     title: "Work",
     subtitle:
-      "Design engineering and frontend for product teams across the US, UK, Australia, and India.",
+      "Design engineering and frontend for product teams across North America, Europe, Asia, and Australia.",
   })
 }

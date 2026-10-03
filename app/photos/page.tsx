@@ -1,7 +1,9 @@
 import type { Metadata } from "next"
 import type * as React from "react"
+import JsonLd from "@/components/JsonLd"
 import PhotoGallery from "@/components/PhotoGallery"
 import getMetadata from "@/utils/metadata"
+import { getBreadcrumbSchema } from "@/utils/schema"
 import { photos } from "@/utils/photos"
 
 export const metadata: Metadata = getMetadata({
@@ -14,6 +16,12 @@ export const metadata: Metadata = getMetadata({
 const PhotosPage: React.FC = () => {
   return (
     <main>
+      <JsonLd
+        schema={getBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Photos", path: "/photos/" },
+        ])}
+      />
       <section className="container mt-32 md:mt-40">
         <h1 className="text-title text-2xl font-bold tracking-tight md:text-3xl">
           Photos

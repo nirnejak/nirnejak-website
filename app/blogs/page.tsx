@@ -4,7 +4,7 @@ import AppLink from "@/components/atoms/Link"
 import JsonLd from "@/components/JsonLd"
 import { allBlogs, type Blog } from "@/utils/blogs"
 import getMetadata from "@/utils/metadata"
-import { getCollectionPageSchema } from "@/utils/schema"
+import { getBreadcrumbSchema, getCollectionPageSchema } from "@/utils/schema"
 
 export const metadata: Metadata = getMetadata({
   path: "/blogs/",
@@ -27,20 +27,26 @@ const BlogsPage: React.FC = () => {
   return (
     <main>
       <JsonLd
-        schema={getCollectionPageSchema({
-          name: "Writing by Jitendra Nirnejak",
-          description:
-            "Long-form writing on React, TypeScript, design engineering, animation, Postgres, and the tools that make modern web work.",
-          path: "/blogs/",
-          items: allBlogs.map((blog) => ({
-            title: blog.title,
-            url: blog.url,
-          })),
-        })}
+        schema={[
+          getCollectionPageSchema({
+            name: "Writing by Jitendra Nirnejak",
+            description:
+              "Long-form writing on React, TypeScript, design engineering, animation, Postgres, and the tools that make modern web work.",
+            path: "/blogs/",
+            items: allBlogs.map((blog) => ({
+              title: blog.title,
+              url: blog.url,
+            })),
+          }),
+          getBreadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Writing", path: "/blogs/" },
+          ]),
+        ]}
       />
       <section className="container mt-32 md:mt-40">
         <h1 className="text-title text-2xl font-bold tracking-tight md:text-3xl">
-          Blogs
+          Writing
         </h1>
       </section>
       <section className="container mt-10 mb-16 text-sm md:mt-16">

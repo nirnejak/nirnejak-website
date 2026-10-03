@@ -16,8 +16,6 @@ interface Props {
 }
 
 const NavigationTabs: React.FC<Props> = ({ navLinks }) => {
-  const TABS_LINKS = navLinks
-
   const [tabBoundingBox, setTabBoundingBox] =
     React.useState<TAB_BOUNDING_BOX_TYPE | null>(null)
   const [wrapperBoundingBox, setWrapperBoundingBox] =
@@ -27,7 +25,6 @@ const NavigationTabs: React.FC<Props> = ({ navLinks }) => {
   )
   const [isHoveredFromNull, setIsHoveredFromNull] = React.useState(true)
 
-  const highlightRef = React.useRef(null)
   const wrapperRef = React.useRef<HTMLDivElement>(null)
 
   const repositionHighlight = (
@@ -60,10 +57,12 @@ const NavigationTabs: React.FC<Props> = ({ navLinks }) => {
     }px)`
   }
 
+  // A plain wrapper, not a <nav>: the Navbar around it is already the
+  // navigation landmark, and a nested one gets announced twice.
   return (
-    <nav>
+    <div>
       {/* The pointer tracking is presentational, so it lives on the layout
-          container rather than the navigation landmark. */}
+          container rather than on the wrapper. */}
       <div
         className="relative flex gap-1"
         ref={wrapperRef}
@@ -71,14 +70,13 @@ const NavigationTabs: React.FC<Props> = ({ navLinks }) => {
       >
         <div
           className="bg-hover absolute left-0 h-full rounded-md"
-          ref={highlightRef}
           style={{
             transition: "0.15s ease",
             transitionProperty: "width, transform, opacity",
             ...highlightStyles,
           }}
         />
-        {TABS_LINKS.map((tab) => (
+        {navLinks.map((tab) => (
           <Link
             key={tab.link}
             href={tab.link}
@@ -94,7 +92,7 @@ const NavigationTabs: React.FC<Props> = ({ navLinks }) => {
           </Link>
         ))}
       </div>
-    </nav>
+    </div>
   )
 }
 

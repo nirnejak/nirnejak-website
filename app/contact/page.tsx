@@ -1,9 +1,11 @@
 import type { Metadata } from "next"
 import type * as React from "react"
+import JsonLd from "@/components/JsonLd"
 import AppLink from "@/components/atoms/Link"
 import ContactForm from "@/components/ContactForm"
 import config from "@/config"
 import getMetadata from "@/utils/metadata"
+import { getBreadcrumbSchema } from "@/utils/schema"
 
 export const metadata: Metadata = getMetadata({
   path: "/contact/",
@@ -15,6 +17,12 @@ export const metadata: Metadata = getMetadata({
 const ContactPage: React.FC = () => {
   return (
     <main className="min-h-[77vh]">
+      <JsonLd
+        schema={getBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact/" },
+        ])}
+      />
       <section className="container mt-32 md:mt-40">
         <h1 className="text-title text-2xl font-bold tracking-tight md:text-3xl">
           Contact

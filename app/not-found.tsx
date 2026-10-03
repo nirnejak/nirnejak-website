@@ -5,7 +5,6 @@ import AppLink from "@/components/atoms/Link"
 import getMetadata from "@/utils/metadata"
 
 export const metadata: Metadata = getMetadata({
-  path: "/404",
   title: "Not Found | Jitendra Nirnejak",
   description:
     "The page you're looking for doesn't exist. Head back to nirnejak.com to browse work, blogs, photos, and more.",
@@ -29,8 +28,18 @@ const NotFound: React.FC = () => {
   return (
     <main className="container">
       <section className="grid min-h-dvh place-content-center">
-        <div className="">
-          <Image src={gif} alt="" width={480} height={270} />
+        <div>
+          {/* Unoptimized: the optimiser would only re-encode an animated GIF
+              it can't resize. h-auto lets each GIF keep its own aspect ratio
+              rather than being squashed into the 480×270 placeholder box. */}
+          <Image
+            src={gif}
+            alt=""
+            width={480}
+            height={270}
+            unoptimized
+            className="h-auto w-[480px] max-w-full"
+          />
           <h1 className="text-title mt-10 mb-3 text-center text-3xl font-bold tracking-tight md:text-4xl">
             You lost buddy?
           </h1>

@@ -1,7 +1,9 @@
 import type { Metadata } from "next"
 import type * as React from "react"
+import JsonLd from "@/components/JsonLd"
 import UsesImages from "@/components/UsesImages"
 import getMetadata from "@/utils/metadata"
+import { getBreadcrumbSchema } from "@/utils/schema"
 
 export const metadata: Metadata = getMetadata({
   path: "/uses/",
@@ -13,6 +15,12 @@ export const metadata: Metadata = getMetadata({
 const UsesPage: React.FC = () => {
   return (
     <main className="max-w-[100vw] overflow-hidden">
+      <JsonLd
+        schema={getBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Uses", path: "/uses/" },
+        ])}
+      />
       <section className="container mt-32 md:mt-40">
         <h1 className="text-title text-2xl font-bold tracking-tight md:text-3xl">
           Uses
@@ -47,7 +55,7 @@ const UsesPage: React.FC = () => {
         <div>
           <p className="text-muted text-sm font-medium">Audio & Accessories</p>
           <p className="text-body mt-1.5 text-lg font-semibold">
-            Rode NT Mini, JBL Charge
+            RØDE NT-USB Mini & JBL Charge
           </p>
         </div>
         <div>
@@ -59,7 +67,7 @@ const UsesPage: React.FC = () => {
         <div className="md:col-span-2">
           <p className="text-muted text-sm font-medium">Camera & Gear</p>
           <p className="text-body mt-1.5 text-lg font-semibold">
-            iPhone 14 Pro, Insta 360 X3 & DJI Osmo Mobile
+            iPhone 14 Pro, Insta360 X3 & DJI Osmo Mobile
           </p>
         </div>
       </section>
