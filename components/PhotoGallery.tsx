@@ -64,7 +64,6 @@ const PhotoTile = React.memo<TileProps>(
         stiffness: hasEntered ? 530 : 100,
         damping: hasEntered ? 20 : 10,
         mass: 0.7,
-
         delay: hasEntered ? 0 : 0.05 * index,
       }}
       onAnimationComplete={onEntered}

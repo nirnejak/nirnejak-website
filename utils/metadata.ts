@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 
-import config from "@/config"
+import CONFIG from "@/config"
 
 interface MetadataArgs {
   // Omitted for pages that should not claim a canonical URL, like the 404.
@@ -18,47 +18,42 @@ const getMetadata = ({
   ogType,
   noIndex,
 }: MetadataArgs): Metadata => {
-  const metaTitle = title
-  const metaDescription = description
-
   const metadata: Metadata = {
-    title: metaTitle,
-    description: metaDescription,
+    title,
+    description,
 
     alternates: path === undefined ? undefined : { canonical: path },
 
-    applicationName: config.appName,
-    creator: config.author,
-    authors: [{ name: config.author, url: config.authorUrl }],
+    applicationName: CONFIG.APP_NAME,
+    creator: CONFIG.AUTHOR,
+    authors: [{ name: CONFIG.AUTHOR, url: CONFIG.AUTHOR_URL }],
     robots: noIndex
       ? "noindex, nofollow"
       : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-    keywords: config.keywords,
 
     icons: {
       icon: "/favicon.ico",
-      shortcut: "/icons/icon-512x512.png",
       apple: "/icons/icon-512x512.png",
     },
-    manifest: `${config.baseUrl}/manifest.json`,
+    manifest: `${CONFIG.BASE_URL}/manifest.json`,
 
     // `images` is deliberately absent from openGraph and twitter: the
     // app/**/opengraph-image.tsx files own og:image and emit its type, width,
     // and height. Declaring it here too would produce duplicate tags.
     openGraph: {
       type: ogType ?? "website",
-      url: path === undefined ? undefined : `${config.baseUrl}${path}`,
-      siteName: config.appName,
-      title: metaTitle,
-      description: metaDescription,
+      url: path === undefined ? undefined : `${CONFIG.BASE_URL}${path}`,
+      siteName: CONFIG.APP_NAME,
+      title,
+      description,
     },
 
     twitter: {
       card: "summary_large_image",
-      site: `@${config.twitter}`,
-      creator: `@${config.twitter}`,
-      title: metaTitle,
-      description: metaDescription,
+      site: `@${CONFIG.TWITTER}`,
+      creator: `@${CONFIG.TWITTER}`,
+      title,
+      description,
     },
 
     appleWebApp: {

@@ -9,7 +9,7 @@ interface Engagement {
   link?: string
 }
 
-const rowClass =
+const ROW_CLASS =
   "flex flex-col gap-0.5 p-3 font-medium md:flex-row md:items-center md:gap-2"
 
 const PastEngagements: React.FC = () => {
@@ -18,7 +18,7 @@ const PastEngagements: React.FC = () => {
       <p className="text-label mb-6 text-center font-medium tracking-wider uppercase">
         Projects & Engagements
       </p>
-      {engagements.map((client) => {
+      {ENGAGEMENTS.map((client) => {
         // Atollon appears in two separate years, so the key needs both parts.
         const key = `${client.name}-${client.year}`
         const row = (
@@ -33,7 +33,7 @@ const PastEngagements: React.FC = () => {
 
         // A handful of the oldest engagements have nothing left to link to.
         return client.link === undefined ? (
-          <div key={key} className={rowClass}>
+          <div key={key} className={ROW_CLASS}>
             {row}
           </div>
         ) : (
@@ -42,7 +42,7 @@ const PastEngagements: React.FC = () => {
             href={client.link}
             target="_blank"
             rel="noopener"
-            className={`hover-bg ${rowClass}`}
+            className={`hover-bg ${ROW_CLASS}`}
           >
             {row}
           </a>
@@ -54,7 +54,7 @@ const PastEngagements: React.FC = () => {
 
 export default PastEngagements
 
-const engagements: Engagement[] = [
+const ENGAGEMENTS: Engagement[] = [
   {
     name: "Stonera",
     work: "Design Engineering",

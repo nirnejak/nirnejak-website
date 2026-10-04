@@ -3,17 +3,17 @@
 import { GithubFill, XFill } from "akar-icons"
 import type * as React from "react"
 import Tooltip from "@/components/atoms/Tooltip"
-import config from "@/config"
+import CONFIG from "@/config"
 
-const socialLinks = [
-  { title: "Github", url: config.socials.github, Icon: GithubFill },
-  { title: "X", url: config.socials.x, Icon: XFill },
+const SOCIAL_LINKS = [
+  { title: "Github", url: CONFIG.SOCIALS.GITHUB, Icon: GithubFill },
+  { title: "X", url: CONFIG.SOCIALS.X, Icon: XFill },
 ]
 
 const SocialIcons: React.FC = () => {
   return (
     <div className="flex items-center gap-1">
-      {socialLinks.map(({ title, url, Icon }) => (
+      {SOCIAL_LINKS.map(({ title, url, Icon }) => (
         <Tooltip key={title} label={title}>
           {/* Real links rather than buttons calling window.open: crawlable,
               middle-clickable, and they show their URL on hover. `me` ties

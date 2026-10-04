@@ -135,7 +135,7 @@ import Photo78 from "@/assets/photos/IMG_9380.jpeg"
 import Photo91 from "@/assets/photos/IMG_9421.jpeg"
 import Photo119 from "@/assets/photos/IMG_9431.jpeg"
 
-const photoImages = [
+const PHOTO_IMAGES = [
   Photo1,
   Photo2,
   Photo3,
@@ -280,7 +280,7 @@ export interface Photo {
 // Alt text is generic for now. These photographs are the page's primary
 // content, so replacing each entry with a real description is worth doing as
 // captions get written — but anything beats the webpack hash this used to emit.
-export const photos: Photo[] = photoImages.map((image) => ({
+export const PHOTOS: Photo[] = PHOTO_IMAGES.map((image) => ({
   image,
   alt: "Photograph by Jitendra Nirnejak",
 }))

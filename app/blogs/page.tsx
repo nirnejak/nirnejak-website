@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import type * as React from "react"
 import AppLink from "@/components/atoms/Link"
 import JsonLd from "@/components/JsonLd"
-import { allBlogs, type Blog } from "@/utils/blogs"
+import { ALL_BLOGS, type Blog } from "@/utils/blogs"
 import getMetadata from "@/utils/metadata"
 import { getBreadcrumbSchema, getCollectionPageSchema } from "@/utils/schema"
 
@@ -17,7 +17,7 @@ const BlogsPage: React.FC = () => {
   // The list is maintained newest-first, so a Map preserves descending years
   // without a sort — and still groups correctly if an entry lands out of order.
   const blogsByYear = new Map<string, Blog[]>()
-  for (const blog of allBlogs) {
+  for (const blog of ALL_BLOGS) {
     const year = String(new Date(blog.date).getFullYear())
     const bucket = blogsByYear.get(year)
     if (bucket === undefined) blogsByYear.set(year, [blog])
@@ -33,7 +33,7 @@ const BlogsPage: React.FC = () => {
             description:
               "Long-form writing on React, TypeScript, design engineering, animation, Postgres, and the tools that make modern web work.",
             path: "/blogs/",
-            items: allBlogs.map((blog) => ({
+            items: ALL_BLOGS.map((blog) => ({
               title: blog.title,
               url: blog.url,
             })),

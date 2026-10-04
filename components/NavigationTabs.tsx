@@ -1,28 +1,26 @@
 import { Link } from "next-view-transitions"
 import * as React from "react"
 
-interface TAB_BOUNDING_BOX_TYPE {
+interface TabBoundingBox {
   left: number
   width: number
 }
 
-interface TAB_TYPE {
+interface Tab {
   content: string
   link: string
 }
 
 interface Props {
-  navLinks: TAB_TYPE[]
+  navLinks: Tab[]
 }
 
 const NavigationTabs: React.FC<Props> = ({ navLinks }) => {
   const [tabBoundingBox, setTabBoundingBox] =
-    React.useState<TAB_BOUNDING_BOX_TYPE | null>(null)
+    React.useState<TabBoundingBox | null>(null)
   const [wrapperBoundingBox, setWrapperBoundingBox] =
-    React.useState<TAB_BOUNDING_BOX_TYPE | null>(null)
-  const [highlightedTab, setHighlightedTab] = React.useState<TAB_TYPE | null>(
-    null
-  )
+    React.useState<TabBoundingBox | null>(null)
+  const [highlightedTab, setHighlightedTab] = React.useState<Tab | null>(null)
   const [isHoveredFromNull, setIsHoveredFromNull] = React.useState(true)
 
   const wrapperRef = React.useRef<HTMLDivElement>(null)
@@ -31,7 +29,7 @@ const NavigationTabs: React.FC<Props> = ({ navLinks }) => {
     e:
       | React.MouseEvent<HTMLAnchorElement>
       | React.FocusEvent<HTMLAnchorElement>,
-    tab: TAB_TYPE
+    tab: Tab
   ): void => {
     setTabBoundingBox(
       (e.currentTarget as HTMLAnchorElement).getBoundingClientRect()

@@ -12,7 +12,7 @@ import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
 import SmoothScroll from "@/components/SmoothScroll"
 
-import config from "@/config"
+import CONFIG from "@/config"
 
 // Lenis ships its own stylesheet and needs it: it is what makes
 // `lenis.stop()` actually block native scrolling, and what keeps
@@ -24,10 +24,10 @@ import "./main.css"
 // opengraph-image handlers — can resolve relative metadata URLs to absolute
 // ones without falling back to localhost.
 export const metadata: Metadata = {
-  metadataBase: new URL(config.baseUrl),
+  metadataBase: new URL(CONFIG.BASE_URL),
 }
 
-const sansFont = localFont({
+const SANS_FONT = localFont({
   variable: "--sans-font",
   src: [
     {
@@ -50,7 +50,7 @@ interface Props {
 const HomeLayout: React.FC<Props> = ({ children }) => {
   return (
     <ViewTransitions>
-      <html lang="en" className={sansFont.variable}>
+      <html lang="en" className={SANS_FONT.variable}>
         <head>
           {/* Rendered here rather than via the `viewport` export: Next unmounts
               metadata tags during client navigation, which flashes the browser

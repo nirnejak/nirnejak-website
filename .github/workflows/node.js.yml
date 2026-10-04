@@ -15,10 +15,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
+      # next build and tsc run on Node, so pin it to the same version as
+      # local development rather than whatever the runner image ships.
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
-          bun-version: latest
+          bun-version: 1.4.0
       - run: bun install --frozen-lockfile
       - run: bun run lint
       - run: bun run format:check

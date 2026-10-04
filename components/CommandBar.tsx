@@ -25,10 +25,10 @@ import { useLenis } from "lenis/react"
 import { useTransitionRouter } from "next-view-transitions"
 import * as React from "react"
 
-import config from "@/config"
+import CONFIG from "@/config"
 import isExternal from "@/utils/isExternal"
 
-const commandItemClass =
+const COMMAND_ITEM_CLASS =
   "command-item px-3 py-2.5 cursor-pointer hover-bg hover-bg-dark flex items-center gap-2 outline-hidden"
 
 const CommandBar: React.FC = () => {
@@ -84,7 +84,7 @@ const CommandBar: React.FC = () => {
   }
 
   const copyEmail = (): void => {
-    void navigator.clipboard.writeText(config.CONTACT_EMAIL).then(
+    void navigator.clipboard.writeText(CONFIG.CONTACT_EMAIL).then(
       () => {
         setHasCopiedEmail(true)
         dismissTimer.current = setTimeout(() => {
@@ -136,11 +136,11 @@ const CommandBar: React.FC = () => {
           data-lenis-prevent
         >
           <Command.Item
-            className={commandItemClass}
+            className={COMMAND_ITEM_CLASS}
             tabIndex={0}
-            value={config.SCHEDULE_CALL_LINK}
+            value={CONFIG.SCHEDULE_CALL_LINK}
             onSelect={() => {
-              navigate(config.SCHEDULE_CALL_LINK)
+              navigate(CONFIG.SCHEDULE_CALL_LINK)
             }}
           >
             <Calendar size={14} />
@@ -148,7 +148,7 @@ const CommandBar: React.FC = () => {
             <LinkOut size={12} className="ml-auto" />
           </Command.Item>
           <Command.Item
-            className={commandItemClass}
+            className={COMMAND_ITEM_CLASS}
             tabIndex={0}
             value="Copy Email"
             onSelect={copyEmail}
@@ -162,10 +162,10 @@ const CommandBar: React.FC = () => {
             )}
           </Command.Item>
           <Command.Separator className="bg-line my-1 h-[0.5px]" />
-          {socialLinks.map((link) => (
+          {SOCIAL_LINKS.map((link) => (
             <Command.Item
               key={link.content}
-              className={commandItemClass}
+              className={COMMAND_ITEM_CLASS}
               tabIndex={0}
               value={link.content}
               onSelect={() => {
@@ -178,10 +178,10 @@ const CommandBar: React.FC = () => {
             </Command.Item>
           ))}
           <Command.Separator className="bg-line my-1 h-[0.5px]" />
-          {siteLinks.map((link) => (
+          {SITE_LINKS.map((link) => (
             <Command.Item
               key={link.content}
-              className={commandItemClass}
+              className={COMMAND_ITEM_CLASS}
               tabIndex={0}
               value={link.content}
               onSelect={() => {
@@ -194,11 +194,11 @@ const CommandBar: React.FC = () => {
           ))}
           <Command.Separator className="bg-line my-1 h-[0.5px]" />
           <Command.Item
-            className={commandItemClass}
+            className={COMMAND_ITEM_CLASS}
             tabIndex={0}
             value="View Source"
             onSelect={() => {
-              navigate(config.sourceUrl)
+              navigate(CONFIG.SOURCE_URL)
             }}
           >
             <GithubFill size={14} />
@@ -230,21 +230,21 @@ const CommandBar: React.FC = () => {
 
 export default CommandBar
 
-const socialLinks = [
-  { content: "X", href: config.socials.x, icon: <XFill size={14} /> },
+const SOCIAL_LINKS = [
+  { content: "X", href: CONFIG.SOCIALS.X, icon: <XFill size={14} /> },
   {
     content: "Github",
-    href: config.socials.github,
+    href: CONFIG.SOCIALS.GITHUB,
     icon: <GithubFill size={14} />,
   },
   {
     content: "LinkedIn",
-    href: config.socials.linkedin,
+    href: CONFIG.SOCIALS.LINKEDIN,
     icon: <LinkedinBoxFill size={14} />,
   },
 ]
 
-const siteLinks = [
+const SITE_LINKS = [
   { content: "Home", link: "/", icon: <HomeAlt1 size={14} /> },
   { content: "Work", link: "/work/", icon: <LaptopDevice size={14} /> },
   {

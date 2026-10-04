@@ -6,9 +6,9 @@ import Photo from "@/assets/photo.jpg"
 import Tooltip from "@/components/atoms/Tooltip"
 import JsonLd from "@/components/JsonLd"
 import SocialIcons from "@/components/SocialIcons"
-import config from "@/config"
+import CONFIG from "@/config"
 import getMetadata from "@/utils/metadata"
-import { personSchema, websiteSchema } from "@/utils/schema"
+import { PERSON_SCHEMA, WEBSITE_SCHEMA } from "@/utils/schema"
 
 export const metadata: Metadata = getMetadata({
   path: "/",
@@ -21,7 +21,7 @@ export const metadata: Metadata = getMetadata({
 const HomePage: React.FC = () => {
   return (
     <main className="mt-32 flex min-h-[calc(100dvh-173px)] flex-col md:mt-40 md:min-h-[calc(100dvh-206px)]">
-      <JsonLd schema={[personSchema, websiteSchema]} />
+      <JsonLd schema={[PERSON_SCHEMA, WEBSITE_SCHEMA]} />
       <section className="container sm:my-0">
         <Image
           src={Photo}
@@ -53,7 +53,7 @@ const HomePage: React.FC = () => {
           Crafting <span className="text-gradient-green font-bold">fast</span>,{" "}
           <span className="text-gradient-red pr-px font-bold">obsessive</span>,{" "}
           <span className="text-gradient-blue font-bold">motion-rich</span> user
-          interfaces, <br className="hidden md:flex" />
+          interfaces, <br className="hidden md:inline" />
           web animations, and websites that users fall in love with.
         </p>
         <p className="text-muted mb-12 text-sm font-medium sm:text-[15px]">
@@ -66,7 +66,7 @@ const HomePage: React.FC = () => {
           <div className="flex items-center gap-6">
             <a
               className="group bg-inverse-soft text-on-inverse hover:bg-inverse-hover focus:bg-inverse-hover inline-flex items-center gap-1.5 rounded-full py-3 pr-4 pl-5 text-sm leading-none font-medium outline-hidden transition-colors active:scale-98"
-              href={config.SCHEDULE_CALL_LINK}
+              href={CONFIG.SCHEDULE_CALL_LINK}
               target="_blank"
               rel="noopener"
             >
@@ -79,10 +79,10 @@ const HomePage: React.FC = () => {
             <p className="text-muted text-sm font-medium">
               or{" "}
               <a
-                href={`mailto:${config.CONTACT_EMAIL}?subject=Project%20Enquiry`}
+                href={`mailto:${CONFIG.CONTACT_EMAIL}?subject=Project%20Enquiry`}
                 className="text-dim hover:text-body focus:text-body ml-3 underline-offset-2 outline-hidden transition-colors hover:underline focus:underline"
               >
-                {config.CONTACT_EMAIL}
+                {CONFIG.CONTACT_EMAIL}
               </a>
             </p>
           </div>

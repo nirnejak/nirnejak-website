@@ -10,7 +10,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `bun run lint:fix` — Auto-fix lint issues (`oxlint --fix`)
 - `bun run format` — Format with oxfmt (`oxfmt`)
 - `bun run format:check` — Check formatting (`oxfmt --check`)
-- `bun run type-check` — TypeScript type checking (`tsc --pretty --noEmit`)
+- `bun run type-check` — TypeScript type checking (`next typegen && tsc --pretty --noEmit`; `next-env.d.ts` is untracked and regenerated)
 
 ## Architecture
 
@@ -43,7 +43,7 @@ Tailwind CSS v4 via PostCSS. Custom animations and theme extensions defined in `
 - View transitions via `next-view-transitions` — use `components/atoms/Link.tsx` instead of `next/link`
 - Smooth scrolling via Lenis, wrapped by `components/SmoothScroll.tsx` in the root layout (native scrolling on desktop Safari). Lock scroll with `lenis.stop()` in an effect whose cleanup calls `start()` — never `start()` unconditionally, and never `body.style.overflow`
 - Motion library for component animations
-- Social profiles, contact email and repo URL live in `config.ts` — don't hard-code them
+- Social profiles, contact email and repo URL live in `CONFIG` (`config.ts`) — don't hard-code them
 - `public/sw.js` only unregisters the service worker the old `next-pwa` setup installed — there is no PWA; don't reintroduce precaching of `_next/static/media`
 - `"use client"` directive required for components with interactivity
 - `utils/classNames.ts` is a custom conditional class joiner (not clsx) — usage: `classNames("foo", condition && "bar")`
@@ -55,6 +55,7 @@ Tailwind CSS v4 via PostCSS. Custom animations and theme extensions defined in `
 oxlint handles linting and oxfmt handles formatting (no ESLint/Prettier/Biome). Key rules:
 
 - No semicolons, double quotes, ES5 trailing commas, 2-space indent, 80-char line width, LF line endings
+- Module-level constants are `UPPER_SNAKE_CASE`, including `CONFIG` and its keys and exported data (`ALL_BLOGS`, `PHOTOS`). Exceptions: names Next requires (`metadata`, `alt`, `size`, `contentType`) and props. Types are `PascalCase`
 - Tailwind classes sorted automatically by oxfmt (`sortTailwindcss` — recognizes `className`, `classNames(...)`, `cva(...)`, `cx(...)`, `clsx(...)`, `twMerge(...)`)
 - oxlint config (`.oxlintrc.json`): `correctness` = error, `suspicious`/`perf` = warn, `style` = off; plugins: unicorn, oxc, typescript, react, nextjs, jsx-a11y, import
 - Pre-commit hook runs `oxlint --fix` and `oxfmt` via lint-staged

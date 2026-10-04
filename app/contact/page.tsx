@@ -3,7 +3,7 @@ import type * as React from "react"
 import JsonLd from "@/components/JsonLd"
 import AppLink from "@/components/atoms/Link"
 import ContactForm from "@/components/ContactForm"
-import config from "@/config"
+import CONFIG from "@/config"
 import getMetadata from "@/utils/metadata"
 import { getBreadcrumbSchema } from "@/utils/schema"
 
@@ -31,7 +31,7 @@ const ContactPage: React.FC = () => {
       <section className="container mt-10 grid gap-4 md:mt-16 md:grid-cols-5 md:gap-10">
         <div className="col-span-2 flex flex-col">
           <p className="text-muted text-xs font-medium md:text-sm">
-            Let{"'"}s get in touch to discuss a project or maybe just say hi :)
+            Let&apos;s get in touch to discuss a project or maybe just say hi :)
           </p>
           <p className="text-muted mt-4 text-xs font-medium md:text-sm">
             I take on a small number of projects at a time — usually design
@@ -43,10 +43,10 @@ const ContactPage: React.FC = () => {
               Reach me via email
             </p>
             <AppLink
-              href={`mailto:${config.CONTACT_EMAIL}?subject=Project%20Enquiry`}
+              href={`mailto:${CONFIG.CONTACT_EMAIL}?subject=Project%20Enquiry`}
               className="text-body text-xs font-semibold md:text-sm"
             >
-              {config.CONTACT_EMAIL}
+              {CONFIG.CONTACT_EMAIL}
             </AppLink>
           </div>
         </div>

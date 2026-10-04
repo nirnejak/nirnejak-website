@@ -8,7 +8,7 @@ import SideProjects from "@/components/SideProjects"
 import SocialIcons from "@/components/SocialIcons"
 import getMetadata from "@/utils/metadata"
 import { getBreadcrumbSchema } from "@/utils/schema"
-import { allSites } from "@/utils/projects"
+import { ALL_SITES } from "@/utils/projects"
 
 export const metadata: Metadata = getMetadata({
   path: "/work/",
@@ -17,7 +17,7 @@ export const metadata: Metadata = getMetadata({
     "Selected client work and engagements by Jitendra Nirnejak — design and frontend for SaaS, real estate, and product teams across North America, Europe, Asia, and Australia.",
 })
 
-const projectCount = allSites.websites.length + allSites.cms.length
+const PROJECT_COUNT = ALL_SITES.websites.length + ALL_SITES.cms.length
 
 const WorkPage: React.FC = () => {
   return (
@@ -50,7 +50,7 @@ const WorkPage: React.FC = () => {
           </span>
           <div className="border-line flex-1 border-t border-dashed" />
           <span className="text-muted flex items-center gap-1.5">
-            {projectCount} projects
+            {PROJECT_COUNT} projects
             <ArrowRight
               size={14}
               className="transition-transform group-hover:-rotate-45 group-focus:-rotate-45"

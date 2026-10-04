@@ -4,11 +4,9 @@ const Background: React.FC = () => {
   return (
     <svg
       aria-hidden="true"
-      className="grain pointer-events-none fixed top-0 left-0 z-999 inline-block w-full align-middle"
-      style={{
-        height: "calc(100vh + 200px)",
-        transform: "translateY(0px)",
-      }}
+      // lvh, the viewport with the browser toolbars collapsed, so the noise
+      // still covers the page when mobile Safari hides its URL bar.
+      className="grain pointer-events-none fixed top-0 left-0 z-999 h-lvh w-full"
     >
       <filter id="noise">
         <feTurbulence

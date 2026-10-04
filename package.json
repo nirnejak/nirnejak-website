@@ -29,7 +29,7 @@
     "lint:fix": "oxlint --fix",
     "format": "oxfmt",
     "format:check": "oxfmt --check",
-    "type-check": "tsc --pretty --noEmit",
+    "type-check": "next typegen && tsc --pretty --noEmit",
     "prepare": "husky"
   },
   "dependencies": {
@@ -63,9 +63,6 @@
       "oxfmt"
     ],
     "*.json": "oxfmt"
-  },
-  "volta": {
-    "node": "24.18.0"
   },
   "trustedDependencies": [
     "@vercel/speed-insights"

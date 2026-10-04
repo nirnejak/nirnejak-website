@@ -1,24 +1,24 @@
-const config = {
+const CONFIG = {
   SCHEDULE_CALL_LINK: "https://cal.com/nirnejak/15min",
   CONTACT_EMAIL: "hello@nirnejak.com",
 
-  baseUrl: "https://nirnejak.com",
-  appName: "Jitendra Nirnejak",
-  author: "Jitendra Nirnejak",
-  authorUrl: "https://nirnejak.com/",
-  twitter: "jeetnirnejak",
+  BASE_URL: "https://nirnejak.com",
+  APP_NAME: "Jitendra Nirnejak",
+  AUTHOR: "Jitendra Nirnejak",
+  AUTHOR_URL: "https://nirnejak.com/",
+  TWITTER: "jeetnirnejak",
   // Every profile, all of which go in the Person schema's sameAs. Only some
   // are linked visibly: GitHub and X as icons, LinkedIn in the command bar
   // alone, and Instagram nowhere on the page — pick them by key, never map
   // over the whole object in UI.
-  socials: {
-    github: "https://github.com/nirnejak",
-    x: "https://x.com/jeetnirnejak",
-    linkedin: "https://www.linkedin.com/in/nirnejak/",
-    instagram: "https://www.instagram.com/jeetnirnejak",
+  SOCIALS: {
+    GITHUB: "https://github.com/nirnejak",
+    X: "https://x.com/jeetnirnejak",
+    LINKEDIN: "https://www.linkedin.com/in/nirnejak/",
+    INSTAGRAM: "https://www.instagram.com/jeetnirnejak",
   },
-  sourceUrl: "https://github.com/nirnejak/nirnejak-website",
-  keywords: [
+  SOURCE_URL: "https://github.com/nirnejak/nirnejak-website",
+  KEYWORDS: [
     "Design Engineer",
     "Design Engineering",
     "Frontend Developer",
@@ -42,4 +42,4 @@ const config = {
   ],
 }
 
-export default config
+export default CONFIG

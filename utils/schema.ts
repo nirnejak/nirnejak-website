@@ -1,44 +1,44 @@
-import config from "@/config"
+import CONFIG from "@/config"
 
-const { baseUrl } = config
+const { BASE_URL } = CONFIG
 
-const PERSON_ID = `${baseUrl}/#person`
-const WEBSITE_ID = `${baseUrl}/#website`
+const PERSON_ID = `${BASE_URL}/#person`
+const WEBSITE_ID = `${BASE_URL}/#website`
 
-const jobTitle = "Design Engineer"
+const JOB_TITLE = "Design Engineer"
 
-const bio =
+const BIO =
   "Design engineer based in Mumbai, crafting tasteful websites, user-interfaces, and web animations for ambitious product teams."
 
-export const personSchema = {
+export const PERSON_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Person",
   "@id": PERSON_ID,
-  name: config.author,
+  name: CONFIG.AUTHOR,
   alternateName: "Jeet",
-  url: baseUrl,
-  image: `${baseUrl}/jitendra-nirnejak.jpg`,
-  jobTitle,
-  description: bio,
-  email: `mailto:${config.CONTACT_EMAIL}`,
-  knowsAbout: config.keywords,
+  url: BASE_URL,
+  image: `${BASE_URL}/jitendra-nirnejak.jpg`,
+  jobTitle: JOB_TITLE,
+  description: BIO,
+  email: `mailto:${CONFIG.CONTACT_EMAIL}`,
+  knowsAbout: CONFIG.KEYWORDS,
   address: {
     "@type": "PostalAddress",
     addressLocality: "Mumbai",
     addressCountry: "IN",
   },
-  sameAs: Object.values(config.socials),
+  sameAs: Object.values(CONFIG.SOCIALS),
 }
 
 // Declared alongside Person so search engines can attribute the site to a
 // named author — this is what earns branded sitelinks.
-export const websiteSchema = {
+export const WEBSITE_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": WEBSITE_ID,
-  name: config.appName,
-  url: baseUrl,
-  description: bio,
+  name: CONFIG.APP_NAME,
+  url: BASE_URL,
+  description: BIO,
   inLanguage: "en",
   publisher: { "@id": PERSON_ID },
   author: { "@id": PERSON_ID },
@@ -58,7 +58,7 @@ export const getBreadcrumbSchema = (
     "@type": "ListItem",
     position: index + 1,
     name: item.name,
-    item: `${baseUrl}${item.path}`,
+    item: `${BASE_URL}${item.path}`,
   })),
 })
 
@@ -81,7 +81,7 @@ export const getCollectionPageSchema = ({
   "@type": "CollectionPage",
   name,
   description,
-  url: `${baseUrl}${path}`,
+  url: `${BASE_URL}${path}`,
   isPartOf: { "@id": WEBSITE_ID },
   author: { "@id": PERSON_ID },
   mainEntity: {

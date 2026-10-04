@@ -3,7 +3,7 @@ export interface Project {
   link: string
 }
 
-export const allSites: { websites: Project[]; cms: Project[] } = {
+export const ALL_SITES: { websites: Project[]; cms: Project[] } = {
   websites: [
     { title: "Acquisity", link: "https://www.acquisity.ai/" },
     { title: "Superserve - Platform", link: "https://console.superserve.ai/" },

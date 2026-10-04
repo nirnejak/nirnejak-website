@@ -4,7 +4,7 @@ import JsonLd from "@/components/JsonLd"
 import PhotoGallery from "@/components/PhotoGallery"
 import getMetadata from "@/utils/metadata"
 import { getBreadcrumbSchema } from "@/utils/schema"
-import { photos } from "@/utils/photos"
+import { PHOTOS } from "@/utils/photos"
 
 export const metadata: Metadata = getMetadata({
   path: "/photos/",
@@ -29,7 +29,7 @@ const PhotosPage: React.FC = () => {
       </section>
 
       <section className="mt-10 mb-16 px-3 md:mt-16">
-        <PhotoGallery photos={photos} />
+        <PhotoGallery photos={PHOTOS} />
       </section>
     </main>
   )

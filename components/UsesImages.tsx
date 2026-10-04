@@ -13,9 +13,9 @@ import BlueTokai from "@/assets/uses/IMG_4772.jpeg"
 import GirlDrawing from "@/assets/uses/IMG_4890.jpeg"
 import TacoXbox from "@/assets/uses/IMG_8559.jpeg"
 
-const rotation = [-3, 3, -6, 6]
+const ROTATION = [-3, 3, -6, 6]
 
-const images = [
+const IMAGES = [
   { image: MysticallyAwkward, alt: "Mystically Awkward" },
   { image: TopDownBnW, alt: "Top Down, Black & White" },
   { image: GirlDrawing, alt: "Girl Drawing" },
@@ -35,20 +35,18 @@ const UsesImages: React.FC = () => {
 
   return (
     <section className="relative mt-10 -ml-4 grid w-[calc(100vw+32px)] grid-cols-4 md:mt-20 md:-ml-5 md:grid-cols-8">
-      {images.map((photo, index) => (
+      {IMAGES.map((photo, index) => (
         <motion.div
           key={photo.image.src}
           className={index > 3 ? `-mt-4 md:mt-0` : ""}
           initial={{ opacity: 0, scale: 0.02 }}
-          animate={{ opacity: 1, scale: 1, rotate: rotation[index % 3] }}
+          animate={{ opacity: 1, scale: 1, rotate: ROTATION[index % 3] }}
           whileHover={{ scale: 1.1, rotate: 0, zIndex: 5 }}
           transition={{
             type: "spring",
             stiffness: hasEntered ? 530 : 100,
             damping: hasEntered ? 20 : 10,
             mass: 0.7,
-            duration: 0.1,
-
             delay: hasEntered ? 0 : 0.05 * index,
           }}
           onAnimationComplete={() => {

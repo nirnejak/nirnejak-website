@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import type * as React from "react"
 import AppLink from "@/components/atoms/Link"
 import JsonLd from "@/components/JsonLd"
-import { allSites } from "@/utils/projects"
+import { ALL_SITES } from "@/utils/projects"
 import getMetadata from "@/utils/metadata"
 import { getBreadcrumbSchema } from "@/utils/schema"
 
@@ -33,7 +33,7 @@ const ProjectsPage: React.FC = () => {
           <p className="text-label mb-6 text-center font-medium tracking-wider uppercase">
             Products
           </p>
-          {allSites.websites.map((project) => (
+          {ALL_SITES.websites.map((project) => (
             <AppLink
               key={project.title}
               href={project.link}
@@ -53,7 +53,7 @@ const ProjectsPage: React.FC = () => {
           <p className="text-label mb-6 text-center font-medium tracking-wider uppercase">
             Websites
           </p>
-          {allSites.cms.map((project) => (
+          {ALL_SITES.cms.map((project) => (
             <AppLink
               key={project.title}
               href={project.link}

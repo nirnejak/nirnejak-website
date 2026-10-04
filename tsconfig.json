@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "ES2022",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -17,7 +17,6 @@
     "paths": {
       "@/*": ["./*"]
     },
-    "strictNullChecks": true,
     "plugins": [
       {
         "name": "next"
@@ -28,7 +27,6 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "postcss.config.mjs",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
   ],

@@ -5,7 +5,7 @@ export interface Blog {
   url: string
 }
 
-export const allBlogs: Blog[] = [
+export const ALL_BLOGS: Blog[] = [
   {
     date: "30 January 2026",
     description:

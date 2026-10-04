@@ -14,15 +14,5 @@
   "sortTailwindcss": {
     "functions": ["classNames", "cva", "cx", "clsx", "twMerge", "tw"]
   },
-  "ignorePatterns": [
-    ".next",
-    "out",
-    "build",
-    "next-env.d.ts",
-    "public/sw.js.map",
-    "public/workbox-*.js",
-    "public/workbox-*.js.map",
-    "public/worker-*.js",
-    "public/fallback-*.js"
-  ]
+  "ignorePatterns": [".next", "out", "build", "next-env.d.ts"]
 }

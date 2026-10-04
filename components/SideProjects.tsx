@@ -6,7 +6,7 @@ const SideProjects: React.FC = () => {
       <p className="text-label mb-6 text-center font-medium tracking-wider uppercase">
         Side Projects
       </p>
-      {projects.map((project) => (
+      {PROJECTS.map((project) => (
         <a
           href={project.link}
           key={project.name}
@@ -25,7 +25,7 @@ const SideProjects: React.FC = () => {
 
 export default SideProjects
 
-const projects = [
+const PROJECTS = [
   {
     name: "Invoy (WIP)",
     work: "Create, send and track beautiful invoices",

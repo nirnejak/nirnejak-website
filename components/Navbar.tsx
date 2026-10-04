@@ -7,7 +7,7 @@ import AppLink from "@/components/atoms/Link"
 import NavigationTabs from "@/components/NavigationTabs"
 import classNames from "@/utils/classNames"
 
-export const navLinks = [
+const NAV_LINKS = [
   { content: "Home", link: "/" },
   { content: "Work", link: "/work/" },
   { content: "Writing", link: "/blogs/" },
@@ -15,7 +15,7 @@ export const navLinks = [
   { content: "Uses", link: "/uses/" },
 ]
 
-const navLinkClass =
+const NAV_LINK_CLASS =
   "font-medium text-xs rounded-md px-4 py-2 hover-bg outline-hidden"
 
 const Navbar: React.FC = () => {
@@ -48,12 +48,12 @@ const Navbar: React.FC = () => {
     <nav className="bg-surface/70 fixed top-0 z-10 w-full backdrop-blur-lg">
       <div className="container hidden items-center py-3 md:flex">
         <div className="-mx-3.5">
-          <NavigationTabs navLinks={navLinks} />
+          <NavigationTabs navLinks={NAV_LINKS} />
         </div>
         <div className="ml-auto">
           <AppLink
             className={classNames(
-              navLinkClass,
+              NAV_LINK_CLASS,
               "group flex items-center gap-1.5"
             )}
             href={"/contact/"}
@@ -84,10 +84,10 @@ const Navbar: React.FC = () => {
             >
               <XSmall />
             </button>
-            {navLinks.map((navLink) => (
+            {NAV_LINKS.map((navLink) => (
               <AppLink
                 key={navLink.link}
-                className={navLinkClass}
+                className={NAV_LINK_CLASS}
                 href={navLink.link}
                 onClick={() => {
                   setIsOpen(false)
@@ -98,7 +98,7 @@ const Navbar: React.FC = () => {
             ))}
             <br />
             <AppLink
-              className={navLinkClass}
+              className={NAV_LINK_CLASS}
               href={"/contact/"}
               onClick={() => {
                 setIsOpen(false)

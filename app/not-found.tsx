@@ -11,7 +11,7 @@ export const metadata: Metadata = getMetadata({
   noIndex: true,
 })
 
-const GIFs = [
+const GIFS = [
   "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWFlN2tteTk4Y3N2NGUycHpnOThlZmQ3M3U2Z3I5MDFoZmk0aXBlNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1EmBoG0IL50VIJLWTs/giphy.gif",
   "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXI4ZnA5ZDJ5d2llNGRyNXNrdWVkY2p3MWZkY2xxYXhvaW91dW0xayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RHInHY2dInc6uMI2ET/giphy.gif",
   "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXBraHp2MzhpODI5Z3oxNmlyNWt4c2l3aGF2MjcxaWRpeGkzdmMxdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ji6zzUZwNIuLS/giphy.gif",
@@ -22,7 +22,7 @@ const GIFs = [
 // Picked once per build, so the GIF rotates on deploy rather than per visit —
 // unavoidable on a prerendered page, and calling Math.random() during render
 // instead would break React purity.
-const gif = GIFs[Math.floor(Math.random() * GIFs.length)]
+const GIF = GIFS[Math.floor(Math.random() * GIFS.length)]
 
 const NotFound: React.FC = () => {
   return (
@@ -33,7 +33,7 @@ const NotFound: React.FC = () => {
               it can't resize. h-auto lets each GIF keep its own aspect ratio
               rather than being squashed into the 480×270 placeholder box. */}
           <Image
-            src={gif}
+            src={GIF}
             alt=""
             width={480}
             height={270}
