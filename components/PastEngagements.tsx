@@ -56,6 +56,19 @@ export default PastEngagements
 
 const ENGAGEMENTS: Engagement[] = [
   {
+    name: "Contra",
+    work: "Product Design",
+    year: 2026,
+    city: "New York",
+    link: "https://contra.com/",
+  },
+  {
+    name: "Óra",
+    work: "Design Engineering",
+    year: 2026,
+    city: "New York",
+  },
+  {
     name: "Stonera",
     work: "Design Engineering",
     year: 2026,
