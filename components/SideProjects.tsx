@@ -27,14 +27,19 @@ export default SideProjects
 
 const PROJECTS = [
   {
-    name: "Invoy (WIP)",
-    work: "Create, send and track beautiful invoices",
-    link: "https://invoy.work/",
-  },
-  {
     name: "Interactive Interfaces",
     work: "UI experiments with React & motion.dev",
     link: "https://interfaces.show/",
+  },
+  {
+    name: "SwiftUI Components (WIP)",
+    work: "UI components and experiments with SwiftUI",
+    link: "https://www.swiftui.show/",
+  },
+  {
+    name: "Invoy (WIP)",
+    work: "Create, send and track beautiful invoices",
+    link: "https://invoy.work/",
   },
   {
     name: "Peerlist UI Animation Challenge",
