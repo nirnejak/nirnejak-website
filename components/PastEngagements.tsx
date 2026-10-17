@@ -59,7 +59,7 @@ const ENGAGEMENTS: Engagement[] = [
     name: "Contra",
     work: "Product Design",
     year: 2026,
-    city: "New York",
+    city: "San Francisco",
     link: "https://contra.com/",
   },
   {
