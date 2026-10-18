@@ -15,7 +15,7 @@ export const metadata: Metadata = getMetadata({
   ogType: "profile",
   title: "Jeet Nirnejak — Design Engineer",
   description:
-    "Jeet (Jitendra) Nirnejak is a design engineer based in Mumbai, crafting tasteful websites, user-interfaces, and web animations for ambitious product teams.",
+    "Design engineer based in Mumbai, crafting tasteful websites, user-interfaces, and web animations for ambitious product teams.",
 })
 
 const HomePage: React.FC = () => {
