@@ -65,11 +65,6 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
             media="(prefers-color-scheme: dark)"
             content="#1D1D20"
           />
-          <Script
-            src="https://analytics.ahrefs.com/analytics.js"
-            data-key="gbZIqgdBQxOyNwjN+z3uWA"
-            strategy="afterInteractive"
-          />
         </head>
 
         <SmoothScroll>
@@ -90,6 +85,14 @@ const HomeLayout: React.FC<Props> = ({ children }) => {
 
             <Analytics />
             <SpeedInsights />
+
+            {process.env.NODE_ENV === "production" && (
+              <Script
+                src="https://analytics.ahrefs.com/analytics.js"
+                data-key="gbZIqgdBQxOyNwjN+z3uWA"
+                strategy="afterInteractive"
+              />
+            )}
           </body>
         </SmoothScroll>
       </html>
