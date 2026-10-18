@@ -5,7 +5,7 @@ import AppLink from "@/components/atoms/Link"
 import getMetadata from "@/utils/metadata"
 
 export const metadata: Metadata = getMetadata({
-  title: "Not Found | Jitendra Nirnejak",
+  title: "Not Found | Jeet Nirnejak",
   description:
     "The page you're looking for doesn't exist. Head back to nirnejak.com to browse work, blogs, photos, and more.",
   noIndex: true,

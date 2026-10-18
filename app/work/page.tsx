@@ -12,9 +12,9 @@ import { ALL_SITES } from "@/utils/projects"
 
 export const metadata: Metadata = getMetadata({
   path: "/work/",
-  title: "Work — Design Engineering & Frontend | Jitendra Nirnejak",
+  title: "Work — Design Engineering & Frontend | Jeet Nirnejak",
   description:
-    "Selected client work and engagements by Jitendra Nirnejak — design and frontend for SaaS, real estate, and product teams across North America, Europe, Asia, and Australia.",
+    "Selected client work and engagements by Jeet Nirnejak — design and frontend for SaaS, real estate, and product teams across North America, Europe, Asia, and Australia.",
 })
 
 const PROJECT_COUNT = ALL_SITES.websites.length + ALL_SITES.cms.length

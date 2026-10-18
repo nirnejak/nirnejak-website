@@ -8,9 +8,9 @@ import { getBreadcrumbSchema } from "@/utils/schema"
 
 export const metadata: Metadata = getMetadata({
   path: "/work/projects/",
-  title: "Projects — Shipped Sites & Apps | Jitendra Nirnejak",
+  title: "Projects — Shipped Sites & Apps | Jeet Nirnejak",
   description:
-    "Side projects and shipped builds by Jitendra Nirnejak, ranging from full-stack web apps to design-led marketing sites.",
+    "Side projects and shipped builds by Jeet Nirnejak, ranging from full-stack web apps to design-led marketing sites.",
 })
 
 const ProjectsPage: React.FC = () => {

@@ -282,5 +282,5 @@ export interface Photo {
 // captions get written — but anything beats the webpack hash this used to emit.
 export const PHOTOS: Photo[] = PHOTO_IMAGES.map((image) => ({
   image,
-  alt: "Photograph by Jitendra Nirnejak",
+  alt: "Photograph by Jeet Nirnejak",
 }))

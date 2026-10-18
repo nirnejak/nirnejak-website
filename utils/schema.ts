@@ -15,9 +15,11 @@ export const PERSON_SCHEMA = {
   "@type": "Person",
   "@id": PERSON_ID,
   name: CONFIG.AUTHOR,
-  alternateName: "Jeet",
+  // The name this site went by before, so existing search results and
+  // mentions still resolve to the same person.
+  alternateName: "Jitendra Nirnejak",
   url: BASE_URL,
-  image: `${BASE_URL}/jitendra-nirnejak.jpg`,
+  image: `${BASE_URL}/jeet-nirnejak.jpg`,
   jobTitle: JOB_TITLE,
   description: BIO,
   email: `mailto:${CONFIG.CONTACT_EMAIL}`,

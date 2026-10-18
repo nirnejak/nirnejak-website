@@ -9,9 +9,9 @@ import { getBreadcrumbSchema } from "@/utils/schema"
 
 export const metadata: Metadata = getMetadata({
   path: "/contact/",
-  title: "Contact — Design Engineering Enquiries | Jitendra Nirnejak",
+  title: "Contact — Design Engineering Enquiries | Jeet Nirnejak",
   description:
-    "Get in touch with Jitendra Nirnejak — schedule a call, send a project enquiry, or just say hi. Available for select design and frontend engagements.",
+    "Get in touch with Jeet Nirnejak — schedule a call, send a project enquiry, or just say hi. Available for select design and frontend engagements.",
 })
 
 const ContactPage: React.FC = () => {

@@ -1,7 +1,7 @@
 {
   "name": "nirnejak-website",
   "version": "1.0.0",
-  "description": "Portfolio website of Jitendra Nirnejak",
+  "description": "Portfolio website of Jeet Nirnejak",
   "keywords": [
     "nextjs",
     "oxfmt",
@@ -15,7 +15,7 @@
     "url": "https://github.com/nirnejak/nirnejak-website/issues"
   },
   "license": "MIT",
-  "author": "Jitendra Nirnejak <jeetnirnejak@gmail.com>",
+  "author": "Jeet Nirnejak <jeetnirnejak@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/nirnejak/nirnejak-website"

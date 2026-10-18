@@ -5,10 +5,10 @@
 </p>
 
 <h1 align="center">
-  Jitendra Nirnejak's Portfolio
+  Jeet Nirnejak's Portfolio
 </h1>
 
-!["Jitendra Nirnejak Website Snapshot"](https://raw.githubusercontent.com/nirnejak/nirnejak-website/master/public/cover.png)
+!["Jeet Nirnejak Website Snapshot"](https://raw.githubusercontent.com/nirnejak/nirnejak-website/master/public/cover.png)
 
 ---
 

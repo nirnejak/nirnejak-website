@@ -7,9 +7,9 @@ import { getBreadcrumbSchema } from "@/utils/schema"
 
 export const metadata: Metadata = getMetadata({
   path: "/uses/",
-  title: "Uses — Hardware, Software & Gear | Jitendra Nirnejak",
+  title: "Uses — Hardware, Software & Gear | Jeet Nirnejak",
   description:
-    "The hardware, software, and gear Jitendra Nirnejak uses every day for design, development, photography, and writing.",
+    "The hardware, software, and gear Jeet Nirnejak uses every day for design, development, photography, and writing.",
 })
 
 const UsesPage: React.FC = () => {

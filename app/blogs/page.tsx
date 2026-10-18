@@ -8,9 +8,9 @@ import { getBreadcrumbSchema, getCollectionPageSchema } from "@/utils/schema"
 
 export const metadata: Metadata = getMetadata({
   path: "/blogs/",
-  title: "Writing on React, TypeScript & Design | Jitendra Nirnejak",
+  title: "Writing on React, TypeScript & Design | Jeet Nirnejak",
   description:
-    "Long-form writing by Jitendra Nirnejak on React, TypeScript, design engineering, animation, Postgres, and the tools that make modern web work.",
+    "Long-form writing by Jeet Nirnejak on React, TypeScript, design engineering, animation, Postgres, and the tools that make modern web work.",
 })
 
 const BlogsPage: React.FC = () => {
@@ -29,7 +29,7 @@ const BlogsPage: React.FC = () => {
       <JsonLd
         schema={[
           getCollectionPageSchema({
-            name: "Writing by Jitendra Nirnejak",
+            name: "Writing by Jeet Nirnejak",
             description:
               "Long-form writing on React, TypeScript, design engineering, animation, Postgres, and the tools that make modern web work.",
             path: "/blogs/",

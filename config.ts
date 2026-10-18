@@ -3,8 +3,8 @@ const CONFIG = {
   CONTACT_EMAIL: "hello@nirnejak.com",
 
   BASE_URL: "https://nirnejak.com",
-  APP_NAME: "Jitendra Nirnejak",
-  AUTHOR: "Jitendra Nirnejak",
+  APP_NAME: "Jeet Nirnejak",
+  AUTHOR: "Jeet Nirnejak",
   AUTHOR_URL: "https://nirnejak.com/",
   TWITTER: "jeetnirnejak",
   // Every profile, all of which go in the Person schema's sameAs. Only some

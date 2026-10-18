@@ -1,6 +1,6 @@
 import renderOgImage, { contentType, size } from "@/utils/og"
 
-export const alt = "Projects by Jitendra Nirnejak"
+export const alt = "Projects by Jeet Nirnejak"
 export { contentType, size }
 
 export default function Image() {

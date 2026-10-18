@@ -13,9 +13,9 @@ import { PERSON_SCHEMA, WEBSITE_SCHEMA } from "@/utils/schema"
 export const metadata: Metadata = getMetadata({
   path: "/",
   ogType: "profile",
-  title: "Jitendra Nirnejak — Design Engineer",
+  title: "Jeet Nirnejak — Design Engineer",
   description:
-    "Design engineer based in Mumbai, crafting tasteful websites, user-interfaces, and web animations for ambitious product teams.",
+    "Jeet (Jitendra) Nirnejak is a design engineer based in Mumbai, crafting tasteful websites, user-interfaces, and web animations for ambitious product teams.",
 })
 
 const HomePage: React.FC = () => {
@@ -25,7 +25,7 @@ const HomePage: React.FC = () => {
       <section className="container sm:my-0">
         <Image
           src={Photo}
-          alt="Jitendra Nirnejak"
+          alt="Jeet Nirnejak"
           placeholder="blur"
           // Without a width Next sizes the srcset off the 1290px source and
           // ships ~400 KB for a 64px avatar.
