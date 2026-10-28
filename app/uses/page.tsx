@@ -52,16 +52,10 @@ const UsesPage: React.FC = () => {
             Conductor, Claude Code & Zed
           </p>
         </div>
-        <div>
+        <div className="md:col-span-2">
           <p className="text-muted text-sm font-medium">Audio & Accessories</p>
           <p className="text-body mt-1.5 text-lg font-semibold">
-            RØDE NT-USB Mini & JBL Charge
-          </p>
-        </div>
-        <div>
-          <p className="text-muted text-sm font-medium">Computer</p>
-          <p className="text-body mt-1.5 text-lg font-semibold">
-            MacBook Air & Studio Display
+            RØDE NT-USB Mini, JBL Charge 4, Apple Airpods 4
           </p>
         </div>
         <div className="md:col-span-2">
