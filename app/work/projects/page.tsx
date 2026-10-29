@@ -10,8 +10,13 @@ export const metadata: Metadata = getMetadata({
   path: "/work/projects/",
   title: "Projects — Shipped Sites & Apps | Jeet Nirnejak",
   description:
-    "Side projects and shipped builds by Jeet Nirnejak, ranging from full-stack web apps to design-led marketing sites.",
+    "Client work shipped by Jeet Nirnejak, from SaaS product platforms to design-led, CMS-driven marketing sites.",
 })
+
+const SECTIONS = [
+  { label: "Products", projects: ALL_SITES.products },
+  { label: "Websites", projects: ALL_SITES.websites },
+]
 
 const ProjectsPage: React.FC = () => {
   return (
@@ -29,45 +34,27 @@ const ProjectsPage: React.FC = () => {
         </h1>
       </section>
       <section className="container mt-10 mb-16 text-sm md:mt-16">
-        <div className="-mx-3 mb-16">
-          <p className="text-label mb-6 text-center font-medium tracking-wider uppercase">
-            Products
-          </p>
-          {ALL_SITES.websites.map((project) => (
-            <AppLink
-              key={project.title}
-              href={project.link}
-              target="_blank"
-              className="hover-bg flex flex-col gap-0.5 p-3 font-medium md:flex-row md:items-center md:gap-2"
-            >
-              <p className="text-body shrink-0">{project.title}</p>
-              <div className="border-line min-w-6 flex-1 border-t border-dashed" />
-              <p className="text-muted min-w-0 truncate md:max-w-70">
-                {project.link}
-              </p>
-            </AppLink>
-          ))}
-        </div>
-
-        <div className="-mx-3 mb-16">
-          <p className="text-label mb-6 text-center font-medium tracking-wider uppercase">
-            Websites
-          </p>
-          {ALL_SITES.cms.map((project) => (
-            <AppLink
-              key={project.title}
-              href={project.link}
-              target="_blank"
-              className="hover-bg flex flex-col gap-0.5 p-3 font-medium md:flex-row md:items-center md:gap-2"
-            >
-              <p className="text-body shrink-0">{project.title}</p>
-              <div className="border-line min-w-6 flex-1 border-t border-dashed" />
-              <p className="text-muted min-w-0 truncate md:max-w-70">
-                {project.link}
-              </p>
-            </AppLink>
-          ))}
-        </div>
+        {SECTIONS.map(({ label, projects }) => (
+          <div key={label} className="-mx-3 mb-16">
+            <p className="text-label mb-6 text-center font-medium tracking-wider uppercase">
+              {label}
+            </p>
+            {projects.map((project) => (
+              <AppLink
+                key={project.title}
+                href={project.link}
+                target="_blank"
+                className="hover-bg flex flex-col gap-0.5 p-3 font-medium md:flex-row md:items-center md:gap-2"
+              >
+                <p className="text-body shrink-0">{project.title}</p>
+                <div className="border-line min-w-6 flex-1 border-t border-dashed" />
+                <p className="text-muted min-w-0 truncate md:max-w-70">
+                  {project.link}
+                </p>
+              </AppLink>
+            ))}
+          </div>
+        ))}
       </section>
     </main>
   )

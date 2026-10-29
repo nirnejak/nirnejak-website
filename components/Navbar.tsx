@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
               Contact
             </span>
             <ArrowRight
-              className="animate-slide-left-and-fade hidden group-hover:block group-focus-visible:block hover:block"
+              className="animate-slide-left-and-fade hidden group-hover:block group-focus-visible:block"
               size={14}
             />
           </AppLink>

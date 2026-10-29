@@ -3,8 +3,8 @@ export interface Project {
   link: string
 }
 
-export const ALL_SITES: { websites: Project[]; cms: Project[] } = {
-  websites: [
+export const ALL_SITES: { products: Project[]; websites: Project[] } = {
+  products: [
     { title: "Acquisity", link: "https://www.acquisity.ai/" },
     { title: "Superserve - Platform", link: "https://console.superserve.ai/" },
     { title: "Data Vidhya", link: "https://datavidhya.com/" },
@@ -22,7 +22,7 @@ export const ALL_SITES: { websites: Project[]; cms: Project[] } = {
       link: "https://www.merklescience.com/platform/intelligence-reports",
     },
   ],
-  cms: [
+  websites: [
     { title: "Superserve - Website", link: "https://www.superserve.ai/" },
     {
       title: "Superserve - Prev Website",
@@ -32,7 +32,6 @@ export const ALL_SITES: { websites: Project[]; cms: Project[] } = {
     { title: "ROCC Naturals", link: "https://roccnaturals.com.au/" },
     { title: "Wills Property", link: "https://www.willsproperty.com.au/" },
     { title: "Warlimont & Nutt", link: "https://wnre.com.au/" },
-    // { title: "Sciberras Group", link: "https://sciberrasgroupre.com.au/" },
     { title: "Matthews Agency", link: "https://matthews.agency/" },
     { title: "Wingspan Capital", link: "https://wingspancapital.com.au/" },
     { title: "Harris Wood", link: "https://www.harriswood.com.au/" },
@@ -43,7 +42,6 @@ export const ALL_SITES: { websites: Project[]; cms: Project[] } = {
       title: "Whitefox Real Estate",
       link: "https://www.whitefoxrealestate.com.au/",
     },
-    // { title: "Kooyong Travel", link: "https://kooyongtravel.com.au/" },
     { title: "Maven", link: "https://maven.com.au/" },
     { title: "Arkhaus", link: "https://arkhaus.com.au/" },
     { title: "iRock Finishes", link: "https://irockfinishes.com.au/" },
@@ -55,3 +53,42 @@ export const ALL_SITES: { websites: Project[]; cms: Project[] } = {
     { title: "Inkoop", link: "https://www.inkoop.io/" },
   ],
 }
+
+export interface SideProject {
+  name: string
+  work: string
+  link: string
+}
+
+export const SIDE_PROJECTS: SideProject[] = [
+  {
+    name: "Interactive Interfaces",
+    work: "UI experiments with React & motion.dev",
+    link: "https://interfaces.show/",
+  },
+  {
+    name: "SwiftUI Components (WIP)",
+    work: "UI components and experiments with SwiftUI",
+    link: "https://www.swiftui.show/",
+  },
+  {
+    name: "Invoy (WIP)",
+    work: "Create, send and track beautiful invoices",
+    link: "https://invoy.work/",
+  },
+  {
+    name: "Peerlist UI Animation Challenge",
+    work: "My submission for the challenge",
+    link: "https://ui-animation-challenge.vercel.app",
+  },
+  {
+    name: "SVG Animations Gallery",
+    work: "SVG illustrations animated with motion.dev",
+    link: "https://svg-animations-gallery.vercel.app/",
+  },
+  {
+    name: "React Presentation Maker",
+    work: "Use your React components as presentation slides",
+    link: "https://github.com/nirnejak/react-presentation/",
+  },
+]

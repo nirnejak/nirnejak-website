@@ -28,7 +28,7 @@ const OgCard: React.FC<OgArgs> = ({ title, subtitle }) => (
     }}
   >
     <div style={{ display: "flex", fontSize: 30, color: "#8B8B94" }}>
-      {CONFIG.AUTHOR}
+      {CONFIG.NAME}
     </div>
 
     <div style={{ display: "flex", flexDirection: "column" }}>

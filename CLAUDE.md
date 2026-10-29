@@ -21,7 +21,7 @@ Next.js 16 portfolio site using App Router. Fully static — no CMS or API data 
 - `app/` — Pages and layouts (App Router file-based routing)
 - `components/` — React components; `atoms/` for small primitives (Link, Tooltip, ModifierKey)
 - `hooks/` — Custom React hooks
-- `utils/` — Helpers (classNames, isExternal, metadata, OG images, JSON-LD schema, blog/project/photo data)
+- `utils/` — Helpers (classNames, isExternal, metadata, OG images, JSON-LD schema, blog/project/engagement/photo data)
 - `fonts/` — Self-hosted GeneralSans variable font, plus static Medium/Bold `.ttf` cuts for OG images (Satori can't read woff2 or variable fonts)
 - `config.ts` — Site-wide config (links, email, keywords)
 

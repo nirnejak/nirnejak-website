@@ -1,12 +1,14 @@
 import type * as React from "react"
 
+import { SIDE_PROJECTS } from "@/utils/projects"
+
 const SideProjects: React.FC = () => {
   return (
     <div className="-mx-3">
       <p className="text-label mb-6 text-center font-medium tracking-wider uppercase">
         Side Projects
       </p>
-      {PROJECTS.map((project) => (
+      {SIDE_PROJECTS.map((project) => (
         <a
           href={project.link}
           key={project.name}
@@ -24,36 +26,3 @@ const SideProjects: React.FC = () => {
 }
 
 export default SideProjects
-
-const PROJECTS = [
-  {
-    name: "Interactive Interfaces",
-    work: "UI experiments with React & motion.dev",
-    link: "https://interfaces.show/",
-  },
-  {
-    name: "SwiftUI Components (WIP)",
-    work: "UI components and experiments with SwiftUI",
-    link: "https://www.swiftui.show/",
-  },
-  {
-    name: "Invoy (WIP)",
-    work: "Create, send and track beautiful invoices",
-    link: "https://invoy.work/",
-  },
-  {
-    name: "Peerlist UI Animation Challenge",
-    work: "My submission for the challenge",
-    link: "https://ui-animation-challenge.vercel.app",
-  },
-  {
-    name: "SVG Animations Gallery",
-    work: "SVG illustrations animated with motion.dev",
-    link: "https://svg-animations-gallery.vercel.app/",
-  },
-  {
-    name: "React Presentation Maker",
-    work: "Use your React components as presentation slides",
-    link: "https://github.com/nirnejak/react-presentation/",
-  },
-]

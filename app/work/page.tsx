@@ -17,7 +17,7 @@ export const metadata: Metadata = getMetadata({
     "Selected client work and engagements by Jeet Nirnejak — design and frontend for SaaS, real estate, and product teams across North America, Europe, Asia, and Australia.",
 })
 
-const PROJECT_COUNT = ALL_SITES.websites.length + ALL_SITES.cms.length
+const PROJECT_COUNT = ALL_SITES.products.length + ALL_SITES.websites.length
 
 const WorkPage: React.FC = () => {
   return (

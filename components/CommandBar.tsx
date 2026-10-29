@@ -20,6 +20,7 @@ import {
   Phone,
   XFill,
 } from "akar-icons"
+import * as Dialog from "@radix-ui/react-dialog"
 import { Command } from "cmdk"
 import { useLenis } from "lenis/react"
 import { useTransitionRouter } from "next-view-transitions"
@@ -52,6 +53,9 @@ const CommandBar: React.FC = () => {
   React.useEffect(() => {
     const eventHandler = (e: KeyboardEvent): void => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+        // Firefox, and Chrome outside macOS, bind the same chord to their own
+        // search bar.
+        e.preventDefault()
         setIsOpen(true)
       }
     }
@@ -110,121 +114,115 @@ const CommandBar: React.FC = () => {
   }
 
   return (
-    <Command
-      className={
-        isOpen
-          ? `bg-scrim fixed top-0 left-0 z-30 h-dvh w-full backdrop-blur-lg`
-          : ""
-      }
+    <Command.Dialog
+      open={isOpen}
+      onOpenChange={handleOpenChange}
+      loop={true}
+      label="Global Command Menu"
+      overlayClassName="bg-scrim fixed inset-0 z-30 backdrop-blur-lg"
+      contentClassName="animate-rise bg-surface-raised border-line fixed top-1/2 left-1/2 z-30 w-11/12 max-w-[560px] -translate-1/2 rounded-2xl border p-2 text-[13px] shadow-2xl outline-hidden select-none md:w-full"
     >
-      <Command.Dialog
-        open={isOpen}
-        onOpenChange={handleOpenChange}
-        loop={true}
-        label="Global Command Menu"
-        className="animate-rise bg-surface-raised border-line fixed top-1/2 left-1/2 z-30 w-11/12 max-w-[560px] -translate-1/2 rounded-2xl border p-2 text-[13px] shadow-2xl select-none md:w-full"
+      {/* cmdk labels the dialog but renders no title of its own, and Radix
+          wants both to be present for screen readers. */}
+      <Dialog.Title className="sr-only">Command Menu</Dialog.Title>
+      <Dialog.Description className="sr-only">
+        Search pages and links on this site
+      </Dialog.Description>
+      <Command.Input
+        className="bg-surface text-body placeholder:text-placeholder border-line w-full rounded-xl border px-3 py-2.5 text-[13px] outline-hidden"
+        placeholder="Search pages and links…"
+      />
+      <Command.Empty className="text-body mt-8 mb-6 w-full text-center">
+        No results found.
+      </Command.Empty>
+      <Command.List
+        className="text-body my-1.5 max-h-[240px] overflow-y-scroll overscroll-contain"
+        data-lenis-prevent
       >
-        <Command.Input
-          className="bg-surface text-body placeholder:text-placeholder border-line w-full rounded-xl border px-3 py-2.5 text-[13px] outline-hidden"
-          placeholder="Search Link"
-        />
-        <Command.Empty className="text-body mt-8 mb-6 w-full text-center">
-          No results found.
-        </Command.Empty>
-        <Command.List
-          className="text-body my-1.5 max-h-[240px] overflow-y-scroll overscroll-contain"
-          data-lenis-prevent
+        <Command.Item
+          className={COMMAND_ITEM_CLASS}
+          value="Schedule Call"
+          onSelect={() => {
+            navigate(CONFIG.SCHEDULE_CALL_LINK)
+          }}
         >
+          <Calendar size={14} />
+          <span>Schedule Call</span>
+          <LinkOut size={12} className="ml-auto" />
+        </Command.Item>
+        <Command.Item
+          className={COMMAND_ITEM_CLASS}
+          value="Copy Email"
+          onSelect={copyEmail}
+        >
+          <Envelope size={14} />
+          <span>{hasCopiedEmail ? "Copied" : "Copy Email"}</span>
+          {hasCopiedEmail ? (
+            <Check size={12} className="ml-auto" />
+          ) : (
+            <Copy size={12} className="ml-auto" />
+          )}
+        </Command.Item>
+        <Command.Separator className="bg-line my-1 h-[0.5px]" />
+        {SOCIAL_LINKS.map((link) => (
           <Command.Item
+            key={link.content}
             className={COMMAND_ITEM_CLASS}
-            tabIndex={0}
-            value={CONFIG.SCHEDULE_CALL_LINK}
+            value={link.content}
             onSelect={() => {
-              navigate(CONFIG.SCHEDULE_CALL_LINK)
+              navigate(link.href)
             }}
           >
-            <Calendar size={14} />
-            <span>Schedule Call</span>
+            {link.icon}
+            <span>{link.content}</span>
             <LinkOut size={12} className="ml-auto" />
           </Command.Item>
+        ))}
+        <Command.Separator className="bg-line my-1 h-[0.5px]" />
+        {SITE_LINKS.map((link) => (
           <Command.Item
+            key={link.content}
             className={COMMAND_ITEM_CLASS}
-            tabIndex={0}
-            value="Copy Email"
-            onSelect={copyEmail}
-          >
-            <Envelope size={14} />
-            <span>{hasCopiedEmail ? "Copied" : "Copy Email"}</span>
-            {hasCopiedEmail ? (
-              <Check size={12} className="ml-auto" />
-            ) : (
-              <Copy size={12} className="ml-auto" />
-            )}
-          </Command.Item>
-          <Command.Separator className="bg-line my-1 h-[0.5px]" />
-          {SOCIAL_LINKS.map((link) => (
-            <Command.Item
-              key={link.content}
-              className={COMMAND_ITEM_CLASS}
-              tabIndex={0}
-              value={link.content}
-              onSelect={() => {
-                navigate(link.href)
-              }}
-            >
-              {link.icon}
-              <span>{link.content}</span>
-              <LinkOut size={12} className="ml-auto" />
-            </Command.Item>
-          ))}
-          <Command.Separator className="bg-line my-1 h-[0.5px]" />
-          {SITE_LINKS.map((link) => (
-            <Command.Item
-              key={link.content}
-              className={COMMAND_ITEM_CLASS}
-              tabIndex={0}
-              value={link.content}
-              onSelect={() => {
-                navigate(link.link)
-              }}
-            >
-              {link.icon}
-              <span>{link.content}</span>
-            </Command.Item>
-          ))}
-          <Command.Separator className="bg-line my-1 h-[0.5px]" />
-          <Command.Item
-            className={COMMAND_ITEM_CLASS}
-            tabIndex={0}
-            value="View Source"
+            value={link.content}
             onSelect={() => {
-              navigate(CONFIG.SOURCE_URL)
+              navigate(link.link)
             }}
           >
-            <GithubFill size={14} />
-            <span>View Source</span>
-            <LinkOut size={12} className="ml-auto" />
+            {link.icon}
+            <span>{link.content}</span>
           </Command.Item>
-        </Command.List>
-        <div className="border-line text-body -mx-2 -mb-2 flex justify-between rounded-b-xl border-t-[0.5px] p-2.5 text-[11px]">
-          <p className="flex items-center gap-1">
-            <span>Navigate with</span>
-            <span className="bg-surface-inset rounded-lg p-0.5">
-              <ArrowUp size={9} />
-            </span>
-            <span className="bg-surface-inset rounded-lg p-0.5">
-              <ArrowDown size={9} />
-            </span>
-          </p>
-          <p className="flex items-center gap-1">
-            <span>Open Link</span>
-            <span className="bg-surface-inset rotate-180 rounded-lg p-0.5">
-              <ArrowForward size={9} />
-            </span>
-          </p>
-        </div>
-      </Command.Dialog>
-    </Command>
+        ))}
+        <Command.Separator className="bg-line my-1 h-[0.5px]" />
+        <Command.Item
+          className={COMMAND_ITEM_CLASS}
+          value="View Source"
+          onSelect={() => {
+            navigate(CONFIG.SOURCE_URL)
+          }}
+        >
+          <GithubFill size={14} />
+          <span>View Source</span>
+          <LinkOut size={12} className="ml-auto" />
+        </Command.Item>
+      </Command.List>
+      <div className="border-line text-body -mx-2 -mb-2 flex justify-between rounded-b-xl border-t-[0.5px] p-2.5 text-[11px]">
+        <p className="flex items-center gap-1">
+          <span>Navigate with</span>
+          <span className="bg-surface-inset rounded-lg p-0.5">
+            <ArrowUp size={9} />
+          </span>
+          <span className="bg-surface-inset rounded-lg p-0.5">
+            <ArrowDown size={9} />
+          </span>
+        </p>
+        <p className="flex items-center gap-1">
+          <span>Open Link</span>
+          <span className="bg-surface-inset rotate-180 rounded-lg p-0.5">
+            <ArrowForward size={9} />
+          </span>
+        </p>
+      </div>
+    </Command.Dialog>
   )
 }
 
@@ -233,7 +231,7 @@ export default CommandBar
 const SOCIAL_LINKS = [
   { content: "X", href: CONFIG.SOCIALS.X, icon: <XFill size={14} /> },
   {
-    content: "Github",
+    content: "GitHub",
     href: CONFIG.SOCIALS.GITHUB,
     icon: <GithubFill size={14} />,
   },

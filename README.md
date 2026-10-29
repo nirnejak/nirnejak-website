@@ -8,7 +8,7 @@
   Jeet Nirnejak's Portfolio
 </h1>
 
-!["Jeet Nirnejak Website Snapshot"](https://raw.githubusercontent.com/nirnejak/nirnejak-website/master/public/cover.png)
+!["Jeet Nirnejak Website Snapshot"](https://raw.githubusercontent.com/nirnejak/nirnejak-website/master/.github/cover.png)
 
 ---
 

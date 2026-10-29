@@ -7,6 +7,6 @@ export default function Image() {
   return renderOgImage({
     title: "Projects",
     subtitle:
-      "Side projects and shipped builds — full-stack apps and design-led marketing sites.",
+      "Shipped client work — product platforms and design-led marketing sites.",
   })
 }

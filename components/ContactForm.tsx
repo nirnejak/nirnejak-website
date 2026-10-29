@@ -3,16 +3,14 @@
 import { AnimatePresence, motion } from "motion/react"
 import * as React from "react"
 
+import CONFIG from "@/config"
+
 const INITIAL_STATE = { name: "", email: "", message: "" }
 
 const ContactForm: React.FC = () => {
   const [formState, setFormState] = React.useState("Send")
 
-  const [state, setState] = React.useState<{
-    name: string
-    email: string
-    message: string
-  }>(INITIAL_STATE)
+  const [state, setState] = React.useState(INITIAL_STATE)
 
   const variants = {
     initial: { opacity: 0, y: -25 },
@@ -31,13 +29,15 @@ const ContactForm: React.FC = () => {
     setFormState("Sending...")
     // Without `Accept: application/json` Formspree answers with an HTML
     // redirect, and the status is the only reliable signal either way.
-    fetch("https://formspree.io/f/xgerdbkz", {
+    fetch(CONFIG.CONTACT_FORM_ENDPOINT, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify(state),
+      // Read off the form rather than state so the honeypot below goes along
+      // with the real fields.
+      body: JSON.stringify(Object.fromEntries(new FormData(e.currentTarget))),
     })
       .then((response) => {
         if (!response.ok) throw new Error(`Formspree ${response.status}`)
@@ -85,6 +85,21 @@ const ContactForm: React.FC = () => {
         onChange={handleChange}
         required
       />
+      {/* Formspree's honeypot: people never see it, so anything in it came
+          from a bot, and Formspree drops the submission. */}
+      <input
+        type="text"
+        name="_gotcha"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden
+        className="hidden"
+      />
+      {/* The button keeps a fixed accessible name, so screen readers would
+          never hear its label change — the outcome is announced here. */}
+      <p role="status" className="sr-only">
+        {formState === "Send" ? "" : formState}
+      </p>
       <button
         type="submit"
         aria-label="Send message"

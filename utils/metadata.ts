@@ -24,9 +24,9 @@ const getMetadata = ({
 
     alternates: path === undefined ? undefined : { canonical: path },
 
-    applicationName: CONFIG.APP_NAME,
-    creator: CONFIG.AUTHOR,
-    authors: [{ name: CONFIG.AUTHOR, url: CONFIG.AUTHOR_URL }],
+    applicationName: CONFIG.NAME,
+    creator: CONFIG.NAME,
+    authors: [{ name: CONFIG.NAME, url: `${CONFIG.BASE_URL}/` }],
     robots: noIndex
       ? "noindex, nofollow"
       : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
@@ -35,7 +35,6 @@ const getMetadata = ({
       icon: "/favicon.ico",
       apple: "/icons/icon-512x512.png",
     },
-    manifest: `${CONFIG.BASE_URL}/manifest.json`,
 
     // `images` is deliberately absent from openGraph and twitter: the
     // app/**/opengraph-image.tsx files own og:image and emit its type, width,
@@ -43,7 +42,7 @@ const getMetadata = ({
     openGraph: {
       type: ogType ?? "website",
       url: path === undefined ? undefined : `${CONFIG.BASE_URL}${path}`,
-      siteName: CONFIG.APP_NAME,
+      siteName: CONFIG.NAME,
       title,
       description,
     },
@@ -56,15 +55,11 @@ const getMetadata = ({
       description,
     },
 
-    appleWebApp: {
-      capable: true,
-      // The home-screen label, not the document title — iOS truncates
-      // anything much past a dozen characters. Matches the manifest.
-      title: "Nirnejak",
-      // "black-translucent" forces white status-bar text, which disappears
-      // against a light page. "default" follows the system scheme.
-      statusBarStyle: "default",
-    },
+    // Only the home-screen label, not the document title — iOS truncates
+    // anything much past a dozen characters. Matches the manifest. `capable`
+    // is spelled out because Next defaults it to true, and there is no PWA:
+    // a saved bookmark should open in Safari.
+    appleWebApp: { title: "Nirnejak", capable: false },
   }
   return metadata
 }

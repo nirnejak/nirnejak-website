@@ -14,8 +14,7 @@ export const metadata: Metadata = getMetadata({
   path: "/",
   ogType: "profile",
   title: "Jeet Nirnejak — Design Engineer",
-  description:
-    "Design engineer based in Mumbai, crafting tasteful websites, user-interfaces, and web animations for ambitious product teams.",
+  description: CONFIG.BIO,
 })
 
 const HomePage: React.FC = () => {

@@ -3,7 +3,6 @@ import type { NextConfig } from "next"
 const nextConfig: NextConfig = {
   reactCompiler: true,
   trailingSlash: true,
-  reactStrictMode: true,
   poweredByHeader: false,
   async redirects() {
     return [
@@ -27,33 +26,9 @@ const nextConfig: NextConfig = {
         destination: "/photos/",
         permanent: true,
       },
+      // The old /craft/ demos all folded into the work page.
       {
-        source: "/craft/animate-height/",
-        destination: "/work/",
-        permanent: true,
-      },
-      {
-        source: "/craft/dynamic-button/",
-        destination: "/work/",
-        permanent: true,
-      },
-      {
-        source: "/craft/dynamic-island/",
-        destination: "/work/",
-        permanent: true,
-      },
-      {
-        source: "/craft/gradual-content-loading/",
-        destination: "/work/",
-        permanent: true,
-      },
-      {
-        source: "/craft/photo-cards/",
-        destination: "/work/",
-        permanent: true,
-      },
-      {
-        source: "/craft/slider-tabs/",
+        source: "/craft/:slug/",
         destination: "/work/",
         permanent: true,
       },

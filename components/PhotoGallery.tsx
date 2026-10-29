@@ -35,6 +35,9 @@ const THUMB_HEIGHT = 640
 // expand snaps instead of flying.
 const INSET = 16
 
+// Two full rows at the widest breakpoint — roughly the first screen.
+const EAGER_COUNT = 12
+
 interface TileProps {
   photo: Photo
   index: number
@@ -57,14 +60,20 @@ const PhotoTile = React.memo<TileProps>(
         onOpen(photo)
       }}
       initial={{ opacity: 0, scale: 0.02, rotate: 15 }}
-      animate={{ opacity: 1, scale: 1, rotate: 0 }}
+      // Enters as it scrolls into view rather than on mount: staggering all
+      // ~134 tiles by index on mount left the last ones invisible for ~7s
+      // to anyone who scrolled down quickly.
+      whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+      viewport={{ once: true }}
       whileHover={{ scale: 1.03, rotate: 0, zIndex: 5 }}
       transition={{
         type: "spring",
         stiffness: hasEntered ? 530 : 100,
         damping: hasEntered ? 20 : 10,
         mass: 0.7,
-        delay: hasEntered ? 0 : 0.05 * index,
+        // Only the first screen cascades in; later tiles are revealed by the
+        // scroll itself, so they enter without waiting their turn.
+        delay: hasEntered || index >= EAGER_COUNT ? 0 : 0.05 * index,
       }}
       onAnimationComplete={onEntered}
       className="after:border-frame bg-surface-inset relative block aspect-[9/16] cursor-pointer overflow-hidden rounded-3xl after:absolute after:inset-0 after:rounded-3xl after:border-8 hover:shadow-2xl"
@@ -90,7 +99,7 @@ const PhotoTile = React.memo<TileProps>(
             height={THUMB_HEIGHT}
             // Two full rows at the widest breakpoint load straight away; the
             // rest wait until they near the viewport.
-            loading={index < 12 ? "eager" : "lazy"}
+            loading={index < EAGER_COUNT ? "eager" : "lazy"}
             className="h-full w-full object-cover"
           />
         </motion.div>

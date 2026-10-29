@@ -7,21 +7,18 @@ const WEBSITE_ID = `${BASE_URL}/#website`
 
 const JOB_TITLE = "Design Engineer"
 
-const BIO =
-  "Design engineer based in Mumbai, crafting tasteful websites, user-interfaces, and web animations for ambitious product teams."
-
 export const PERSON_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Person",
   "@id": PERSON_ID,
-  name: CONFIG.AUTHOR,
+  name: CONFIG.NAME,
   // The name this site went by before, so existing search results and
   // mentions still resolve to the same person.
   alternateName: "Jitendra Nirnejak",
   url: BASE_URL,
   image: `${BASE_URL}/jeet-nirnejak.jpg`,
   jobTitle: JOB_TITLE,
-  description: BIO,
+  description: CONFIG.BIO,
   email: `mailto:${CONFIG.CONTACT_EMAIL}`,
   knowsAbout: CONFIG.KEYWORDS,
   address: {
@@ -38,9 +35,9 @@ export const WEBSITE_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": WEBSITE_ID,
-  name: CONFIG.APP_NAME,
+  name: CONFIG.NAME,
   url: BASE_URL,
-  description: BIO,
+  description: CONFIG.BIO,
   inLanguage: "en",
   publisher: { "@id": PERSON_ID },
   author: { "@id": PERSON_ID },

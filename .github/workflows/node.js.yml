@@ -30,4 +30,3 @@ jobs:
       - run: bun run format:check
       - run: bun run type-check
       - run: bun run build
-      # - run: bun test

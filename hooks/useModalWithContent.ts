@@ -8,7 +8,7 @@ interface HookReturn<T> {
   closeModal: () => void
 }
 
-const useModalWithContent = <T,>(): HookReturn<T> => {
+const useModalWithContent = <T>(): HookReturn<T> => {
   const [isOpen, setIsOpen] = React.useState(false)
   const [content, setContent] = React.useState<T | null>(null)
 

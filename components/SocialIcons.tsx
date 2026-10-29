@@ -6,7 +6,7 @@ import Tooltip from "@/components/atoms/Tooltip"
 import CONFIG from "@/config"
 
 const SOCIAL_LINKS = [
-  { title: "Github", url: CONFIG.SOCIALS.GITHUB, Icon: GithubFill },
+  { title: "GitHub", url: CONFIG.SOCIALS.GITHUB, Icon: GithubFill },
   { title: "X", url: CONFIG.SOCIALS.X, Icon: XFill },
 ]
 

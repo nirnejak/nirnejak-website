@@ -12,6 +12,24 @@ export const metadata: Metadata = getMetadata({
     "The hardware, software, and gear Jeet Nirnejak uses every day for design, development, photography, and writing.",
 })
 
+// `wide` items span both columns from md up — their lists run longer.
+const USES = [
+  { label: "Productivity", items: "Apple Notes, Notion & Slack" },
+  { label: "Design Tools", items: "Figma, Paper & Rive" },
+  { label: "Tech Stack", items: "TypeScript, React & Motion" },
+  { label: "AI & Editor", items: "Conductor, Claude Code & Zed" },
+  {
+    label: "Audio & Accessories",
+    items: "RØDE NT-USB Mini, JBL Charge 4, Apple AirPods 4",
+    wide: true,
+  },
+  {
+    label: "Camera & Gear",
+    items: "Fujifilm X100VI, Insta360 X3, iPhone 14 Pro & DJI Osmo Mobile",
+    wide: true,
+  },
+]
+
 const UsesPage: React.FC = () => {
   return (
     <main className="max-w-[100vw] overflow-hidden">
@@ -28,42 +46,12 @@ const UsesPage: React.FC = () => {
       </section>
       <UsesImages />
       <section className="container mt-10 mb-16 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2">
-        <div>
-          <p className="text-muted text-sm font-medium">Productivity</p>
-          <p className="text-body mt-1.5 text-lg font-semibold">
-            Apple Notes, Notion & Slack
-          </p>
-        </div>
-        <div>
-          <p className="text-muted text-sm font-medium">Design Tools</p>
-          <p className="text-body mt-1.5 text-lg font-semibold">
-            Figma, Paper & Rive
-          </p>
-        </div>
-        <div>
-          <p className="text-muted text-sm font-medium">Tech Stack</p>
-          <p className="text-body mt-1.5 text-lg font-semibold">
-            TypeScript, React & Motion
-          </p>
-        </div>
-        <div>
-          <p className="text-muted text-sm font-medium">AI & Editor</p>
-          <p className="text-body mt-1.5 text-lg font-semibold">
-            Conductor, Claude Code & Zed
-          </p>
-        </div>
-        <div className="md:col-span-2">
-          <p className="text-muted text-sm font-medium">Audio & Accessories</p>
-          <p className="text-body mt-1.5 text-lg font-semibold">
-            RØDE NT-USB Mini, JBL Charge 4, Apple Airpods 4
-          </p>
-        </div>
-        <div className="md:col-span-2">
-          <p className="text-muted text-sm font-medium">Camera & Gear</p>
-          <p className="text-body mt-1.5 text-lg font-semibold">
-            Fujifilm X100VI, Insta360 X3, iPhone 14 Pro & DJI Osmo Mobile
-          </p>
-        </div>
+        {USES.map(({ label, items, wide }) => (
+          <div key={label} className={wide ? "md:col-span-2" : undefined}>
+            <p className="text-muted text-sm font-medium">{label}</p>
+            <p className="text-body mt-1.5 text-lg font-semibold">{items}</p>
+          </div>
+        ))}
       </section>
     </main>
   )
